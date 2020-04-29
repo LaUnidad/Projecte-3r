@@ -12,6 +12,8 @@ public class Aspiradora : MonoBehaviour
     int AspirableObjectsSize;
     float minDist;
     GameObject MinDistObject;
+
+    float Force;
     public GameObject NewLookAtObject;
     public float ListObjects;
     float MaxObj;
@@ -36,7 +38,8 @@ public class Aspiradora : MonoBehaviour
     {
         //Debug.Log(AspirableObjects.Count);
         ListObjectsIn();
-
+        //Debug.Log(ObjectToLookAt());
+        //Debug.Log(AspirableObjects.Count);
         if(AspirableObjects.Count == 0)
         {
             MinDistObject = null;
@@ -65,6 +68,7 @@ public class Aspiradora : MonoBehaviour
         {
             foreach(GameObject obj in AspirableObjects)
             {
+                //Debug.Log("EOEO");
                 WithObjectIsNear(obj.gameObject);
             }   
         }
@@ -82,7 +86,7 @@ public class Aspiradora : MonoBehaviour
         {
             WithObjectIsBigger(obj.gameObject);
         }
-        return MinDistObject;
+        return MaxObject;
     }
     public void WithObjectIsNear(GameObject x)
     {
@@ -98,7 +102,7 @@ public class Aspiradora : MonoBehaviour
         }
         else
         {
-             Debug.Log("NO HAY OBJETO; NI CERCA NI LEJOS");
+            //Debug.Log("NO HAY OBJETO; NI CERCA NI LEJOS");
         } 
     }
     public void WithObjectIsBigger(GameObject x)
@@ -115,7 +119,7 @@ public class Aspiradora : MonoBehaviour
         }
         else
         {
-            Debug.Log("NO HAY OBJETO; NI GRANDE NI PEQUEÑO");
+            //Debug.Log("NO HAY OBJETO; NI GRANDE NI PEQUEÑO");
         }
        
     }
@@ -123,14 +127,22 @@ public class Aspiradora : MonoBehaviour
     {
         GameObject x;
         x = BiggestObject();
-        foreach(GameObject obj in AspirableObjects)
+        if(x != null)
         {
-            if(obj == x)
+            foreach(GameObject obj in AspirableObjects)
             {
-                return x.GetComponent<AspirableObject>().ForceToAbsorb;
+                if(obj == x)
+                {
+                    Force =  x.GetComponent<AspirableObject>().ForceToAbsorb;
+                }
             }
         }
-        return 1;
+        else
+        {
+            Force = 1;
+        }
+        return Force;
+        
     }
     public void ListObjectsIn()
     {

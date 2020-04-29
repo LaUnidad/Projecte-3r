@@ -69,6 +69,7 @@ public class AspirableObject : MonoBehaviour
             //Debug.Log("ABSORVIENDO");
             ImAbsorved = true;
             rgbd.useGravity = false;
+            rgbd.isKinematic = false;
             this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
                 
             if(!ICantBeAbsorved)

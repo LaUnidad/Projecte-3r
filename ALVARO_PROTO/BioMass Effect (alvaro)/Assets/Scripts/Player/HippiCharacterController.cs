@@ -66,6 +66,7 @@ public class HippiCharacterController : MonoBehaviour
         {
             if(blackboard.Gun.GetComponent<Aspiradora>().ObjectToLookAt() != null)
             {
+                //Debug.Log("Mirando al OBJETO");
                 m_CharacterController.transform.LookAt(blackboard.Gun.GetComponent<Aspiradora>().ObjectToLookAt().transform);
             }
             else
@@ -145,7 +146,7 @@ public class HippiCharacterController : MonoBehaviour
         }
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
-        Debug.Log(IsPackageFull());
+        //Debug.Log(IsPackageFull());
     }
 
     void CamDirection() 
