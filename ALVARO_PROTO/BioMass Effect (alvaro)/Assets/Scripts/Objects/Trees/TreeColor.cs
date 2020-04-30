@@ -15,6 +15,8 @@ public class TreeColor : MonoBehaviour
 
     public bool ImDeath;
 
+    public bool OnList;
+
     void Start()
     {
         meshR = GetComponent<MeshRenderer>();

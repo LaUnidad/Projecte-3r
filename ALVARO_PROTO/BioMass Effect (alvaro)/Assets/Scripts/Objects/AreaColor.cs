@@ -8,12 +8,9 @@ public class AreaColor : MonoBehaviour
 
     public GameObject[] Area1Obj;
     MeshRenderer meshR;
-
+    public float NumOfDeads;
     public Material Death;
 
-    public bool AllDead;
-
-    public float TotalObj;
     void Start()
     {
         Area1Obj = GameObject.FindGameObjectsWithTag("Tronco");
@@ -23,31 +20,31 @@ public class AreaColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(IsEveryoneDeath());
         ChangeColor();
+        Debug.Log(EveryoneDeath());
     }
     public void ChangeColor()
     {
-        if(IsEveryoneDeath())
-        {
+       if(NumOfDeads >= Area1Obj.Length)
+       {
             meshR.material = Death;
-        }
+       }
+      
+       
+        
     }
-
-    public bool IsEveryoneDeath()
-    { 
+    public float EveryoneDeath()
+    {
         foreach(GameObject obj in Area1Obj)
         {
-            if(obj.GetComponent<TreeColor>().ImDeath == false)
+            if(obj.GetComponent<TreeColor>().ImDeath == true && obj.GetComponent<TreeColor>().OnList == false)
             {
-                AllDead = false;
+                NumOfDeads += 1;
+                obj.GetComponent<TreeColor>().OnList = true;
             }
-            else
-            {
-                AllDead = true;
-            } 
-        }   
-        return AllDead;
+        }
+        return NumOfDeads;    
     }
+   
 
 }
