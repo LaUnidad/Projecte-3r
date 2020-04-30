@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 2524653}
   - component: {fileID: 2524652}
   - component: {fileID: 2524651}
+  - component: {fileID: 2524654}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -217,7 +218,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f2f7bde4cca86e4487f6d700da1fb42, type: 2}
+  - {fileID: 2100000, guid: d731f764301320f458a21e181e834ccf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -246,6 +247,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2524649}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2524654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1128e3f26a47a29479f80580b8f0812d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Area1Obj: []
+  Death: {fileID: 2100000, guid: 72c5898df9d8c874d8ab861405d165e4, type: 2}
+  AllDead: 0
+  TotalObj: 0
 --- !u!1 &9704420
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +573,7 @@ GameObject:
   - component: {fileID: 37680982}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,6 +622,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &37680984
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -682,7 +700,7 @@ GameObject:
   - component: {fileID: 46915061}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -731,6 +749,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &46915063
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -901,7 +920,7 @@ GameObject:
   - component: {fileID: 73638586}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -950,6 +969,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &73638588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2492,7 +2512,7 @@ GameObject:
   - component: {fileID: 292679187}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2541,6 +2561,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &292679189
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2618,7 +2639,7 @@ GameObject:
   - component: {fileID: 335620222}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2667,6 +2688,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &335620224
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2877,7 +2899,7 @@ GameObject:
   - component: {fileID: 339052424}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2926,6 +2948,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &339052426
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3189,7 +3212,7 @@ GameObject:
   - component: {fileID: 365419827}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3238,6 +3261,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &365419829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3408,7 +3432,7 @@ GameObject:
   - component: {fileID: 409700042}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3457,6 +3481,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &409700044
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3534,7 +3559,7 @@ GameObject:
   - component: {fileID: 412101037}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3583,6 +3608,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &412101039
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3660,7 +3686,7 @@ GameObject:
   - component: {fileID: 416369696}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3709,6 +3735,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &416369698
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3979,7 +4006,7 @@ GameObject:
   - component: {fileID: 464629731}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4028,6 +4055,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &464629733
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5968,7 +5996,7 @@ GameObject:
   - component: {fileID: 738562029}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6017,6 +6045,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &738562031
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8421,7 +8450,7 @@ GameObject:
   - component: {fileID: 933846965}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8470,6 +8499,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &933846967
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8914,6 +8944,7 @@ GameObject:
   - component: {fileID: 982746635}
   - component: {fileID: 982746634}
   - component: {fileID: 982746633}
+  - component: {fileID: 982746637}
   - component: {fileID: 982746636}
   m_Layer: 0
   m_Name: Plane
@@ -9010,6 +9041,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &982746637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982746631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1128e3f26a47a29479f80580b8f0812d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Area1Obj: []
+  Death: {fileID: 2100000, guid: 72c5898df9d8c874d8ab861405d165e4, type: 2}
+  AllDead: 0
+  TotalObj: 26
 --- !u!1 &982760748
 GameObject:
   m_ObjectHideFlags: 0
@@ -10580,7 +10627,7 @@ GameObject:
   - component: {fileID: 1200895606}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10629,6 +10676,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1200895608
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10706,7 +10754,7 @@ GameObject:
   - component: {fileID: 1208028218}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10755,6 +10803,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1208028220
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11423,7 +11472,7 @@ GameObject:
   - component: {fileID: 1404023161}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11472,6 +11521,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1404023163
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11693,7 +11743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433981046}
   m_LocalRotation: {x: 0.7051208, y: 0.66812426, z: 0.17179342, w: 0.1640175}
-  m_LocalPosition: {x: 33.400032, y: 2, z: 2.300002}
+  m_LocalPosition: {x: 35.3, y: 2, z: 2.5}
   m_LocalScale: {x: 19.983, y: 13.86, z: 19.982996}
   m_Children: []
   m_Father: {fileID: 507666653}
@@ -11771,6 +11821,7 @@ GameObject:
   - component: {fileID: 1434229107}
   - component: {fileID: 1434229106}
   - component: {fileID: 1434229105}
+  - component: {fileID: 1434229108}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -11852,6 +11903,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434229103}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1434229108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434229103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1128e3f26a47a29479f80580b8f0812d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Area1Obj: []
+  Death: {fileID: 2100000, guid: 72c5898df9d8c874d8ab861405d165e4, type: 2}
+  AllDead: 0
+  TotalObj: 0
 --- !u!1 &1446590417
 GameObject:
   m_ObjectHideFlags: 0
@@ -12281,7 +12348,7 @@ GameObject:
   - component: {fileID: 1499981163}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12330,6 +12397,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1499981165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13160,7 +13228,7 @@ GameObject:
   - component: {fileID: 1621654740}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13209,6 +13277,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1621654742
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13824,7 +13893,7 @@ GameObject:
   - component: {fileID: 1647313511}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13873,6 +13942,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1647313513
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13982,7 +14052,7 @@ GameObject:
   - component: {fileID: 1652501037}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14031,6 +14101,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1652501039
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14336,7 +14407,7 @@ GameObject:
   - component: {fileID: 1681779905}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14385,6 +14456,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1681779907
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15041,7 +15113,7 @@ GameObject:
   - component: {fileID: 1785119572}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15090,6 +15162,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1785119574
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15516,7 +15589,7 @@ GameObject:
   - component: {fileID: 1821601462}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15565,6 +15638,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1821601464
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15902,7 +15976,7 @@ GameObject:
   - component: {fileID: 1882943908}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15951,6 +16025,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &1882943910
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16964,7 +17039,7 @@ GameObject:
   - component: {fileID: 2069621645}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17013,6 +17088,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &2069621647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17090,7 +17166,7 @@ GameObject:
   - component: {fileID: 2072953952}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Untagged
+  m_TagString: Tronco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17139,6 +17215,7 @@ MonoBehaviour:
   InContact: 0
   TimeToDie: 1
   timer: 0
+  ImDeath: 0
 --- !u!136 &2072953954
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17212,6 +17289,7 @@ GameObject:
   - component: {fileID: 2089170257}
   - component: {fileID: 2089170256}
   - component: {fileID: 2089170255}
+  - component: {fileID: 2089170258}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -17293,6 +17371,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089170253}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2089170258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089170253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1128e3f26a47a29479f80580b8f0812d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Area1Obj: []
+  Death: {fileID: 2100000, guid: 72c5898df9d8c874d8ab861405d165e4, type: 2}
+  AllDead: 0
+  TotalObj: 0
 --- !u!1 &2097311535
 GameObject:
   m_ObjectHideFlags: 0

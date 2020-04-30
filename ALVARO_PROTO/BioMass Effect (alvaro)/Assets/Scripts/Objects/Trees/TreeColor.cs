@@ -13,6 +13,8 @@ public class TreeColor : MonoBehaviour
 
     public float timer;
 
+    public bool ImDeath;
+
     void Start()
     {
         meshR = GetComponent<MeshRenderer>();
@@ -31,8 +33,10 @@ public class TreeColor : MonoBehaviour
         {
             timer += 1* Time.deltaTime;
             if(TimeToDie <= timer)
-            {
+            {   
+                ImDeath = true;
                 meshR.material = DeathMaterial;
+                
             }
         }
     }
