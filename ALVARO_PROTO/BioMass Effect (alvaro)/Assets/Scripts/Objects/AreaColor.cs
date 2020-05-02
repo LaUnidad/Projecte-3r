@@ -7,33 +7,30 @@ public class AreaColor : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject[] Area1Obj;
-    MeshRenderer meshR;
+    
     public float NumOfDeads;
-    public Material Death;
+    
+    public bool KillZone;
 
     void Start()
     {
         Area1Obj = GameObject.FindGameObjectsWithTag("Tronco");
-        meshR = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         ChangeColor();
-        Debug.Log(EveryoneDeath());
+        Debug.Log("I KILL ->"+SumDeaths()+ "  of " + Area1Obj.Length);
     }
     public void ChangeColor()
     {
        if(NumOfDeads >= Area1Obj.Length)
        {
-            meshR.material = Death;
-       }
-      
-       
-        
+            KillZone = true;
+       }   
     }
-    public float EveryoneDeath()
+    public float SumDeaths()
     {
         foreach(GameObject obj in Area1Obj)
         {

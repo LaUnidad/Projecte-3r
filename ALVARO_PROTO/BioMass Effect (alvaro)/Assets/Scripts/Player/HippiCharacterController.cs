@@ -108,7 +108,7 @@ public class HippiCharacterController : MonoBehaviour
         {
             UsingGadget = true;
             
-            if(blackboard.Power != 0)
+            if(blackboard.Power >= 0)
             {
                 if(blackboard.Gun.GetComponent<Aspiradora>().ListObjects != 0)
                 {
