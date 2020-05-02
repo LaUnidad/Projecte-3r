@@ -8,10 +8,15 @@ public class HacksForTheGame : MonoBehaviour
     public KeyCode m_KillTheZone = KeyCode.K;
     GameObject[] AspirableObj;
     GameObject[] Troncos;
+    GameObject AreaKiller;
+
+    GameObject[] MagneticRocks;
     void Start()
     {
         AspirableObj = GameObject.FindGameObjectsWithTag("AspirableObject");
         Troncos = GameObject.FindGameObjectsWithTag("Tronco");
+        AreaKiller = GameObject.FindGameObjectWithTag("AreaKiller");
+        MagneticRocks = GameObject.FindGameObjectsWithTag("MagneticRock");
     }
 
     // Update is called once per frame
@@ -28,6 +33,12 @@ public class HacksForTheGame : MonoBehaviour
 
                 obj.GetComponent<TreeColor>().InContact = false;
             }
+            foreach(GameObject obj in MagneticRocks)
+            {
+
+                obj.gameObject.tag = "AspirableObject";
+            }
+            AreaKiller.GetComponent<AreaColor>().KillZone = true;
         }
     }
 }

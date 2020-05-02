@@ -77,15 +77,13 @@ public class HippiCharacterController : MonoBehaviour
        /////////////////////////////////////GRAVEDAD//////////////////////////////////////////////////
        SetGravity();
        /////////////////////////////////////SALTO/////////////////////////////////////////////////////
-       if(Input.GetKey(blackboard.m_JumpCode) && blackboard.Power>0 && ICanAbsorbThis == false)
+       if(Input.GetKeyDown(blackboard.m_JumpCode))
        {   
-           Jetpack = true;
-           VerticalSpeed = blackboard.JetpackForce;
+           VerticalSpeed = blackboard.JumpForce;
            l_Movment.y = VerticalSpeed;
        }
        else
        { 
-           Jetpack = false;
            VerticalSpeed -= blackboard.Gravity * Time.deltaTime;
            l_Movment.y = VerticalSpeed;
        }
@@ -104,7 +102,7 @@ public class HippiCharacterController : MonoBehaviour
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
         m_CharacterController.Move(l_Movment *Time.deltaTime);
          ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
-        if (Input.GetMouseButton(blackboard.m_Absorb) && ICanAbsorbThis == false && IsPackageFull() != true)
+        if (Input.GetMouseButton(blackboard.m_Absorb) && ICanAbsorbThis == false)
         {
             UsingGadget = true;
             
@@ -184,17 +182,6 @@ public class HippiCharacterController : MonoBehaviour
             else
             {
                 blackboard.Power -= blackboard.WastePowerVelocityABSORB * Time.deltaTime;
-            }
-        }
-        else if(Jetpack && blackboard.Power>0)
-        {
-             if(blackboard.Power<=0)
-            {
-                blackboard.Power = 0;
-            }
-            else
-            {
-                blackboard.Power -= blackboard.WastePowerVelocityJETPACK * Time.deltaTime;
             }
         }
         if(blackboard.Power <= 100 && UsingGadget == false && m_CharacterController.isGrounded && Absorving == false) 

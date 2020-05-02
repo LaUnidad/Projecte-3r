@@ -6,7 +6,7 @@ using UnityEngine;
 public class AspirableObject : MonoBehaviour
 {
 
-    public bool ICantBeAbsorved;
+    public bool IAmMagnetic;
     public bool IAmAsborved;
     public bool IAmInList;
     public float ForceToAbsorb;
@@ -53,7 +53,7 @@ public class AspirableObject : MonoBehaviour
             if(Player.GetComponent<HippiCharacterController>().Shootting)
             {
                 //Debug.Log("BUUUUUUM");
-                rgbd.useGravity = true;
+                //rgbd.useGravity = true;
                 this.transform.SetParent(null);
                 this.transform.position = transform.position + Player.transform.forward;
                 rgbd.velocity = Player.transform.forward * SpeedToShoot;
@@ -72,21 +72,32 @@ public class AspirableObject : MonoBehaviour
             rgbd.isKinematic = false;
             this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
                 
-            if(!ICantBeAbsorved)
+            if(!IAmMagnetic)
             {
                 this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
             }
         }
         else
         {
-            rgbd.useGravity = true;
-            this.transform.localScale = OriginalScale;
-            ImAbsorved = false;
+            if(!IAmMagnetic)
+            {
+                rgbd.useGravity = true;
+                this.transform.localScale = OriginalScale;
+                ImAbsorved = false;
+            }
+            else
+            {
+                rgbd.useGravity = false;
+                 ImAbsorved = false;
+            }
+           
+            
+           
         }
     }
     void OnCollisionEnter(Collision other) 
     {
-        if(other.gameObject.tag == "Gun" && ICantBeAbsorved)
+        if(other.gameObject.tag == "Gun" && IAmMagnetic)
         {
             //Debug.Log("IEP");
             

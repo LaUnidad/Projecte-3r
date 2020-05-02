@@ -15,7 +15,7 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
     public KeyCode m_JumpCode = KeyCode.Space;
     public int m_Absorb = 0;
     public int m_Shoot = 1;
-    public float JetpackForce;
+    public float JumpForce;
     public float Power;
 
     public float WastePowerVelocityABSORB;

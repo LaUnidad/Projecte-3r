@@ -153,7 +153,7 @@ public class Aspiradora : MonoBehaviour
     {
         if(other.gameObject.tag == "AspirableObject" && Player.GetComponent<HippiCharacterController>().Absorving == true)
         {
-            if(other.gameObject.GetComponent<AspirableObject>().ICantBeAbsorved == false)
+            if(other.gameObject.GetComponent<AspirableObject>().IAmMagnetic == false)
             {
                 //Debug.Log("ASPIRADO");
                 RemoveObjects(other.gameObject);

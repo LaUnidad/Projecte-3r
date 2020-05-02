@@ -20,28 +20,10 @@ public class AreaColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeColor();
-        Debug.Log("I KILL ->"+SumDeaths()+ "  of " + Area1Obj.Length);
+        
     }
-    public void ChangeColor()
-    {
-       if(NumOfDeads >= Area1Obj.Length)
-       {
-            KillZone = true;
-       }   
-    }
-    public float SumDeaths()
-    {
-        foreach(GameObject obj in Area1Obj)
-        {
-            if(obj.GetComponent<TreeColor>().ImDeath == true && obj.GetComponent<TreeColor>().OnList == false)
-            {
-                NumOfDeads += 1;
-                obj.GetComponent<TreeColor>().OnList = true;
-            }
-        }
-        return NumOfDeads;    
-    }
+    
+    
    
 
 }
