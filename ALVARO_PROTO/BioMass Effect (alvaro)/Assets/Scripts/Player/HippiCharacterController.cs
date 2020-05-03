@@ -136,11 +136,11 @@ public class HippiCharacterController : MonoBehaviour
         if (Input.GetMouseButtonDown(blackboard.m_Shoot) && ICanAbsorbThis)
         { 
             //Debug.Log("SHOOOOOOOOOOOOOOOT");
-            Shootting = true;
+            //Shootting = true;
         } 
         if (Input.GetMouseButtonUp(blackboard.m_Shoot))
         {
-            Shootting = false;
+            //Shootting = false;
         }
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();

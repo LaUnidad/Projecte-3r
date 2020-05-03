@@ -164,7 +164,9 @@ public class Aspiradora : MonoBehaviour
             {
                 //Debug.Log("SE QUEDO PILLADO");
                 RemoveObjects(other.gameObject);
-                other.gameObject.transform.SetParent(this.gameObject.transform);
+                other.gameObject.GetComponent<AspirableObject>().PlayerForward = Player.gameObject.transform.forward;
+                Player.GetComponent<HippiCharacterController>().Shootting = true;
+                //other.gameObject.transform.SetParent(this.gameObject.transform);
                
             }    
         }

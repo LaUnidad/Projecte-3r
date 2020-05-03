@@ -32,7 +32,14 @@ public class AspirableObject : MonoBehaviour
 
     GameObject target;
 
-    public bool GoUp;
+    public float TimeToReturn;
+
+    public float timer;
+    public bool ImShooted;
+
+    public Vector3 PlayerForward;
+
+    
 
     
 
@@ -55,25 +62,42 @@ public class AspirableObject : MonoBehaviour
         Shooting();  
         if(IAmMagnetic)
         {   
-            Debug.Log("DIST-->"+DistanceToTarget()+" ON SIDE:"+IsOnSide());
+            Debug.Log("ABSORVING"+ImAbsorved+" ON SIDE:"+IsOnSide()+" SHOOTED:"+ImShooted);
         }
+        MagneticRockState();
+        TimeToBeShoot();
         
+    }
+    public void TimeToBeShoot()
+    {
+        if(ImShooted)
+        {
+            timer += 1 * Time.deltaTime;
+            
+            if(timer>=TimeToReturn)
+            {
+                ImShooted = false;
+                timer = 0;
+                Player.GetComponent<HippiCharacterController>().Shootting = false;
+            }
+            
+        }
     }
     public void Shooting()
     {
-        if(Enganchao == true)
-        {
-            this.transform.position = Gun.transform.position;
               
-            if(Player.GetComponent<HippiCharacterController>().Shootting)
-            {
-                //Debug.Log("BUUUUUUM");
-                //rgbd.useGravity = true;
-                this.transform.SetParent(null);
-                this.transform.position = transform.position + Player.transform.forward;
-                rgbd.velocity = Player.transform.forward * SpeedToShoot;
-            }   
-        }
+        if(Player.GetComponent<HippiCharacterController>().Shootting)
+        {
+            //Debug.Log("BUUUUUUM");
+            //rgbd.useGravity = true;
+            //this.transform.SetParent(null);
+            ImAbsorved = false;
+            this.transform.position = transform.position + PlayerForward * 0.1f;
+            rgbd.velocity = Player.transform.forward * SpeedToShoot;
+            ImShooted = true;
+                
+
+        }   
     }
     public void Absorbing()
     {
@@ -103,15 +127,23 @@ public class AspirableObject : MonoBehaviour
             else
             {
                 rgbd.useGravity = false;
-                 ImAbsorved = false;
+                ImAbsorved = false;
             } 
         }
     }
     public void MagneticRockState()
     {
-        if(!IsOnSide())
+        if(IAmMagnetic)
         {
-
+            Debug.Log("EI");
+            if(IsOnSide()==false && ImAbsorved == false && ImShooted == false)
+            {
+                Debug.Log("QUE PASA LOKOOO");
+                transform.LookAt(target.transform.position, transform.position + transform.forward);
+                this.transform.position = transform.position + transform.forward * 0.1f;
+                rgbd.velocity = Player.transform.forward * SpeedToShoot;
+                //Vector3.MoveTowards(this.transform.position, target.transform.position, 10* Time.deltaTime);
+            }
         }
     }
     public float DistanceToTarget()
