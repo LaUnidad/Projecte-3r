@@ -144,6 +144,12 @@ public class AspirableObject : MonoBehaviour
                 rgbd.velocity = Player.transform.forward * SpeedToShoot;
                 //Vector3.MoveTowards(this.transform.position, target.transform.position, 10* Time.deltaTime);
             }
+            else if(IsOnSide()== true && ImAbsorved == false && ImShooted == false)
+            {
+                transform.LookAt(target.transform.position, transform.position + transform.forward);
+                this.transform.position = transform.position + transform.forward * 0.1f;
+                rgbd.velocity = Player.transform.forward * SpeedToShoot;
+            }
         }
     }
     public float DistanceToTarget()
