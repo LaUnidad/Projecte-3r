@@ -327,6 +327,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -474,6 +475,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -877,6 +879,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -1352,6 +1355,36 @@ Transform:
   m_Father: {fileID: 839388842}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &80600911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80600912}
+  m_Layer: 0
+  m_Name: target
+  m_TagString: MagneticTarget
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80600912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80600911}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.9, y: 5.012, z: 2.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 787513786}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &81310401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1793,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -2308,6 +2342,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -2455,6 +2490,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -2773,6 +2809,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -3139,6 +3176,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -3737,6 +3775,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -5103,6 +5142,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -5560,6 +5600,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -5851,6 +5892,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -5998,6 +6040,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -6382,6 +6425,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -6513,6 +6557,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -6699,6 +6744,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -6880,6 +6926,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -7182,6 +7229,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -7329,6 +7377,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -7478,6 +7527,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -7824,7 +7874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 787513786}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &709500301
 Rigidbody:
@@ -7837,7 +7887,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -7860,6 +7910,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.1
   SpeedToAbsorb: 2
   SpeedToShoot: 10
+  MinDistToGeiser: 2
   Biomass: 0
   distance: 0
   ImAbsorved: 0
@@ -8295,6 +8346,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -8658,6 +8710,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -8791,6 +8844,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -8954,6 +9008,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -9201,6 +9256,7 @@ Transform:
   - {fileID: 899652897}
   - {fileID: 1573236552}
   - {fileID: 303806639}
+  - {fileID: 80600912}
   - {fileID: 709500300}
   m_Father: {fileID: 739678565}
   m_RootOrder: 0
@@ -9272,6 +9328,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -9421,6 +9478,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -9552,6 +9610,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -9997,6 +10056,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -10128,6 +10188,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -10277,6 +10338,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -10515,6 +10577,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -10850,6 +10913,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -11461,6 +11525,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -11876,6 +11941,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -12041,6 +12107,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -12281,6 +12348,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.2
   SpeedToAbsorb: 3
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 20
   distance: 0
   ImAbsorved: 0
@@ -12412,6 +12480,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -12620,6 +12689,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -13097,6 +13167,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -13246,6 +13317,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -13599,6 +13671,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -14079,6 +14152,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -14569,6 +14643,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -15046,6 +15121,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -15286,6 +15362,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -15417,6 +15494,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -15566,6 +15644,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -15918,6 +15997,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -16158,6 +16238,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -16538,6 +16619,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -16954,6 +17036,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -17085,6 +17168,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -17341,6 +17425,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -17889,6 +17974,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -18538,6 +18624,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -18685,6 +18772,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -19805,6 +19893,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -20061,6 +20150,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -20492,6 +20582,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -20625,6 +20716,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
@@ -20756,6 +20848,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
@@ -21185,6 +21278,7 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0

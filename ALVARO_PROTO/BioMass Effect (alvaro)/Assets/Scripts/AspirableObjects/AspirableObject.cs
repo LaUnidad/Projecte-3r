@@ -13,6 +13,8 @@ public class AspirableObject : MonoBehaviour
     public float SpeedToAbsorb;
     public float SpeedToShoot;
 
+    public float MinDistToGeiser;
+
     Rigidbody rgbd;
     private GameObject Player;
 
@@ -28,12 +30,20 @@ public class AspirableObject : MonoBehaviour
 
     public bool Enganchao;
 
+    GameObject target;
+
+    public bool GoUp;
+
+    
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Gun = GameObject.FindGameObjectWithTag("Gun");
+        FindYourTarget();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
+       
 
     }
     void Update()
@@ -43,6 +53,11 @@ public class AspirableObject : MonoBehaviour
            Absorbing();
         }  
         Shooting();  
+        if(IAmMagnetic)
+        {   
+            Debug.Log("DIST-->"+DistanceToTarget()+" ON SIDE:"+IsOnSide());
+        }
+        
     }
     public void Shooting()
     {
@@ -89,10 +104,42 @@ public class AspirableObject : MonoBehaviour
             {
                 rgbd.useGravity = false;
                  ImAbsorved = false;
-            }
-           
-            
-           
+            } 
+        }
+    }
+    public void MagneticRockState()
+    {
+        if(!IsOnSide())
+        {
+
+        }
+    }
+    public float DistanceToTarget()
+    {
+       float dist = Vector3.Distance(this.transform.position, target.transform.position);
+       return dist;
+    }
+    public bool IsOnSide()
+    {
+        if(DistanceToTarget()>= MinDistToGeiser)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void FindYourTarget()
+    {
+        if(IAmMagnetic)
+        {
+            target = GameObject.FindGameObjectWithTag("MagneticTarget");
+        }
+        else
+        {
+            target = null;
         }
     }
     void OnCollisionEnter(Collision other) 
@@ -106,6 +153,9 @@ public class AspirableObject : MonoBehaviour
             Enganchao = true;
         }
     }
+
+
+    
     void OnCollisionExit(Collision other) 
     {
         if(other.gameObject.tag == "Gun")
