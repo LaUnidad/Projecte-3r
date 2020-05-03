@@ -13,6 +13,8 @@ public class AspirableObject : MonoBehaviour
     public float SpeedToAbsorb;
     public float SpeedToShoot;
 
+    public float MinDistToGeiser;
+
     Rigidbody rgbd;
     private GameObject Player;
 
@@ -28,12 +30,27 @@ public class AspirableObject : MonoBehaviour
 
     public bool Enganchao;
 
+    GameObject target;
+
+    public float TimeToReturn;
+
+    public float timer;
+    public bool ImShooted;
+
+    public Vector3 PlayerForward;
+
+    
+
+    
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Gun = GameObject.FindGameObjectWithTag("Gun");
+        FindYourTarget();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
+       
 
     }
     void Update()
@@ -43,22 +60,44 @@ public class AspirableObject : MonoBehaviour
            Absorbing();
         }  
         Shooting();  
+        if(IAmMagnetic)
+        {   
+            Debug.Log("ABSORVING"+ImAbsorved+" ON SIDE:"+IsOnSide()+" SHOOTED:"+ImShooted);
+        }
+        MagneticRockState();
+        TimeToBeShoot();
+        
+    }
+    public void TimeToBeShoot()
+    {
+        if(ImShooted)
+        {
+            timer += 1 * Time.deltaTime;
+            
+            if(timer>=TimeToReturn)
+            {
+                ImShooted = false;
+                timer = 0;
+                Player.GetComponent<HippiCharacterController>().Shootting = false;
+            }
+            
+        }
     }
     public void Shooting()
     {
-        if(Enganchao == true)
-        {
-            this.transform.position = Gun.transform.position;
               
-            if(Player.GetComponent<HippiCharacterController>().Shootting)
-            {
-                //Debug.Log("BUUUUUUM");
-                //rgbd.useGravity = true;
-                this.transform.SetParent(null);
-                this.transform.position = transform.position + Player.transform.forward;
-                rgbd.velocity = Player.transform.forward * SpeedToShoot;
-            }   
-        }
+        if(Player.GetComponent<HippiCharacterController>().Shootting)
+        {
+            //Debug.Log("BUUUUUUM");
+            //rgbd.useGravity = true;
+            //this.transform.SetParent(null);
+            ImAbsorved = false;
+            this.transform.position = transform.position + PlayerForward * 0.1f;
+            rgbd.velocity = Player.transform.forward * SpeedToShoot;
+            ImShooted = true;
+                
+
+        }   
     }
     public void Absorbing()
     {
@@ -88,11 +127,57 @@ public class AspirableObject : MonoBehaviour
             else
             {
                 rgbd.useGravity = false;
-                 ImAbsorved = false;
+                ImAbsorved = false;
+            } 
+        }
+    }
+    public void MagneticRockState()
+    {
+        if(IAmMagnetic)
+        {
+            Debug.Log("EI");
+            if(IsOnSide()==false && ImAbsorved == false && ImShooted == false)
+            {
+                Debug.Log("QUE PASA LOKOOO");
+                transform.LookAt(target.transform.position, transform.position + transform.forward);
+                this.transform.position = transform.position + transform.forward * 0.1f;
+                rgbd.velocity = Player.transform.forward * SpeedToShoot;
+                //Vector3.MoveTowards(this.transform.position, target.transform.position, 10* Time.deltaTime);
             }
-           
-            
-           
+            else if(IsOnSide()== true && ImAbsorved == false && ImShooted == false)
+            {
+                transform.LookAt(target.transform.position, transform.position + transform.forward);
+                this.transform.position = transform.position + transform.forward * 0.1f;
+                rgbd.velocity = Player.transform.forward * SpeedToShoot;
+            }
+        }
+    }
+    public float DistanceToTarget()
+    {
+       float dist = Vector3.Distance(this.transform.position, target.transform.position);
+       return dist;
+    }
+    public bool IsOnSide()
+    {
+        if(DistanceToTarget()>= MinDistToGeiser)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void FindYourTarget()
+    {
+        if(IAmMagnetic)
+        {
+            target = GameObject.FindGameObjectWithTag("MagneticTarget");
+        }
+        else
+        {
+            target = null;
         }
     }
     void OnCollisionEnter(Collision other) 
@@ -106,6 +191,9 @@ public class AspirableObject : MonoBehaviour
             Enganchao = true;
         }
     }
+
+
+    
     void OnCollisionExit(Collision other) 
     {
         if(other.gameObject.tag == "Gun")

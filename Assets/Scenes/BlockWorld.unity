@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -434,10 +434,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &9704424
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -955,10 +960,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &37340888
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1358,10 +1368,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &55854608
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2546,10 +2561,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &105651606
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2695,10 +2715,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &109813196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3820,10 +3845,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &190296477
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3967,10 +3997,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &195771381
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4524,10 +4559,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &239952801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4620,7 +4660,7 @@ Transform:
   m_LocalScale: {x: 20.399994, y: 13.700001, z: 19.982996}
   m_Children: []
   m_Father: {fileID: 2041846752}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 179.9, y: -27.48, z: -86.93799}
 --- !u!114 &246407018
 MonoBehaviour:
@@ -5235,10 +5275,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &272959677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5633,10 +5678,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &296248280
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5887,10 +5937,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &298986738
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6266,10 +6321,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &333591368
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7869,10 +7929,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &422163985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8060,10 +8125,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &426938976
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8612,10 +8682,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &496953733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8759,10 +8834,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &509345311
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9013,10 +9093,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &524703901
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9160,10 +9245,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &529120353
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9779,10 +9869,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &548626212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9910,10 +10005,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &554475070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10517,10 +10617,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &576578542
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11312,10 +11417,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &625113357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11868,10 +11978,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &663847310
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12047,10 +12162,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &667954283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12324,10 +12444,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &684223457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13059,10 +13184,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.1
   SpeedToAbsorb: 2
   SpeedToShoot: 10
+  MinDistToGeiser: 0
   Biomass: 0
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &709500303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13610,10 +13740,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &749598049
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13866,10 +14001,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &765193500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13999,10 +14139,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &765390117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14162,10 +14307,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &778801642
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14864,10 +15014,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &811034426
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15227,10 +15382,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &818269361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15358,10 +15518,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &827287982
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15776,10 +15941,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &856546664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15907,10 +16077,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &857303208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16056,10 +16231,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &864666026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16294,10 +16474,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &871250088
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17206,10 +17391,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &925397626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17993,10 +18183,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &966780725
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18608,10 +18803,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &984301914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18704,7 +18904,7 @@ Transform:
   m_LocalScale: {x: 19.983, y: 13.86, z: 19.982996}
   m_Children: []
   m_Father: {fileID: 2041846752}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 179.9, y: -27.48, z: -86.93799}
 --- !u!114 &994081348
 MonoBehaviour:
@@ -19094,10 +19294,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1011409487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19369,10 +19574,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1035773427
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19732,10 +19942,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.2
   SpeedToAbsorb: 3
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 20
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1050088204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19863,10 +20078,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1059424545
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20071,10 +20291,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1064249451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20623,10 +20848,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1099836835
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20802,10 +21032,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1123755150
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20949,10 +21184,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1134484729
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21261,10 +21501,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1148605394
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21624,10 +21869,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1158348572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21794,113 +22044,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160623254}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1167883459
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1167883460}
-  - component: {fileID: 1167883464}
-  - component: {fileID: 1167883463}
-  - component: {fileID: 1167883462}
-  - component: {fileID: 1167883461}
-  m_Layer: 0
-  m_Name: RAMPA (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1167883460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167883459}
-  m_LocalRotation: {x: 0.7051208, y: 0.66812426, z: 0.17179342, w: 0.1640175}
-  m_LocalPosition: {x: 22.320005, y: 2.63, z: 53.760014}
-  m_LocalScale: {x: 22.899996, y: 13.700001, z: 19.982996}
-  m_Children: []
-  m_Father: {fileID: 2041846752}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 179.9, y: -27.48, z: -86.93799}
---- !u!114 &1167883461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167883459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc5f7d0b4584ae4493ca6b4f7865034, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Death: {fileID: 2100000, guid: dc48ad1ecacf5bb419326e7a2873f9f3, type: 2}
---- !u!65 &1167883462
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167883459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1167883463
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167883459}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3c79f9156f2b9f24789e942d943eed79, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1167883464
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167883459}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1168700075
 GameObject:
@@ -22626,10 +22769,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1195241899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23427,10 +23575,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1216048601
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23718,10 +23871,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1248244796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23972,10 +24130,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1261632511
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25039,10 +25202,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1310882816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26105,10 +26273,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1391956934
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26489,10 +26662,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1415637815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26729,10 +26907,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1446590421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26860,10 +27043,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1448529633
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27330,10 +27518,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1454589385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27626,10 +27819,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1503213213
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27898,10 +28096,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1516666972
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28186,10 +28389,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1528547990
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28426,10 +28634,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1573720895
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28806,10 +29019,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1614309516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29222,10 +29440,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1630602733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29353,10 +29576,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1635604143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29716,10 +29944,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1647156501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30371,10 +30604,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1673785705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31020,10 +31258,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1740656757
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31204,10 +31447,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1748470994
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31907,10 +32155,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1791659359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32933,10 +33186,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1867964965
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33189,10 +33447,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1879601338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33727,10 +33990,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1942622496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33860,10 +34128,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 10
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!65 &1946938652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33991,10 +34264,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &1959244362
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34248,10 +34526,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &2001708943
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34498,7 +34781,6 @@ Transform:
   - {fileID: 632288215}
   - {fileID: 1250894244}
   - {fileID: 479706167}
-  - {fileID: 1167883460}
   - {fileID: 994081347}
   - {fileID: 246407017}
   m_Father: {fileID: 715057576}
@@ -34818,10 +35100,15 @@ MonoBehaviour:
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 4
   SpeedToShoot: 0
+  MinDistToGeiser: 0
   Biomass: 30
   distance: 0
   ImAbsorved: 0
   Enganchao: 0
+  TimeToReturn: 0
+  timer: 0
+  ImShooted: 0
+  PlayerForward: {x: 0, y: 0, z: 0}
 --- !u!54 &2065064234
 Rigidbody:
   m_ObjectHideFlags: 0
