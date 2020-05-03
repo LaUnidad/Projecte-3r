@@ -39,6 +39,9 @@ public class AspirableObject : MonoBehaviour
 
     public Vector3 PlayerForward;
 
+    GameObject AreaKiller;
+
+    
     
 
     
@@ -47,6 +50,7 @@ public class AspirableObject : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Gun = GameObject.FindGameObjectWithTag("Gun");
+        AreaKiller = GameObject.FindGameObjectWithTag("AreaKiller");
         FindYourTarget();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
@@ -135,21 +139,24 @@ public class AspirableObject : MonoBehaviour
     {
         if(IAmMagnetic)
         {
-            Debug.Log("EI");
-            if(IsOnSide()==false && ImAbsorved == false && ImShooted == false)
+            if(AreaKiller.GetComponent<AreaColor>().KillZone == true)
             {
-                Debug.Log("QUE PASA LOKOOO");
-                transform.LookAt(target.transform.position, transform.position + transform.forward);
-                this.transform.position = transform.position + transform.forward * 0.1f;
-                rgbd.velocity = Player.transform.forward * SpeedToShoot;
-                //Vector3.MoveTowards(this.transform.position, target.transform.position, 10* Time.deltaTime);
+                if(IsOnSide()==false && ImAbsorved == false && ImShooted == false)
+                {
+                    Debug.Log("QUE PASA LOKOOO");
+                    transform.LookAt(target.transform.position, transform.position + transform.forward);
+                    this.transform.position = transform.position + transform.forward * 0.1f;
+                    rgbd.velocity = Player.transform.forward * SpeedToShoot;
+                    //Vector3.MoveTowards(this.transform.position, target.transform.position, 10* Time.deltaTime);
+                }
+                else if(IsOnSide()== true && ImAbsorved == false && ImShooted == false)
+                {
+                    transform.LookAt(target.transform.position, transform.position + transform.forward);
+                    this.transform.position = transform.position + transform.forward * 0.1f;
+                    rgbd.velocity = Player.transform.forward * SpeedToShoot;
+                }
             }
-            else if(IsOnSide()== true && ImAbsorved == false && ImShooted == false)
-            {
-                transform.LookAt(target.transform.position, transform.position + transform.forward);
-                this.transform.position = transform.position + transform.forward * 0.1f;
-                rgbd.velocity = Player.transform.forward * SpeedToShoot;
-            }
+            
         }
     }
     public float DistanceToTarget()
@@ -202,6 +209,4 @@ public class AspirableObject : MonoBehaviour
             Enganchao = false;
         }
     }
-    
-   
 }
