@@ -79,12 +79,12 @@ public class HippiCharacterController : MonoBehaviour
        /////////////////////////////////////SALTO/////////////////////////////////////////////////////
        if(Input.GetKeyDown(blackboard.m_JumpCode))
        {   
-           VerticalSpeed = blackboard.JumpForce;
+           VerticalSpeed = blackboard.JumpForce/2f;
            l_Movment.y = VerticalSpeed;
        }
        else
        { 
-           VerticalSpeed -= blackboard.Gravity * Time.deltaTime;
+           VerticalSpeed -= (blackboard.Gravity/3.5f) * Time.deltaTime;
            l_Movment.y = VerticalSpeed;
        }
       
@@ -165,7 +165,7 @@ public class HippiCharacterController : MonoBehaviour
         }
         else
         {
-            VerticalSpeed -= blackboard.Gravity * Time.deltaTime;
+            VerticalSpeed -= (blackboard.Gravity/3.5f) * Time.deltaTime;
             l_Movment.y = VerticalSpeed;
         }
         //DESLIZAMIENTO//
