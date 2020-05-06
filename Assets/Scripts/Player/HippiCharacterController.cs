@@ -77,7 +77,7 @@ public class HippiCharacterController : MonoBehaviour
        /////////////////////////////////////GRAVEDAD//////////////////////////////////////////////////
        SetGravity();
        /////////////////////////////////////SALTO/////////////////////////////////////////////////////
-       if(Input.GetKeyDown(blackboard.m_JumpCode))
+       if(Input.GetKeyDown(blackboard.m_JumpCode) && m_CharacterController.isGrounded)
        {   
            VerticalSpeed = blackboard.JumpForce/2f;
            l_Movment.y = VerticalSpeed;
