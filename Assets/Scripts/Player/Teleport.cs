@@ -54,7 +54,7 @@ public class Teleport : MonoBehaviour
         {
 
         }
-        if (other.tag == "Teleport2") ;
+        if (other.tag == "Teleport2") 
         {
             goingTo2 = false;
         }

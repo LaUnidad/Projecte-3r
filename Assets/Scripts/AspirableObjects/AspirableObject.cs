@@ -81,8 +81,8 @@ public class AspirableObject : MonoBehaviour
         {
             if(!IAmMagnetic)
             {
-                rgbd.useGravity = false;
-               // rgbd.useGravity = true;
+                
+                rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
             }
