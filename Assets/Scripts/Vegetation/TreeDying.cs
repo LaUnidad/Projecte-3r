@@ -22,7 +22,7 @@ public class TreeDying : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(WichIsMyTreeMaster().GetComponent<DeathTree>().Death);
+        //Debug.Log(WichIsMyTreeMaster().GetComponent<DeathTree>().Death);
         
         if(WichIsMyTreeMaster().GetComponent<DeathTree>().Death)
         {

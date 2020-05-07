@@ -12,7 +12,6 @@ public class Aspiradora : MonoBehaviour
     int AspirableObjectsSize;
     float minDist;
     GameObject MinDistObject;
-
     float Force;
     public GameObject NewLookAtObject;
     public float ListObjects;
@@ -162,6 +161,7 @@ public class Aspiradora : MonoBehaviour
             }
             else
             {
+                other.gameObject.GetComponent<AspirableObject>().ImAbsorved = false;
                 other.gameObject.GetComponent<AspirableObject>().direction = Player.gameObject.transform.forward;
                 other.gameObject.GetComponent<AspirableObject>().Shooot = true;
                 RemoveObjects(other.gameObject);

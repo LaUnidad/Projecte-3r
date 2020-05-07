@@ -6,7 +6,7 @@ using UnityEngine;
 public class AspirableObject : MonoBehaviour
 {
     public bool IAmMagnetic;
-    public bool IAmAsborved;
+
     public bool IAmInList;
     public float ForceToAbsorb;
     public float SpeedToAbsorb;
@@ -52,9 +52,15 @@ public class AspirableObject : MonoBehaviour
         {
            Absorbing();
         }  
-
-        Shooting();
-        BeingShooted();  
+        
+        if(IAmMagnetic)
+        {
+            //Debug.Log("OnSide->"+ImOnSide()+"  Absorving->"+ImAbsorved+"  Shooted->"+Shooted);
+            Shooting();
+            BeingShooted(); 
+            MagneticRockState(); 
+        }
+        
     }
     public void Shooting()
     {      
@@ -71,10 +77,14 @@ public class AspirableObject : MonoBehaviour
         if(Shooted)
         {
             timer += 1* Time.deltaTime;
-            if(timer>= TimeToReturn)
-            {
+            
+
+            if(timer >= TimeToReturn)
+            { 
+                
                 Shooot = false;
                 Shooted = false;
+               
             }
         }
     }
@@ -97,27 +107,33 @@ public class AspirableObject : MonoBehaviour
         }
         else
         {
+            ImAbsorved = false; 
             if(!IAmMagnetic)
             {
-                
                 rgbd.useGravity = true;
-                this.transform.localScale = OriginalScale;
-                ImAbsorved = false;
+                this.transform.localScale = OriginalScale;    
             }
-            else
-            {
-                rgbd.useGravity = false;
-                ImAbsorved = false;
-            }  
         }
     }
     public void MagneticRockState()
     {
         if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {
-            if(!ImOnSide() && !ImAbsorved && !Shooted)
+            if(ImOnSide()==false && ImAbsorved == false && Shooted == false)
             {
-                //this.transform.LookAt(MyTarget)
+                Debug.Log("TOT FALÇ");
+                timer = 0;
+                Shooot = false;
+                direction = new Vector3(0,0,0);
+                transform.LookAt(MyTarget.transform.position, transform.position + transform.forward);
+                this.transform.position = transform.position + transform.forward * 0.1f;
+                rgbd.velocity = Player.transform.forward * SpeedToShoot;
+                //Vector3.MoveTowards(this.transform.position, target.transform.position, 10* Time.deltaTime);
+                
+            }
+            else if(ImOnSide()== true && ImAbsorved == false && Shooted == false)
+            {
+                this.transform.position = MyTarget.transform.position;
             }
         }
     }
@@ -126,7 +142,8 @@ public class AspirableObject : MonoBehaviour
     {
         float dist;
         dist = Vector3.Distance(MyTarget.transform.position, this.transform.position);
-        if(dist>3)
+        //Debug.Log(dist);
+        if(dist >= 1)
         {
             return false;
         }
