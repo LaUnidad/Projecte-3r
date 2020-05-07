@@ -30,8 +30,6 @@ public class HippiCharacterController : MonoBehaviour
 
     public bool StopLook;
 
-
-
     private float ActualSpeed;
     private Vector3 hitNormal;
 

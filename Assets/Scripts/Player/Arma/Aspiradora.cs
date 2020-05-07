@@ -161,9 +161,8 @@ public class Aspiradora : MonoBehaviour
             }
             else
             {
-                other.gameObject.GetComponent<AspirableObject>().ImAbsorved = false;
-                other.gameObject.GetComponent<AspirableObject>().direction = Player.gameObject.transform.forward;
-                other.gameObject.GetComponent<AspirableObject>().Shooot = true;
+                other.gameObject.GetComponent<AspirableObject>().PlayerForward = Player.gameObject.transform.forward;
+                other.gameObject.GetComponent<AspirableObject>().Shooting();
                 RemoveObjects(other.gameObject);
                 
                
