@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class AspirableObject : MonoBehaviour
 {
-
     public bool IAmMagnetic;
     public bool IAmAsborved;
     public bool IAmInList;
@@ -28,6 +27,16 @@ public class AspirableObject : MonoBehaviour
 
     public bool Shooot;
 
+    public Vector3 direction;
+
+    public GameObject MyTarget;
+
+    public float TimeToReturn;
+
+    float timer;
+
+    bool Shooted;
+
 
     void Start()
     {
@@ -44,16 +53,30 @@ public class AspirableObject : MonoBehaviour
            Absorbing();
         }  
 
-        Shooting();  
+        Shooting();
+        BeingShooted();  
     }
     public void Shooting()
     {      
         if(Shooot)
         {     
-            this.transform.SetParent(null);
-            this.transform.position = transform.position + Player.transform.forward * Time.deltaTime;
-            rgbd.velocity = Player.transform.forward * SpeedToShoot;
+            this.transform.position = transform.position + direction * Time.deltaTime;
+            rgbd.velocity = direction * SpeedToShoot;
+            Shooted = true;
         }     
+    }
+
+    public void BeingShooted()
+    {
+        if(Shooted)
+        {
+            timer += 1* Time.deltaTime;
+            if(timer>= TimeToReturn)
+            {
+                Shooot = false;
+                Shooted = false;
+            }
+        }
     }
     public void Absorbing()
     {
@@ -84,13 +107,35 @@ public class AspirableObject : MonoBehaviour
             else
             {
                 rgbd.useGravity = false;
-                 ImAbsorved = false;
-            }
-           
-            
-           
+                ImAbsorved = false;
+            }  
         }
     }
+    public void MagneticRockState()
+    {
+        if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
+        {
+            if(!ImOnSide() && !ImAbsorved && !Shooted)
+            {
+                //this.transform.LookAt(MyTarget)
+            }
+        }
+    }
+
+    public bool ImOnSide()
+    {
+        float dist;
+        dist = Vector3.Distance(MyTarget.transform.position, this.transform.position);
+        if(dist>3)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
     void OnCollisionEnter(Collision other) 
     {
         if(other.gameObject.tag == "Gun" && IAmMagnetic)

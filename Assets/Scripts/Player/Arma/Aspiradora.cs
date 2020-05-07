@@ -162,6 +162,7 @@ public class Aspiradora : MonoBehaviour
             }
             else
             {
+                other.gameObject.GetComponent<AspirableObject>().direction = Player.gameObject.transform.forward;
                 other.gameObject.GetComponent<AspirableObject>().Shooot = true;
                 RemoveObjects(other.gameObject);
                 

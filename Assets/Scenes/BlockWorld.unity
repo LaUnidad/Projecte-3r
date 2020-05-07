@@ -705,6 +705,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &35238422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1474,6 +1477,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &79942759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1976,6 +1982,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &109673211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2065,6 +2074,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &109813196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2226,6 +2238,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &131595755
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2373,6 +2388,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &147487276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2952,6 +2970,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &165876354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3676,6 +3697,36 @@ Transform:
   m_Father: {fileID: 310367094}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &231988451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 231988452}
+  m_Layer: 0
+  m_Name: TARGET FOR MAGNETIC
+  m_TagString: MagneticTarget
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &231988452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231988451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0.87, z: 0.68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1121116613}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &239952797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3749,6 +3800,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &239952801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4204,6 +4258,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &259108116
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4484,6 +4541,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &272959677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5259,6 +5319,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &325609645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5406,6 +5469,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &326203309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5553,6 +5619,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &346831831
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5793,6 +5862,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &353944804
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6300,6 +6372,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &368519556
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6594,6 +6669,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &422163985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7198,6 +7276,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &447036551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7714,6 +7795,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &500628382
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8276,6 +8360,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &536758822
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8448,6 +8535,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &547995243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8641,6 +8731,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &548043747
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8730,6 +8823,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &548626212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8861,6 +8957,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &549314102
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9440,6 +9539,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &579960315
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10314,6 +10416,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &625113357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10809,6 +10914,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &664729662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11032,6 +11140,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &684223457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11854,6 +11965,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &739430166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12242,6 +12356,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &755840371
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12389,6 +12506,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &756959188
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12646,6 +12766,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &765193500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12779,6 +12902,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &765390117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12910,6 +13036,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &765506141
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13262,6 +13391,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &786377815
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13483,6 +13615,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &787633572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13630,6 +13765,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &791058730
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14327,6 +14465,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &818269361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14680,6 +14821,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &856546664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14850,13 +14994,16 @@ MonoBehaviour:
   IAmMagnetic: 1
   IAmAsborved: 0
   IAmInList: 0
-  ForceToAbsorb: 0.1
-  SpeedToAbsorb: 2
-  SpeedToShoot: 1
+  ForceToAbsorb: 0.05
+  SpeedToAbsorb: 1
+  SpeedToShoot: 15
   Biomass: 0
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &857345659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14946,6 +15093,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &864666026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15430,6 +15580,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &880542255
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15688,6 +15841,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &884031774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16160,6 +16316,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &925397626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16399,6 +16558,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &933240913
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16643,6 +16805,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &957339341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17500,6 +17665,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &984301914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17957,6 +18125,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1011409487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18263,6 +18434,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1034408369
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18592,6 +18766,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1038218108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18907,6 +19084,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1064249451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24180,6 +24360,7 @@ Transform:
   m_Children:
   - {fileID: 1376785967}
   - {fileID: 857345654}
+  - {fileID: 231988452}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24435,6 +24616,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1155942231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24692,6 +24876,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1158348572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25539,6 +25726,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1195241899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26142,6 +26332,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1219182678
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26434,6 +26627,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1237607728
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26581,6 +26777,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1247001894
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26872,6 +27071,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1260289345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27560,6 +27762,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1310882816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27799,6 +28004,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1312415649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28194,6 +28402,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1331480217
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28880,6 +29091,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1382184124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29323,6 +29537,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1415637815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29454,6 +29671,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1424766495
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29601,6 +29821,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1427792999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29748,6 +29971,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1432999255
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30005,6 +30231,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1446590421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30136,6 +30365,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1449169912
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30609,6 +30841,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1454589385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30740,6 +30975,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1460928760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31218,6 +31456,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1552441077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31365,6 +31606,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1577211213
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31832,6 +32076,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1628446163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31981,6 +32228,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1630602733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32441,6 +32691,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1647156501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32572,6 +32825,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1664844198
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32955,6 +33211,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1673785705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38900,6 +39159,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1801175719
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -39438,6 +39700,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1846451348
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -39878,6 +40143,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1879601338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40148,6 +40416,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1912700327
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40449,6 +40720,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1925428779
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40663,6 +40937,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1942622496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40794,6 +41071,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1942776290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40941,6 +41221,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1943356535
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41090,6 +41373,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!65 &1946938652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41264,6 +41550,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &1960788790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41834,6 +42123,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &2026489693
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41981,6 +42273,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &2029030883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42714,6 +43009,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &2092142819
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42861,6 +43159,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &2093885381
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43162,6 +43463,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &2098099956
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43326,6 +43630,9 @@ MonoBehaviour:
   distance: 0
   ImAbsorved: 0
   Shooot: 0
+  direction: {x: 0, y: 0, z: 0}
+  MyTarget: {fileID: 0}
+  TimeToReturn: 0
 --- !u!54 &2111114646
 Rigidbody:
   m_ObjectHideFlags: 0
