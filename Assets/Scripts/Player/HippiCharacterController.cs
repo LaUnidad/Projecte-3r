@@ -134,7 +134,7 @@ public class HippiCharacterController : MonoBehaviour
         UsePower();
         //Debug.Log(IsPackageFull());
     }
-
+    
     void CamDirection() 
     {
         camForward = cam.transform.forward;
@@ -144,6 +144,7 @@ public class HippiCharacterController : MonoBehaviour
         camForward = camForward.normalized;
         CamRight = CamRight.normalized;
     }
+    
     void SetGravity()
     {
         if(m_CharacterController.isGrounded)
