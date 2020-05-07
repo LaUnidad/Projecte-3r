@@ -8,17 +8,17 @@ public class TerrainMaterial : MonoBehaviour
     MeshRenderer meshR;
     public Material Death;
 
-     GameObject AreaKiller;
+    public bool Die;
     void Start()
     {
         meshR = GetComponent<MeshRenderer>();
-        AreaKiller = GameObject.FindGameObjectWithTag("AreaKiller");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(AreaKiller.GetComponent<AreaColor>().KillZone == true)
+        if(Die == true)
         {
             meshR.material = Death;
         }

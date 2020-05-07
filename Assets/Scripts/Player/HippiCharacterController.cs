@@ -132,16 +132,6 @@ public class HippiCharacterController : MonoBehaviour
             StopLook = false;
             //Debug.Log("EO");
         }
-       ///////////////////////////////////SHOOT/////////////////////////////////////////////////////////////
-        if (Input.GetMouseButtonDown(blackboard.m_Shoot) && ICanAbsorbThis)
-        { 
-            //Debug.Log("SHOOOOOOOOOOOOOOOT");
-            Shootting = true;
-        } 
-        if (Input.GetMouseButtonUp(blackboard.m_Shoot))
-        {
-            Shootting = false;
-        }
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
         //Debug.Log(IsPackageFull());

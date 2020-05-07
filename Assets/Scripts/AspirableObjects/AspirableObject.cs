@@ -26,7 +26,8 @@ public class AspirableObject : MonoBehaviour
 
     public bool ImAbsorved;
 
-    public bool Enganchao;
+    public bool Shooot;
+
 
     void Start()
     {
@@ -42,23 +43,17 @@ public class AspirableObject : MonoBehaviour
         {
            Absorbing();
         }  
+
         Shooting();  
     }
     public void Shooting()
-    {
-        if(Enganchao == true)
-        {
-            this.transform.position = Gun.transform.position;
-              
-            if(Player.GetComponent<HippiCharacterController>().Shootting)
-            {
-                //Debug.Log("BUUUUUUM");
-                //rgbd.useGravity = true;
-                this.transform.SetParent(null);
-                this.transform.position = transform.position + Player.transform.forward;
-                rgbd.velocity = Player.transform.forward * SpeedToShoot;
-            }   
-        }
+    {      
+        if(Shooot)
+        {     
+            this.transform.SetParent(null);
+            this.transform.position = transform.position + Player.transform.forward * Time.deltaTime;
+            rgbd.velocity = Player.transform.forward * SpeedToShoot;
+        }     
     }
     public void Absorbing()
     {
@@ -104,7 +99,7 @@ public class AspirableObject : MonoBehaviour
             
             rgbd.useGravity = false;
             Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = true;
-            Enganchao = true;
+            
         }
     }
     void OnCollisionExit(Collision other) 
@@ -112,7 +107,7 @@ public class AspirableObject : MonoBehaviour
         if(other.gameObject.tag == "Gun")
         {
             Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = false;
-            Enganchao = false;
+            
         }
     }
     

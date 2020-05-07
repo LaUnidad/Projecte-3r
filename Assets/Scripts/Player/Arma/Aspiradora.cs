@@ -162,9 +162,9 @@ public class Aspiradora : MonoBehaviour
             }
             else
             {
-                //Debug.Log("SE QUEDO PILLADO");
+                other.gameObject.GetComponent<AspirableObject>().Shooot = true;
                 RemoveObjects(other.gameObject);
-                other.gameObject.transform.SetParent(this.gameObject.transform);
+                
                
             }    
         }
