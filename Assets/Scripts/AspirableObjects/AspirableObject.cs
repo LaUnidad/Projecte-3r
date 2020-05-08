@@ -64,7 +64,7 @@ public class AspirableObject : MonoBehaviour
         if(IAmMagnetic )
         {   
 
-           Debug.Log(IsOnSide()+ " and " + DistanceToTarget());
+            //Debug.Log(IsOnSide()+ " and " + DistanceToTarget());
             //Debug.Log("ABSORVING"+ImAbsorved+" ON SIDE:"+IsOnSide()+" SHOOTED:"+ImShooted);
         }
         StayHome();
@@ -72,7 +72,10 @@ public class AspirableObject : MonoBehaviour
     }
     public void StopBeingShooted()
     {
-        rgbd.velocity = -(PlayerForward * SpeedToShoot);
+        //rgbd.velocity = -(PlayerForward * SpeedToShoot);
+        transform.LookAt(target.transform.position, transform.position + transform.forward);
+        this.transform.position = transform.position + transform.forward * 0.1f;
+        rgbd.velocity = transform.forward * SpeedToShoot;
         Player.GetComponent<HippiCharacterController>().Shootting = false;
         ImShooted = false;
         //Debug.Log(IsOnSide() + " DIST->" + DistanceToTarget());
@@ -170,6 +173,17 @@ public class AspirableObject : MonoBehaviour
         {
             Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = false;
             Enganchao = false;
+        }
+    }
+    void OnTriggerEnter(Collider other) 
+    {
+        if(other.tag == "Crater")
+        {
+            if(!ImAbsorved && !ImShooted && this.gameObject.tag == "AspirableObject")
+            {
+                this.transform.position = target.transform.position;
+                rgbd.isKinematic = true;
+            }
         }
     }
     
