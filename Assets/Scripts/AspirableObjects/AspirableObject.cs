@@ -39,7 +39,9 @@ public class AspirableObject : MonoBehaviour
     public Vector3 PlayerForward;
 
     public bool OnSide;
-    
+    bool TouchingCrater;
+
+    bool DoIt1Time;
 
     
     
@@ -61,31 +63,23 @@ public class AspirableObject : MonoBehaviour
         {
            Absorbing();
         }  
-        if(IAmMagnetic )
+        if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {   
-
-            //Debug.Log(IsOnSide()+ " and " + DistanceToTarget());
-            //Debug.Log("ABSORVING"+ImAbsorved+" ON SIDE:"+IsOnSide()+" SHOOTED:"+ImShooted);
-        }
-        StayHome();
-        
+            Debug.Log(SpeedToShoot);
+            
+        } 
     }
     public void StopBeingShooted()
     {
-        //rgbd.velocity = -(PlayerForward * SpeedToShoot);
+        Player.GetComponent<HippiCharacterController>().Shootting = false;
+        ImShooted = false;
+        ReturnHome();
+    }
+    public void ReturnHome()
+    {
         transform.LookAt(target.transform.position, transform.position + transform.forward);
         this.transform.position = transform.position + transform.forward * 0.1f;
         rgbd.velocity = transform.forward * SpeedToShoot;
-        Player.GetComponent<HippiCharacterController>().Shootting = false;
-        ImShooted = false;
-        //Debug.Log(IsOnSide() + " DIST->" + DistanceToTarget());
-    }
-    public void StayHome()
-    {
-        if(IAmMagnetic && OnSide && !ImShooted && !ImAbsorved && this.gameObject.tag ==  "AspirableObject")
-        {
-            this.transform.position = target.transform.position;
-        }
     }
     public void Shooting()
     {      
@@ -123,21 +117,18 @@ public class AspirableObject : MonoBehaviour
             }
             else
             {
+                //ReturnHome();
                 rgbd.useGravity = false;
                 ImAbsorved = false;
             } 
         }
     }
-    public void MagneticRockState()
+    public void Pos2()
     {
-        if(IAmMagnetic && this.gameObject.tag == "AspirableObject" && !ImAbsorved)
+        if(this.gameObject.tag == "AspirableObject" && DoIt1Time)
         {
-            if(IsOnSide()==false && ImShooted == false)
-            { 
-                transform.LookAt(target.transform.position, transform.position + transform.forward);
-                this.transform.position = transform.position + transform.forward * 0.1f;
-                rgbd.velocity = transform.forward * SpeedToShoot;
-            }          
+            this.transform.position = target.transform.position;
+            DoIt1Time = false;
         }
     }
     public float DistanceToTarget()
@@ -147,7 +138,7 @@ public class AspirableObject : MonoBehaviour
     }
     public bool IsOnSide()
     {
-        if(DistanceToTarget()>= MinDistToGeiser)
+        if(!TouchingCrater)
         {
             return false;
         }
@@ -179,11 +170,20 @@ public class AspirableObject : MonoBehaviour
     {
         if(other.tag == "Crater")
         {
+            TouchingCrater = true;
+
             if(!ImAbsorved && !ImShooted && this.gameObject.tag == "AspirableObject")
             {
                 this.transform.position = target.transform.position;
                 rgbd.isKinematic = true;
             }
+        }
+    }
+    void OnTriggerExit(Collider other) 
+    {
+        if(other.tag == "Crater")
+        {
+            TouchingCrater = false;
         }
     }
     

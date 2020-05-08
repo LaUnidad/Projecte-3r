@@ -43,6 +43,7 @@ public class HippiCharacterController : MonoBehaviour
     {
         m_CharacterController = GetComponent<CharacterController>();
         blackboard = GetComponent<BLACKBOARD_ThirdPersonCharacter>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
