@@ -8,11 +8,14 @@ public class HacksForTheGame : MonoBehaviour
     public KeyCode m_KillTheZone = KeyCode.K;
     public GameObject[] TerrainColor;
 
+    public GameObject Player;
+
     GameObject[] MagneticRocks;
     void Start()
     {
         TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
         MagneticRocks = GameObject.FindGameObjectsWithTag("MagneticRock");
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class HacksForTheGame : MonoBehaviour
 
                 obj.gameObject.tag = "AspirableObject";
             }
+            Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
             //AreaKiller.GetComponent<AreaColor>().KillZone = true;
         }
     }

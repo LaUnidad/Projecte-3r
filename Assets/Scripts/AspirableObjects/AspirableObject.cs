@@ -21,6 +21,8 @@ public class AspirableObject : MonoBehaviour
 
     public float Biomass;
 
+    public float LifeForThePlayer;
+
     public float distance;
 
     Vector3 OriginalScale;

@@ -18,6 +18,10 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
     public float JumpForce;
     public float Power;
 
+    public float Life;
+
+    public float ResistanceToTheGas;
+
     public float WastePowerVelocityABSORB;
     public float WastePowerVelocityJETPACK;
 
@@ -28,6 +32,8 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
     public GameObject Obj;
 
     public float ForceAtAbsorb;
+
+    
     
     void Start()
     {

@@ -21,6 +21,8 @@ public class HippiCharacterController : MonoBehaviour
 
     public bool Jetpack;
 
+    public bool AfectedByTheGas;
+
     //////CAMERA
     public Camera cam;
     private Vector3 camForward;
@@ -131,6 +133,8 @@ public class HippiCharacterController : MonoBehaviour
             StopLook = false;
             //Debug.Log("EO");
         }
+       ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
+        RestLife();
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
         //Debug.Log(IsPackageFull());
@@ -197,6 +201,24 @@ public class HippiCharacterController : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+    public void RestLife()
+    {
+        if(AfectedByTheGas == true)
+        {
+            if(blackboard.Life >= 0)
+            {
+                blackboard.Life -= blackboard.ResistanceToTheGas * Time.deltaTime;
+            }
+            
+        }
+    }
+    public void SumLife(float x)
+    {
+        if(blackboard.Life<100)
+        {
+            blackboard.Life += x;
         }
     }
 
