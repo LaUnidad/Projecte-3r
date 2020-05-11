@@ -3430,6 +3430,7 @@ MonoBehaviour:
   Gun: {fileID: 0}
   Obj: {fileID: 0}
   ForceAtAbsorb: 1
+  BiomassObj: {fileID: 0}
 --- !u!114 &205461386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3545,6 +3546,7 @@ Transform:
   - {fileID: 855071408}
   - {fileID: 1194712246}
   - {fileID: 1893750830}
+  - {fileID: 686061894}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11384,6 +11386,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684223453}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &686061893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686061894}
+  - component: {fileID: 686061895}
+  m_Layer: 0
+  m_Name: BagHueco
+  m_TagString: InstantiateBiomass
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686061894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686061893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205461391}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686061895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686061893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a6b4736e318b64abc8e568c3c6179c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotate: 0
+  stop: 0
+  RotationVelocity: 1000
+  TimeToRotate: 0.33
+  active: 0
+  BiommasObj: {fileID: 165087043969148498, guid: 850a700bea5755046bbe41ede3f87a45,
+    type: 3}
 --- !u!1 &687979678
 GameObject:
   m_ObjectHideFlags: 0
@@ -26024,6 +26076,7 @@ MonoBehaviour:
   ListObjects: 0
   Biomass: 0
   MaxBiomass: 300
+  LastObjectCatched: {fileID: 0}
 --- !u!1 &1195241895
 GameObject:
   m_ObjectHideFlags: 0
@@ -40370,8 +40423,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_KillTheZone: 107
+  m_PlayerReciveHit: 104
   TerrainColor: []
   Player: {fileID: 0}
+  InstaniateBio: {fileID: 0}
 --- !u!4 &1861579273
 Transform:
   m_ObjectHideFlags: 0

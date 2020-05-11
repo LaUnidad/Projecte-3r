@@ -216,14 +216,21 @@ public class HippiCharacterController : MonoBehaviour
     }
     public void SumLife(float x)
     {
-        if(blackboard.Life<100)
+        if(blackboard.Life < 100)
         {
             blackboard.Life += x;
+
+            if (blackboard.Life > 100)
+            {
+                blackboard.Life = 100;
+            }
         }
     }
-
-
-
+    public void PlayerReciveDamage(float lifeToRest)
+    {
+        blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().active = true;
+        blackboard.Life = blackboard.Life -30;
+    }
 
     void OnControllerColliderHit(ControllerColliderHit hit) 
     {

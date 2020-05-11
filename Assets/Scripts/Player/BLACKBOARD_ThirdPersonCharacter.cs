@@ -33,11 +33,14 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
 
     public float ForceAtAbsorb;
 
+    public GameObject BiomassObj;
+
     
     
     void Start()
     {
         Gun = GameObject.FindGameObjectWithTag("Gun");
+        BiomassObj = GameObject.FindGameObjectWithTag("InstantiateBiomass");
         
     }
 

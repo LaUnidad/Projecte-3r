@@ -36,7 +36,7 @@ public class LifeLight : MonoBehaviour
     }
     public void Timer()
     {
-        if(Player.GetComponent<HippiCharacterController>().AfectedByTheGas == true)
+        if(Player.GetComponent<HippiCharacterController>().blackboard.Life < 100)
         {
             timer += 1 * Time.deltaTime;
 
@@ -69,6 +69,10 @@ public class LifeLight : MonoBehaviour
         if(Player.GetComponent<HippiCharacterController>().blackboard.Life<= 0)
         {
             mesR.material = DangerMat;
+        }
+        if(Player.GetComponent<HippiCharacterController>().blackboard.Life>= 100)
+        {
+            mesR.material = NormalMat;
         }
     }   
     public void ChangingRate()
