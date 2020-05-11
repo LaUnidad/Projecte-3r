@@ -24,6 +24,8 @@ public class Aspiradora : MonoBehaviour
 
     public float MaxBiomass;
 
+    public GameObject LastObjectCatched;
+
    
 
     void Start()

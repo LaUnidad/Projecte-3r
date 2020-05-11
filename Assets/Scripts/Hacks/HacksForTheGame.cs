@@ -7,7 +7,7 @@ public class HacksForTheGame : MonoBehaviour
     // Start is called before the first frame update
     public KeyCode m_KillTheZone = KeyCode.K;
     public GameObject[] TerrainColor;
-
+    
     public GameObject Player;
 
     GameObject[] MagneticRocks;
