@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof (BLACKBOARD_ThirdPersonCharacter))]
-//[RequireComponent(typeof (CharacterController))]
+[RequireComponent(typeof (CharacterController))]
 public class HippiCharacterController : MonoBehaviour
 {
     // Start is called before the first frame update
