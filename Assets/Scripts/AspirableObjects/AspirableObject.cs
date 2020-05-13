@@ -14,7 +14,7 @@ public class AspirableObject : MonoBehaviour
 
     public float MinDistToGeiser;
 
-    Rigidbody rgbd;
+    public Rigidbody rgbd;
     private GameObject Player;
 
     private GameObject Gun;
@@ -67,7 +67,7 @@ public class AspirableObject : MonoBehaviour
         }  
         if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {   
-            Debug.Log(SpeedToShoot);
+            //Debug.Log(SpeedToShoot);
             
         } 
     }

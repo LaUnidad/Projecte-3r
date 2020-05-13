@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakableDoor : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -19,7 +20,10 @@ public class BreakableDoor : MonoBehaviour
     {
         if(other.gameObject.tag == "AspirableObject" && other.gameObject.GetComponent<AspirableObject>().IAmMagnetic == true)
         {
-            Destroy(this.gameObject);
+            if(other.gameObject.GetComponent<AspirableObject>().rgbd.velocity.y >= 1)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
