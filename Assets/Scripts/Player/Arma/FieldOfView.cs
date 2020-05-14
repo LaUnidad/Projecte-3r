@@ -34,6 +34,11 @@ public class FieldOfView : MonoBehaviour
     {
         if(other.gameObject.tag == "AspirableObject")
         {
+            if(!other.gameObject.GetComponent<AspirableObject>().IAmMagnetic)
+            {
+                other.gameObject.GetComponent<AspirableObject>().rgbd.useGravity = true;
+                other.gameObject.transform.localScale = other.gameObject.GetComponent<AspirableObject>().OriginalScale;
+            }
             Gun.GetComponent<Aspiradora>().RemoveObjects(other.gameObject);
             Cube = null;
             Touch = false;

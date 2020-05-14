@@ -172,6 +172,20 @@ public class Aspiradora : MonoBehaviour
             }    
         }
     }
+    void OnTriggerEnter(Collider other) 
+    {
+        if(other.gameObject.tag == "AspirableObject" && Player.GetComponent<HippiCharacterController>().Absorving == true)
+        {
+            if(other.gameObject.GetComponent<AspirableObject>().IAmMagnetic == false)
+            {
+                //Debug.Log("ASPIRADO");
+                RemoveObjects(other.gameObject);
+                Biomass += other.gameObject.GetComponent<AspirableObject>().Biomass;
+                Player.GetComponent<HippiCharacterController>().SumLife(other.gameObject.GetComponent<AspirableObject>().LifeForThePlayer);
+                Destroy(other.gameObject);
+            }
+        }
+    }
     public void ExpulseBiomass()
     {
         Biomass = Biomass - 1f;

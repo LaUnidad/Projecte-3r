@@ -25,7 +25,7 @@ public class AspirableObject : MonoBehaviour
 
     public float distance;
 
-    Vector3 OriginalScale;
+    public Vector3 OriginalScale;
 
     public bool ImAbsorved;
 

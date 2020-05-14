@@ -20,10 +20,10 @@ public class BreakableDoor : MonoBehaviour
     {
         if(other.gameObject.tag == "AspirableObject" && other.gameObject.GetComponent<AspirableObject>().IAmMagnetic == true)
         {
-            if(other.gameObject.GetComponent<AspirableObject>().rgbd.velocity.y >= 1)
-            {
+            //if(other.gameObject.GetComponent<AspirableObject>().rgbd.velocity.y >= 1)
+            //{
                 Destroy(this.gameObject);
-            }
+            //}
         }
     }
 }
