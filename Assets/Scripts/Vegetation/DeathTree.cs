@@ -22,7 +22,7 @@ public class DeathTree : MonoBehaviour
     {
         if(Death)
         {
-            Debug.Log(IHaveFruits);
+            
         }
         
         if(!IHaveFruits)
