@@ -20,6 +20,8 @@ public class AspirableObject : MonoBehaviour
 
     private GameObject Gun;
 
+    private Collider coll;
+
     public float Biomass;
 
     public float LifeForThePlayer;
@@ -57,7 +59,7 @@ public class AspirableObject : MonoBehaviour
         Gun = GameObject.FindGameObjectWithTag("Gun");
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
-       
+        
 
     }
     void Update()
@@ -118,6 +120,7 @@ public class AspirableObject : MonoBehaviour
                 rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
+                
                 
             }
             else

@@ -8,6 +8,8 @@ public class DeathTree : MonoBehaviour
     GameObject AliveObj;
     GameObject DeathObj;
 
+    public bool Death;
+
     void Start()
     {
        
@@ -19,9 +21,14 @@ public class DeathTree : MonoBehaviour
         //Debug.Log(this.transform.childCount);
         if(this.transform.childCount == 0)
         {
-            //Death = true;
+            if(!Death)
+            {
+                DeathObj.transform.rotation = AliveObj.transform.rotation;
+                Death = true;
+            }
             AliveObj.SetActive(false);
             DeathObj.SetActive(true);
+            
         }
         else
         {
