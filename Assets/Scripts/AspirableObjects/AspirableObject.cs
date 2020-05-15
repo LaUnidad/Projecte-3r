@@ -118,7 +118,7 @@ public class AspirableObject : MonoBehaviour
                 rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
-                IMakeDamage = true;
+                
             }
             else
             {
