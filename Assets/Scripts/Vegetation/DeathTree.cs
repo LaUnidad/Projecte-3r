@@ -5,27 +5,19 @@ using UnityEngine;
 public class DeathTree : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static List<GameObject> Fruits = new List<GameObject>();
-    public bool Death;
     GameObject AliveObj;
     GameObject DeathObj;
 
-    public bool IHaveFruits;
-
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if(Death)
-        {
-            
-        }
-        
-        if(!IHaveFruits)
+    {    
+        //Debug.Log(this.transform.childCount);
+        if(this.transform.childCount == 0)
         {
             //Death = true;
             AliveObj.SetActive(false);
@@ -39,11 +31,6 @@ public class DeathTree : MonoBehaviour
     }
     void OnTriggerEnter(Collider other) 
     {
-        if(other.tag == "AspirableObject")
-        {
-            //AddObjectToList(other.gameObject);
-            IHaveFruits = true;
-        }
         if(other.tag == "LivePlant")
         {
             AliveObj = other.gameObject;
@@ -53,20 +40,15 @@ public class DeathTree : MonoBehaviour
             DeathObj = other.gameObject;
         }
     }
-    void OnTriggerExit(Collider other) 
+    void OnCollisionEnter(Collision other) 
     {
-        if(other.tag == "AspirableObject" || other.gameObject == null)
+        if(other.gameObject.tag == "LivePlant")
         {
-            IHaveFruits = false;
-            //RemoveObjectToList(other.gameObject);
+            AliveObj = other.gameObject;
         }
-    }
-    void AddObjectToList(GameObject x)
-    {
-        Fruits.Add(x);
-    }
-    void RemoveObjectToList(GameObject x)
-    {
-        Fruits.Remove(x);
-    }
+        if(other.gameObject.tag == "DeathPlant")
+        {
+            DeathObj = other.gameObject;
+        }
+    }  
 }

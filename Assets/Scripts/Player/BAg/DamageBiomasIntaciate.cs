@@ -17,7 +17,7 @@ public class DamageBiomasIntaciate : MonoBehaviour
 
     public float TimeToRotate;
 
-    public bool active;
+    //public bool active;
 
     public GameObject BiommasObj;
     void Start()
@@ -30,11 +30,11 @@ public class DamageBiomasIntaciate : MonoBehaviour
     {
        ActiveRotation();
         if(rotate)
-        {
-            active = false;
+        { 
+            //active = false;
             transform.RotateAround(Player.transform.position, Vector3.up, RotationVelocity * Time.deltaTime);
+            InstanciateBiomass();
         }
-        InstanciateBiomass();
         StopRotate();
     }
     public void StopRotate()
@@ -46,28 +46,30 @@ public class DamageBiomasIntaciate : MonoBehaviour
             if(timer>= TimeToRotate)
             {
                 rotate = false;
+                timer = 0;
+                timer2 = 0;
             }
         }
     }
     public void ActiveRotation()
     {
+        /*
         if(active)
         {
             timer = 0;
             timer2 = 0;
-            rotate = true;
+            //rotate = true;
         }
+        */
     }
     public void InstanciateBiomass()
     {
-        if(rotate)
+        timer2 += 1* Time.deltaTime;
+        if(timer2>= 0.05)
         {
-            timer2 += 1* Time.deltaTime;
-            if(timer2>= 0.05)
-            {
-                Instantiate(BiommasObj, this.transform.position,this.transform.rotation);
-                timer2 = 0;
-            }   
-        }  
+            Instantiate(BiommasObj, this.transform.position,this.transform.rotation);
+            timer2 = 0;
+        }   
+        
     }
 }

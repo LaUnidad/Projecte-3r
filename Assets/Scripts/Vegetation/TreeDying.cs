@@ -23,11 +23,12 @@ public class TreeDying : MonoBehaviour
     void Update()
     {
         //Debug.Log(WichIsMyTreeMaster().GetComponent<DeathTree>().Death);
-        
+        /*
         if(WichIsMyTreeMaster().GetComponent<DeathTree>().Death)
         {
             WelcomToDeath();
         }
+        */
     }
 
     public void WelcomToDeath()

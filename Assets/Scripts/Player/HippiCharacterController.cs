@@ -41,6 +41,8 @@ public class HippiCharacterController : MonoBehaviour
 
     public bool Shootting;
 
+    public bool Damage;
+
     void Start()
     {
         m_CharacterController = GetComponent<CharacterController>();
@@ -137,7 +139,8 @@ public class HippiCharacterController : MonoBehaviour
         RestLife();
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
-        //Debug.Log(IsPackageFull());
+       /////////////////////////////////////////////////DAMAGE///////////////////////////////////////////////////
+       
     }
 
     void CamDirection() 
@@ -225,18 +228,18 @@ public class HippiCharacterController : MonoBehaviour
                 blackboard.Life = 100;
             }
         }
-    }
+    } 
     public void PlayerReciveDamage(float lifeToRest)
-    {
-        blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().active = true;
-        blackboard.Life = blackboard.Life -30;
+    { 
+        blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
+        blackboard.Life = blackboard.Life -30;           
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit) 
     {
         hitNormal = hit.normal;
     }
-
+    
     
     
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AspirableObject : MonoBehaviour
 {
+    public bool IMakeDamage;
     public bool IAmMagnetic;
     public bool IAmAsborved;
     public bool IAmInList;
@@ -100,6 +101,7 @@ public class AspirableObject : MonoBehaviour
             //Debug.Log("ABSORVIENDO");
             this.transform.LookAt(Gun.transform.position);
             ImAbsorved = true;
+            IMakeDamage = false;
             rgbd.useGravity = false;
             rgbd.isKinematic = false;
             this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
@@ -116,12 +118,14 @@ public class AspirableObject : MonoBehaviour
                 rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
+                IMakeDamage = true;
             }
             else
             {
                 //ReturnHome();
                 rgbd.useGravity = false;
                 ImAbsorved = false;
+                
             } 
         }
     }
@@ -179,6 +183,10 @@ public class AspirableObject : MonoBehaviour
                 this.transform.position = target.transform.position;
                 rgbd.isKinematic = true;
             }
+        }
+        if(other.tag == "PlayerCollider" && IMakeDamage)
+        {
+            Player.GetComponent<HippiCharacterController>().PlayerReciveDamage(5);
         }
     }
     void OnTriggerExit(Collider other) 

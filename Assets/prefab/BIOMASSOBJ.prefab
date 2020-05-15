@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
@@ -114,9 +115,11 @@ MonoBehaviour:
   SpeedToAbsorb: 5
   SpeedToShoot: 0
   MinDistToGeiser: 0
+  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 5
   distance: 0
+  OriginalScale: {x: 0, y: 0, z: 0}
   ImAbsorved: 0
   Enganchao: 0
   target: {fileID: 0}
