@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 915733}
   - component: {fileID: 915732}
   - component: {fileID: 915731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 2524652}
   - component: {fileID: 2524651}
   - component: {fileID: 2524654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 11712330}
   - component: {fileID: 11712329}
   - component: {fileID: 11712328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 35359439}
   - component: {fileID: 35359438}
   - component: {fileID: 35359437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -900,6 +900,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35359435}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &56115978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 56115980}
+  - component: {fileID: 56115979}
+  m_Layer: 0
+  m_Name: CameraPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &56115979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56115978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a90a224a5475848b42aecdaeae24c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1699637560}
+--- !u!4 &56115980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56115978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 963194228}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &59677891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: feb7e1ce461dc8b46a6d93c961898242,
@@ -919,7 +964,7 @@ GameObject:
   - component: {fileID: 60513121}
   - component: {fileID: 60513120}
   - component: {fileID: 60513123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1116,7 +1161,7 @@ GameObject:
   - component: {fileID: 73252214}
   - component: {fileID: 73252213}
   - component: {fileID: 73252212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1224,7 +1269,7 @@ GameObject:
   - component: {fileID: 74787699}
   - component: {fileID: 74787698}
   - component: {fileID: 74787697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -1490,7 +1535,7 @@ GameObject:
   - component: {fileID: 81310404}
   - component: {fileID: 81310403}
   - component: {fileID: 81310406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -6445,7 +6490,7 @@ GameObject:
   - component: {fileID: 100970620}
   - component: {fileID: 100970619}
   - component: {fileID: 100970622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -7043,7 +7088,7 @@ GameObject:
   - component: {fileID: 152384439}
   - component: {fileID: 152384438}
   - component: {fileID: 152384441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (3)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -7151,7 +7196,7 @@ GameObject:
   - component: {fileID: 153965287}
   - component: {fileID: 153965286}
   - component: {fileID: 153965285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -7349,7 +7394,7 @@ GameObject:
   - component: {fileID: 164002987}
   - component: {fileID: 164002986}
   - component: {fileID: 164002985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -7457,7 +7502,7 @@ GameObject:
   - component: {fileID: 165668813}
   - component: {fileID: 165668812}
   - component: {fileID: 165668811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -7723,7 +7768,7 @@ GameObject:
   - component: {fileID: 181666709}
   - component: {fileID: 181666708}
   - component: {fileID: 181666707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -7831,7 +7876,7 @@ GameObject:
   - component: {fileID: 185815857}
   - component: {fileID: 185815856}
   - component: {fileID: 185815859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -8302,7 +8347,7 @@ GameObject:
   - component: {fileID: 246407020}
   - component: {fileID: 246407019}
   - component: {fileID: 246407018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (8)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -8410,7 +8455,7 @@ GameObject:
   - component: {fileID: 255986761}
   - component: {fileID: 255986760}
   - component: {fileID: 255986759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -8518,7 +8563,7 @@ GameObject:
   - component: {fileID: 258718912}
   - component: {fileID: 258718911}
   - component: {fileID: 258718910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -8789,14 +8834,13 @@ GameObject:
   - component: {fileID: 266540991}
   - component: {fileID: 266540990}
   - component: {fileID: 266540989}
-  - component: {fileID: 266540993}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &266540989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8893,21 +8937,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &266540993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266540988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7bf4b54ae812734eb144a05c7ecf508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: {x: 0, y: 2, z: -10}
-  lerpValue: 1
-  sensibilidad: 4
 --- !u!1 &279756474
 GameObject:
   m_ObjectHideFlags: 0
@@ -8921,7 +8950,7 @@ GameObject:
   - component: {fileID: 279756477}
   - component: {fileID: 279756476}
   - component: {fileID: 279756479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -9054,7 +9083,7 @@ GameObject:
   - component: {fileID: 296470527}
   - component: {fileID: 296470526}
   - component: {fileID: 296470525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -9322,7 +9351,7 @@ GameObject:
   - component: {fileID: 314035987}
   - component: {fileID: 314035986}
   - component: {fileID: 314035985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -10323,7 +10352,7 @@ GameObject:
   - component: {fileID: 356462887}
   - component: {fileID: 356462886}
   - component: {fileID: 356462889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -10431,7 +10460,7 @@ GameObject:
   - component: {fileID: 360901230}
   - component: {fileID: 360901229}
   - component: {fileID: 360901232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (8)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -10539,7 +10568,7 @@ GameObject:
   - component: {fileID: 365813507}
   - component: {fileID: 365813506}
   - component: {fileID: 365813509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (7)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -10837,7 +10866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 378281842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10911,7 +10940,7 @@ GameObject:
   - component: {fileID: 401825291}
   - component: {fileID: 401825290}
   - component: {fileID: 401825289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -11400,7 +11429,7 @@ GameObject:
   - component: {fileID: 430771570}
   - component: {fileID: 430771569}
   - component: {fileID: 430771568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -11919,7 +11948,7 @@ GameObject:
   - component: {fileID: 479706170}
   - component: {fileID: 479706169}
   - component: {fileID: 479706168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (3)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -12286,7 +12315,7 @@ GameObject:
   - component: {fileID: 517548675}
   - component: {fileID: 517548674}
   - component: {fileID: 517548673}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -12454,7 +12483,7 @@ GameObject:
   - component: {fileID: 531795604}
   - component: {fileID: 531795603}
   - component: {fileID: 531795602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -12568,7 +12597,7 @@ GameObject:
   - component: {fileID: 536517593}
   - component: {fileID: 536517592}
   - component: {fileID: 536517591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -13319,7 +13348,7 @@ GameObject:
   - component: {fileID: 555150618}
   - component: {fileID: 555150617}
   - component: {fileID: 555150616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -13427,7 +13456,7 @@ GameObject:
   - component: {fileID: 563435854}
   - component: {fileID: 563435853}
   - component: {fileID: 563435852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -13620,7 +13649,7 @@ GameObject:
   - component: {fileID: 567949963}
   - component: {fileID: 567949962}
   - component: {fileID: 567949961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -13728,7 +13757,7 @@ GameObject:
   - component: {fileID: 570185292}
   - component: {fileID: 570185291}
   - component: {fileID: 570185290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -13994,7 +14023,7 @@ GameObject:
   - component: {fileID: 589307459}
   - component: {fileID: 589307458}
   - component: {fileID: 589307457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (13)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -14102,7 +14131,7 @@ GameObject:
   - component: {fileID: 592576340}
   - component: {fileID: 592576339}
   - component: {fileID: 592576338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -14412,7 +14441,7 @@ GameObject:
   - component: {fileID: 605401037}
   - component: {fileID: 605401036}
   - component: {fileID: 605401035}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -14550,7 +14579,7 @@ GameObject:
   - component: {fileID: 620248324}
   - component: {fileID: 620248323}
   - component: {fileID: 620248322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (6)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -14751,7 +14780,7 @@ GameObject:
   - component: {fileID: 632288218}
   - component: {fileID: 632288217}
   - component: {fileID: 632288216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -14928,7 +14957,7 @@ GameObject:
   - component: {fileID: 638110319}
   - component: {fileID: 638110318}
   - component: {fileID: 638110321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (4)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -15036,7 +15065,7 @@ GameObject:
   - component: {fileID: 644115496}
   - component: {fileID: 644115495}
   - component: {fileID: 644115494}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -15140,7 +15169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654006994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15450,7 +15479,7 @@ GameObject:
   - component: {fileID: 687979682}
   - component: {fileID: 687979681}
   - component: {fileID: 687979680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -15607,6 +15636,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3778184890932128782, guid: 5ed4796f146c6224da9f3d7480fa5115,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778184890932128782, guid: 5ed4796f146c6224da9f3d7480fa5115,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778184890932128782, guid: 5ed4796f146c6224da9f3d7480fa5115,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3778184890932128783, guid: 5ed4796f146c6224da9f3d7480fa5115,
         type: 3}
       propertyPath: m_Name
@@ -15627,7 +15671,7 @@ GameObject:
   - component: {fileID: 702198574}
   - component: {fileID: 702198573}
   - component: {fileID: 702198572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -15901,7 +15945,7 @@ GameObject:
   - component: {fileID: 709440573}
   - component: {fileID: 709440572}
   - component: {fileID: 709440571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -16401,7 +16445,7 @@ GameObject:
   - component: {fileID: 746005186}
   - component: {fileID: 746005185}
   - component: {fileID: 746005184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -16905,7 +16949,7 @@ GameObject:
   - component: {fileID: 758029311}
   - component: {fileID: 758029310}
   - component: {fileID: 758029313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -17904,7 +17948,7 @@ GameObject:
   - component: {fileID: 798085782}
   - component: {fileID: 798085781}
   - component: {fileID: 798085780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -18008,7 +18052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 803784794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18054,7 +18098,7 @@ GameObject:
   - component: {fileID: 808083304}
   - component: {fileID: 808083303}
   - component: {fileID: 808083302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -18162,7 +18206,7 @@ GameObject:
   - component: {fileID: 813714015}
   - component: {fileID: 813714014}
   - component: {fileID: 813714013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -18270,7 +18314,7 @@ GameObject:
   - component: {fileID: 814286509}
   - component: {fileID: 814286508}
   - component: {fileID: 814286507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -18702,7 +18746,7 @@ GameObject:
   - component: {fileID: 866861969}
   - component: {fileID: 866861968}
   - component: {fileID: 866861971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -18810,7 +18854,7 @@ GameObject:
   - component: {fileID: 874560946}
   - component: {fileID: 874560945}
   - component: {fileID: 874560944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -19482,7 +19526,7 @@ GameObject:
   - component: {fileID: 896471259}
   - component: {fileID: 896471258}
   - component: {fileID: 896471257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -19697,7 +19741,7 @@ GameObject:
   - component: {fileID: 918493514}
   - component: {fileID: 918493513}
   - component: {fileID: 918493512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -19805,7 +19849,7 @@ GameObject:
   - component: {fileID: 928806057}
   - component: {fileID: 928806056}
   - component: {fileID: 928806055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (5)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -20141,7 +20185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 945928329}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20370,7 +20414,7 @@ GameObject:
   - component: {fileID: 961152696}
   - component: {fileID: 961152695}
   - component: {fileID: 961152694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -20476,8 +20520,8 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -20543,28 +20587,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 21.7, z: 0}
-  m_LocalScale: {x: 0.672, y: 0.672, z: 0.672}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 56115980}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7bf4b54ae812734eb144a05c7ecf508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: {x: 0, y: 2, z: -10}
-  lerpValue: 1
-  sensibilidad: 4
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20596,6 +20625,29 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f01a63e7589424c8d27138bdeb6964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 4
+  scrollSensitivity: 2
+  orbitDampening: 10
+  scrollDampening: 8
+  cameraDisabled: 0
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 256
+  collisionRayDebug: 0
+  collisionOffset: 0.5
+  adjustedDistance: 0
 --- !u!1 &963792073
 GameObject:
   m_ObjectHideFlags: 0
@@ -20643,7 +20695,7 @@ GameObject:
   - component: {fileID: 968125994}
   - component: {fileID: 968125993}
   - component: {fileID: 968125996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (5)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -20844,7 +20896,7 @@ GameObject:
   - component: {fileID: 980902775}
   - component: {fileID: 980902774}
   - component: {fileID: 980902773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -20953,7 +21005,7 @@ GameObject:
   - component: {fileID: 982746633}
   - component: {fileID: 982746636}
   - component: {fileID: 982746637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -21071,7 +21123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 982760749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21112,7 +21164,7 @@ GameObject:
   - component: {fileID: 994081350}
   - component: {fileID: 994081349}
   - component: {fileID: 994081348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (7)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -21220,7 +21272,7 @@ GameObject:
   - component: {fileID: 995345090}
   - component: {fileID: 995345089}
   - component: {fileID: 995345088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -21328,7 +21380,7 @@ GameObject:
   - component: {fileID: 998714470}
   - component: {fileID: 998714469}
   - component: {fileID: 998714468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (3)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -21436,7 +21488,7 @@ GameObject:
   - component: {fileID: 1024568554}
   - component: {fileID: 1024568553}
   - component: {fileID: 1024568552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -21570,7 +21622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1033490789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21843,7 +21895,7 @@ GameObject:
   - component: {fileID: 1037153463}
   - component: {fileID: 1037153462}
   - component: {fileID: 1037153461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (8)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -22109,7 +22161,7 @@ GameObject:
   - component: {fileID: 1040801562}
   - component: {fileID: 1040801561}
   - component: {fileID: 1040801560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -22256,7 +22308,7 @@ GameObject:
   - component: {fileID: 1083512656}
   - component: {fileID: 1083512655}
   - component: {fileID: 1083512654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -27311,7 +27363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138295520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27358,7 +27410,7 @@ GameObject:
   - component: {fileID: 1149508280}
   - component: {fileID: 1149508279}
   - component: {fileID: 1149508278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (8)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -27630,7 +27682,7 @@ GameObject:
   - component: {fileID: 1157275964}
   - component: {fileID: 1157275963}
   - component: {fileID: 1157275962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (3)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -27738,7 +27790,7 @@ GameObject:
   - component: {fileID: 1160623258}
   - component: {fileID: 1160623257}
   - component: {fileID: 1160623256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -27852,7 +27904,7 @@ GameObject:
   - component: {fileID: 1167883463}
   - component: {fileID: 1167883462}
   - component: {fileID: 1167883461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (4)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -27960,7 +28012,7 @@ GameObject:
   - component: {fileID: 1168700078}
   - component: {fileID: 1168700077}
   - component: {fileID: 1168700080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -28161,7 +28213,7 @@ GameObject:
   - component: {fileID: 1172859183}
   - component: {fileID: 1172859182}
   - component: {fileID: 1172859181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -28269,7 +28321,7 @@ GameObject:
   - component: {fileID: 1189775664}
   - component: {fileID: 1189775663}
   - component: {fileID: 1189775662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -28535,7 +28587,7 @@ GameObject:
   - component: {fileID: 1203226845}
   - component: {fileID: 1203226844}
   - component: {fileID: 1203226843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -28643,7 +28695,7 @@ GameObject:
   - component: {fileID: 1210485608}
   - component: {fileID: 1210485607}
   - component: {fileID: 1210485606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -28825,7 +28877,7 @@ GameObject:
   - component: {fileID: 1214500689}
   - component: {fileID: 1214500688}
   - component: {fileID: 1214500687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -29087,7 +29139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1222587170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29128,7 +29180,7 @@ GameObject:
   - component: {fileID: 1236246006}
   - component: {fileID: 1236246005}
   - component: {fileID: 1236246004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (5)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -29552,7 +29604,7 @@ GameObject:
   - component: {fileID: 1250894247}
   - component: {fileID: 1250894246}
   - component: {fileID: 1250894245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -29854,7 +29906,7 @@ GameObject:
   - component: {fileID: 1262282654}
   - component: {fileID: 1262282653}
   - component: {fileID: 1262282656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -30039,7 +30091,7 @@ GameObject:
   - component: {fileID: 1277674248}
   - component: {fileID: 1277674247}
   - component: {fileID: 1277674246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -30147,7 +30199,7 @@ GameObject:
   - component: {fileID: 1289185727}
   - component: {fileID: 1289185726}
   - component: {fileID: 1289185725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -30255,7 +30307,7 @@ GameObject:
   - component: {fileID: 1293940952}
   - component: {fileID: 1293940951}
   - component: {fileID: 1293940950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -30393,7 +30445,7 @@ GameObject:
   - component: {fileID: 1311389320}
   - component: {fileID: 1311389319}
   - component: {fileID: 1311389318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -30659,7 +30711,7 @@ GameObject:
   - component: {fileID: 1316232116}
   - component: {fileID: 1316232115}
   - component: {fileID: 1316232114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -30767,7 +30819,7 @@ GameObject:
   - component: {fileID: 1327578685}
   - component: {fileID: 1327578684}
   - component: {fileID: 1327578683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (7)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -31238,7 +31290,7 @@ GameObject:
   - component: {fileID: 1346079045}
   - component: {fileID: 1346079044}
   - component: {fileID: 1346079043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -31346,7 +31398,7 @@ GameObject:
   - component: {fileID: 1357243236}
   - component: {fileID: 1357243235}
   - component: {fileID: 1357243234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -31871,7 +31923,7 @@ GameObject:
   - component: {fileID: 1394816072}
   - component: {fileID: 1394816071}
   - component: {fileID: 1394816070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -32642,7 +32694,7 @@ GameObject:
   - component: {fileID: 1434229106}
   - component: {fileID: 1434229105}
   - component: {fileID: 1434229108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -32908,7 +32960,7 @@ GameObject:
   - component: {fileID: 1449582042}
   - component: {fileID: 1449582041}
   - component: {fileID: 1449582040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (15)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -33016,7 +33068,7 @@ GameObject:
   - component: {fileID: 1451893157}
   - component: {fileID: 1451893156}
   - component: {fileID: 1451893155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -33124,7 +33176,7 @@ GameObject:
   - component: {fileID: 1453802475}
   - component: {fileID: 1453802474}
   - component: {fileID: 1453802473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (7)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -33452,7 +33504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1486490521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33526,7 +33578,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526468740
 GameObject:
@@ -34067,7 +34119,7 @@ GameObject:
   - component: {fileID: 1579892367}
   - component: {fileID: 1579892366}
   - component: {fileID: 1579892365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -34205,7 +34257,7 @@ GameObject:
   - component: {fileID: 1616080775}
   - component: {fileID: 1616080774}
   - component: {fileID: 1616080773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -34620,7 +34672,7 @@ GameObject:
   - component: {fileID: 1639426614}
   - component: {fileID: 1639426613}
   - component: {fileID: 1639426612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (16)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -34734,7 +34786,7 @@ GameObject:
   - component: {fileID: 1639999101}
   - component: {fileID: 1639999100}
   - component: {fileID: 1639999103}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -35064,7 +35116,7 @@ GameObject:
   - component: {fileID: 1672270634}
   - component: {fileID: 1672270633}
   - component: {fileID: 1672270632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -35165,6 +35217,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 9171774339478513555}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1699637560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1736423542061358881, guid: 9abec30fb58b09845a98fb2f4bd02aa4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736423541299348878}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1709857732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893316000328974288, guid: 7d534dc329b499746804d5b52106059a,
@@ -35185,7 +35243,7 @@ GameObject:
   - component: {fileID: 1712460175}
   - component: {fileID: 1712460179}
   - component: {fileID: 1712460178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35301,7 +35359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741422285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35342,7 +35400,7 @@ GameObject:
   - component: {fileID: 1765114009}
   - component: {fileID: 1765114008}
   - component: {fileID: 1765114011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (3)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -35450,7 +35508,7 @@ GameObject:
   - component: {fileID: 1765819188}
   - component: {fileID: 1765819187}
   - component: {fileID: 1765819186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -35643,7 +35701,7 @@ GameObject:
   - component: {fileID: 1776847765}
   - component: {fileID: 1776847764}
   - component: {fileID: 1776847763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -35757,7 +35815,7 @@ GameObject:
   - component: {fileID: 1785613710}
   - component: {fileID: 1785613709}
   - component: {fileID: 1785613708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -40866,7 +40924,7 @@ GameObject:
   - component: {fileID: 1801017189}
   - component: {fileID: 1801017188}
   - component: {fileID: 1801017191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -41128,7 +41186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1801453304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41275,7 +41333,7 @@ Transform:
   - {fileID: 1559355977}
   - {fileID: 1342866269}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1830120892
 GameObject:
@@ -41349,7 +41407,7 @@ GameObject:
   - component: {fileID: 1844470579}
   - component: {fileID: 1844470578}
   - component: {fileID: 1844470577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -41457,7 +41515,7 @@ GameObject:
   - component: {fileID: 1845064105}
   - component: {fileID: 1845064104}
   - component: {fileID: 1845064103}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (11)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -46477,7 +46535,7 @@ GameObject:
   - component: {fileID: 1860048126}
   - component: {fileID: 1860048125}
   - component: {fileID: 1860048124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (12)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -46663,7 +46721,7 @@ GameObject:
   - component: {fileID: 1876788254}
   - component: {fileID: 1876788253}
   - component: {fileID: 1876788256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (6)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -46771,7 +46829,7 @@ GameObject:
   - component: {fileID: 1884150185}
   - component: {fileID: 1884150184}
   - component: {fileID: 1884150187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (7)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -47043,7 +47101,7 @@ GameObject:
   - component: {fileID: 1922171448}
   - component: {fileID: 1922171447}
   - component: {fileID: 1922171446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (9)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -47917,7 +47975,7 @@ GameObject:
   - component: {fileID: 2015923377}
   - component: {fileID: 2015923376}
   - component: {fileID: 2015923375}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (10)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -48411,7 +48469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2041846752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48452,7 +48510,7 @@ GameObject:
   - component: {fileID: 2054211041}
   - component: {fileID: 2054211040}
   - component: {fileID: 2054211039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (4)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -48556,7 +48614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2055205482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48593,7 +48651,7 @@ GameObject:
   - component: {fileID: 2058175880}
   - component: {fileID: 2058175879}
   - component: {fileID: 2058175878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (14)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -48921,7 +48979,7 @@ GameObject:
   - component: {fileID: 2089170256}
   - component: {fileID: 2089170255}
   - component: {fileID: 2089170258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -49345,7 +49403,7 @@ GameObject:
   - component: {fileID: 2097311538}
   - component: {fileID: 2097311537}
   - component: {fileID: 2097311540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPA (1)
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -49933,7 +49991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2123469945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54782,7 +54840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2133271145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limit0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54853,17 +54911,17 @@ PrefabInstance:
     - target: {fileID: 1736423541369803265, guid: 9abec30fb58b09845a98fb2f4bd02aa4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1736423541369803265, guid: 9abec30fb58b09845a98fb2f4bd02aa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.267
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1736423541369803265, guid: 9abec30fb58b09845a98fb2f4bd02aa4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1736423541369803265, guid: 9abec30fb58b09845a98fb2f4bd02aa4,
         type: 3}
@@ -54909,7 +54967,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 266540991}
+      objectReference: {fileID: 963194227}
     - target: {fileID: 1736423541369803270, guid: 9abec30fb58b09845a98fb2f4bd02aa4,
         type: 3}
       propertyPath: m_Name
@@ -55057,6 +55115,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778184890932128782, guid: 5ed4796f146c6224da9f3d7480fa5115,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778184890932128782, guid: 5ed4796f146c6224da9f3d7480fa5115,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778184890932128782, guid: 5ed4796f146c6224da9f3d7480fa5115,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3778184890932128783, guid: 5ed4796f146c6224da9f3d7480fa5115,
         type: 3}
