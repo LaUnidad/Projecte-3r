@@ -42,10 +42,12 @@ public class CameraOrbit : MonoBehaviour
 
         if(!cameraDisabled)
         {
-            if(Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+            if((Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Right Stick Horizontal") != 0) || (Input.GetAxis("Mouse Y") != 0 || Input.GetAxis("Right Stick Vertical") != 0))
             {
                 localRotation.x += Input.GetAxis("Mouse X") * mouseSensitivity;
+                localRotation.x += Input.GetAxis("Right Stick Horizontal") * mouseSensitivity;
                 localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+                localRotation.y += Input.GetAxis("Right Stick Vertical") * mouseSensitivity;
 
                 //Clamp rotation angle
                 localRotation.y = Mathf.Clamp(localRotation.y, -30f, 70f);

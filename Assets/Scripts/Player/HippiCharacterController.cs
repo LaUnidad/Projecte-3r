@@ -80,7 +80,7 @@ public class HippiCharacterController : MonoBehaviour
        /////////////////////////////////////GRAVEDAD//////////////////////////////////////////////////
        SetGravity();
        /////////////////////////////////////SALTO/////////////////////////////////////////////////////
-       if(Input.GetKeyDown(blackboard.m_JumpCode) && m_CharacterController.isGrounded)
+       if((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded)
        {   
            VerticalSpeed = blackboard.JumpForce/2f;
            l_Movment.y = VerticalSpeed;
@@ -105,7 +105,7 @@ public class HippiCharacterController : MonoBehaviour
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
         m_CharacterController.Move(l_Movment *Time.deltaTime);
          ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
-        if (Input.GetMouseButton(blackboard.m_Absorb) && ICanAbsorbThis == false)
+        if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && ICanAbsorbThis == false)
         {
             UsingGadget = true;
             
