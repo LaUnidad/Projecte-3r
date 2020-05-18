@@ -48,6 +48,8 @@ public class AspirableObject : MonoBehaviour
 
     bool DoIt1Time;
 
+    public bool BeenAbsorved;
+
     
     
 
@@ -70,9 +72,10 @@ public class AspirableObject : MonoBehaviour
         }  
         if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {   
-            //Debug.Log(SpeedToShoot);
-            
+            //Debug.Log(SpeedToShoot);   
         } 
+        ///////////////////////////////////////////////////TIME TO GO//////////////////////////////////////////////////////
+        DieWithTime(8);
     }
     public void StopBeingShooted()
     {
@@ -107,7 +110,8 @@ public class AspirableObject : MonoBehaviour
             rgbd.useGravity = false;
             rgbd.isKinematic = false;
             this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
-                
+            BeenAbsorved = true;
+
             if(!IAmMagnetic)
             {
                 this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
@@ -198,6 +202,19 @@ public class AspirableObject : MonoBehaviour
         {
             TouchingCrater = false;
         }
+    }
+
+    void DieWithTime(float x)
+    {
+        if(BeenAbsorved)
+        {
+            Invoke("MyTimeHasArrive", x);
+        }    
+    }
+
+    void MyTimeHasArrive()
+    {
+        Destroy(this.gameObject);
     }
     
 }
