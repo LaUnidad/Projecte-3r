@@ -19,7 +19,7 @@ public class HippiCharacterController : MonoBehaviour
 
     public bool UsingGadget;
 
-    public bool Jetpack;
+    public bool NoPower;
 
     public bool AfectedByTheGas;
 
@@ -105,7 +105,7 @@ public class HippiCharacterController : MonoBehaviour
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
         m_CharacterController.Move(l_Movment *Time.deltaTime);
          ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
-        if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && ICanAbsorbThis == false)
+        if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && ICanAbsorbThis == false && !NoPower)
         {
             UsingGadget = true;
             
@@ -170,19 +170,23 @@ public class HippiCharacterController : MonoBehaviour
     void UsePower()
     {
         if(UsingGadget && blackboard.Power>0)
-        {   
-            if(blackboard.Power<=0)
-            {
-                blackboard.Power = 0;
-            }
-            else
-            {
-                blackboard.Power -= blackboard.WastePowerVelocityABSORB * Time.deltaTime;
-            }
+        {      
+           
+            blackboard.Power -= blackboard.WastePowerVelocityABSORB * Time.deltaTime;   
+        }
+        if(UsingGadget && blackboard.Power<0)
+        {
+            NoPower = true;  
         }
         if(blackboard.Power <= 100 && UsingGadget == false && m_CharacterController.isGrounded && Absorving == false) 
         {
             blackboard.Power += 1 * blackboard.ReloadPowerSpeed * Time.deltaTime;
+            if(blackboard.Power>=100)
+            {
+                NoPower = false;
+                blackboard.Power = 100;
+            }
+
         }
     }
     public void SlideDown()
