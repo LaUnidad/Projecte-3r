@@ -122,6 +122,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &2020838143920961634
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +146,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020838143920961634}
-  m_LocalRotation: {x: -0.7002442, y: 0.09827561, z: 0.09827561, w: 0.7002442}
+  m_LocalRotation: {x: -0.7002442, y: 0.09827583, z: 0.09827583, w: 0.7002442}
   m_LocalPosition: {x: -10.841237, y: 0.21722564, z: 0.7239688}
   m_LocalScale: {x: 46.66902, y: 46.66902, z: 46.66901}
   m_Children:
@@ -153,7 +154,7 @@ Transform:
   - {fileID: 8742660658734633741}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 15.978001}
 --- !u!54 &207506157958104806
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -216,6 +217,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506158682098260
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,6 +280,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506158161802455
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -340,6 +343,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506156718200746
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -402,6 +406,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506157387489121
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -464,6 +469,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506157218790707
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -526,6 +532,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506158652595795
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -588,6 +595,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506157453538591
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -650,6 +658,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &207506157285434603
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -755,6 +764,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1001 &207506157002741487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -872,11 +882,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SV_Asset2Alive
       objectReference: {fileID: 0}
-    - target: {fileID: 7437396399206719234, guid: 67039b220150b8141ad5b0179dc4cbbe,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7952092589697255666, guid: 67039b220150b8141ad5b0179dc4cbbe,
         type: 3}
       propertyPath: m_TagString
@@ -989,11 +994,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SV_Asset2Dead
       objectReference: {fileID: 0}
-    - target: {fileID: 535160640432457856, guid: fd786052ea718574c8887a2d6a291849,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1394242316346742761, guid: fd786052ea718574c8887a2d6a291849,
         type: 3}
       propertyPath: m_TagString
@@ -1001,13 +1001,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666709490077574650, guid: fd786052ea718574c8887a2d6a291849,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.135
+      propertyPath: m_LocalPosition.x
+      value: 0.068
       objectReference: {fileID: 0}
     - target: {fileID: 2666709490077574650, guid: fd786052ea718574c8887a2d6a291849,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.068
+      propertyPath: m_LocalPosition.y
+      value: 0.135
       objectReference: {fileID: 0}
     - target: {fileID: 2666709490077574650, guid: fd786052ea718574c8887a2d6a291849,
         type: 3}
