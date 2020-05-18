@@ -10,6 +10,8 @@ public class DeathTree : MonoBehaviour
 
     public bool Death;
 
+    public bool rotate;
+
     void Start()
     {
        
@@ -21,11 +23,12 @@ public class DeathTree : MonoBehaviour
         //Debug.Log(this.transform.childCount);
         if(this.transform.childCount == 0)
         {
-            if(!Death)
+            if(!Death && rotate)
             {
                 DeathObj.transform.rotation = AliveObj.transform.rotation;
                 Death = true;
             }
+           
             AliveObj.SetActive(false);
             DeathObj.SetActive(true);
             

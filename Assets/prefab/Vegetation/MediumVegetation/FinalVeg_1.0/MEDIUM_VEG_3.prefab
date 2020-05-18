@@ -585,6 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Death: 0
+  rotate: 1
 --- !u!54 &1893315998935788479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1244,7 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478c393da515a7b48aa893453d6d1e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceToDetect: 10
+  DistanceToDetect: 100
 --- !u!54 &1893315999939987325
 Rigidbody:
   m_ObjectHideFlags: 0

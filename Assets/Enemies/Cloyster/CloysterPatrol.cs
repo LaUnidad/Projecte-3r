@@ -26,7 +26,7 @@ public class CloysterPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Wait Time: " + waitTime);
+        //Debug.Log("Wait Time: " + waitTime);
 
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(moveSpots[randomSpot].position.x, transform.position.y, moveSpots[randomSpot].position.z), speed * Time.deltaTime);
         //transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
