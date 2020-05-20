@@ -75,7 +75,11 @@ public class AspirableObject : MonoBehaviour
             //Debug.Log(SpeedToShoot);   
         } 
         ///////////////////////////////////////////////////TIME TO GO//////////////////////////////////////////////////////
-        DieWithTime(8);
+        if(!IAmMagnetic)
+        {
+            DieWithTime(8);
+        }
+            
     }
     public void StopBeingShooted()
     {

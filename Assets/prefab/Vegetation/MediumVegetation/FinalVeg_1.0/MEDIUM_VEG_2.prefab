@@ -144,6 +144,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774337819769812
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +289,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774337828118534
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +434,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774337882493110
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +579,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774337885944181
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +724,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774337936992080
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +750,7 @@ Transform:
   m_GameObject: {fileID: 9171774337936992080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 9171774337814733496}
   - {fileID: 9171774339798194615}
@@ -896,6 +901,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338129698081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1046,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338227164899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1191,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338245680797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1336,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338282248797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,6 +1481,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338312439628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,6 +1626,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338331162193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1771,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338365774633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +1916,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338376569362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,6 +2061,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338416109935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2206,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338448030637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,6 +2351,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338454135303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,6 +2496,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338463555627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,6 +2641,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338479614787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,6 +2786,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338481452036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3042,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338529504580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,6 +3187,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338656376323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3332,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338704047894
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,6 +3437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be048c8ccddd0f54ba32bafde94bdb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Death: 0
+  rotate: 0
 --- !u!1 &9171774338717021689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3559,6 +3583,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338737498575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3703,6 +3728,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338765926136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3847,6 +3873,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338767870284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,6 +4018,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338874231326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4135,6 +4163,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338906105578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4279,6 +4308,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774338985174662
 GameObject:
   m_ObjectHideFlags: 0
@@ -4423,6 +4453,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339022463909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4567,6 +4598,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339067408424
 GameObject:
   m_ObjectHideFlags: 0
@@ -4711,6 +4743,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339077157328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4855,6 +4888,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339087525452
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,6 +5033,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339139770268
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5178,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339163627480
 GameObject:
   m_ObjectHideFlags: 0
@@ -5287,6 +5323,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339192587704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5431,6 +5468,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339210759689
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,6 +5613,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339300417562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5830,6 +5869,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339367974957
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,6 +6014,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339428451824
 GameObject:
   m_ObjectHideFlags: 0
@@ -6118,6 +6159,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339485520060
 GameObject:
   m_ObjectHideFlags: 0
@@ -6262,6 +6304,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339537340685
 GameObject:
   m_ObjectHideFlags: 0
@@ -6406,6 +6449,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339624619520
 GameObject:
   m_ObjectHideFlags: 0
@@ -6550,6 +6594,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339638220162
 GameObject:
   m_ObjectHideFlags: 0
@@ -6694,6 +6739,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339721708815
 GameObject:
   m_ObjectHideFlags: 0
@@ -6869,6 +6915,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339761653429
 GameObject:
   m_ObjectHideFlags: 0
@@ -7013,6 +7060,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &9171774339798194608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7189,3 +7237,4 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
