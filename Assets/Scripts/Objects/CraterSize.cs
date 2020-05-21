@@ -8,6 +8,7 @@ public class CraterSize : MonoBehaviour
     // Start is called before the first frame update
     TerrainMaterial m_TM;
     public GameObject ParticleSystem;
+    public bool IAmMagneticCrater;
     void Start()
     {
         ParticleSystem.SetActive(false);
@@ -17,10 +18,14 @@ public class CraterSize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(m_TM.Die)
+        if(m_TM.Die && !IAmMagneticCrater)
         {
-            this.transform.localScale = new Vector3(this.transform.localScale.x,this.transform.localScale.y,1);
+            this.transform.localScale = new Vector3(this.transform.localScale.x,this.transform.localScale.y,150);
             ParticleSystem.SetActive(true);
+        }
+        else if(m_TM.Die && IAmMagneticCrater)
+        {
+            this.transform.localScale = new Vector3(this.transform.localScale.x,this.transform.localScale.y,100);
         }
     }
 }

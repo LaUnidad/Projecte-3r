@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3171906154681409744}
   - component: {fileID: 5863644282915003110}
   - component: {fileID: 172069187817956895}
-  - component: {fileID: -1513397422459387856}
+  - component: {fileID: 50021023264214440}
   m_Layer: 0
   m_Name: Prefab_C1
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &-1513397422459387856
-BoxCollider:
+--- !u!64 &50021023264214440
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,6 +90,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.027837481, y: 0.03157884, z: 0.1046253}
-  m_Center: {x: 0.000591874, y: -0.0005049868, z: 0.052312635}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1568016432510859342, guid: 721fd92a54aa5ef46bc469271646f760, type: 3}
