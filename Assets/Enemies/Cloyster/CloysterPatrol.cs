@@ -5,8 +5,10 @@ using UnityEngine;
 public class CloysterPatrol : MonoBehaviour
 {
     public float speed;
+    public float nearDistance = 2f;
     public float startWaitTime;
     private float waitTime;
+    public GameObject energy;
 
     public Transform[] moveSpots;
     private int randomSpot;
@@ -30,17 +32,19 @@ public class CloysterPatrol : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(moveSpots[randomSpot].position.x, transform.position.y, moveSpots[randomSpot].position.z), speed * Time.deltaTime);
         //transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
+        if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < nearDistance)
         {
             if (playAnim)
             {
                 anim.Play(cloysterOpenAnimClip.name);
+                energy.SetActive(true);
                 playAnim = false;
             }
 
             if (waitTime < 0)
             {
                 randomSpot = Random.Range(0, moveSpots.Length);
+                energy.SetActive(false);
                 waitTime = startWaitTime;
                 playAnim = true;
             }
@@ -49,6 +53,11 @@ public class CloysterPatrol : MonoBehaviour
                 waitTime -= Time.deltaTime;
                 playAnim = false;
             }
+        }
+
+        if (energy.transform.childCount == 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
