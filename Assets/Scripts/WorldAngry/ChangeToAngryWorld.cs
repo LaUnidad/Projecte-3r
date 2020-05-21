@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChangeToAngryWorld : MonoBehaviour
 {
+    HippiCharacterController cc;
+
     // Start is called before the first frame update
     public GameObject[] TerrainColor;
     GameObject[] MagneticRocks;
@@ -11,6 +13,7 @@ public class ChangeToAngryWorld : MonoBehaviour
     {
         TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
         MagneticRocks = GameObject.FindGameObjectsWithTag("MagneticRock");
+        cc = FindObjectOfType<HippiCharacterController>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class ChangeToAngryWorld : MonoBehaviour
         if(other.tag == "Player")
         {
             ChangeWorld();
+            cc.isDeadWorldActive = true;
         }    
     }
 }

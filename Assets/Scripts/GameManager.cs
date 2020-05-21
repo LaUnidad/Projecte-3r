@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     bool m_GameActive = true;
 
 
-    private bool isPaused;
+    public bool isPaused;
 
 
     public static GameManager Instance

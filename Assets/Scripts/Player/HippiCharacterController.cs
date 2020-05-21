@@ -61,6 +61,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     bool playerDead;
 
+    public bool isDeadWorldActive = false;
+
     void Awake()
     {
         maxHealth = 100;
@@ -182,7 +184,11 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         }
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
         RestLife();
-        PlayerHealth();
+
+        if (isDeadWorldActive)
+        {
+            ReducePlayerHealth();
+        }
 
         if (currentHealth <= 0)
         {
@@ -307,7 +313,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         hitNormal = hit.normal;
     }
 
-    void PlayerHealth()
+    void ReducePlayerHealth()
     {
         currentHealth -= Time.deltaTime;
         currentHealth = Mathf.Clamp(currentHealth, -1, maxHealth);
