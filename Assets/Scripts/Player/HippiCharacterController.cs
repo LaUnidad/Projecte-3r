@@ -56,7 +56,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public float maxHealth;
 
-    [HideInInspector]
+    //[HideInInspector]
     public float currentHealth;
 
     bool playerDead;
@@ -66,7 +66,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     void Awake()
     {
         maxHealth = 100;
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
 
         restartPosition = transform.position;
         restartRotation = transform.rotation;
