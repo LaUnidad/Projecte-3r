@@ -4,9 +4,15 @@ using UnityEngine;
 
 [RequireComponent(typeof (BLACKBOARD_ThirdPersonCharacter))]
 [RequireComponent(typeof (CharacterController))]
-public class HippiCharacterController : MonoBehaviour
+public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 {
-    // Start is called before the first frame update
+    GameManager gameManager;
+
+    // ----- RESTART -----
+    Vector3 restartPosition;
+    Quaternion restartRotation;
+
+
     public BLACKBOARD_ThirdPersonCharacter blackboard;
     private CharacterController m_CharacterController;
 
@@ -41,13 +47,43 @@ public class HippiCharacterController : MonoBehaviour
 
     public bool Shootting;
 
+
+    public GameObject vaccumCone;
+
+
+    //HEALTH
     public bool Damage;
+
+    public float maxHealth;
+
+    [HideInInspector]
+    public float currentHealth;
+
+    bool playerDead;
+
+    void Awake()
+    {
+        maxHealth = 100;
+        currentHealth = maxHealth;
+
+        restartPosition = transform.position;
+        restartRotation = transform.rotation;
+    }
 
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        gameManager.AddRestartGameElement(this);
+
         m_CharacterController = GetComponent<CharacterController>();
         blackboard = GetComponent<BLACKBOARD_ThirdPersonCharacter>();
         Cursor.visible = false;
+
+        vaccumCone.SetActive(false);
+
+        playerDead = false;
+
+
     }
 
     // Update is called once per frame
@@ -135,12 +171,38 @@ public class HippiCharacterController : MonoBehaviour
             StopLook = false;
             //Debug.Log("EO");
         }
-       ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
+
+        if (Absorving)
+        {
+            vaccumCone.SetActive(true);
+        }
+        else
+        {
+            vaccumCone.SetActive(false);
+        }
+        ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
         RestLife();
+        PlayerHealth();
+
+        if (currentHealth <= 0)
+        {
+            gameManager.RestartGame();
+        }
+
+       // Debug.Log("Current health:  " + currentHealth);
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
        /////////////////////////////////////////////////DAMAGE///////////////////////////////////////////////////
        
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        transform.position = restartPosition;
+        transform.rotation = restartRotation;
+        currentHealth = maxHealth;
+        playerDead = false;
     }
 
     void CamDirection() 
@@ -236,14 +298,18 @@ public class HippiCharacterController : MonoBehaviour
     public void PlayerReciveDamage(float lifeToRest)
     { 
         blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
-        blackboard.Life = blackboard.Life -30;           
+        //blackboard.Life = blackboard.Life -30;        
+        currentHealth -= lifeToRest;
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit) 
     {
         hitNormal = hit.normal;
     }
-    
-    
-    
+
+    void PlayerHealth()
+    {
+        currentHealth -= Time.deltaTime;
+        currentHealth = Mathf.Clamp(currentHealth, -1, maxHealth);
+    }   
 }

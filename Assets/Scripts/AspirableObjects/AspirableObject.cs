@@ -213,12 +213,14 @@ public class AspirableObject : MonoBehaviour
         if(BeenAbsorved)
         {
             Invoke("MyTimeHasArrive", x);
+
         }    
     }
 
     void MyTimeHasArrive()
     {
         Destroy(this.gameObject);
+        //Player.GetComponent<HippiCharacterController>().currentHealth += 1;
     }
     
 }
