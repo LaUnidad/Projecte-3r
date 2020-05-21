@@ -8,6 +8,7 @@ public class HacksForTheGame : MonoBehaviour
     public KeyCode m_KillTheZone = KeyCode.K;
 
     public KeyCode m_PlayerReciveHit = KeyCode.H;
+    public KeyCode m_ReviveBoton = KeyCode.L;
     public GameObject[] TerrainColor;
     
     public GameObject Player;
@@ -43,6 +44,20 @@ public class HacksForTheGame : MonoBehaviour
         if(Input.GetKeyDown(m_PlayerReciveHit))
         {
             Player.GetComponent<HippiCharacterController>().PlayerReciveDamage(30);
+        }
+        if(Input.GetKey(m_ReviveBoton))
+        {
+            foreach(GameObject obj in TerrainColor)
+            {
+                obj.GetComponent<TerrainMaterial>().Die = false;
+            }
+            foreach(GameObject obj in MagneticRocks)
+            {
+
+                obj.gameObject.tag = "MagneticRock";
+            }
+            Player.GetComponent<HippiCharacterController>().AfectedByTheGas = false;
+            //AreaKiller.GetComponent<AreaColor>().KillZone = true;
         }
 
     }
