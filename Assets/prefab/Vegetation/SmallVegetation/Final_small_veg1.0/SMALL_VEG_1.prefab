@@ -54,7 +54,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866315560076918190}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0017426584
@@ -80,6 +80,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -117,7 +118,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2170616352176785655}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0021158988
@@ -143,6 +144,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -180,7 +182,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2355882267490271497}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.004461247
@@ -206,6 +208,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -243,7 +246,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3548081872881264869}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0030631118
@@ -269,6 +272,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -306,7 +310,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3701755674494838554}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0089532
@@ -332,6 +336,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -401,7 +406,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3843177338888949380}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0021158992
@@ -427,6 +432,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -464,7 +470,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4114886621469135954}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.008395064
@@ -490,6 +496,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -571,7 +578,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6115499685390522762}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0031102945
@@ -597,6 +604,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -634,7 +642,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6819668016536433548}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.006149505
@@ -660,6 +668,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -697,7 +706,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7761838433267210700}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.002115899
@@ -723,6 +732,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0
@@ -790,7 +800,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296868624210659303}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0021158988
@@ -816,6 +826,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 2
   LifeForThePlayer: 0.2
   distance: 0

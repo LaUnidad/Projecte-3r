@@ -7,10 +7,9 @@ public class TerrainMaterial : MonoBehaviour
     // Start is called before the first frame update
     MeshRenderer meshR;
     public Material Death;
-
     
-
     public bool Die;
+
     void Start()
     {
         meshR = GetComponent<MeshRenderer>();
@@ -23,6 +22,6 @@ public class TerrainMaterial : MonoBehaviour
         if(Die == true)
         {
             meshR.material = Death;
-        }
+        }   
     }
 }

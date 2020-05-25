@@ -1576,6 +1576,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -2978,6 +2979,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -5006,6 +5008,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -5624,6 +5627,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -6273,6 +6277,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -9506,6 +9511,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -12822,6 +12828,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -12981,6 +12988,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -13841,6 +13849,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -14321,6 +14330,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -14902,6 +14912,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -18273,6 +18284,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -20449,6 +20461,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -21477,6 +21490,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -22215,6 +22229,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -22478,6 +22493,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -23686,6 +23702,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -27253,6 +27270,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -30740,6 +30758,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -30905,6 +30924,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -31108,6 +31128,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1510151522}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &759532367 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 6095470017244021354, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6095470016487345181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &760763554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3171906154681409744, guid: 602c32287fbac174789242edffe32714,
@@ -31190,6 +31216,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -31558,6 +31585,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -31791,6 +31819,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -32043,6 +32072,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -34935,6 +34965,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -35163,6 +35194,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -36362,6 +36394,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -37436,6 +37469,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -40528,6 +40562,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -40832,6 +40867,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -50286,6 +50322,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -52321,6 +52358,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -53024,6 +53062,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -53618,6 +53657,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -53955,6 +53995,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -56399,6 +56440,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -57198,6 +57240,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -59243,6 +59286,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -60277,6 +60321,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -60505,6 +60550,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -60777,6 +60823,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -61686,6 +61733,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -62067,6 +62115,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -65227,6 +65276,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -65891,6 +65941,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -67467,6 +67518,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -69130,6 +69182,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -80055,6 +80108,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -81311,6 +81365,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -83116,6 +83171,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -84378,6 +84434,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -84561,6 +84618,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -84857,6 +84915,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -87334,6 +87393,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -87511,6 +87571,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -89898,6 +89959,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -90057,6 +90119,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -90546,6 +90609,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 30
   LifeForThePlayer: 0
   distance: 0
@@ -98046,7 +98110,7 @@ PrefabInstance:
     - target: {fileID: 6095470015368605144, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.477578
+      value: 13.03
       objectReference: {fileID: 0}
     - target: {fileID: 6095470015368605144, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
         type: 3}
@@ -98093,11 +98157,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6095470015368605144, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095470015368605144, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095470015368605144, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6095470015368605145, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
         type: 3}
       propertyPath: m_Name
       value: CRATER_MAGNETIC
       objectReference: {fileID: 0}
+    - target: {fileID: 6095470017244021351, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f,
+        type: 3}
+      propertyPath: coll
+      value: 
+      objectReference: {fileID: 759532367}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cdfaa89e94c0ec46b76afcb23e96d5f, type: 3}
 --- !u!1001 &7421919594449766585

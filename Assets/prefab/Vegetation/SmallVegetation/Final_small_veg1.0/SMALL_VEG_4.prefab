@@ -24,7 +24,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434994419120387458}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0025733085
@@ -50,6 +50,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -87,7 +88,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808588501469452480}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0025733095
@@ -113,6 +114,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -150,7 +152,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226214090235996843}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.00681262
@@ -176,6 +178,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -257,7 +260,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557041171987333302}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0037112953
@@ -283,6 +286,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -320,7 +324,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082586294490584738}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0013153749
@@ -346,6 +350,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -383,7 +388,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423199932499674758}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.008395063
@@ -409,6 +414,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -446,7 +452,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5587903484293129868}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.004733569
@@ -472,6 +478,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -509,7 +516,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6231646034598322970}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0025733085
@@ -535,6 +542,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -572,7 +580,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6656562810008100273}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.005617713
@@ -598,6 +606,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0
@@ -727,7 +736,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9056259446672928348}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0025733083
@@ -753,6 +762,7 @@ MonoBehaviour:
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
+  coll: {fileID: 0}
   Biomass: 5
   LifeForThePlayer: 0.5
   distance: 0

@@ -20,7 +20,7 @@ public class AspirableObject : MonoBehaviour
 
     private GameObject Gun;
 
-    private Collider coll;
+    public Collider coll;
 
     public float Biomass;
 
@@ -89,6 +89,7 @@ public class AspirableObject : MonoBehaviour
     }
     public void ReturnHome()
     {
+        coll.isTrigger = true;
         transform.LookAt(target.transform.position, transform.position + transform.forward);
         this.transform.position = transform.position + transform.forward * 0.1f;
         rgbd.velocity = transform.forward * SpeedToShoot;
@@ -189,6 +190,7 @@ public class AspirableObject : MonoBehaviour
 
             if(!ImAbsorved && !ImShooted && this.gameObject.tag == "AspirableObject")
             {
+                coll.isTrigger = false;
                 this.transform.position = target.transform.position;
                 rgbd.isKinematic = true;
             }
