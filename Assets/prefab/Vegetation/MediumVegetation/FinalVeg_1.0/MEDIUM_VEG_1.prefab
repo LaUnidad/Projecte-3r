@@ -1723,6 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Death: 0
   rotate: 0
+  KillFruits: 0
 --- !u!54 &5759906451632631203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4365,6 +4366,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8260073763987179321, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+        type: 3}
+      propertyPath: m_TagString
+      value: DeadController
+      objectReference: {fileID: 0}
     - target: {fileID: 8260073764421306816, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
         type: 3}
       propertyPath: m_TagString
@@ -4803,17 +4809,17 @@ PrefabInstance:
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1766653
+      value: 0.192
       objectReference: {fileID: 0}
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22666627
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.109996974
+      value: 0.192
       objectReference: {fileID: 0}
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
@@ -4858,17 +4864,17 @@ PrefabInstance:
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3333333
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3333333
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3333333
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6444600847615787769, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}

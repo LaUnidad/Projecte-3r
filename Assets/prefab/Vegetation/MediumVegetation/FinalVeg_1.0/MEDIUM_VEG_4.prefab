@@ -702,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Death: 0
   rotate: 0
+  KillFruits: 0
 --- !u!54 &1749517245741317038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1253,6 +1254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774644474506447573, guid: 6756ebdf5369b7640b27e59b70719d8d,
+        type: 3}
+      propertyPath: m_TagString
+      value: DeadController
       objectReference: {fileID: 0}
     - target: {fileID: 8986018707053877982, guid: 6756ebdf5369b7640b27e59b70719d8d,
         type: 3}

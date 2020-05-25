@@ -128,15 +128,13 @@ public class AspirableObject : MonoBehaviour
                 rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
-                
-                
+   
             }
             else
             {
                 //ReturnHome();
                 rgbd.useGravity = false;
-                ImAbsorved = false;
-                
+                ImAbsorved = false;    
             } 
         }
     }

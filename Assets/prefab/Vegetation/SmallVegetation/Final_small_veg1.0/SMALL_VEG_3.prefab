@@ -62,6 +62,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1 &477940362622074269
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +187,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214902559328127
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -248,6 +250,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214902105973807
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -310,6 +313,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214901897168886
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -372,6 +376,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214902626758048
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -434,6 +439,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214901069601143
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -526,6 +532,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214901416155167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -588,6 +595,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214901040252925
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -631,6 +639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Death: 0
   rotate: 0
+  KillFruits: 0
 --- !u!54 &5061214901829675363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -693,6 +702,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &5061214902122284894
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -755,6 +765,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   OnSide: 0
+  BeenAbsorved: 0
 --- !u!1001 &5061214901127165451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -977,6 +988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: LivePlant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326590545420269841, guid: 9e6ee083db6e24a499b2877e290a48f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: DeadController
       objectReference: {fileID: 0}
     - target: {fileID: 2930118209375159406, guid: 9e6ee083db6e24a499b2877e290a48f3,
         type: 3}

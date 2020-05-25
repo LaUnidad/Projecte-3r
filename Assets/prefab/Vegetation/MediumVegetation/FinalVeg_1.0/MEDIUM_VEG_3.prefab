@@ -580,6 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Death: 0
   rotate: 1
+  KillFruits: 0
 --- !u!54 &1893315998935788479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1448,7 +1449,7 @@ PrefabInstance:
     - target: {fileID: 50209012425645565, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
-      value: TreeMaster
+      value: DeadController
       objectReference: {fileID: 0}
     - target: {fileID: 50209013104927351, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}

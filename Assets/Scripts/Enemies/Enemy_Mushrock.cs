@@ -44,7 +44,7 @@ public class Enemy_Mushrock : MonoBehaviour
         {
             StartCoroutine(DamagePlayer(m_knockback, 0.2f));
             GameManager.Instance.m_player.GetComponent<HippiCharacterController>().PlayerReciveDamage(m_damage);
-            Debug.Log("lol");
+            //Debug.Log("lol");
             m_canKnockback = false;
         }
 

@@ -38,7 +38,7 @@ public class HacksForTheGame : MonoBehaviour
 
                 obj.gameObject.tag = "AspirableObject";
             }
-            Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
+            Player.GetComponent<HippiCharacterController>().isDeadWorldActive = true;
             //AreaKiller.GetComponent<AreaColor>().KillZone = true;
         }
         if(Input.GetKeyDown(m_PlayerReciveHit))
