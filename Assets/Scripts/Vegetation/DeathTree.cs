@@ -33,9 +33,10 @@ public class DeathTree : MonoBehaviour
                 DeathObj.transform.rotation = AliveObj.transform.rotation;
                 Death = true;
             }
-           
-            AliveObj.SetActive(false);
+            AliveObj.GetComponent<DisolveMyChildrens>().Disolve = true;
+            //AliveObj.SetActive(false);
             DeathObj.SetActive(true);
+            //DeathObj.GetComponent<DisolveTrial>().Doit = true;
             
         }
         else
