@@ -18,7 +18,6 @@ public class DisolveTrial : MonoBehaviour
     [Range (0,10)]public float VelocityToDisapear;
     void Start()
     {
-        WichIsYourState();
         mesR = GetComponent<MeshRenderer>();
     }
 
@@ -37,20 +36,6 @@ public class DisolveTrial : MonoBehaviour
         else if(Doit && !Disolve)
         {
             timer -= 1* Time.deltaTime * (VelocityToDisapear/10);  
-        }
-        
-        
-
-    }
-    public void WichIsYourState()
-    {
-        if(Disolve)
-        {
-            disolveMat.SetFloat("Vector1_226A2816", 0);
-        }
-        else
-        {
-            disolveMat.SetFloat("Vector1_226A2816", 1);
         }
     }
 }

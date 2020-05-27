@@ -14,19 +14,16 @@ public class CreateTrial : MonoBehaviour
     [Range (0,10)]public float VelocityToDisapear;
     void Start()
     {
-        disolveMat.SetFloat("Vector1_226A2816", 1);
         mesR = GetComponent<MeshRenderer>();
+        timer = 1;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        disolveMat.SetFloat("Vector1_226A2816", timer);
-        Debug.Log(timer);
+        disolveMat.SetFloat("Vector1_1D89C180", timer);
+        
         if(Doit)
         {
-           
-            timer += 1* Time.deltaTime * (VelocityToDisapear/10);    
+            timer -= 1* Time.deltaTime * (VelocityToDisapear/10);    
         }
         
 

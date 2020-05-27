@@ -36,7 +36,7 @@ public class DeathTree : MonoBehaviour
             AliveObj.GetComponent<DisolveMyChildrens>().Disolve = true;
             //AliveObj.SetActive(false);
             DeathObj.SetActive(true);
-            //DeathObj.GetComponent<DisolveTrial>().Doit = true;
+            DeathObj.GetComponent<CreateTrial>().Doit = true;
             
         }
         else
