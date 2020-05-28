@@ -26,7 +26,14 @@ public class DeathController : MonoBehaviour
     {
         if(Player.GetComponent<HippiCharacterController>().isDeadWorldActive)
         {
-            KillElementsInTime();
+            if(DeadElements.Length == 0)
+            {
+                Debug.Log("No hay vegetacion que eliminar! Hasta luego, Saludos;)))");
+            }
+            else
+            {
+                KillElementsInTime();
+            }
         }
     }
 
