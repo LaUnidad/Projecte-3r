@@ -35,6 +35,8 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
 
     public GameObject BiomassObj;
 
+    public float KnockBackForce;
+
     
     
     void Start()
