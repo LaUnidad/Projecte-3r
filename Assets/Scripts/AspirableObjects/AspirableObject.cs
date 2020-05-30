@@ -90,6 +90,7 @@ public class AspirableObject : MonoBehaviour
     }
     public void ReturnHome()
     {
+        Debug.Log("Take Me Home");
         BeenAbsorved = false;
         //coll.isTrigger = true;
         transform.LookAt(target.transform.position, transform.position + transform.forward);
@@ -226,7 +227,7 @@ public class AspirableObject : MonoBehaviour
 
     public bool StopAbsorvingMagneticRock()
     {
-        if(BeenAbsorved && !Player.GetComponent<HippiCharacterController>().Absorving && !ImShooted)
+        if(BeenAbsorved && !Player.GetComponent<HippiCharacterController>().Absorving && !ImShooted && !TouchingCrater)
         {
             return true;
         }

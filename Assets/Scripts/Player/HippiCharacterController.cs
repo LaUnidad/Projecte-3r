@@ -56,6 +56,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public float maxHealth;
 
+    public float TimeAtFalling;
+
     //[HideInInspector]
     public float currentHealth;
 
@@ -117,6 +119,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         }
        /////////////////////////////////////GRAVEDAD//////////////////////////////////////////////////
        SetGravity();
+       DamageAtFall();
+       //Debug.Log(TimeAtFalling + "   " + m_CharacterController.isGrounded);
        /////////////////////////////////////SALTO/////////////////////////////////////////////////////
        if((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded)
        {   
@@ -317,5 +321,17 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     {
         currentHealth -= Time.deltaTime;
         currentHealth = Mathf.Clamp(currentHealth, -1, maxHealth);
-    }   
+    }  
+
+    public void DamageAtFall()
+    {
+        if(!m_CharacterController.isGrounded)
+        {
+            TimeAtFalling += 1*Time.deltaTime;
+        }
+        else
+        {
+            TimeAtFalling = 0;
+        }    
+    } 
 }
