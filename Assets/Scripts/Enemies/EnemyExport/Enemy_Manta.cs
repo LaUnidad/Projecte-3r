@@ -17,6 +17,7 @@ public class Enemy_Manta : MonoBehaviour
     public float m_MinDistanceToAlert = 19f;
     public float m_MinDistanceToReplace = 25f;
     public float m_DistanceToOutOfRange = 25f;
+    public float m_Knockback = 16f;
     public LayerMask m_CollisionLayerMask;
     public float m_MinHeight;
 
@@ -26,7 +27,7 @@ public class Enemy_Manta : MonoBehaviour
     private Animator m_Animator;
     private int m_CurrentPatrolPositionId = -1;
     public float m_ConeAngle = 15.0f;
-    private bool m_hasPath;
+    private bool m_hasPath = false;
 
 
 
@@ -98,6 +99,7 @@ public class Enemy_Manta : MonoBehaviour
                 if (Vector3.Distance(transform.position, m_Target.position) <= m_ReachRadius)
                 {
                     ChangeState(State.REPLACE);
+                    StartCoroutine(DamagePlayer(m_Knockback, 0.2f));
                 }
 
                 if (!SeesPlayer())
@@ -121,7 +123,7 @@ public class Enemy_Manta : MonoBehaviour
                 break;
         }
 
-        if (GameManager.Instance.m_player.transform.position.y <= m_MinHeight)
+        if (GameManager.Instance.m_player.transform.position.y <= m_MinHeight && Vector3.Distance(GameManager.Instance.m_player.transform.position, transform.position) <= m_MinDistanceToAlert)
         {
             ChangeState(State.REPLACE);
             //return;
@@ -267,6 +269,17 @@ public class Enemy_Manta : MonoBehaviour
     {
          transform.position += transform.forward * m_Speed * Time.deltaTime;
        
+    }
+
+    IEnumerator DamagePlayer(float sumPos, float inTime)
+    {
+        var from = GameManager.Instance.m_player.transform.position;
+        var to = GameManager.Instance.m_player.transform.position + (-sumPos * GameManager.Instance.m_player.transform.forward.normalized);
+        for (var t = 0f; t < 1; t += Time.deltaTime / inTime)
+        {
+            GameManager.Instance.m_player.transform.position = Vector3.Lerp(from, to, t);
+            yield return null;
+        }
     }
 
     private void OnDrawGizmos()
