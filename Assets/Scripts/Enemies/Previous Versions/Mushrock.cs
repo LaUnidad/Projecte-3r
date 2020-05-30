@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Mushrock : MonoBehaviour
+public class Mushrock : MonoBehaviour
 {
 
     public float m_near = 7.5f;
