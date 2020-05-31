@@ -57,9 +57,8 @@ public class AspirableObject : MonoBehaviour
         coll = GetComponent<SphereCollider>();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
-        
-
     }
+
     void Update()
     {   
         if(IAmInList == true)
@@ -215,6 +214,7 @@ public class AspirableObject : MonoBehaviour
     {
         if(BeenAbsorved)
         {
+            //this.transform.parent = null;
             Invoke("MyTimeHasArrive", x);
 
         }    
