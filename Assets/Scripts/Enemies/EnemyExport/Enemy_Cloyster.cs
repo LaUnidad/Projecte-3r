@@ -196,7 +196,7 @@ public class Enemy_Cloyster : MonoBehaviour
         switch (l_newState)
         {
             case State.PATROL:
-
+                CheckDie();
                 m_CurrentTime = 0f;
                 m_NavMeshAgent.speed = m_Speed;
                 m_NavMeshAgent.isStopped = false;
@@ -204,21 +204,21 @@ public class Enemy_Cloyster : MonoBehaviour
 
                 break;
             case State.ALERT:
-
+                CheckDie();
                 m_CurrentTime = 0f;
                 m_CurrentAlertRotation = 0.0f;
                 m_StartAlertRotation = transform.rotation.y;
 
                 break;
             case State.CHASE:
-
+                CheckDie();
                 m_CurrentTime = 0f;
                 m_NavMeshAgent.speed = m_ChaseSpeed;
                 MoveToPoint(GameManager.Instance.m_player.transform.position);
                 m_Body.GetComponent<Collider>().enabled = true;
                 break;
             case State.WAIT_TO_ATTACK:
-
+                CheckDie();
                 m_CurrentTime = 0f;
                 SetActiveEnergy();
                 //m_Animator.SetTrigger("Open");
@@ -226,12 +226,11 @@ public class Enemy_Cloyster : MonoBehaviour
                 break;
 
             case State.WAIT:
-
+                CheckDie();
 
                 break;
 
             case State.DIE:
-
                 m_CurrentTime = 0f;
                 //m_Animator.SetTrigger("Die");
 
@@ -318,6 +317,17 @@ public class Enemy_Cloyster : MonoBehaviour
 
         }
 
+    }
+
+    void CheckDie()
+    {
+        foreach (GameObject item in m_AbsorbableItems)
+        {
+            if (item == null)
+            {
+                m_AbsorbableItems.Remove(item);
+            }
+        }
     }
 
     public void HitPlayer()
