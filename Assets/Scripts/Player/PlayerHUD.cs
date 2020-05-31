@@ -18,7 +18,7 @@ public class PlayerHUD : MonoBehaviour
         cc = GetComponent<HippiCharacterController>();
         gm = FindObjectOfType<GameManager>();
 
-        healthBar.fillAmount = cc.currentHealth / cc.maxHealth;
+        //healthBar.fillAmount = cc.currentHealth / cc.maxHealth;
 
         pauseScreen.SetActive(false);
     }
@@ -26,7 +26,8 @@ public class PlayerHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthBar.fillAmount = cc.currentHealth / cc.maxHealth;
+        //healthBar.fillAmount = cc.currentHealth / cc.maxHealth;
+        healthBar.fillAmount = cc.blackboard.Life/100;
 
         if(gm.isPaused)
         {

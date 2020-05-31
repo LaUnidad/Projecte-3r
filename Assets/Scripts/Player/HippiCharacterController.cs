@@ -188,7 +188,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         }
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
         RestLife();
-
+        
+        if (blackboard.Life <= 0)
+        {
+            gameManager.RestartGame();
+        }
+        /*
         if (isDeadWorldActive)
         {
             ReducePlayerHealth();
@@ -198,7 +203,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         {
             gameManager.RestartGame();
         }
-
+        */
        // Debug.Log("Current health:  " + currentHealth);
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
@@ -211,7 +216,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         Time.timeScale = 1f;
         transform.position = restartPosition;
         transform.rotation = restartRotation;
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
+        blackboard.Life = 100;
         playerDead = false;
     }
 
@@ -308,8 +314,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public void PlayerReciveDamage(float lifeToRest)
     { 
         blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
-        //blackboard.Life = blackboard.Life -30;        
-        currentHealth -= lifeToRest;
+        blackboard.Life = blackboard.Life - lifeToRest;        
+        //currentHealth -= lifeToRest;
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit) 
@@ -328,10 +334,17 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         if(!m_CharacterController.isGrounded)
         {
             TimeAtFalling += 1*Time.deltaTime;
+            if(TimeAtFalling>= 0.9)
+            {
+                Debug.Log("MORITE PUTO");
+                PlayerReciveDamage(100);
+            }
+            
         }
         else
         {
             TimeAtFalling = 0;
-        }    
+        }   
     } 
+    
 }
