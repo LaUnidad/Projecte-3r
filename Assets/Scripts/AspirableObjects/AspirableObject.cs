@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+[RequireComponent(typeof (SphereCollider))]
 public class AspirableObject : MonoBehaviour
 {
     public bool IMakeDamage;
@@ -20,8 +21,6 @@ public class AspirableObject : MonoBehaviour
 
     private GameObject Gun;
 
-    private Collider coll;
-
     public float Biomass;
 
     public float LifeForThePlayer;
@@ -32,24 +31,20 @@ public class AspirableObject : MonoBehaviour
 
     public bool ImAbsorved;
 
-    public bool Enganchao;
-
     public GameObject target;
-
-    public float TimeToReturn;
 
     public float timer;
     public bool ImShooted;
 
     public Vector3 PlayerForward;
 
-    public bool OnSide;
     bool TouchingCrater;
 
     bool DoIt1Time;
 
     public bool BeenAbsorved;
 
+    private SphereCollider coll;
     
     
 
@@ -59,6 +54,7 @@ public class AspirableObject : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Gun = GameObject.FindGameObjectWithTag("Gun");
+        coll = GetComponent<SphereCollider>();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
         
@@ -72,10 +68,19 @@ public class AspirableObject : MonoBehaviour
         }  
         if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {   
-            //Debug.Log(SpeedToShoot);   
+            VelocityChanger(timer);
+            //Debug.Log(StopAbsorvingMagneticRock());  
+            if(StopAbsorvingMagneticRock())
+            {
+                ReturnHome();  
+            } 
         } 
         ///////////////////////////////////////////////////TIME TO GO//////////////////////////////////////////////////////
-        DieWithTime(8);
+        if(!IAmMagnetic)
+        {
+            DieWithTime(8);
+        }
+            
     }
     public void StopBeingShooted()
     {
@@ -85,6 +90,8 @@ public class AspirableObject : MonoBehaviour
     }
     public void ReturnHome()
     {
+        BeenAbsorved = false;
+        //coll.isTrigger = true;
         transform.LookAt(target.transform.position, transform.position + transform.forward);
         this.transform.position = transform.position + transform.forward * 0.1f;
         rgbd.velocity = transform.forward * SpeedToShoot;
@@ -111,7 +118,7 @@ public class AspirableObject : MonoBehaviour
             rgbd.isKinematic = false;
             this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
             BeenAbsorved = true;
-
+            timer += 1* Time.deltaTime;
             if(!IAmMagnetic)
             {
                 this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
@@ -124,15 +131,13 @@ public class AspirableObject : MonoBehaviour
                 rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
-                
-                
+   
             }
             else
             {
                 //ReturnHome();
                 rgbd.useGravity = false;
-                ImAbsorved = false;
-                
+                ImAbsorved = false;    
             } 
         }
     }
@@ -167,7 +172,7 @@ public class AspirableObject : MonoBehaviour
             //Debug.Log("IEP");
             rgbd.useGravity = false;
             Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = true;
-            Enganchao = true;
+            
         }
         
     }  
@@ -176,7 +181,7 @@ public class AspirableObject : MonoBehaviour
         if(other.gameObject.tag == "Gun")
         {
             Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = false;
-            Enganchao = false;
+            
         }
     }
     void OnTriggerEnter(Collider other) 
@@ -189,6 +194,8 @@ public class AspirableObject : MonoBehaviour
             {
                 this.transform.position = target.transform.position;
                 rgbd.isKinematic = true;
+                timer = 0;
+                coll.isTrigger = false;
             }
         }
         if(other.tag == "PlayerCollider" && IMakeDamage)
@@ -203,18 +210,45 @@ public class AspirableObject : MonoBehaviour
             TouchingCrater = false;
         }
     }
-
     void DieWithTime(float x)
     {
         if(BeenAbsorved)
         {
             Invoke("MyTimeHasArrive", x);
+
         }    
     }
-
     void MyTimeHasArrive()
     {
         Destroy(this.gameObject);
+        //Player.GetComponent<HippiCharacterController>().currentHealth += 1;
+    }
+
+    public bool StopAbsorvingMagneticRock()
+    {
+        if(BeenAbsorved && !Player.GetComponent<HippiCharacterController>().Absorving && !ImShooted)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void VelocityChanger (float x)
+    {
+        if(x<= 1)
+        {
+            SpeedToShoot = 8;
+        }
+        else if(x> 1 && x<= 2.5)
+        {
+            SpeedToShoot = 1 * (x*10);
+        }
+        else if(x>2.5)
+        {
+            SpeedToShoot = 25;
+        }
     }
     
 }

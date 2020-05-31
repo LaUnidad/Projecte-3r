@@ -160,6 +160,9 @@ public class Aspiradora : MonoBehaviour
                 RemoveObjects(other.gameObject);
                 Biomass += other.gameObject.GetComponent<AspirableObject>().Biomass;
                 Player.GetComponent<HippiCharacterController>().SumLife(other.gameObject.GetComponent<AspirableObject>().LifeForThePlayer);
+
+                Player.GetComponent<HippiCharacterController>().currentHealth += 0.5f;
+
                 Destroy(other.gameObject);
             }
             else

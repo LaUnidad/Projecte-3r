@@ -8,6 +8,8 @@ public class TerrainMaterial : MonoBehaviour
     MeshRenderer meshR;
     public Material Death;
 
+    
+
     public bool Die;
     void Start()
     {

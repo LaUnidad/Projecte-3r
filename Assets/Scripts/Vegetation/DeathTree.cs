@@ -12,6 +12,10 @@ public class DeathTree : MonoBehaviour
 
     public bool rotate;
 
+    public bool KillFruits;
+
+    
+
     void Start()
     {
        
@@ -21,6 +25,7 @@ public class DeathTree : MonoBehaviour
     void Update()
     {    
         //Debug.Log(this.transform.childCount);
+        TimeToDie();
         if(this.transform.childCount == 0)
         {
             if(!Death && rotate)
@@ -28,9 +33,10 @@ public class DeathTree : MonoBehaviour
                 DeathObj.transform.rotation = AliveObj.transform.rotation;
                 Death = true;
             }
-           
+            //AliveObj.GetComponent<DisolveMyChildrens>().Disolve = true;
             AliveObj.SetActive(false);
             DeathObj.SetActive(true);
+            //DeathObj.GetComponent<DisolveTrial>().Doit = true;
             
         }
         else
@@ -61,4 +67,14 @@ public class DeathTree : MonoBehaviour
             DeathObj = other.gameObject;
         }
     }  
+    public void TimeToDie()
+    {
+        if(KillFruits)
+        {
+            foreach (Transform child in this.transform) 
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+    }
 }
