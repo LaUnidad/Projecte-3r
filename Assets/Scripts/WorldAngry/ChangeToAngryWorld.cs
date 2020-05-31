@@ -7,15 +7,22 @@ public class ChangeToAngryWorld : MonoBehaviour
     HippiCharacterController cc;
 
     // Start is called before the first frame update
-    public GameObject[] TerrainColor;
+    //public GameObject[] TerrainColor;
     GameObject[] MagneticRocks;
+
+    public GameObject[] Craters;
+    GameObject Player;
+
+    GameObject ParticleController;
     void Start()
     {
-        TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
+        //TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
         MagneticRocks = GameObject.FindGameObjectsWithTag("MagneticRock");
-        cc = FindObjectOfType<HippiCharacterController>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Craters = GameObject.FindGameObjectsWithTag("Crater");
+        ParticleController = GameObject.FindGameObjectWithTag("BadGas");
+        ParticleController.gameObject.SetActive(false);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -23,22 +30,27 @@ public class ChangeToAngryWorld : MonoBehaviour
     }
     void ChangeWorld()
     {
-        foreach(GameObject obj in TerrainColor)
+        
+        foreach(GameObject obj in Craters)
         {
-            obj.GetComponent<TerrainMaterial>().Die = true;
+            obj.gameObject.GetComponent<CraterSize>().Gas = true;
         }
+        
         foreach(GameObject obj in MagneticRocks)
         {
 
             obj.gameObject.tag = "AspirableObject";
         }
+        
+        Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
+        ParticleController.gameObject.SetActive(true);
+        
     }
     void OnTriggerEnter(Collider other) 
     {
         if(other.tag == "Player")
         {
-            ChangeWorld();
-            cc.isDeadWorldActive = true;
+            ChangeWorld();  
         }    
     }
 }

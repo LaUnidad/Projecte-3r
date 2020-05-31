@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7890423923201624416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2207194649235240604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b28f01245a1d5d478663c89035dd39e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParticleSystem: {fileID: 7890423922185014161}
---- !u!114 &7890423923201624431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2207194649235240604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc5f7d0b4584ae4493ca6b4f7865034, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Death: {fileID: 2100000, guid: 93306927a5f4dff4f93f3bc57641e7f2, type: 2}
-  Die: 0
 --- !u!64 &7673968966035070085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41,6 +14,34 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: b52a608957116e941b8333b6894d57e7, type: 3}
+--- !u!114 &7890423923201624416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207194649235240604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b28f01245a1d5d478663c89035dd39e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParticleSystem: {fileID: 7890423922185014161}
+  IAmMagneticCrater: 0
+--- !u!114 &7890423923201624431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207194649235240604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc5f7d0b4584ae4493ca6b4f7865034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Death: {fileID: 2100000, guid: 93306927a5f4dff4f93f3bc57641e7f2, type: 2}
+  Die: 0
 --- !u!1 &7890423922185014161
 GameObject:
   m_ObjectHideFlags: 0
@@ -4923,7 +4924,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 048deb4c2f70d864b88ace305598af44,
         type: 3}
       propertyPath: m_TagString
-      value: Terrain
+      value: Crater
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048deb4c2f70d864b88ace305598af44, type: 3}

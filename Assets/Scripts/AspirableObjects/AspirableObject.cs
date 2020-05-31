@@ -186,7 +186,7 @@ public class AspirableObject : MonoBehaviour
     }
     void OnTriggerEnter(Collider other) 
     {
-        if(other.tag == "Crater")
+        if(other.tag == "CraterCollider")
         {
             TouchingCrater = true;
 
@@ -205,7 +205,7 @@ public class AspirableObject : MonoBehaviour
     }
     void OnTriggerExit(Collider other) 
     {
-        if(other.tag == "Crater")
+        if(other.tag == "CraterCollider")
         {
             TouchingCrater = false;
         }
