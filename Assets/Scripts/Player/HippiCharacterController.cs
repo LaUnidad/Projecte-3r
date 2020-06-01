@@ -17,11 +17,11 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     private CharacterController m_CharacterController;
 
     /////PLAYER
-    private float MovHor;
-    private float MovVer;
-    private Vector3 l_Movment;
+   // private float MovHor;
+   // private float MovVer;
+   // private Vector3 l_Movment;
 
-    private float VerticalSpeed;
+   // private float VerticalSpeed;
 
     public bool UsingGadget;
 
@@ -30,16 +30,16 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public bool AfectedByTheGas;
 
     //////CAMERA
-    public Camera cam;
-    private Vector3 camForward;
-    private Vector3 CamRight;
+   // public Camera cam;
+   // private Vector3 camForward;
+  //  private Vector3 CamRight;
 
-    public bool isOnSlope = false;
+   // public bool isOnSlope = false;
 
     public bool StopLook;
 
-    private float ActualSpeed;
-    private Vector3 hitNormal;
+  //  private float ActualSpeed;
+  //  private Vector3 hitNormal;
 
     public bool Absorving;
 
@@ -94,13 +94,15 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     void Update()
     {
        //////////////////////////////////////CAPTURA DE INPUTS Y MOVIMIENTO/////////////////////////
-       MovHor = Input.GetAxis("Horizontal");
-       MovVer = Input.GetAxis("Vertical");
-       Vector3 orientation = new Vector3(MovHor,0,MovVer);
-       orientation = Vector3.ClampMagnitude(orientation, 1);
+      // MovHor = Input.GetAxis("Horizontal");
+     //  MovVer = Input.GetAxis("Vertical");
+     //  Vector3 orientation = new Vector3(MovHor,0,MovVer);
+    //   orientation = Vector3.ClampMagnitude(orientation, 1);
        /////////////////////////////////////ROTACIÓN//////////////////////////////////////////////////
-        CamDirection();
-        l_Movment = orientation.x * CamRight + orientation.z * camForward;
+      //  CamDirection();
+     //   l_Movment = orientation.x * CamRight + orientation.z * camForward;
+
+        /*
         if(!StopLook)
         {
             m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movment));
@@ -118,10 +120,11 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             }  
         }
        /////////////////////////////////////GRAVEDAD//////////////////////////////////////////////////
-       SetGravity();
+    //   SetGravity();
        DamageAtFall();
        //Debug.Log(TimeAtFalling + "   " + m_CharacterController.isGrounded);
        /////////////////////////////////////SALTO/////////////////////////////////////////////////////
+       /*
        if((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded)
        {   
            VerticalSpeed = blackboard.JumpForce/2f;
@@ -146,6 +149,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         l_Movment = l_Movment * ActualSpeed * blackboard.ForceAtAbsorb;
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
         m_CharacterController.Move(l_Movment *Time.deltaTime);
+
+        */
          ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
         if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && ICanAbsorbThis == false && !NoPower)
         {
@@ -220,7 +225,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         blackboard.Life = 100;
         playerDead = false;
     }
-
+    /*
     void CamDirection() 
     {
         camForward = cam.transform.forward;
@@ -245,6 +250,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         //DESLIZAMIENTO//
         SlideDown();
     }
+    */
     void UsePower()
     {
         if(UsingGadget && blackboard.Power>0)
@@ -267,6 +273,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
         }
     }
+    /*
     public void SlideDown()
     {
         isOnSlope = Vector3.Angle(Vector3.up, hitNormal)>= m_CharacterController.slopeLimit;
@@ -277,6 +284,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             l_Movment.y += blackboard.SlideDownForce;
         }  
     }
+    */
     public bool IsPackageFull()
     {
         if(blackboard.Gun.GetComponent<Aspiradora>().Biomass >= blackboard.Gun.GetComponent<Aspiradora>().MaxBiomass)
@@ -317,12 +325,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         blackboard.Life = blackboard.Life - lifeToRest;        
         //currentHealth -= lifeToRest;
     }
-
+    /*
     void OnControllerColliderHit(ControllerColliderHit hit) 
     {
         hitNormal = hit.normal;
     }
-
+    */
     void ReducePlayerHealth()
     {
         currentHealth -= Time.deltaTime;
