@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof (SphereCollider))]
 public class AspirableObject : MonoBehaviour
 {
+    public bool THEBIGONE;
     public bool IMakeDamage;
     public bool IAmMagnetic;
     public bool IAmAsborved;
@@ -75,7 +76,7 @@ public class AspirableObject : MonoBehaviour
             } 
         } 
         ///////////////////////////////////////////////////TIME TO GO//////////////////////////////////////////////////////
-        if(!IAmMagnetic)
+        if(!IAmMagnetic && !THEBIGONE)
         {
             DieWithTime(8);
         }

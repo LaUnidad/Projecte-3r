@@ -162,6 +162,11 @@ public class Aspiradora : MonoBehaviour
                 Player.GetComponent<HippiCharacterController>().SumLife(1);
 
                 //Player.GetComponent<HippiCharacterController>().currentHealth += 0.5f;
+                if(other.gameObject.GetComponent<AspirableObject>().THEBIGONE)
+                {
+                    Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
+                    Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
+                }
 
                 Destroy(other.gameObject);
             }

@@ -37,6 +37,8 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
 
     public float KnockBackForce;
 
+    public bool RoketMan;
+
     
     
     void Start()

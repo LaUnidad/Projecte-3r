@@ -151,7 +151,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         m_CharacterController.Move(l_Movment *Time.deltaTime);
 
         */
-         ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
+        ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
         if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && ICanAbsorbThis == false && !NoPower)
         {
             UsingGadget = true;
@@ -183,7 +183,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             //Debug.Log("EO");
         }
 
-        if (Absorving)
+        if (UsingGadget)
         {
             vaccumCone.SetActive(true);
         }
@@ -219,11 +219,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        transform.position = restartPosition;
-        transform.rotation = restartRotation;
+        this.transform.position = restartPosition;
+        this.transform.rotation = restartRotation;
         //currentHealth = maxHealth;
         blackboard.Life = 100;
         playerDead = false;
+        Debug.Log("MUERETE");
     }
     /*
     void CamDirection() 
