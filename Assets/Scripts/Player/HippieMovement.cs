@@ -55,7 +55,8 @@ public class HippieMovement : MonoBehaviour
         /////////////////////////////////////ROTACIÓN//////////////////////////////////////////////////
         CamDirection();
         l_Movment = orientation.x * CamRight + orientation.z * camForward;
-
+        m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movment));
+        /*
         if (!hippieController.StopLook)
         {
             m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movment));
@@ -72,7 +73,8 @@ public class HippieMovement : MonoBehaviour
                 m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movment));
             }
         }
-
+        */
+        ///////////////////////////////////////////////GRAVITY///////////////////////////////////////////
         SetGravity();
 
         /////////////////////////////////////SALTO/////////////////////////////////////////////////////
