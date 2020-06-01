@@ -18,7 +18,8 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
     public float JumpForce;
     public float Power;
 
-    public float Life;
+    public float currentLife;
+    public float MaxLife = 100;
 
     public float ResistanceToTheGas;
 

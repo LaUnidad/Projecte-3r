@@ -27,7 +27,7 @@ public class PlayerHUD : MonoBehaviour
     void Update()
     {
         //healthBar.fillAmount = cc.currentHealth / cc.maxHealth;
-        healthBar.fillAmount = cc.blackboard.Life/100;
+        healthBar.fillAmount = cc.blackboard.currentLife/100;
 
         if(gm.isPaused)
         {

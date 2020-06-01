@@ -36,7 +36,7 @@ public class LifeLight : MonoBehaviour
     }
     public void Timer()
     {
-        if(Player.GetComponent<HippiCharacterController>().blackboard.Life < 100)
+        if(Player.GetComponent<HippiCharacterController>().blackboard.currentLife < 100)
         {
             timer += 1 * Time.deltaTime;
 
@@ -66,30 +66,30 @@ public class LifeLight : MonoBehaviour
         {
             mesR.material = NormalMat;
         }
-        if(Player.GetComponent<HippiCharacterController>().blackboard.Life<= 0)
+        if(Player.GetComponent<HippiCharacterController>().blackboard.currentLife<= 0)
         {
             mesR.material = DangerMat;
         }
-        if(Player.GetComponent<HippiCharacterController>().blackboard.Life>= 100)
+        if(Player.GetComponent<HippiCharacterController>().blackboard.currentLife>= 100)
         {
             mesR.material = NormalMat;
         }
     }   
     public void ChangingRate()
     {
-       if(Player.GetComponent<HippiCharacterController>().blackboard.Life<= 80 && Player.GetComponent<HippiCharacterController>().blackboard.Life>60)
+       if(Player.GetComponent<HippiCharacterController>().blackboard.currentLife<= 80 && Player.GetComponent<HippiCharacterController>().blackboard.currentLife>60)
        {
            TimeToChange = 2f;
        }
-       else if(Player.GetComponent<HippiCharacterController>().blackboard.Life<= 60 && Player.GetComponent<HippiCharacterController>().blackboard.Life>40)
+       else if(Player.GetComponent<HippiCharacterController>().blackboard.currentLife<= 60 && Player.GetComponent<HippiCharacterController>().blackboard.currentLife>40)
        {
            TimeToChange = 1.5f;
        }
-       else if(Player.GetComponent<HippiCharacterController>().blackboard.Life<= 40 && Player.GetComponent<HippiCharacterController>().blackboard.Life>20)
+       else if(Player.GetComponent<HippiCharacterController>().blackboard.currentLife<= 40 && Player.GetComponent<HippiCharacterController>().blackboard.currentLife>20)
        {
            TimeToChange = 1f;
        }
-       else if(Player.GetComponent<HippiCharacterController>().blackboard.Life<= 20 && Player.GetComponent<HippiCharacterController>().blackboard.Life>0)
+       else if(Player.GetComponent<HippiCharacterController>().blackboard.currentLife<= 20 && Player.GetComponent<HippiCharacterController>().blackboard.currentLife>0)
        {
            TimeToChange = 0.5f;
        }

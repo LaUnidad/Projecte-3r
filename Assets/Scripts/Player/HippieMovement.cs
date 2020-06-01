@@ -80,6 +80,7 @@ public class HippieMovement : MonoBehaviour
         /////////////////////////////////////SALTO/////////////////////////////////////////////////////
         if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded)
         {
+            anim.SetTrigger("Jump");
             VerticalSpeed = blackboard.JumpForce / 2f;
             l_Movment.y = VerticalSpeed;
         }
@@ -142,7 +143,6 @@ public class HippieMovement : MonoBehaviour
         }
     }
 
-
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         hitNormal = hit.normal;
@@ -154,9 +154,10 @@ public class HippieMovement : MonoBehaviour
         // Calculate Input Vectors
         InputX = Input.GetAxis("Horizontal");
         InputZ = Input.GetAxis("Vertical");
+        float dampTime = 0.3f;
 
-        anim.SetFloat("InputZ", InputZ, 0.3f, Time.deltaTime * 2f);
-        anim.SetFloat("InputX", InputX, 0.3f, Time.deltaTime * 2f);
+        anim.SetFloat("InputZ", InputZ, dampTime, Time.deltaTime * 2f);
+        anim.SetFloat("InputX", InputX, dampTime, Time.deltaTime * 2f);
 
         // Calculate Input Magnitude
         Speed = new Vector2(InputX, InputZ).sqrMagnitude;
