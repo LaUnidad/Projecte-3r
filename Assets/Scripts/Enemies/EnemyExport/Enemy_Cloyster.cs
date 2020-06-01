@@ -252,7 +252,7 @@ public class Enemy_Cloyster : MonoBehaviour
     bool SeesPlayer()
     {
         //Nomenclatura player al GameManager m_player > m_Player;
-        Vector3 l_Direction = (GameManager.Instance.m_player.transform.position + Vector3.up * 0.9f) - transform.position;
+        Vector3 l_Direction = (GameManager.Instance.m_player.transform.position /*+ Vector3.up * 0.9f*/) - transform.position;
         Ray l_Ray = new Ray(transform.position, l_Direction);
 
         float l_Distance = l_Direction.magnitude;
