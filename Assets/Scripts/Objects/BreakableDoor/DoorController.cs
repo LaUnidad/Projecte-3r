@@ -29,8 +29,12 @@ public class DoorController : MonoBehaviour
     {
         if(other.gameObject.tag == "AspirableObject" && other.gameObject.GetComponent<AspirableObject>().IAmMagnetic)
         {
-            ExploteYourChildren();
-            boxy.isTrigger = true;
+            if(other.gameObject.GetComponent<AspirableObject>().SpeedToShoot>20)
+            {
+                ExploteYourChildren();
+                boxy.isTrigger = true;
+            }
+            
         }
     }
     public void ExploteYourChildren()

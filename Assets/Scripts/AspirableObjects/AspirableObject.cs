@@ -47,6 +47,7 @@ public class AspirableObject : MonoBehaviour
 
     private SphereCollider coll;
     
+    public float TimeToReturn;
     
 
     
@@ -72,7 +73,8 @@ public class AspirableObject : MonoBehaviour
             Debug.Log(StopAbsorvingMagneticRock());  
             if(StopAbsorvingMagneticRock())
             {
-                ReturnHome();  
+                //ReturnHome();
+                Shooting();  
             } 
         } 
         ///////////////////////////////////////////////////TIME TO GO//////////////////////////////////////////////////////
@@ -100,10 +102,11 @@ public class AspirableObject : MonoBehaviour
     public void Shooting()
     {      
         ImAbsorved = false;
+        PlayerForward = Player.gameObject.transform.forward;
         this.transform.position = transform.position + PlayerForward;
         rgbd.velocity = PlayerForward * SpeedToShoot;
         ImShooted = true;
-        Invoke("StopBeingShooted", 3);    
+        Invoke("StopBeingShooted", TimeToReturn);    
     }
     public void Absorbing()
     {
@@ -242,14 +245,17 @@ public class AspirableObject : MonoBehaviour
         if(x<= 1)
         {
             SpeedToShoot = 8;
+            TimeToReturn = 1;
         }
         else if(x> 1 && x<= 2.5)
         {
             SpeedToShoot = 1 * (x*10);
+            TimeToReturn = 2;
         }
         else if(x>2.5)
         {
             SpeedToShoot = 25;
+            TimeToReturn = 3;
         }
     }
     
