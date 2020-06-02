@@ -158,7 +158,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         this.transform.rotation = restartRotation;
         blackboard.currentLife = blackboard.MaxLife;
         playerDead = false;
-        Debug.Log("MUERETE");
+        
     }
    
     void UsePower()
