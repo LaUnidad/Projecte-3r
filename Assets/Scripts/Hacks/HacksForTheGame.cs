@@ -31,14 +31,15 @@ public class HacksForTheGame : MonoBehaviour
         {
             foreach(GameObject obj in TerrainColor)
             {
-                obj.GetComponent<TerrainMaterial>().Die = true;
+                //obj.GetComponent<TerrainMaterial>().Die = true;
             }
             foreach(GameObject obj in MagneticRocks)
             {
 
                 obj.gameObject.tag = "AspirableObject";
             }
-            Player.GetComponent<HippiCharacterController>().isDeadWorldActive = true;
+            //Player.GetComponent<HippiCharacterController>().isDeadWorldActive = true;
+            Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
             //AreaKiller.GetComponent<AreaColor>().KillZone = true;
         }
         if(Input.GetKeyDown(m_PlayerReciveHit))

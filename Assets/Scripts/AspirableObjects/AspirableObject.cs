@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof (SphereCollider))]
 public class AspirableObject : MonoBehaviour
 {
+    public bool THEBIGONE;
     public bool IMakeDamage;
     public bool IAmMagnetic;
     public bool IAmAsborved;
@@ -46,6 +47,7 @@ public class AspirableObject : MonoBehaviour
 
     private SphereCollider coll;
     
+    public float TimeToReturn;
     
 
     
@@ -57,9 +59,8 @@ public class AspirableObject : MonoBehaviour
         coll = GetComponent<SphereCollider>();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
-        
-
     }
+
     void Update()
     {   
         if(IAmInList == true)
@@ -69,14 +70,15 @@ public class AspirableObject : MonoBehaviour
         if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {   
             VelocityChanger(timer);
-            //Debug.Log(StopAbsorvingMagneticRock());  
+            Debug.Log(StopAbsorvingMagneticRock());  
             if(StopAbsorvingMagneticRock())
             {
-                ReturnHome();  
+                //ReturnHome();
+                Shooting();  
             } 
         } 
         ///////////////////////////////////////////////////TIME TO GO//////////////////////////////////////////////////////
-        if(!IAmMagnetic)
+        if(!IAmMagnetic && !THEBIGONE)
         {
             DieWithTime(8);
         }
@@ -90,6 +92,7 @@ public class AspirableObject : MonoBehaviour
     }
     public void ReturnHome()
     {
+        Debug.Log("Take Me Home");
         BeenAbsorved = false;
         //coll.isTrigger = true;
         transform.LookAt(target.transform.position, transform.position + transform.forward);
@@ -99,10 +102,11 @@ public class AspirableObject : MonoBehaviour
     public void Shooting()
     {      
         ImAbsorved = false;
+        PlayerForward = Player.gameObject.transform.forward;
         this.transform.position = transform.position + PlayerForward;
         rgbd.velocity = PlayerForward * SpeedToShoot;
         ImShooted = true;
-        Invoke("StopBeingShooted", 3);    
+        Invoke("StopBeingShooted", TimeToReturn);    
     }
     public void Absorbing()
     {
@@ -186,7 +190,7 @@ public class AspirableObject : MonoBehaviour
     }
     void OnTriggerEnter(Collider other) 
     {
-        if(other.tag == "Crater")
+        if(other.tag == "CraterCollider")
         {
             TouchingCrater = true;
 
@@ -205,7 +209,7 @@ public class AspirableObject : MonoBehaviour
     }
     void OnTriggerExit(Collider other) 
     {
-        if(other.tag == "Crater")
+        if(other.tag == "CraterCollider")
         {
             TouchingCrater = false;
         }
@@ -214,6 +218,7 @@ public class AspirableObject : MonoBehaviour
     {
         if(BeenAbsorved)
         {
+            //this.transform.parent = null;
             Invoke("MyTimeHasArrive", x);
 
         }    
@@ -226,7 +231,7 @@ public class AspirableObject : MonoBehaviour
 
     public bool StopAbsorvingMagneticRock()
     {
-        if(BeenAbsorved && !Player.GetComponent<HippiCharacterController>().Absorving && !ImShooted)
+        if(BeenAbsorved && !Player.GetComponent<HippiCharacterController>().Absorving && !ImShooted && !TouchingCrater)
         {
             return true;
         }
@@ -240,14 +245,17 @@ public class AspirableObject : MonoBehaviour
         if(x<= 1)
         {
             SpeedToShoot = 8;
+            TimeToReturn = 1;
         }
         else if(x> 1 && x<= 2.5)
         {
             SpeedToShoot = 1 * (x*10);
+            TimeToReturn = 2;
         }
         else if(x>2.5)
         {
             SpeedToShoot = 25;
+            TimeToReturn = 3;
         }
     }
     

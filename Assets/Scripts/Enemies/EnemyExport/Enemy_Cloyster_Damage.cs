@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy_Cloyster_Damage : MonoBehaviour
 {
     public float m_KnockBackForce = 5f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class Enemy_Cloyster_Damage : MonoBehaviour
             Debug.Log("Hit");
             //GameManager.Instance.m_player.GetComponent<ImpactReciever>().AddImpact(KnockbakDirection(), m_KnockBackForce);
             transform.parent.transform.parent.GetComponent<Enemy_Cloyster>().HitPlayer();
+            other.gameObject.GetComponent<HippiCharacterController>().PlayerReciveDamage(20);
         }
     }
 

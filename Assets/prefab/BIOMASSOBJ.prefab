@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cf9e39c98ffa254dba00ab408bd4b85, type: 2}
+  - {fileID: 2100000, guid: bfedbd698d3fcd643a36e5347412f055, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,13 +121,11 @@ MonoBehaviour:
   distance: 0
   OriginalScale: {x: 0, y: 0, z: 0}
   ImAbsorved: 0
-  Enganchao: 0
   target: {fileID: 0}
-  TimeToReturn: 0
   timer: 0
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  OnSide: 0
+  BeenAbsorved: 0
 --- !u!54 &165087043969148509
 Rigidbody:
   m_ObjectHideFlags: 0

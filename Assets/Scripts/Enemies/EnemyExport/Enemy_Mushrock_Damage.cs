@@ -26,6 +26,7 @@ public class Enemy_Mushrock_Damage : MonoBehaviour
             Debug.Log("Hit");
             //GameManager.Instance.m_player.GetComponent<ImpactReciever>().AddImpact(KnockbakDirection(), m_KnockBackForce);
             transform.parent.GetComponent<Enemy_Mushrock>().HitPlayer();
+            other.gameObject.GetComponent<HippiCharacterController>().PlayerReciveDamage(20);
         }
     }
     

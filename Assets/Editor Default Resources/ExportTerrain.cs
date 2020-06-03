@@ -8,8 +8,9 @@ using System.Text;
 enum SaveFormat { Triangles, Quads }
 enum SaveResolution { Full = 0, Half, Quarter, Eighth, Sixteenth }
 
-class ExportTerrain : EditorWindow
+class ExportTerrain : /*EditorWindow*/ MonoBehaviour
 {
+    /*
     SaveFormat saveFormat = SaveFormat.Triangles;
     SaveResolution saveResolution = SaveResolution.Half;
 
@@ -210,5 +211,5 @@ class ExportTerrain : EditorWindow
             counter = 0;
             EditorUtility.DisplayProgressBar("Saving...", "", Mathf.InverseLerp(0, totalCount, ++tCount));
         }
-    }
+    }*/
 }

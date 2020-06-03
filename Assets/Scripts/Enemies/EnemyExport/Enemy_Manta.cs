@@ -19,6 +19,7 @@ public class Enemy_Manta : MonoBehaviour
     public float m_DistanceToOutOfRange = 25f;
     public float m_Knockback = 16f;
     public LayerMask m_CollisionLayerMask;
+    public List<GameObject> m_AbsorbableItems;
     public float m_MinHeight;
 
     private float m_CurrentTime;
@@ -28,6 +29,7 @@ public class Enemy_Manta : MonoBehaviour
     private int m_CurrentPatrolPositionId = -1;
     public float m_ConeAngle = 15.0f;
     private bool m_hasPath = false;
+    private bool m_isAlive = true;
 
 
 
@@ -54,6 +56,12 @@ public class Enemy_Manta : MonoBehaviour
     {
         m_CurrentTime += Time.deltaTime;
 
+
+        if (m_AbsorbableItems.Count <= 0 && m_isAlive)
+        {
+            ChangeState(State.DIE);
+            m_isAlive = false;
+        }
 
         //IN STATE
         switch (m_CurrentState)
@@ -120,6 +128,12 @@ public class Enemy_Manta : MonoBehaviour
 
                 break;
             case State.DIE:
+
+                if (m_CurrentTime > 1)
+                {
+                    //DIE
+                    gameObject.SetActive(false);
+                }
                 break;
         }
 
@@ -159,25 +173,27 @@ public class Enemy_Manta : MonoBehaviour
                 m_hasPath = false;
                 m_RotationalDamp = m_RotationalDampPatrol;
                 m_Speed = m_SpeedPatrol;
-                  
+                CheckDie();
                 //Animation Patrol
                 break;
             case State.ALERT:
                 m_CurrentTime = 0f;
                 m_Target = GameManager.Instance.m_player.transform;
                 m_RotationalDamp = m_RotationalDampAlert;
+                CheckDie();
                 break;
             case State.CHASE:
                 m_Target = GameManager.Instance.m_player.transform;
                 m_CurrentTime = 0f;
                 m_RotationalDamp = m_RotationalDampAlert;
                 m_Speed = m_SpeedChase;
-                
+                CheckDie();
                 break;
             case State.REPLACE:
                 m_CurrentTime = 0f;
                 m_Target = (GetNearestPoint());
                 m_RotationalDamp = m_RotationalDampAlert;
+                CheckDie();
                 break;
             case State.DIE:
                 m_CurrentTime = 0f;
@@ -269,6 +285,17 @@ public class Enemy_Manta : MonoBehaviour
     {
          transform.position += transform.forward * m_Speed * Time.deltaTime;
        
+    }
+
+    void CheckDie()
+    {
+        foreach (GameObject item in m_AbsorbableItems)
+        {
+            if (item == null)
+            {
+                m_AbsorbableItems.Remove(item);
+            }
+        }
     }
 
     IEnumerator DamagePlayer(float sumPos, float inTime)

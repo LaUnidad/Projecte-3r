@@ -25,7 +25,8 @@ public class DisolveTrial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        disolveMat.SetFloat("Vector1_226A2816", timer);
+        mesR.material.SetFloat("Vector1_226A2816", timer);
+        //disolveMat.SetFloat("Vector1_226A2816", timer);
         if(Doit && Disolve)
         {
             timer += 1* Time.deltaTime * (VelocityToDisapear/10);  
