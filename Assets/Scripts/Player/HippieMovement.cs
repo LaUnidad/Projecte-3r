@@ -78,7 +78,7 @@ public class HippieMovement : MonoBehaviour
         SetGravity();
 
         /////////////////////////////////////SALTO/////////////////////////////////////////////////////
-        if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded)
+        if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded && !hippieController.UsingGadget)
         {
             anim.SetTrigger("Jump");
             VerticalSpeed = blackboard.JumpForce / 2f;

@@ -87,7 +87,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
                     blackboard.ForceAtAbsorb = blackboard.Gun.GetComponent<Aspiradora>().ForceToThePlayer();
                     StopLook = true;
 
-                    anim.SetBool("Absorbing", true);                  
+                  //  anim.SetBool("Absorbing", true);                  
                 }
                 else
                 {
@@ -97,8 +97,11 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             else
             {
                Absorving = false;
-                anim.SetBool("Absorbing", false);
-            }  
+               // anim.SetBool("Absorbing", false);
+            }
+
+            //if (Absorving) anim.SetBool("Absorbing", true);
+           // if (!Absorving) anim.SetBool("Absorbing", false);
         }
         else
         {
@@ -112,10 +115,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         if (UsingGadget)
         {
             vaccumCone.SetActive(true);
+            anim.SetBool("Absorbing", true);
         }
         else
         {
             vaccumCone.SetActive(false);
+            anim.SetBool("Absorbing", false);
         }
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
         RestLife();
