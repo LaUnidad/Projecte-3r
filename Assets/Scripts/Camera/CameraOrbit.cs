@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraOrbit : MonoBehaviour
 {
+    public Animation anim;
+    public AnimationClip animClip;
     private Transform cameraTransform;
     private Transform parentTransform;
 
@@ -33,11 +35,15 @@ public class CameraOrbit : MonoBehaviour
         parentTransform = this.transform.parent;
 
         Cursor.lockState = CursorLockMode.Locked;
+
+       // anim = GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.L)) anim.Play(animClip.name);
+
         //if (Input.GetKeyDown(KeyCode.LeftShift)) cameraDisabled = !cameraDisabled;
 
         if(!cameraDisabled)

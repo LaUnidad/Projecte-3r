@@ -120,10 +120,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
         RestLife();
         
-        if (blackboard.currentLife <= 0)
-        {
-            gameManager.RestartGame();
-        }
         /*
         if (isDeadWorldActive)
         {
@@ -132,6 +128,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         */
         if (blackboard.currentLife <= 0)
         {
+            m_CharacterController.enabled = false;
             gameManager.RestartGame();
         }
         
@@ -153,10 +150,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public void RestartGame()
     {
+        Debug.Log("Restart Player");
         Time.timeScale = 1f;
         this.transform.position = restartPosition;
         this.transform.rotation = restartRotation;
         blackboard.currentLife = blackboard.MaxLife;
+        m_CharacterController.enabled = true;
         playerDead = false;
         
     }
