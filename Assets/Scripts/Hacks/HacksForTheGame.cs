@@ -9,19 +9,26 @@ public class HacksForTheGame : MonoBehaviour
 
     public KeyCode m_PlayerReciveHit = KeyCode.H;
     public KeyCode m_ReviveBoton = KeyCode.L;
+
+    public KeyCode m_KillingWorld = KeyCode.M;
     public GameObject[] TerrainColor;
     
     public GameObject Player;
 
     public GameObject InstaniateBio;
 
+    private GameObject[] Doors;
+
     GameObject[] MagneticRocks;
+    private GameObject LeavesBT;
     void Start()
     {
         TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
         MagneticRocks = GameObject.FindGameObjectsWithTag("MagneticRock");
         Player = GameObject.FindGameObjectWithTag("Player");
         InstaniateBio = GameObject.FindGameObjectWithTag("InstantiateBiomass");
+        Doors = GameObject.FindGameObjectsWithTag("BreakableDoor");
+        LeavesBT = GameObject.FindGameObjectWithTag("LeavesBigTree");
     }
 
     // Update is called once per frame
@@ -46,19 +53,18 @@ public class HacksForTheGame : MonoBehaviour
         {
             Player.GetComponent<HippiCharacterController>().PlayerReciveDamage(30);
         }
-        if(Input.GetKey(m_ReviveBoton))
+        if(Input.GetKeyDown(m_KillingWorld))
         {
-            foreach(GameObject obj in TerrainColor)
+            foreach(GameObject obj in Doors)
             {
-                obj.GetComponent<TerrainMaterial>().Die = false;
+                if(!obj.GetComponent<DoorController>().Exploted)
+                {
+                    obj.GetComponent<DoorController>().ExploteYourChildren();
+                }
             }
-            foreach(GameObject obj in MagneticRocks)
-            {
+            Destroy(LeavesBT.gameObject);
 
-                obj.gameObject.tag = "MagneticRock";
-            }
-            Player.GetComponent<HippiCharacterController>().AfectedByTheGas = false;
-            //AreaKiller.GetComponent<AreaColor>().KillZone = true;
+            //ActivaCamaraShake si vols
         }
 
     }

@@ -26,12 +26,18 @@ public class Aspiradora : MonoBehaviour
 
     public GameObject LastObjectCatched;
 
+    private GameObject DestroyDoors;
+
+    private GameObject LeavesBT;
+
    
 
     void Start()
     {
         blackboard = GetComponent<BLACKBOARD_Aspiradora>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        DestroyDoors = GameObject.FindGameObjectWithTag("DestroyDoors");
+        LeavesBT = GameObject.FindGameObjectWithTag("LeavesBigTree");
     }
 
     // Update is called once per frame
@@ -164,8 +170,7 @@ public class Aspiradora : MonoBehaviour
                 //Player.GetComponent<HippiCharacterController>().currentHealth += 0.5f;
                 if(other.gameObject.GetComponent<AspirableObject>().THEBIGONE)
                 {
-                    Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
-                    Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
+                   KillPlanet();
                 }
 
                 Destroy(other.gameObject);
@@ -195,13 +200,15 @@ public class Aspiradora : MonoBehaviour
             }
         }
     }
-    public void ExpulseBiomass()
+
+    public void KillPlanet()
     {
-        Biomass = Biomass - 1f;
-        
-        if(Biomass<= 0)
-        {
-            Biomass = 0;
-        }
+        Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
+        Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
+        DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
+        Destroy(LeavesBT.gameObject);
+        //geri activa aqui el camara shake, i si vols, a hacksfortheproto,
+        //clicant M sactiva tot el que s'hauria de activar al arribar al final
+        //aixi es més facil testearho ;)
     }
 }

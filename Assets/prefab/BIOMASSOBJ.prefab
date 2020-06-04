@@ -107,12 +107,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5
+  SpeedToAbsorb: 6.5
   SpeedToShoot: 0
   MinDistToGeiser: 0
   rgbd: {fileID: 0}
@@ -126,6 +127,7 @@ MonoBehaviour:
   ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
   BeenAbsorved: 0
+  TimeToReturn: 0
 --- !u!54 &165087043969148509
 Rigidbody:
   m_ObjectHideFlags: 0
