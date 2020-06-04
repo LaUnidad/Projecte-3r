@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public interface IRestartGameElement
 {
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     List<IRestartGameElement> m_RestartGameElements = new List<IRestartGameElement>();
     bool m_GameActive = true;
+
 
 
     public bool isPaused;
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour
     public string AbsorbCooldown = "event:/FX/Weapon/AbsorbCooldown";
     public string AbsorbOverheat = "event:/FX/Weapon/AbsorbOverheat";
     public string AbsorbWarning = "event:/FX/Weapon/AbsorbWarning";
+    public string ChangeDirection = "event:/FX/Character/ChangeDirection";
 
 
 
@@ -93,7 +96,15 @@ public class GameManager : MonoBehaviour
             isPaused = !isPaused;
         }
 
-        if (isPaused) Time.timeScale = 0f;
-        else Time.timeScale = 1f;
+        if (isPaused)
+        {
+            SoundManager.Instance.PauseAllEvents();
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            SoundManager.Instance.ResumeAllEvents();
+            Time.timeScale = 1f;
+        }
     }
 }

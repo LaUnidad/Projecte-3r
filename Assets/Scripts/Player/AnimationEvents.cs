@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class AnimationEvents : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void GrassStep()
     {
-        
+        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.stepGrass, GameManager.Instance.m_player.transform);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

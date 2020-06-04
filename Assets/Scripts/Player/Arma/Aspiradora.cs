@@ -30,10 +30,13 @@ public class Aspiradora : MonoBehaviour
 
     private GameObject LeavesBT;
 
+    CameraOrbit camOrbit;
+
    
 
     void Start()
     {
+        camOrbit = FindObjectOfType<CameraOrbit>();
         blackboard = GetComponent<BLACKBOARD_Aspiradora>();
         Player = GameObject.FindGameObjectWithTag("Player");
         DestroyDoors = GameObject.FindGameObjectWithTag("DestroyDoors");
@@ -210,5 +213,6 @@ public class Aspiradora : MonoBehaviour
         //geri activa aqui el camara shake, i si vols, a hacksfortheproto,
         //clicant M sactiva tot el que s'hauria de activar al arribar al final
         //aixi es més facil testearho ;)
+        camOrbit.FinalCameraShakeStart();
     }
 }

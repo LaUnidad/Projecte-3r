@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CameraOrbit : MonoBehaviour
 {
-    public Animation anim;
-    public AnimationClip animClip;
+    // public Animation anim;
+    //public AnimationClip animClip;
+
+    private Animator camAnim;
     private Transform cameraTransform;
     private Transform parentTransform;
 
@@ -31,6 +33,7 @@ public class CameraOrbit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        camAnim = GetComponent<Animator>();
         cameraTransform = this.transform;
         parentTransform = this.transform.parent;
 
@@ -42,7 +45,7 @@ public class CameraOrbit : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.L)) anim.Play(animClip.name);
+        //if (Input.GetKeyDown(KeyCode.L)) anim.Play(animClip.name);
 
         //if (Input.GetKeyDown(KeyCode.LeftShift)) cameraDisabled = !cameraDisabled;
 
@@ -106,4 +109,15 @@ public class CameraOrbit : MonoBehaviour
             Debug.DrawLine(camRay.origin, camRay.origin + camRay.direction * cameraDistance, Color.cyan);
 
     }
+
+    public void FinalCameraShakeStart()
+    {
+        camAnim.SetBool("CameraShakeOnce", true);
+    }
+
+    public void FinalCameraShakeStop()
+    {
+        camAnim.SetBool("CameraShakeOnce", false);
+    }
+
 }
