@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
 
     public bool isPaused;
 
+    //[Header("Sound Bank")]
+    //public Eve
+
+
 
     public static GameManager Instance
     {
