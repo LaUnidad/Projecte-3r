@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: B3_Tronco_BV
-  m_Shader: {fileID: -6465566751694194690, guid: f7516aea97640e74b9743c445b7262f6,
+  m_Shader: {fileID: -6465566751694194690, guid: 1c7391ea9f6d9d449acf81492ac2473f,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -62,6 +62,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_285B4655: 0.01
+    - Vector1_99DBF51F: 30
+    - VelocityToApear: 1
+    - VelocityToDisapear: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -84,7 +88,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_3594732B: {r: 1, g: 0.870023, b: 0, a: 1}
+    - Color_591FFF9: {r: 0.59607846, g: 0.13725491, b: 0.17254902, a: 1}
+    - Color_7267F02B: {r: 0, g: 0, b: 0, a: 0}
     - Color_991E2B73: {r: 0.5943396, g: 0.18074444, b: 0.17101279, a: 0}
+    - Color_9AFC5F71: {r: 1, g: 0.7999099, b: 0.06132078, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
