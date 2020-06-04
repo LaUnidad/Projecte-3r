@@ -230,7 +230,10 @@ public class SoundManagerParameter
 
 }
 
+/*
+[SerializeField]
 public class SoundBank
 {
     public string xPath;
 }
+*/

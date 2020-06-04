@@ -21,8 +21,30 @@ public class GameManager : MonoBehaviour
 
     public bool isPaused;
 
-    //[Header("Sound Bank")]
-    //public Eve
+    [Header("Sound Bank")]
+    public string stepGrass = "event:/FX/Character/StepGrass";
+    public string stepGround = "event:/FX/Character/StepGround";
+    public string playerHit = "event:/FX/Character/Hit";
+    public string playerDie = "event:/FX/Character/Die";
+    public string Damage = "event:/FX/HUD/Damage";
+    public string Heal = "event:/FX/HUD/Heal";
+    public string AbsorbableBig = "event:/FX/Objects/AbsorbableBig";
+    public string AbsorbableNormal = "event:/FX/Objects/AbsorbableNormal";
+    public string AbsorbableSmall = "event:/FX/Objects/AbsorbableSmall";
+    public string GasRock = "event:/FX/Objects/GasRock";
+    public string GasRockThrow = "event:/FX/Objects/GasRockThrow";
+    public string GasSource = "event:/FX/Objects/GasSource";
+    public string ObstacleHard = "event:/FX/Objects/ObstacleHard";
+    public string ObstacleLight = "event:/FX/Objects/ObstacleLight";
+    public string Absorb = "event:/FX/Weapon/Absorb";
+    public string AbsorbCooldown = "event:/FX/Weapon/AbsorbCooldown";
+    public string AbsorbOverheat = "event:/FX/Weapon/AbsorbOverheat";
+    public string AbsorbWarning = "event:/FX/Weapon/AbsorbWarning";
+
+
+
+
+
 
 
 

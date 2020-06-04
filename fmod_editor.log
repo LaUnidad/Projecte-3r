@@ -8,84 +8,10 @@
 [WRN] SystemI::init                            : Output requires a sample rate of 192000Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001D93F71E288 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000273BBF3D178 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 595712
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29184
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000098E9AAF2DC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC09F180A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC09F18070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC09F18170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC09F18230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001D93F261948
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='AbsorbableBig', format=2, channels=2, frequency=48000, lengthbytes=2048, lengthpcm=8994, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.273632.
-[WRN] EventInstance::update                    : Event {abecb34e-6066-444f-b127-7b7e60bdf668} waited 78 milliseconds for sample data to load.  Preload sample data to avoid this delay.
-[LOG] SoundI::release                          :  (000001D9458CC798)
-[LOG] SoundI::release                          :     AbsorbableBig (000001D8DCEC5278)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 595712
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29184
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000098E9AAF2DC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC09F180A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC09F18070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC09F18170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC09F18230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001D93F260CE8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='AbsorbableBig', format=2, channels=2, frequency=48000, lengthbytes=2048, lengthpcm=8994, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.273632.
-[WRN] EventInstance::update                    : Event {abecb34e-6066-444f-b127-7b7e60bdf668} waited 89 milliseconds for sample data to load.  Preload sample data to avoid this delay.
-[LOG] SoundI::release                          :  (000001D9458CD488)
-[LOG] SoundI::release                          :     AbsorbableBig (000001D8DCEC7978)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 595712
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29184
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000098E9AAF2DC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC09F180A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC09F18070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC09F18170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC09F18230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001D93F261318
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='AbsorbableBig', format=2, channels=2, frequency=48000, lengthbytes=2048, lengthpcm=8994, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.273632.
-[WRN] EventInstance::update                    : Event {abecb34e-6066-444f-b127-7b7e60bdf668} waited 82 milliseconds for sample data to load.  Preload sample data to avoid this delay.
-[LOG] SoundI::release                          :  (000001D9458CEE68)
-[LOG] SoundI::release                          :     AbsorbableBig (000001D8DCEC4578)
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
