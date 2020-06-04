@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FMOD.Studio;
 
 [RequireComponent(typeof (BLACKBOARD_ThirdPersonCharacter))]
 [RequireComponent(typeof (CharacterController))]
@@ -49,13 +48,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public bool isDeadWorldActive = false;
 
-
-    //SOUND
-
-    private bool firstTimeUsingGadget;
-    EventInstance AbsorbSoundEvent;
-    EventInstance WarningEvent;
-
     void Awake()
     {
         maxHealth = 100;
@@ -77,8 +69,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         vaccumCone.SetActive(false);
 
         playerDead = false;
-
-        firstTimeUsingGadget = true;
     }
 
     // Update is called once per frame
@@ -124,24 +114,13 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
         if (UsingGadget)
         {
-               // AbsorbSoundEvent = SoundManager.Instance.PlayEvent(GameManager.Instance.Absorb, transform);
-                if (!SoundManager.Instance.isPlaying(AbsorbSoundEvent)) AbsorbSoundEvent = SoundManager.Instance.PlayEvent(GameManager.Instance.Absorb, transform);
-                firstTimeUsingGadget = false;
-
             vaccumCone.SetActive(true);
             anim.SetBool("Absorbing", true);
-   
-           // SoundManager.Instance.PlayEvent(gameManager.i)
         }
         else
         {
-            // if (!AbsorbSoundEvent.Equals(null)) SoundManager.Instance.StopEvent(AbsorbSoundEvent, true);
-            //SoundManager.Instance.StopEvent(AbsorbSoundEvent, true);
-            AbsorbSoundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            WarningEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             vaccumCone.SetActive(false);
             anim.SetBool("Absorbing", false);
-            firstTimeUsingGadget = true;
         }
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
         RestLife();
@@ -190,19 +169,16 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     {
         if(UsingGadget && blackboard.Power>0)
         {      
-           
             blackboard.Power -= blackboard.WastePowerVelocityABSORB * Time.deltaTime;   
         }
         if(UsingGadget && blackboard.Power<0)
         {
-            NoPower = true;
-            //WarningEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbOverheat, GameManager.Instance.m_player.transform);
+            NoPower = true;  
         }
         if(blackboard.Power <= 100 && UsingGadget == false && m_CharacterController.isGrounded && Absorving == false) 
         {
-          //  SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbCooldown, GameManager.Instance.m_player.transform);
             blackboard.Power += 1 * blackboard.ReloadPowerSpeed * Time.deltaTime;
+            
             if(blackboard.Power>=100)
             {
                 NoPower = false;
@@ -210,9 +186,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             }
 
         }
-
-        //if(blackboard.Power < 30) if (!SoundManager.Instance.isPlaying(WarningEvent)) WarningEvent = SoundManager.Instance.PlayEvent(GameManager.Instance.AbsorbWarning, transform);
-       // if(blackboard.Power <= 5) WarningEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
    
     public bool IsPackageFull()
@@ -252,8 +225,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public void PlayerReciveDamage(float lifeToRest)
     { 
         blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
-        blackboard.currentLife = blackboard.currentLife - lifeToRest;
-        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.ChangeDirection, GameManager.Instance.m_player.transform);
+        blackboard.currentLife = blackboard.currentLife - lifeToRest;        
     }
 
     void ReducePlayerHealth()

@@ -7,73 +7,17 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000015729DB2968 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000160DF1F8588 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] SoundI::release                          :  (00000157E8B3AE38)
-[LOG] SoundI::release                          :     Button (000001572B982F68)
-[LOG] SoundI::release                          :  (00000157E8B39FD8)
-[LOG] SoundI::release                          :     GasRock (00000157E3828008)
-[LOG] SoundI::release                          :  (00000157E8B3D228)
-[LOG] SoundI::release                          :     Damage (00000157E3829048)
-[LOG] SoundI::release                          :  (00000157E8B3A878)
-[LOG] SoundI::release                          :     AbsorbableSmall (00000157E3987B88)
-[LOG] SoundI::release                          :  (00000157E8B39E68)
-[LOG] SoundI::release                          :     Asphyxiation (00000157E3825288)
-[LOG] SoundI::release                          :  (00000157E8B3BC98)
-[LOG] SoundI::release                          :     AbsorbableNormal (00000157283E78C8)
-[LOG] SoundI::release                          :  (00000157E8B3A148)
-[LOG] SoundI::release                          :     Absorb (000001572B1E6888)
-[LOG] SoundI::release                          :  (00000157E8B3A708)
-[LOG] SoundI::release                          :     GasSource (00000157283E7A68)
-[LOG] SoundI::release                          :  (00000157E8B3D508)
-[LOG] SoundI::release                          :     ObstacleHard (00000157283E73E8)
-[LOG] SoundI::release                          :  (00000157E8B3CC68)
-[LOG] SoundI::release                          :     AbsorbableBig (00000157E39898C8)
-[LOG] SoundI::release                          :  (00000157E8B3D0B8)
-[LOG] SoundI::release                          :     Warning (000001572B982C28)
-[LOG] SoundI::release                          :  (00000157E8B3B9B8)
-[LOG] SoundI::release                          :     StepRocks (00000157283E70A8)
-[LOG] SoundI::release                          :  (00000157E8F82718)
-[LOG] SoundI::release                          :     StepRocks2 (00000157E38248C8)
-[LOG] SoundI::release                          :  (00000157E8B3CDD8)
-[LOG] SoundI::release                          :     Cancel (000001572B1E6F08)
-[LOG] SoundI::release                          :  (00000157E8F83CA8)
-[LOG] SoundI::release                          :     ChangeDirection (00000157E3825428)
-[LOG] SoundI::release                          :  (00000157E8B3BB28)
-[LOG] SoundI::release                          :     Accept (000001572B1E6A28)
-[LOG] SoundI::release                          :  (00000157E8B39A18)
-[LOG] SoundI::release                          :     Resume (00000157E3988BC8)
-[LOG] SoundI::release                          :  (00000157E8B3AB58)
-[LOG] SoundI::release                          :     Heal (00000157E3989588)
-[LOG] SoundI::release                          :  (00000157E8B3B848)
-[LOG] SoundI::release                          :     StepGrass (00000157283E6F08)
-[LOG] SoundI::release                          :  (00000157E8B3AFA8)
-[LOG] SoundI::release                          :     StepGrass2 (00000157E3825DE8)
-[LOG] SoundI::release                          :  (00000157E8F829F8)
-[LOG] SoundI::release                          :     Pause (00000157E3824C08)
-[LOG] SoundI::release                          :  (00000157E8F83B38)
-[LOG] SoundI::release                          :     Cooldown (00000157E3826948)
-[LOG] SoundI::release                          :  (00000157E8B3C258)
-[LOG] SoundI::release                          :     ObstacleLight (00000157E3987D28)
-[LOG] SoundI::release                          :  (00000157E8B3ACC8)
-[LOG] SoundI::release                          :     Overheat (00000157283E7728)
-[LOG] SoundI::release                          :  (00000157E8B3C818)
-[LOG] SoundI::release                          :     GasRockThrow (000001572B9828E8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 

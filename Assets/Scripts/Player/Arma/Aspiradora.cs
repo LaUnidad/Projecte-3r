@@ -173,7 +173,9 @@ public class Aspiradora : MonoBehaviour
                 //Player.GetComponent<HippiCharacterController>().currentHealth += 0.5f;
                 if(other.gameObject.GetComponent<AspirableObject>().THEBIGONE)
                 {
+                   Destroy(other.gameObject);
                    KillPlanet();
+                   
                 }
 
                 Destroy(other.gameObject);
@@ -214,5 +216,6 @@ public class Aspiradora : MonoBehaviour
         //clicant M sactiva tot el que s'hauria de activar al arribar al final
         //aixi es més facil testearho ;)
         camOrbit.FinalCameraShakeStart();
+        
     }
 }

@@ -112,12 +112,12 @@ public class CameraOrbit : MonoBehaviour
 
     public void FinalCameraShakeStart()
     {
-        camAnim.SetBool("CameraShakeOnce", true);
+        //camAnim.SetBool("FinalCameraShake", true);
     }
 
     public void FinalCameraShakeStop()
     {
-        camAnim.SetBool("CameraShakeOnce", false);
+        //camAnim.SetBool("FinalCameraShake", false);
     }
 
 }
