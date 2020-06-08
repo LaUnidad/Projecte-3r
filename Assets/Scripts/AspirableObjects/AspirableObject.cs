@@ -64,6 +64,15 @@ public class AspirableObject : MonoBehaviour
     float YPos;
 
     float ZPos;
+    Vector3  rotationPoint;
+
+    float RandomSpeed;
+
+    public float StartDistance;
+
+    public bool booleanForTheScale;
+
+
 
     
 
@@ -74,6 +83,7 @@ public class AspirableObject : MonoBehaviour
         coll = GetComponent<SphereCollider>();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
+        RandomSpeed = Random.Range(0.5f,1);
     }
 
     void Update()
@@ -125,10 +135,11 @@ public class AspirableObject : MonoBehaviour
     }
     public void Absorbing()
     {
-        distance = Vector3.Distance(this.transform.position, Gun.transform.position);
+        
 
         if(Player.GetComponent<HippiCharacterController>().Absorving == true)
         {
+
             //Debug.Log("ABSORVIENDO");
             //this.transform.LookAt(Gun.transform.position);
             //ImAbsorved = true;
@@ -150,8 +161,10 @@ public class AspirableObject : MonoBehaviour
         }
         else
         {
-            if(!IAmMagnetic)
+            if(!IAmMagnetic )
             {
+                rgbd.isKinematic = !BeenAbsorved;
+                booleanForTheScale = false;
                 rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
@@ -292,20 +305,28 @@ public class AspirableObject : MonoBehaviour
     }
     public void AbsorbInSpiral()
     {
-        this.transform.LookAt(Gun.transform.position);
+        if(!booleanForTheScale)
+        {
+            StartDistance = Vector3.Distance(this.transform.position, Gun.transform.position);
+        }
+        distance = Vector3.Distance(this.transform.position, Gun.transform.position);
+        rotationPoint = Gun.transform.position + (Gun.transform.forward * distance);
+        this.transform.RotateAround(rotationPoint, Gun.transform.forward, Time.deltaTime*720*RandomSpeed);
         ImAbsorved = true;
         IMakeDamage = false;
         rgbd.useGravity = false;
         rgbd.isKinematic = false;
-        //XPos = Mathf.Sin(Time.time * CircleSpeed) * CircleSize;
-        //YPos = Mathf.Cos(Time.time * CircleSpeed) * CircleSize;
-        //ZPos += forwardSpeed * Time.deltaTime;
-        //CircleSize += CircleDownSpeed;
-        //this.transform.position = new Vector3(XPos, YPos, ZPos);
-        this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
+        this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime*RandomSpeed);
         BeenAbsorved = true;
+        booleanForTheScale = true;
         timer += 1* Time.deltaTime;
-        this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
+        float escala = distance/StartDistance;
+        //Debug.Log("SD"+ StartDistance + "  D" + distance + " E" + escala);
+        this.transform.localScale = new Vector3(OriginalScale.x * escala,OriginalScale.y * escala,OriginalScale.z * escala);
+
+        
+
+        
     }
     
 }
