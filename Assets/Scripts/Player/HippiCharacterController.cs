@@ -30,6 +30,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public bool Shootting;
 
+    public bool WiningLife;
+
 
     public GameObject vaccumCone;
 
@@ -215,7 +217,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         if(blackboard.currentLife < 100)
         {
             blackboard.currentLife += x;
-
+            WiningLife = true; 
+            //Invoke("StupidFunction", 2);
             if (blackboard.currentLife > 100)
             {
                 blackboard.currentLife = 100;
@@ -249,6 +252,11 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         {
             TimeAtFalling = 0;
         }   
-    } 
+    }
+
+    public void StupidFunction()
+    {
+        WiningLife = false;
+    }
     
 }

@@ -6,49 +6,64 @@ using UnityEngine;
 [RequireComponent(typeof (SphereCollider))]
 public class AspirableObject : MonoBehaviour
 {
+    [Header("TIPO DE ASPIRABLEOBJECT")]
     public bool THEBIGONE;
     public bool IMakeDamage;
     public bool IAmMagnetic;
     public bool IAmAsborved;
     public bool IAmInList;
+
+    [Header("VARIABLES DEL ASPIRABLEOBJECT")]
     public float ForceToAbsorb;
     public float SpeedToAbsorb;
     public float SpeedToShoot;
 
+    public float CircleSpeed;
+
+    public float forwardSpeed;
+
+    public float CircleSize;
+
+    public float CircleDownSpeed;
+
     public float MinDistToGeiser;
-
-    public Rigidbody rgbd;
-    private GameObject Player;
-
-    private GameObject Gun;
 
     public float Biomass;
 
     public float LifeForThePlayer;
 
-    public float distance;
+    [Header("VARIABLES AUTOMATICAS, NI CASO")]
+    public Rigidbody rgbd;
 
     public Vector3 OriginalScale;
-
-    public bool ImAbsorved;
-
-    public GameObject target;
-
-    public float timer;
-    public bool ImShooted;
-
     public Vector3 PlayerForward;
+    private GameObject Player;
+
+    private GameObject Gun;
+    private SphereCollider coll;
+
+    
+    [Header("SI LA ROCA ES MAGNETICA NECESITA EL TARGET")]
+    public GameObject target;
+    float distance;
+    bool ImAbsorved;
+
+    float timer;
+    bool ImShooted;
 
     bool TouchingCrater;
 
     bool DoIt1Time;
 
-    public bool BeenAbsorved;
+    bool BeenAbsorved;
+    
+    float TimeToReturn;
+    
+    float XPos;
 
-    private SphereCollider coll;
-    
-    public float TimeToReturn;
-    
+    float YPos;
+
+    float ZPos;
 
     
 
@@ -115,17 +130,22 @@ public class AspirableObject : MonoBehaviour
         if(Player.GetComponent<HippiCharacterController>().Absorving == true)
         {
             //Debug.Log("ABSORVIENDO");
-            this.transform.LookAt(Gun.transform.position);
-            ImAbsorved = true;
-            IMakeDamage = false;
-            rgbd.useGravity = false;
-            rgbd.isKinematic = false;
-            this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
-            BeenAbsorved = true;
-            timer += 1* Time.deltaTime;
+            //this.transform.LookAt(Gun.transform.position);
+            //ImAbsorved = true;
+            //IMakeDamage = false;
+            //rgbd.useGravity = false;
+            //rgbd.isKinematic = false;
+            //this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
+            //BeenAbsorved = true;
+            //timer += 1* Time.deltaTime;
             if(!IAmMagnetic)
             {
-                this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
+                //this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
+                 AbsorbInSpiral();
+            }
+            else
+            {
+                AbsorbingMagnetic();
             }
         }
         else
@@ -257,6 +277,35 @@ public class AspirableObject : MonoBehaviour
             SpeedToShoot = 25;
             TimeToReturn = 3;
         }
+    }
+
+    public void AbsorbingMagnetic()
+    {
+        this.transform.LookAt(Gun.transform.position);
+        ImAbsorved = true;
+        IMakeDamage = false;
+        rgbd.useGravity = false;
+        rgbd.isKinematic = false;
+        this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
+        BeenAbsorved = true;
+        timer += 1* Time.deltaTime;
+    }
+    public void AbsorbInSpiral()
+    {
+        this.transform.LookAt(Gun.transform.position);
+        ImAbsorved = true;
+        IMakeDamage = false;
+        rgbd.useGravity = false;
+        rgbd.isKinematic = false;
+        //XPos = Mathf.Sin(Time.time * CircleSpeed) * CircleSize;
+        //YPos = Mathf.Cos(Time.time * CircleSpeed) * CircleSize;
+        //ZPos += forwardSpeed * Time.deltaTime;
+        //CircleSize += CircleDownSpeed;
+        //this.transform.position = new Vector3(XPos, YPos, ZPos);
+        this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
+        BeenAbsorved = true;
+        timer += 1* Time.deltaTime;
+        this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
     }
     
 }
