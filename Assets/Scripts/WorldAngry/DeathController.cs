@@ -24,7 +24,7 @@ public class DeathController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Player.GetComponent<HippiCharacterController>().isDeadWorldActive)
+        if(Player.GetComponent<HippiCharacterController>().AfectedByTheGas)
         {
             if(DeadElements.Length == 0)
             {

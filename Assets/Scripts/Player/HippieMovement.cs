@@ -52,6 +52,7 @@ public class HippieMovement : MonoBehaviour
         blackboard = GetComponent<BLACKBOARD_ThirdPersonCharacter>();
         hippieController = GetComponent<HippiCharacterController>();
         canMove = true;
+        blackboard.RotationSpeed = 1;
     }
 
     // Update is called once per frame
@@ -74,7 +75,7 @@ public class HippieMovement : MonoBehaviour
         {
 
             l_Movement = orientation.x * CamRight + orientation.z * camForward;
-            m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movement));
+            m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movement * blackboard.RotationSpeed));
 
 
             /////////////////////////////////////SALTO/////////////////////////////////////////////////////

@@ -12,10 +12,18 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     Vector3 restartPosition;
     Quaternion restartRotation;
 
+    [Header("COSAS AUTOMATICAS, NO TE RALLES TT")]
     public Animator anim;
     public BLACKBOARD_ThirdPersonCharacter blackboard;
     private CharacterController m_CharacterController;
     public HippieMovement hMovement;
+
+
+    
+
+    float maxHealth;
+
+    [Header("A ESTAS VARIABLES NI CASO")]
 
     public bool UsingGadget;
 
@@ -23,33 +31,28 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public bool AfectedByTheGas;
 
-    public bool StopLook;
-
-    public bool Absorving;
-
-    public bool ICanAbsorbThis;
+    bool StopLook;
 
     public bool Shootting;
 
+    public bool Absorving;
+
     public bool WiningLife;
-
-
-    public GameObject vaccumCone;
-
-
-    //HEALTH
-    public bool Damage;
-
-    public float maxHealth;
-
-    public float TimeAtFalling;
-
-    //[HideInInspector]
-    public float currentHealth;
-
+    public float currentHealth;  
     bool playerDead;
 
-    public bool isDeadWorldActive = false;
+
+      
+    [Header("CONO DE ABSORCIÓN!!")]
+    public GameObject vaccumCone;
+    
+
+    
+    
+    
+    
+
+    
 
     void Awake()
     {
@@ -79,9 +82,10 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     void Update()
     {
         ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
-        if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && ICanAbsorbThis == false && !NoPower)
+        if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && !NoPower)
         {
             UsingGadget = true;
+            //blackboard.RotationSpeed = 0.2f;
             
             if(blackboard.Power >= 0)
             {
@@ -113,6 +117,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             Absorving = false;
             blackboard.ForceAtAbsorb = 1;
             StopLook = false;
+            //blackboard.RotationSpeed = 1f;
             //Debug.Log("EO");
         }
 
@@ -250,23 +255,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         currentHealth -= Time.deltaTime;
         currentHealth = Mathf.Clamp(currentHealth, -1, maxHealth);
     }  
-
-    public void DamageAtFall()
-    {
-        if(!m_CharacterController.isGrounded)
-        {
-            TimeAtFalling += 1*Time.deltaTime;
-            if(TimeAtFalling>= 0.9)
-            {
-                Debug.Log("MORITE PUTO");
-                PlayerReciveDamage(100);
-            }           
-        }
-        else
-        {
-            TimeAtFalling = 0;
-        }   
-    }
 
     public void StupidFunction()
     {

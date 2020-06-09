@@ -5,40 +5,51 @@ using UnityEngine;
 public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Header("VARIABLES DE MOVIMIENTO BÁSICAS:")]
     public float WalkSpeed;
     public float RunSpeed;
-    public float SlideDownSpeed;
-
-    public float SlideDownForce;
-    public float Gravity;
-    public KeyCode m_RunKeyCode = KeyCode.LeftShift;
-    public KeyCode m_JumpCode = KeyCode.Space;
-    public int m_Absorb = 0;
-    public int m_Shoot = 1;
     public float JumpForce;
-    public float Power;
+    public float SlideDownSpeed;
+    public float SlideDownForce;
+    public float KnockBackForce;
+    public float RotationSpeed;
+    public bool RoketMan;
 
+    
+
+    [Header("VARIABLES DE VIDA:")]
     public float currentLife;
     public float MaxLife = 100;
-
     public float ResistanceToTheGas;
 
-    public float WastePowerVelocityABSORB;
-    public float WastePowerVelocityJETPACK;
+    [Header("GRAVEDAD DEL PLANETA:")]
+    public float Gravity;
 
+    [Header("VARIABLES DE ABSORCIÓN:")]
+    
+    public float Power;
+    public float WastePowerVelocityABSORB;
     public float ReloadPowerSpeed;
 
+    public float ForceAtAbsorb;
+
+    
+    [Header("CONTROLES BÁSICOS:")]
+    public KeyCode m_RunKeyCode = KeyCode.LeftShift;
+    public KeyCode m_JumpCode = KeyCode.Space;
+
+    public int m_Absorb = 0;
+    public int m_Shoot = 1;
+
+    
+    [Header("COSAS AUTOMÁTICAS:")]
     public GameObject Gun;
 
     public GameObject Obj;
 
-    public float ForceAtAbsorb;
-
     public GameObject BiomassObj;
 
-    public float KnockBackForce;
-
-    public bool RoketMan;
+    
 
     
     

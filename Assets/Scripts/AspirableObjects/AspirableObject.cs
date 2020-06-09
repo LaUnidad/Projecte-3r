@@ -17,15 +17,6 @@ public class AspirableObject : MonoBehaviour
     public float ForceToAbsorb;
     public float SpeedToAbsorb;
     public float SpeedToShoot;
-
-    public float CircleSpeed;
-
-    public float forwardSpeed;
-
-    public float CircleSize;
-
-    public float CircleDownSpeed;
-
     public float MinDistToGeiser;
 
     public float Biomass;
@@ -72,6 +63,8 @@ public class AspirableObject : MonoBehaviour
 
     public bool booleanForTheScale;
 
+    Vector3 TheOtherOriginalScale;
+
 
 
     
@@ -83,7 +76,7 @@ public class AspirableObject : MonoBehaviour
         coll = GetComponent<SphereCollider>();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
-        RandomSpeed = Random.Range(0.5f,1);
+        RandomSpeed = Random.Range(0.7f,1);
     }
 
     void Update()
@@ -208,7 +201,7 @@ public class AspirableObject : MonoBehaviour
         {
             //Debug.Log("IEP");
             rgbd.useGravity = false;
-            Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = true;
+            //Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = true;
             
         }
         
@@ -217,7 +210,7 @@ public class AspirableObject : MonoBehaviour
     {
         if(other.gameObject.tag == "Gun")
         {
-            Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = false;
+            //Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = false;
             
         }
     }
@@ -308,6 +301,8 @@ public class AspirableObject : MonoBehaviour
         if(!booleanForTheScale)
         {
             StartDistance = Vector3.Distance(this.transform.position, Gun.transform.position);
+            TheOtherOriginalScale = new Vector3(OriginalScale.x + 0.3f, OriginalScale.y + 0.3f, OriginalScale.z +0.3f);
+            
         }
         distance = Vector3.Distance(this.transform.position, Gun.transform.position);
         rotationPoint = Gun.transform.position + (Gun.transform.forward * distance);
@@ -322,7 +317,8 @@ public class AspirableObject : MonoBehaviour
         timer += 1* Time.deltaTime;
         float escala = distance/StartDistance;
         //Debug.Log("SD"+ StartDistance + "  D" + distance + " E" + escala);
-        this.transform.localScale = new Vector3(OriginalScale.x * escala,OriginalScale.y * escala,OriginalScale.z * escala);
+        //this.transform.localScale = new Vector3(OriginalScale.x * escala,OriginalScale.y * escala,OriginalScale.z * escala);
+        this.transform.localScale = new Vector3(TheOtherOriginalScale.x * escala,TheOtherOriginalScale.y * escala,TheOtherOriginalScale.z * escala);
 
         
 
