@@ -15,6 +15,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public Animator anim;
     public BLACKBOARD_ThirdPersonCharacter blackboard;
     private CharacterController m_CharacterController;
+    public HippieMovement hMovement;
 
     public bool UsingGadget;
 
@@ -61,6 +62,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     void Start()
     {
+        hMovement = GetComponent<HippieMovement>();
         gameManager = FindObjectOfType<GameManager>();
         gameManager.AddRestartGameElement(this);
 
@@ -153,6 +155,17 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             restartPosition = other.transform.position;
             restartRotation = other.transform.rotation;
         }
+
+        
+        if(other.tag == "Enemy")
+        {
+            Vector3 hitDirection = transform.position - other.transform.position;
+            hitDirection = hitDirection.normalized;
+            hMovement.KnockBack(hitDirection, 2f);
+            Debug.Log("Knocback COntroller");
+        }
+        
+        
     }
 
     public void RestartGame()
@@ -228,7 +241,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public void PlayerReciveDamage(float lifeToRest)
     { 
         blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
-        blackboard.currentLife = blackboard.currentLife - lifeToRest;        
+        blackboard.currentLife = blackboard.currentLife - lifeToRest;
+       // hMovement.KnockBack();
     }
 
     void ReducePlayerHealth()

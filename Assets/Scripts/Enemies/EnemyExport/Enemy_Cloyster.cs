@@ -332,7 +332,7 @@ public class Enemy_Cloyster : MonoBehaviour
 
     public void HitPlayer()
     {
-        StartCoroutine(DamagePlayer(m_Knockback, 0.2f));
+       // StartCoroutine(DamagePlayer(m_Knockback, 0.2f));
         ChangeState(State.WAIT);
     }
 
