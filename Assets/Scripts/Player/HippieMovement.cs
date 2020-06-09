@@ -109,8 +109,8 @@ public class HippieMovement : MonoBehaviour
         }
 
         //l_Movement = l_Movement * ActualSpeed * blackboard.ForceAtAbsorb;
-            /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
-            m_CharacterController.Move(l_Movement * Time.deltaTime);
+        /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
+        m_CharacterController.Move(l_Movement * Time.deltaTime * blackboard.NormalSpeed);
 
             InputMagnitude();
         

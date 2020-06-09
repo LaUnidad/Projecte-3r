@@ -85,7 +85,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && !NoPower)
         {
             UsingGadget = true;
-            //blackboard.RotationSpeed = 0.2f;
+            blackboard.RotationSpeed = 0f;
+            blackboard.NormalSpeed = 0.2f;
             
             if(blackboard.Power >= 0)
             {
@@ -117,7 +118,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             Absorving = false;
             blackboard.ForceAtAbsorb = 1;
             StopLook = false;
-            //blackboard.RotationSpeed = 1f;
+            blackboard.NormalSpeed = 1f;
+            blackboard.RotationSpeed = 1f;
             //Debug.Log("EO");
         }
 

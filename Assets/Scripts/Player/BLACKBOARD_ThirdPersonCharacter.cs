@@ -13,6 +13,7 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
     public float SlideDownForce;
     public float KnockBackForce;
     public float RotationSpeed;
+    public float NormalSpeed;
     public bool RoketMan;
 
     
