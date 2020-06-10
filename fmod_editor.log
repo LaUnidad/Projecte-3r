@@ -7,67 +7,63 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001E1E9718318 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001CD420B4F28 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SoundI::release                          :  (000001E25740E728)
-[LOG] SoundI::release                          :     Button (000001E256EB4BD8)
-[LOG] SoundI::release                          :  (000001E25740E448)
-[LOG] SoundI::release                          :     GasRock (000001E256EB7AF8)
-[LOG] SoundI::release                          :  (000001E25740DFF8)
-[LOG] SoundI::release                          :     Damage (000001E256EB4A38)
-[LOG] SoundI::release                          :  (000001E25740D758)
-[LOG] SoundI::release                          :     AbsorbableSmall (000001E256EB7618)
-[LOG] SoundI::release                          :  (000001E25740E168)
-[LOG] SoundI::release                          :     Asphyxiation (000001E256EB5598)
-[LOG] SoundI::release                          :  (000001E25740CEB8)
-[LOG] SoundI::release                          :     AbsorbableNormal (000001E256EB6AB8)
-[LOG] SoundI::release                          :  (000001E25740B7B8)
-[LOG] SoundI::release                          :     Absorb (000001E256EB4218)
-[LOG] SoundI::release                          :  (000001E25740D478)
-[LOG] SoundI::release                          :     GasSource (000001E256EB7958)
-[LOG] SoundI::release                          :  (000001E25740BC08)
-[LOG] SoundI::release                          :     ObstacleHard (000001E256EB72D8)
-[LOG] SoundI::release                          :  (000001E25740DBA8)
-[LOG] SoundI::release                          :     AbsorbableBig (000001E256EB5258)
-[LOG] SoundI::release                          :  (000001E25740E898)
-[LOG] SoundI::release                          :     Warning (000001E256EB53F8)
-[LOG] SoundI::release                          :  (000001E25740D308)
-[LOG] SoundI::release                          :     StepRocks (000001E256EB6DF8)
-[LOG] SoundI::release                          :  (000001E25740C058)
-[LOG] SoundI::release                          :     StepRocks2 (000001E256EB4D78)
-[LOG] SoundI::release                          :  (000001E25740BEE8)
-[LOG] SoundI::release                          :     Cancel (000001E256EB7138)
-[LOG] SoundI::release                          :  (000001E25740EB78)
-[LOG] SoundI::release                          :     ChangeDirection (000001E256EB7E38)
-[LOG] SoundI::release                          :  (000001E25740DD18)
-[LOG] SoundI::release                          :     Accept (000001E256EB77B8)
-[LOG] SoundI::release                          :  (000001E25740D5E8)
-[LOG] SoundI::release                          :     Resume (000001E256EB4898)
-[LOG] SoundI::release                          :  (000001E25740DA38)
-[LOG] SoundI::release                          :     Heal (000001E256EB5DB8)
-[LOG] SoundI::release                          :  (000001E25740EE58)
-[LOG] SoundI::release                          :     StepGrass (000001E256EB6298)
-[LOG] SoundI::release                          :  (000001E25740DE88)
-[LOG] SoundI::release                          :     StepGrass2 (000001E256EB7478)
-[LOG] SoundI::release                          :  (000001E1E7FB05B8)
-[LOG] SoundI::release                          :     Pause (000001E256EB4078)
-[LOG] SoundI::release                          :  (000001E25740EA08)
-[LOG] SoundI::release                          :     Cooldown (000001E256EB7C98)
-[LOG] SoundI::release                          :  (000001E25740B4D8)
-[LOG] SoundI::release                          :     ObstacleLight (000001E256EB6F98)
-[LOG] SoundI::release                          :  (000001E25740C618)
-[LOG] SoundI::release                          :     Overheat (000001E256EB50B8)
-[LOG] SoundI::release                          :  (000001E25740C788)
-[LOG] SoundI::release                          :     GasRockThrow (000001E256EB5738)
+[LOG] SoundI::release                          :  (000001CD4525FEC8)
+[LOG] SoundI::release                          :     Button (000001CD41707758)
+[LOG] SoundI::release                          :  (000001CD3E4BDA38)
+[LOG] SoundI::release                          :     GasRock (000001CD417078F8)
+[LOG] SoundI::release                          :  (000001CD3E4BE728)
+[LOG] SoundI::release                          :     Damage (000001CD41706F38)
+[LOG] SoundI::release                          :  (000001CD4525F628)
+[LOG] SoundI::release                          :     AbsorbableSmall (000001CD41487728)
+[LOG] SoundI::release                          :  (000001CD3E4BE898)
+[LOG] SoundI::release                          :     Asphyxiation (000001CD41709CB8)
+[LOG] SoundI::release                          :  (000001CD41808C28)
+[LOG] SoundI::release                          :     AbsorbableNormal (000001CD4148A648)
+[LOG] SoundI::release                          :  (000001CD452608D8)
+[LOG] SoundI::release                          :     Absorb (000001CD41708E18)
+[LOG] SoundI::release                          :  (000001CD45260768)
+[LOG] SoundI::release                          :     GasSource (000001CD41487248)
+[LOG] SoundI::release                          :  (000001CD4525F908)
+[LOG] SoundI::release                          :     ObstacleHard (000001CD4148A988)
+[LOG] SoundI::release                          :  (000001CD4525F348)
+[LOG] SoundI::release                          :     AbsorbableBig (000001CD41706D98)
+[LOG] SoundI::release                          :  (000001CD45260038)
+[LOG] SoundI::release                          :     Warning (000001CD41709B18)
+[LOG] SoundI::release                          :  (000001CD4525F4B8)
+[LOG] SoundI::release                          :     StepRocks (000001CD41488428)
+[LOG] SoundI::release                          :  (000001CD3E4BD308)
+[LOG] SoundI::release                          :     StepRocks2 (000001CD417085F8)
+[LOG] SoundI::release                          :  (000001CD4525FBE8)
+[LOG] SoundI::release                          :     Cancel (000001CD417082B8)
+[LOG] SoundI::release                          :  (000001CD3E4BD478)
+[LOG] SoundI::release                          :     ChangeDirection (000001CD41708798)
+[LOG] SoundI::release                          :  (000001CD4525FA78)
+[LOG] SoundI::release                          :     Accept (000001CD41708FB8)
+[LOG] SoundI::release                          :  (000001CD452605F8)
+[LOG] SoundI::release                          :     Resume (000001CD41487C08)
+[LOG] SoundI::release                          :  (000001CD45260E98)
+[LOG] SoundI::release                          :     Heal (000001CD41487DA8)
+[LOG] SoundI::release                          :  (000001CD418087D8)
+[LOG] SoundI::release                          :     StepGrass (000001CD414880E8)
+[LOG] SoundI::release                          :  (000001CD452601A8)
+[LOG] SoundI::release                          :     StepGrass2 (000001CD41709158)
+[LOG] SoundI::release                          :  (000001CD3E4BCBD8)
+[LOG] SoundI::release                          :     Pause (000001CD41708C78)
+[LOG] SoundI::release                          :  (000001CD3E4BEA08)
+[LOG] SoundI::release                          :     Cooldown (000001CD41707F78)
+[LOG] SoundI::release                          :  (000001CD4525F1D8)
+[LOG] SoundI::release                          :     ObstacleLight (000001CD41487A68)
+[LOG] SoundI::release                          :  (000001CD45260D28)
+[LOG] SoundI::release                          :     Overheat (000001CD414870A8)
+[LOG] SoundI::release                          :  (000001CD4525F798)
+[LOG] SoundI::release                          :     GasRockThrow (000001CD41706238)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -77,11 +73,4 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.

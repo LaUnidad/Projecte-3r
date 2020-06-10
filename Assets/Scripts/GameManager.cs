@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     bool m_GameActive = true;
 
 
+    public float RotateSpeed = 1f;
 
     public bool isPaused;
 
@@ -46,11 +47,6 @@ public class GameManager : MonoBehaviour
 
 
 
-
-
-
-
-
     public static GameManager Instance
     {
         get
@@ -73,6 +69,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time * RotateSpeed);
+
         Pause();
 
         if (cc.currentHealth <= 0) m_GameActive = false;
@@ -88,6 +86,7 @@ public class GameManager : MonoBehaviour
     {
         m_RestartGameElements.Add(RestartGameElement);
     }
+
 
     public void Pause()
     {

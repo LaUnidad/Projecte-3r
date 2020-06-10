@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 [RequireComponent(typeof (BLACKBOARD_ThirdPersonCharacter))]
 [RequireComponent(typeof (CharacterController))]
@@ -45,13 +46,13 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
       
     [Header("CONO DE ABSORCIÓN!!")]
     public GameObject vaccumCone;
-    
 
-    
-    
-    
-    
 
+
+    //SOUNDS
+    bool firstTimeUsingGadget;
+    EventInstance AbsorbSoundEvent;
+    
     
 
     void Awake()
@@ -127,11 +128,18 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         {
             vaccumCone.SetActive(true);
             anim.SetBool("Absorbing", true);
+
+            if (!SoundManager.Instance.isPlaying(AbsorbSoundEvent)) AbsorbSoundEvent = SoundManager.Instance.PlayEvent(GameManager.Instance.Absorb, transform);
+            firstTimeUsingGadget = false;
+
         }
         else
         {
             vaccumCone.SetActive(false);
             anim.SetBool("Absorbing", false);
+
+            AbsorbSoundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            firstTimeUsingGadget = true;
         }
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
         RestLife();
@@ -195,6 +203,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         }
         if(UsingGadget && blackboard.Power<0)
         {
+            SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbOverheat, GameManager.Instance.m_player.transform);
             NoPower = true;  
         }
         if(blackboard.Power <= 100 && UsingGadget == false && m_CharacterController.isGrounded && Absorving == false) 
@@ -249,7 +258,9 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     { 
         blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
         blackboard.currentLife = blackboard.currentLife - lifeToRest;
-       // hMovement.KnockBack();
+
+        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.ChangeDirection, GameManager.Instance.m_player.transform);
+        // hMovement.KnockBack();
     }
 
     void ReducePlayerHealth()
