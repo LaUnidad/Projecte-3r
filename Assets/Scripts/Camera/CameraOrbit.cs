@@ -63,9 +63,9 @@ public class CameraOrbit : MonoBehaviour
             }
 
             //Zoom with Mouse scroll
-            if(Input.GetAxis("Mouse ScrollWheel") != 0)
+            if(Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetAxis("GamePad Vertical") != 0)
             {
-                float scrollAmount = Input.GetAxis("Mouse ScrollWheel") * scrollSensitivity;
+                float scrollAmount = Input.GetAxis("Mouse ScrollWheel") * scrollSensitivity + Input.GetAxis("GamePad Vertical") * scrollSensitivity;
 
                 //Zoom faster the further away the camera is
                 scrollAmount *= cameraDistance * 0.3f;

@@ -41,6 +41,7 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
 
     public int m_Absorb = 0;
     public int m_Shoot = 1;
+    public float m_ControllerTrigger;
 
     
     [Header("COSAS AUTOMÁTICAS:")]
@@ -65,6 +66,11 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        m_ControllerTrigger = Input.GetAxis("Right Trigger");
+    }
+
+    public bool ControllerAbsorb()
+    {
+        return m_ControllerTrigger == 1;
     }
 }

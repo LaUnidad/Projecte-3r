@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using FMOD.Studio;
+using XInputDotNetPure;
 
 [RequireComponent(typeof (BLACKBOARD_ThirdPersonCharacter))]
 [RequireComponent(typeof (CharacterController))]
@@ -48,7 +49,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     //----- SOUNDS -----
     bool firstTimeUsingGadget;
     EventInstance AbsorbSoundEvent;
-    
+
+    //----- CONTROLLER -----
+    PlayerIndex playerIndex;
+    GamePadState state;
+    GamePadState prevState;
+
     void Awake()
     {
         restartPosition = transform.position;
@@ -74,8 +80,10 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     // Update is called once per frame
     void Update()
     {
+        
+
         ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
-        if ((Input.GetMouseButton(blackboard.m_Absorb) || Input.GetButton("Right Trigger")) && !NoPower)
+        if ((Input.GetMouseButton(blackboard.m_Absorb) || blackboard.ControllerAbsorb()) && !NoPower)
         {
             UsingGadget = true;
             blackboard.RotationSpeed = 0f;
@@ -116,11 +124,15 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
             if (!SoundManager.Instance.isPlaying(AbsorbSoundEvent)) AbsorbSoundEvent = SoundManager.Instance.PlayEvent(GameManager.Instance.Absorb, transform);
             firstTimeUsingGadget = false;
+
+            GamePad.SetVibration(playerIndex, .05f, .05f); 
         }
         else
         {
             vaccumCone.SetActive(false);
             anim.SetBool("Absorbing", false);
+
+            GamePad.SetVibration(playerIndex, 0f, 0f);
 
             AbsorbSoundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             firstTimeUsingGadget = true;
@@ -234,6 +246,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         // hMovement.KnockBack();
 
         pHud.KnockBackHUD();
+        pHud.HitHUD();
     }
 
     /*

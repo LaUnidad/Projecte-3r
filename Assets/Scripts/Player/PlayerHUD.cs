@@ -89,4 +89,9 @@ public class PlayerHUD : MonoBehaviour
     {
         playerHUDAnimator.SetTrigger("HUDKnockback");
     }
+
+    public void HitHUD()
+    {
+        canvasAnimator.SetTrigger("Hit");
+    }
 }

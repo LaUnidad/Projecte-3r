@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
 
 
     public float RotateSpeed = 1f;
-
+    public Animation m_Animation;
+    public AnimationClip m_ShowHUDAnimationClip;
     public bool isPaused;
 
     [Header("Sound Bank")]
@@ -69,11 +70,25 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         RenderSettings.skybox.SetFloat("_Rotation", Time.time * RotateSpeed);
 
         Pause();
 
        // if (cc.currentHealth <= 0) m_GameActive = false;
+    }
+
+    public void DamageHUD()
+    {
+        m_Animation.Play(m_ShowHUDAnimationClip.name);
+        /*
+        AnimationState l_AnimationState = m_Animation[m_ShowHUDAnimationClip.name];
+        if (!l_AnimationState.enabled || l_AnimationState.normalizedTime >= 1.0f)
+        {
+            m_Animation.Stop();
+            m_Animation.Play(m_ShowHUDAnimationClip.name);
+        }*/
     }
 
     public void RestartGame()
@@ -90,7 +105,7 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.P) || Input.GetButtonDown("Start"))
         {
             isPaused = !isPaused;
         }
