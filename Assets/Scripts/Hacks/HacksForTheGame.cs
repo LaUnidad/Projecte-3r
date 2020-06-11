@@ -51,7 +51,7 @@ public class HacksForTheGame : MonoBehaviour
         }
         if(Input.GetKeyDown(m_PlayerReciveHit))
         {
-            Player.GetComponent<HippiCharacterController>().PlayerReciveDamage(30);
+            Player.GetComponent<HippiCharacterController>().PlayerTakeDamage(30);
         }
         if(Input.GetKeyDown(m_KillingWorld))
         {

@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
         Pause();
 
-        if (cc.currentHealth <= 0) m_GameActive = false;
+       // if (cc.currentHealth <= 0) m_GameActive = false;
     }
 
     public void RestartGame()

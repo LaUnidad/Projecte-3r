@@ -230,7 +230,7 @@ public class AspirableObject : MonoBehaviour
         }
         if(other.tag == "PlayerCollider" && IMakeDamage)
         {
-            Player.GetComponent<HippiCharacterController>().PlayerReciveDamage(5);
+            Player.GetComponent<HippiCharacterController>().PlayerTakeDamage(5);
         }
     }
     void OnTriggerExit(Collider other) 

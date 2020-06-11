@@ -7,6 +7,9 @@ public class PlayerHUD : MonoBehaviour
 {
     GameManager gm;
 
+    public Animator canvasAnimator;
+    public Animator playerHUDAnimator;
+
     HippiCharacterController cc;
 
     public Image healthBar;
@@ -70,5 +73,20 @@ public class PlayerHUD : MonoBehaviour
         {
             pauseScreen.SetActive(false);
         }
+    }
+
+    public void ShowDeathFadeIn()
+    {
+        canvasAnimator.SetTrigger("DeathFadeIn");
+    }
+
+    public void ShowAliveFadeOut()
+    {
+        canvasAnimator.SetTrigger("AliveFadeOut");
+    }
+
+    public void KnockBackHUD()
+    {
+        playerHUDAnimator.SetTrigger("HUDKnockback");
     }
 }

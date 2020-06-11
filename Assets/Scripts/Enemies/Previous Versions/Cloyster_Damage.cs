@@ -27,7 +27,7 @@ public class Cloyster_Damage : MonoBehaviour
         if (other.tag == "Player")
         {
             StartCoroutine(DamagePlayer(m_knockback, 0.2f));
-            GameManager.Instance.m_player.GetComponent<HippiCharacterController>().PlayerReciveDamage(m_damage);
+            GameManager.Instance.m_player.GetComponent<HippiCharacterController>().PlayerTakeDamage(m_damage);
         }
     }
 

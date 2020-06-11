@@ -58,6 +58,7 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
     {
         Gun = GameObject.FindGameObjectWithTag("Gun");
         BiomassObj = GameObject.FindGameObjectWithTag("InstantiateBiomass");
+        currentLife = MaxLife;
         
     }
 

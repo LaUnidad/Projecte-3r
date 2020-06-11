@@ -71,7 +71,7 @@ public class HippieMovement : MonoBehaviour
         //if (m_CharacterController.isGrounded) canMove = true;
         // else canMove = false;
 
-        if (knockBackCounter <= 0)
+        if (knockBackCounter <= 0 && canMove)
         {
 
             l_Movement = orientation.x * CamRight + orientation.z * camForward;
@@ -83,12 +83,13 @@ public class HippieMovement : MonoBehaviour
             {
                 Jump();
             }
-
+            
             else
             {
                 VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
                 l_Movement.y = VerticalSpeed;
             }
+            
 
             ////////////////////////////////////////CORRER Y VELOCIDAD///////////////////////////////////////////////
             if (Input.GetKey(blackboard.m_RunKeyCode))
@@ -110,7 +111,10 @@ public class HippieMovement : MonoBehaviour
 
         //l_Movement = l_Movement * ActualSpeed * blackboard.ForceAtAbsorb;
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
+       // VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
+        //l_Movement.y = VerticalSpeed;
         m_CharacterController.Move(l_Movement * Time.deltaTime * blackboard.NormalSpeed);
+
 
             InputMagnitude();
         

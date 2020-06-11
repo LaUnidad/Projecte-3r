@@ -15,14 +15,10 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     [Header("COSAS AUTOMATICAS, NO TE RALLES TT")]
     public Animator anim;
+    public PlayerHUD pHud;
     public BLACKBOARD_ThirdPersonCharacter blackboard;
     private CharacterController m_CharacterController;
     public HippieMovement hMovement;
-
-
-    
-
-    float maxHealth;
 
     [Header("A ESTAS VARIABLES NI CASO")]
 
@@ -40,26 +36,21 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public bool WiningLife;
     public float currentHealth;  
-    bool playerDead;
-
-
+    bool playerIsDead;
       
     [Header("CONO DE ABSORCIÓN!!")]
     public GameObject vaccumCone;
 
 
+    //----- HIT STOP -----
+    bool waitingHitStop = false;
 
-    //SOUNDS
+    //----- SOUNDS -----
     bool firstTimeUsingGadget;
     EventInstance AbsorbSoundEvent;
     
-    
-
     void Awake()
     {
-        maxHealth = 100;
-        //currentHealth = maxHealth;
-
         restartPosition = transform.position;
         restartRotation = transform.rotation;
     }
@@ -67,6 +58,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     void Start()
     {
         hMovement = GetComponent<HippieMovement>();
+        pHud = GetComponent<PlayerHUD>();
         gameManager = FindObjectOfType<GameManager>();
         gameManager.AddRestartGameElement(this);
 
@@ -76,7 +68,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
         vaccumCone.SetActive(false);
 
-        playerDead = false;
+        playerIsDead = false;
     }
 
     // Update is called once per frame
@@ -95,9 +87,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
                 {
                     Absorving = true;
                     blackboard.ForceAtAbsorb = blackboard.Gun.GetComponent<Aspiradora>().ForceToThePlayer();
-                    StopLook = true;
-
-                  //  anim.SetBool("Absorbing", true);                  
+                    StopLook = true;               
                 }
                 else
                 {
@@ -107,11 +97,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             else
             {
                Absorving = false;
-               // anim.SetBool("Absorbing", false);
             }
-
-            //if (Absorving) anim.SetBool("Absorbing", true);
-           // if (!Absorving) anim.SetBool("Absorbing", false);
         }
         else
         {
@@ -121,7 +107,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             StopLook = false;
             blackboard.NormalSpeed = 1f;
             blackboard.RotationSpeed = 1f;
-            //Debug.Log("EO");
         }
 
         if (UsingGadget)
@@ -131,7 +116,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
             if (!SoundManager.Instance.isPlaying(AbsorbSoundEvent)) AbsorbSoundEvent = SoundManager.Instance.PlayEvent(GameManager.Instance.Absorb, transform);
             firstTimeUsingGadget = false;
-
         }
         else
         {
@@ -142,8 +126,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             firstTimeUsingGadget = true;
         }
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
-        RestLife();
-        
+        RestLife();   
         /*
         if (isDeadWorldActive)
         {
@@ -152,15 +135,18 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         */
         if (blackboard.currentLife <= 0)
         {
-            m_CharacterController.enabled = false;
-            gameManager.RestartGame();
+            playerIsDead = true;
+            blackboard.currentLife = 0.1f;
+            AfectedByTheGas = false;          
         }
-        
-       // Debug.Log("Current health:  " + currentHealth);
+        if(playerIsDead)
+        {
+            PlayerHasDied();
+            playerIsDead = false;
+        }        
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
-       /////////////////////////////////////////////////DAMAGE///////////////////////////////////////////////////
-       
+       /////////////////////////////////////////////////DAMAGE///////////////////////////////////////////////////      
     }
 
     void OnTriggerEnter(Collider other)
@@ -170,31 +156,16 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             restartPosition = other.transform.position;
             restartRotation = other.transform.rotation;
         }
-
-        
+      
         if(other.tag == "Enemy")
         {
             Vector3 hitDirection = transform.position - other.transform.position;
             hitDirection = hitDirection.normalized;
             hMovement.KnockBack(hitDirection, 2f);
             Debug.Log("Knocback COntroller");
-        }
-        
-        
+        }       
     }
 
-    public void RestartGame()
-    {
-        Debug.Log("Restart Player");
-        Time.timeScale = 1f;
-        this.transform.position = restartPosition;
-        this.transform.rotation = restartRotation;
-        blackboard.currentLife = blackboard.MaxLife;
-        m_CharacterController.enabled = true;
-        playerDead = false;
-        
-    }
-   
     void UsePower()
     {
         if(UsingGadget && blackboard.Power>0)
@@ -215,7 +186,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
                 NoPower = false;
                 blackboard.Power = 100;
             }
-
         }
     }
    
@@ -237,8 +207,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             if(blackboard.currentLife >= 0)
             {
                 blackboard.currentLife -= blackboard.ResistanceToTheGas * Time.deltaTime;
-            }
-            
+            }          
         }
     }
     public void SumLife(float x)
@@ -254,24 +223,81 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             }
         }
     } 
-    public void PlayerReciveDamage(float lifeToRest)
+    public void PlayerTakeDamage(float lifeToRest)
     { 
         blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
         blackboard.currentLife = blackboard.currentLife - lifeToRest;
 
         SoundManager.Instance.PlayOneShotSound(GameManager.Instance.ChangeDirection, GameManager.Instance.m_player.transform);
+        FindObjectOfType<HitStop>().HitStopLoL(1f);
+        anim.SetTrigger("Knockback");
         // hMovement.KnockBack();
+
+        pHud.KnockBackHUD();
     }
 
+    /*
     void ReducePlayerHealth()
     {
         currentHealth -= Time.deltaTime;
         currentHealth = Mathf.Clamp(currentHealth, -1, maxHealth);
     }  
+    */
 
     public void StupidFunction()
     {
         WiningLife = false;
     }
-    
+
+    public void RestartGame()
+    {
+        Debug.Log("Restart Player");
+        Time.timeScale = 1f;
+        this.transform.position = restartPosition;
+        this.transform.rotation = restartRotation;
+        blackboard.currentLife = blackboard.MaxLife;
+        m_CharacterController.enabled = true;
+        anim.SetBool("DeathBySuffocation", false);
+        pHud.ShowAliveFadeOut();
+        hMovement.canMove = true;
+        //playerIsDead = false;
+
+    }
+
+    public void PlayerHasDied()
+    {
+        playerIsDead = false;
+        hMovement.canMove = false;
+        m_CharacterController.enabled = false;
+        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.playerDie, GameManager.Instance.m_player.transform);
+        anim.SetBool("DeathBySuffocation", true);
+        pHud.ShowDeathFadeIn();
+        
+        StartCoroutine(WaitAndRetry(5f));
+    }
+
+    private IEnumerator WaitAndRetry(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        m_CharacterController.enabled = false;
+        gameManager.RestartGame();
+    }
+    /*
+    void HitStop(float duration)
+    {
+        if (waitingHitStop)
+            return;
+        Time.timeScale = 0f;
+        StartCoroutine(WaitHitStop(duration));
+    }
+
+    IEnumerator WaitHitStop(float duration)
+    {
+        waitingHitStop = true;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1f;
+        waitingHitStop = false;
+    }
+    */
+
 }

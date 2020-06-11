@@ -26,7 +26,7 @@ public class Enemy_Cloyster_Damage : MonoBehaviour
             Debug.Log("Hit");
             //GameManager.Instance.m_player.GetComponent<ImpactReciever>().AddImpact(KnockbakDirection(), m_KnockBackForce);
             transform.parent.transform.parent.GetComponent<Enemy_Cloyster>().HitPlayer();
-            other.gameObject.GetComponent<HippiCharacterController>().PlayerReciveDamage(20);
+            other.gameObject.GetComponent<HippiCharacterController>().PlayerTakeDamage(20);
 
             /*
             Vector3 hitDirection = other.transform.position - transform.position;
