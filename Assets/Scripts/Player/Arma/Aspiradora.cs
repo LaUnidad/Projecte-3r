@@ -28,7 +28,7 @@ public class Aspiradora : MonoBehaviour
 
     private GameObject DestroyDoors;
 
-    private GameObject LeavesBT;
+    private GameObject[] LeavesBT;
 
     CameraOrbit camOrbit;
 
@@ -40,7 +40,7 @@ public class Aspiradora : MonoBehaviour
         blackboard = GetComponent<BLACKBOARD_Aspiradora>();
         Player = GameObject.FindGameObjectWithTag("Player");
         DestroyDoors = GameObject.FindGameObjectWithTag("DestroyDoors");
-        LeavesBT = GameObject.FindGameObjectWithTag("LeavesBigTree");
+        LeavesBT = GameObject.FindGameObjectsWithTag("LeavesBigTree");
     }
 
     // Update is called once per frame
@@ -211,10 +211,10 @@ public class Aspiradora : MonoBehaviour
         Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
         Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
         DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
-        Destroy(LeavesBT.gameObject);
-        //geri activa aqui el camara shake, i si vols, a hacksfortheproto,
-        //clicant M sactiva tot el que s'hauria de activar al arribar al final
-        //aixi es més facil testearho ;)
+        foreach(GameObject obj in LeavesBT)
+        {
+            Destroy(obj.gameObject);
+        }
         camOrbit.FinalCameraShakeStart();
         
     }

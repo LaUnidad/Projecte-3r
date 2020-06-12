@@ -318,11 +318,7 @@ public class AspirableObject : MonoBehaviour
         float escala = distance/StartDistance;
         //Debug.Log("SD"+ StartDistance + "  D" + distance + " E" + escala);
         //this.transform.localScale = new Vector3(OriginalScale.x * escala,OriginalScale.y * escala,OriginalScale.z * escala);
-        this.transform.localScale = new Vector3(TheOtherOriginalScale.x * escala,TheOtherOriginalScale.y * escala,TheOtherOriginalScale.z * escala);
-
-        
-
-        
+        this.transform.localScale = new Vector3(TheOtherOriginalScale.x * escala,TheOtherOriginalScale.y * escala,TheOtherOriginalScale.z * escala);  
     }
     
 }
