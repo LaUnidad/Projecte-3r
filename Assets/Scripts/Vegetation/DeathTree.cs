@@ -8,6 +8,8 @@ public class DeathTree : MonoBehaviour
     GameObject AliveObj;
     GameObject DeathObj;
 
+    GameObject Particles;
+
     public bool Death;
 
     public bool rotate;
@@ -34,16 +36,13 @@ public class DeathTree : MonoBehaviour
                 Death = true;
             }
             AliveObj.GetComponent<DisolveMyChildrens>().Disolve = true;
-            //AliveObj.SetActive(false);
-            //DeathObj.SetActive(true);
-            //DeathObj.SetActive(true);
             DeathObj.GetComponent<CreateMyChildren>().Create = true;
+            Destroy(Particles.gameObject);
             
         }
         else
         {
             AliveObj.SetActive(true);
-            //DeathObj.SetActive(false);
         }
     }
     void OnTriggerEnter(Collider other) 
@@ -56,6 +55,10 @@ public class DeathTree : MonoBehaviour
         {
             DeathObj = other.gameObject;
         }
+        if(other.tag == "ParticlesVegetation")
+        {
+            Particles = other.gameObject;
+        }
     }
     void OnCollisionEnter(Collision other) 
     {
@@ -66,6 +69,10 @@ public class DeathTree : MonoBehaviour
         if(other.gameObject.tag == "DeathPlant")
         {
             DeathObj = other.gameObject;
+        }
+        if(other.gameObject.tag == "ParticlesVegetation")
+        {
+            Particles = other.gameObject;
         }
     }  
     public void TimeToDie()
