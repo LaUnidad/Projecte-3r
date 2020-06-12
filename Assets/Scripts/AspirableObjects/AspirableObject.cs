@@ -13,6 +13,8 @@ public class AspirableObject : MonoBehaviour
     public bool IAmAsborved;
     public bool IAmInList;
 
+    public bool ImLive;
+
     [Header("VARIABLES DEL ASPIRABLEOBJECT")]
     public float ForceToAbsorb;
     public float SpeedToAbsorb;
@@ -99,6 +101,12 @@ public class AspirableObject : MonoBehaviour
         if(!IAmMagnetic && !THEBIGONE)
         {
             DieWithTime(8);
+        }
+
+        if(ImLive)
+        {
+            rgbd.useGravity = true;
+            Invoke("KillLiveAsset", 8);
         }
             
     }
@@ -319,6 +327,11 @@ public class AspirableObject : MonoBehaviour
         //Debug.Log("SD"+ StartDistance + "  D" + distance + " E" + escala);
         //this.transform.localScale = new Vector3(OriginalScale.x * escala,OriginalScale.y * escala,OriginalScale.z * escala);
         this.transform.localScale = new Vector3(TheOtherOriginalScale.x * escala,TheOtherOriginalScale.y * escala,TheOtherOriginalScale.z * escala);  
+    }
+
+    public void KillLiveAsset()
+    {
+        Destroy(this.gameObject);
     }
     
 }

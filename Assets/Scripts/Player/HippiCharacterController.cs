@@ -73,7 +73,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         Cursor.visible = false;
 
         vaccumCone.SetActive(false);
-
+        AfectedByTheGas = false;
         playerIsDead = false;
     }
 
@@ -149,7 +149,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         {
             playerIsDead = true;
             blackboard.currentLife = 0.1f;
-            AfectedByTheGas = false;          
+            //AfectedByTheGas = false;          
         }
         if(playerIsDead)
         {
@@ -273,6 +273,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         anim.SetBool("DeathBySuffocation", false);
         pHud.ShowAliveFadeOut();
         hMovement.canMove = true;
+       
         //playerIsDead = false;
 
     }

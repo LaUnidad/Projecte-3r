@@ -208,6 +208,7 @@ public class Aspiradora : MonoBehaviour
 
     public void KillPlanet()
     {
+        Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
         Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
         Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
         DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
