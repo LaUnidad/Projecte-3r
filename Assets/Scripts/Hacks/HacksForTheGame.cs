@@ -20,7 +20,7 @@ public class HacksForTheGame : MonoBehaviour
     private GameObject[] Doors;
 
     GameObject[] MagneticRocks;
-    private GameObject LeavesBT;
+    private GameObject[] LeavesBT;
     void Start()
     {
         TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
@@ -28,7 +28,7 @@ public class HacksForTheGame : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         InstaniateBio = GameObject.FindGameObjectWithTag("InstantiateBiomass");
         Doors = GameObject.FindGameObjectsWithTag("BreakableDoor");
-        LeavesBT = GameObject.FindGameObjectWithTag("LeavesBigTree");
+        LeavesBT = GameObject.FindGameObjectsWithTag("LeavesBigTree");
     }
 
     // Update is called once per frame
@@ -62,7 +62,11 @@ public class HacksForTheGame : MonoBehaviour
                     obj.GetComponent<DoorController>().ExploteYourChildren();
                 }
             }
-            Destroy(LeavesBT.gameObject);
+            foreach(GameObject obj in LeavesBT)
+            {
+                Destroy(obj.gameObject);
+            }
+            
 
             //ActivaCamaraShake si vols
         }

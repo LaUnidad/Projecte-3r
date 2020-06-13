@@ -102,6 +102,7 @@ public class AspirableObject : MonoBehaviour
         {
             DieWithTime(8);
         }
+        
 
         if(ImLive)
         {
@@ -150,12 +151,17 @@ public class AspirableObject : MonoBehaviour
             //this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
             //BeenAbsorved = true;
             //timer += 1* Time.deltaTime;
-            if(!IAmMagnetic)
+            if(!IAmMagnetic && !THEBIGONE)
             {
                 //this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
                  AbsorbInSpiral();
             }
-            else
+            else if(THEBIGONE)
+            {
+                //AbsorbInSpiral();
+                AbsorbingMagnetic();
+            }
+            else if(IAmMagnetic)
             {
                 AbsorbingMagnetic();
             }
