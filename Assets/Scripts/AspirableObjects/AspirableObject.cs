@@ -13,6 +13,8 @@ public class AspirableObject : MonoBehaviour
     public bool IAmAsborved;
     public bool IAmInList;
 
+    public bool Heart;
+
     public bool ImLive;
 
     [Header("VARIABLES DEL ASPIRABLEOBJECT")]

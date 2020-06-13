@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMOD.Studio;
@@ -55,6 +55,11 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     GamePadState state;
     GamePadState prevState;
 
+
+    //------------Bools for Conditions (TUTO) ------
+
+    public bool magneticRock;
+
     void Awake()
     {
         restartPosition = transform.position;
@@ -81,7 +86,6 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     void Update()
     {
         
-
         ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
         if ((Input.GetMouseButton(blackboard.m_Absorb) || blackboard.ControllerAbsorb()) && !NoPower && !playerIsDead)
         {

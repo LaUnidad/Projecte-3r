@@ -34,6 +34,8 @@ public class BLACKBOARD_ThirdPersonCharacter : MonoBehaviour
 
     public float ForceAtAbsorb;
 
+    public float Biomassa;
+
     
     [Header("CONTROLES BÁSICOS:")]
     public KeyCode m_RunKeyCode = KeyCode.LeftShift;

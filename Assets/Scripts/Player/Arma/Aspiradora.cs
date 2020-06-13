@@ -166,13 +166,13 @@ public class Aspiradora : MonoBehaviour
         {
             if(other.gameObject.GetComponent<AspirableObject>().IAmMagnetic == false)
             {
-                Debug.Log(other.gameObject.GetComponent<AspirableObject>().THEBIGONE);
+                //Debug.Log(other.gameObject.GetComponent<AspirableObject>().Heart);
                 RemoveObjects(other.gameObject);
-                Biomass += other.gameObject.GetComponent<AspirableObject>().Biomass;
+                Player.GetComponent<HippiCharacterController>().blackboard.Biomassa += other.gameObject.GetComponent<AspirableObject>().Biomass;
                 Player.GetComponent<HippiCharacterController>().SumLife(1);
 
                 //Player.GetComponent<HippiCharacterController>().currentHealth += 0.5f;
-                if(other.gameObject.GetComponent<AspirableObject>().THEBIGONE)
+                if(other.gameObject.GetComponent<AspirableObject>().Heart)
                 {
                     Debug.Log("ASPIRADO A THE FUCKING BIGONE");
                     Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
