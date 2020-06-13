@@ -33,6 +33,10 @@ public class Aspiradora : MonoBehaviour
     CameraOrbit camOrbit;
 
     public bool startFinalCamShake = false;
+
+    public GameObject[] Cinematicas;
+
+    public int wichCinematicYouWant;
    
 
     void Start()
@@ -42,6 +46,7 @@ public class Aspiradora : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         DestroyDoors = GameObject.FindGameObjectWithTag("DestroyDoors");
         LeavesBT = GameObject.FindGameObjectsWithTag("LeavesBigTree");
+        Cinematicas = GameObject.FindGameObjectsWithTag("Cinematic");
     }
 
     // Update is called once per frame
@@ -175,6 +180,7 @@ public class Aspiradora : MonoBehaviour
                 if(other.gameObject.GetComponent<AspirableObject>().Heart)
                 {
                     Debug.Log("ASPIRADO A THE FUCKING BIGONE");
+                    ActivateTheCorrectCinematic();
                     Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
                     Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
                     Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
@@ -219,8 +225,9 @@ public class Aspiradora : MonoBehaviour
     public void KillPlanet()
     {
         Debug.Log("ULTIM ITEM MORT");
+       
         Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
-        Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
+        Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;  
         Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
         DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
         foreach(GameObject obj in LeavesBT)
@@ -228,7 +235,19 @@ public class Aspiradora : MonoBehaviour
             Destroy(obj.gameObject);
         }
         startFinalCamShake = true;
+        
         //camOrbit.FinalCameraShakeStart();
         
+    }
+    public void ActivateTheCorrectCinematic()
+    {
+        foreach(GameObject obj in Cinematicas)
+        {
+            if(obj.GetComponent<Cinamatic1>().CinematicOrder == wichCinematicYouWant)
+            {
+                obj.GetComponent<Cinamatic1>().ImActive = true;
+                obj.gameObject.SetActive(true);
+            }
+        }
     }
 }

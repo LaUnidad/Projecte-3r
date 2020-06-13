@@ -60,6 +60,10 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     public bool magneticRock;
 
+    public bool Oasis;
+
+    public bool killingPlanet;
+
     void Awake()
     {
         restartPosition = transform.position;

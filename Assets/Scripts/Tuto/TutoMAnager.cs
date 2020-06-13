@@ -28,6 +28,9 @@ public class TutoMAnager : MonoBehaviour
 
     bool TrapCondition1;
     bool TrapCondition2;
+    bool TrapCondition3;
+    bool TrapCondition4;
+    bool TrapCondition5;
 
     [Header("CONDITIONS ORDER")]
 
@@ -170,6 +173,21 @@ public class TutoMAnager : MonoBehaviour
         {
             ConditionVAlidated();
             TrapCondition2 = true;
+        }
+        if(Player.GetComponent<HippiCharacterController>().magneticRock && !TrapCondition3)
+        {
+            ConditionVAlidated();
+            TrapCondition3 = true;
+        }
+        if(Player.GetComponent<HippiCharacterController>().Oasis && !TrapCondition4)
+        {
+            ConditionVAlidated();
+            TrapCondition4 = true;
+        }
+         if(Player.GetComponent<HippiCharacterController>().blackboard.RoketMan && !TrapCondition5)
+        {
+            ConditionVAlidated();
+            TrapCondition5 = true;
         }
     }
 }

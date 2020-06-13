@@ -44,6 +44,7 @@ public class Cinamatic1 : MonoBehaviour
         Canvas = GameObject.FindGameObjectWithTag("Canvas");
         //Canvas.gameObject.SetActive(false);
         DesactivateCams();
+        //ImActive = false;
     }
 
     // Update is called once per frame
@@ -84,6 +85,7 @@ public class Cinamatic1 : MonoBehaviour
     }
     public void TimeUntilChange()
     {
+        
         timer+=1*Time.deltaTime;
         
         if(timer>= TimeToBeAlive())

@@ -8,6 +8,8 @@ public class CinematicManager : MonoBehaviour
     private GameObject MainCamera;
 
     private GameObject Canvas;
+
+    private GameObject Player;
     [Header("LISTA DE CINEMATICAS")]
 
     public GameObject[] Cinematicas;
@@ -21,6 +23,7 @@ public class CinematicManager : MonoBehaviour
         Cinematicas = GameObject.FindGameObjectsWithTag("Cinematic");
         Canvas = GameObject.FindGameObjectWithTag("Canvas");
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -28,10 +31,13 @@ public class CinematicManager : MonoBehaviour
     {
 
         DesactivateTheOdersWhileRunningOne();
+        
         if(IsAnyCinematicActive())
         {
+            Debug.Log("EyeOfTheTiger");
             MainCamera.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
+            Player.gameObject.SetActive(false);
         }
         else
         {
@@ -59,6 +65,9 @@ public class CinematicManager : MonoBehaviour
     {
         MainCamera.gameObject.SetActive(true);
         Canvas.gameObject.SetActive(true);
+        Player.gameObject.SetActive(true);
+        AnyoneIsActive();
+        
     }
 
     public int WichCinematicIsRunning()
@@ -71,6 +80,14 @@ public class CinematicManager : MonoBehaviour
             }
         }
         return TrapCinematic;
+    }
+
+    public void AnyoneIsActive()
+    {
+        foreach(GameObject obj in Cinematicas)
+        {
+            obj.GetComponent<Cinamatic1>().ImActive = false;
+        }
     }
 
     public void DesactivateTheOdersWhileRunningOne()

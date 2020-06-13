@@ -21,6 +21,7 @@ public class DesactivateWorldAngry : MonoBehaviour
         if(other.tag == "Player")
         {
             other.gameObject.GetComponent<HippiCharacterController>().AfectedByTheGas = false;
+            other.gameObject.GetComponent<HippiCharacterController>().Oasis = true;
         }
     }
 }
