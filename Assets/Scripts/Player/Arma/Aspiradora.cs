@@ -32,6 +32,7 @@ public class Aspiradora : MonoBehaviour
 
     CameraOrbit camOrbit;
 
+    public bool startFinalCamShake = false;
    
 
     void Start()
@@ -216,7 +217,8 @@ public class Aspiradora : MonoBehaviour
         {
             Destroy(obj.gameObject);
         }
-        camOrbit.FinalCameraShakeStart();
+        startFinalCamShake = true;
+        //camOrbit.FinalCameraShakeStart();
         
     }
 }

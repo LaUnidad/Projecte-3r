@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class CameraOrbit : MonoBehaviour
 {
-    // public Animation anim;
-    //public AnimationClip animClip;
-
-    private Animator camAnim;
+    Aspiradora aspiradora;
+    public Animator camAnimator;
     private Transform cameraTransform;
     private Transform parentTransform;
 
@@ -33,7 +31,8 @@ public class CameraOrbit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camAnim = GetComponent<Animator>();
+        aspiradora = FindObjectOfType<Aspiradora>();
+        camAnimator = GetComponent<Animator>();
         cameraTransform = this.transform;
         parentTransform = this.transform.parent;
 
@@ -87,6 +86,8 @@ public class CameraOrbit : MonoBehaviour
         }
 
         CameraCollision();
+
+        if (aspiradora.startFinalCamShake) FinalCameraShakeStart();
     }
 
     void CameraCollision()
@@ -112,7 +113,7 @@ public class CameraOrbit : MonoBehaviour
 
     public void FinalCameraShakeStart()
     {
-        //camAnim.SetBool("FinalCameraShake", true);
+        camAnimator.SetBool("FinalCameraShake", true);
     }
 
     public void FinalCameraShakeStop()

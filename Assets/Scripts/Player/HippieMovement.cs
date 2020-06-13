@@ -42,6 +42,7 @@ public class HippieMovement : MonoBehaviour
     public float knockBackTime = 2f;
     private float knockBackCounter;
 
+    public float gravityScale = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +66,7 @@ public class HippieMovement : MonoBehaviour
         orientation = Vector3.ClampMagnitude(orientation, 1);
 
         ///////////////////////////////////////////////GRAVITY///////////////////////////////////////////
+
         SetGravity();
         /////////////////////////////////////ROTACIÓN//////////////////////////////////////////////////
         CamDirection();
@@ -78,12 +80,16 @@ public class HippieMovement : MonoBehaviour
             m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movement * blackboard.RotationSpeed));
 
 
+            //l_Movement = new Vector3(Input.GetAxis("Horizontal") * blackboard.NormalSpeed, l_Movement.y, Input.GetAxis("Vertical") * blackboard.NormalSpeed);
             /////////////////////////////////////SALTO/////////////////////////////////////////////////////
-            if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded && !hippieController.UsingGadget)
+            if(m_CharacterController.isGrounded)
             {
-                Jump();
-            }
-            
+                //l_Movement.y = 0f;
+                if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && !hippieController.UsingGadget)
+                {
+                    Jump();
+                }
+            }           
             else
             {
                 VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
@@ -111,13 +117,12 @@ public class HippieMovement : MonoBehaviour
 
         //l_Movement = l_Movement * ActualSpeed * blackboard.ForceAtAbsorb;
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
-       // VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
-        //l_Movement.y = VerticalSpeed;
+         //VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
+         //l_Movement.y = VerticalSpeed;
+        //l_Movement.y = l_Movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
         m_CharacterController.Move(l_Movement * Time.deltaTime * blackboard.NormalSpeed);
 
-
-            InputMagnitude();
-        
+            InputMagnitude();        
     }
 
     void Jump()

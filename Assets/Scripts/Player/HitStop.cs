@@ -10,6 +10,7 @@ public class HitStop : MonoBehaviour
     {
         if (waitingHitStop)
             return;
+        Debug.Log("Hit Stop");
         Time.timeScale = 0f;
         StartCoroutine(WaitHitStop(duration));
     }

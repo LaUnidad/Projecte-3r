@@ -83,7 +83,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         
 
         ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
-        if ((Input.GetMouseButton(blackboard.m_Absorb) || blackboard.ControllerAbsorb()) && !NoPower)
+        if ((Input.GetMouseButton(blackboard.m_Absorb) || blackboard.ControllerAbsorb()) && !NoPower && !playerIsDead)
         {
             UsingGadget = true;
             blackboard.RotationSpeed = 0f;
@@ -117,7 +117,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             blackboard.RotationSpeed = 1f;
         }
 
-        if (UsingGadget)
+        if (UsingGadget && !playerIsDead)
         {
             vaccumCone.SetActive(true);
             anim.SetBool("Absorbing", true);
@@ -148,13 +148,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         if (blackboard.currentLife <= 0)
         {
             playerIsDead = true;
-            blackboard.currentLife = 0.1f;
-            //AfectedByTheGas = false;          
+            PlayerHasDied();
         }
         if(playerIsDead)
         {
-            PlayerHasDied();
-            playerIsDead = false;
+            //PlayerHasDied();
+           // playerIsDead = false;
         }        
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
@@ -241,7 +240,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         blackboard.currentLife = blackboard.currentLife - lifeToRest;
 
         SoundManager.Instance.PlayOneShotSound(GameManager.Instance.ChangeDirection, GameManager.Instance.m_player.transform);
-        FindObjectOfType<HitStop>().HitStopLoL(1f);
+        FindObjectOfType<HitStop>().HitStopLoL(.1f);
         anim.SetTrigger("Knockback");
         // hMovement.KnockBack();
 
@@ -273,16 +272,20 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         anim.SetBool("DeathBySuffocation", false);
         pHud.ShowAliveFadeOut();
         hMovement.canMove = true;
+        NoPower = false;
        
-        //playerIsDead = false;
+        playerIsDead = false;
 
     }
 
     public void PlayerHasDied()
     {
-        playerIsDead = false;
+       // playerIsDead = false;
         hMovement.canMove = false;
         m_CharacterController.enabled = false;
+        blackboard.currentLife = 0.1f;
+        AfectedByTheGas = false;
+        NoPower = true;
         SoundManager.Instance.PlayOneShotSound(GameManager.Instance.playerDie, GameManager.Instance.m_player.transform);
         anim.SetBool("DeathBySuffocation", true);
         pHud.ShowDeathFadeIn();

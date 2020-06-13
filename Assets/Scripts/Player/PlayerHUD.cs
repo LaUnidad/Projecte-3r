@@ -17,6 +17,9 @@ public class PlayerHUD : MonoBehaviour
     public Image YellowhealthBar;
     public GameObject pauseScreen;
 
+   // public ParticleSystem gasBubblesHUD;
+    public GameObject gasBubblesHUD;
+
     public float OtherLife;
 
     public float VelocityRedLife;
@@ -28,7 +31,7 @@ public class PlayerHUD : MonoBehaviour
         gm = FindObjectOfType<GameManager>();
         OtherLife = cc.blackboard.currentLife;
 
-        //healthBar.fillAmount = cc.currentHealth / cc.maxHealth;
+        gasBubblesHUD.SetActive(false);
 
         pauseScreen.SetActive(false);
     }
@@ -41,8 +44,8 @@ public class PlayerHUD : MonoBehaviour
         
         healthBar.fillAmount = OtherLife/100;
         YellowhealthBar.fillAmount = cc.blackboard.currentLife/100;
-       
 
+        if (cc.AfectedByTheGas) gasBubblesHUD.SetActive(true); //gasBubblesHUD.Play();
 
        IsPaused();
     }
@@ -94,4 +97,6 @@ public class PlayerHUD : MonoBehaviour
     {
         canvasAnimator.SetTrigger("Hit");
     }
+
+
 }
