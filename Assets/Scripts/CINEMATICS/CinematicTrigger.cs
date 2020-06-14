@@ -13,23 +13,28 @@ public class CinematicTrigger : MonoBehaviour
 
     public int wichCinematicYouWant;
 
+    [Header("SI ES LA ULTIMA CINEMATICA ACTIVAHO")]
     
+    public bool FinalCinematic;
+
+    private GameObject player;
 
 
     void Start()
     {
         Cinematicas = GameObject.FindGameObjectsWithTag("Cinematic");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        DesactivateCondition();
     }
 
     void OnTriggerEnter(Collider other) 
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !FinalCinematic)
         {
             ActivateTheCorrectCinematic();
         }
@@ -44,6 +49,14 @@ public class CinematicTrigger : MonoBehaviour
                 obj.GetComponent<Cinamatic1>().ImActive = true;
                 obj.gameObject.SetActive(true);
             }
+        }
+    }
+
+    public void DesactivateCondition()
+    {
+        if(FinalCinematic && player.GetComponent<HippiCharacterController>().blackboard.RoketMan)
+        {
+            FinalCinematic = false;
         }
     }
 
