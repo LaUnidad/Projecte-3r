@@ -9,6 +9,9 @@ public class DoorController : MonoBehaviour
     private BoxCollider boxy;
 
     public bool Exploted;
+
+    public GameObject particlesExplosion;
+
     void Start()
     {
         boxy = GetComponent<BoxCollider>();
@@ -34,10 +37,18 @@ public class DoorController : MonoBehaviour
             if(other.gameObject.GetComponent<AspirableObject>().SpeedToShoot>20)
             {
                 ExploteYourChildren();
+                MakeExplosion(other.transform.position);
+                Destroy(other.gameObject);
                 
             }
             
         }
+    }
+
+    public void MakeExplosion(Vector3 pos)
+    {   
+        Instantiate(particlesExplosion,pos,particlesExplosion.transform.rotation);
+
     }
     public void ExploteYourChildren()
     {
