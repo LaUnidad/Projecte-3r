@@ -44,6 +44,13 @@ public class HippieMovement : MonoBehaviour
 
     public float gravityScale = 1f;
 
+    public float knockTime = 0.2f;
+    float currentKnockTime;
+    Vector3 from;
+    Vector3 to;
+
+    bool isInKnocback = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -115,6 +122,20 @@ public class HippieMovement : MonoBehaviour
             // l_Movement = lastMove;
         }
 
+
+        if(isInKnocback)
+        {
+            currentKnockTime -= Time.deltaTime;
+            isInKnocback = (currentKnockTime > 0);
+
+            transform.position = Vector3.Lerp(from, to, (knockTime - currentKnockTime)/knockTime);
+
+        }
+ 
+        
+
+
+
         //l_Movement = l_Movement * ActualSpeed * blackboard.ForceAtAbsorb;
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
          //VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
@@ -130,6 +151,17 @@ public class HippieMovement : MonoBehaviour
         anim.SetTrigger("Jump");
         VerticalSpeed = blackboard.JumpForce / 2f;
         l_Movement.y = VerticalSpeed;
+    }
+
+    public void KnockbackV2(float sumPos, float inTime)
+    {
+         Debug.Log("KnockbackV2");
+         from = transform.position;
+         to = transform.position + (-sumPos * transform.forward.normalized);
+         knockTime = currentKnockTime = inTime;
+
+         isInKnocback = true;
+       
     }
 
     public void KnockBack(Vector3 direction, float knockBackForce)

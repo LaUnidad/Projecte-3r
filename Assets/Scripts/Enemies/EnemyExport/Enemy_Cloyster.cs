@@ -26,7 +26,7 @@ public class Enemy_Cloyster : MonoBehaviour
     public float m_Knockback = 16f;
     public float m_LerpAttackRotation = 0.6f;
     public List<GameObject> m_AbsorbableItems;
-    public GameObject m_Body;
+   // public GameObject m_Body;
 
     private int m_CurrentPatrolPositionId = -1;
     private float m_CurrentTime;
@@ -35,7 +35,7 @@ public class Enemy_Cloyster : MonoBehaviour
     private float m_CurrentAlertRotation = 0.0f;
     private Vector3 m_playerPos;
     private Vector3 m_initialPosition;
-    private Animator m_Animator;
+    public Animator m_Animator;
     private NavMeshAgent m_NavMeshAgent;
     private bool m_isAlive = true;
 
@@ -56,7 +56,7 @@ public class Enemy_Cloyster : MonoBehaviour
 
         m_NavMeshAgent = GetComponent<NavMeshAgent>();
         m_initialPosition = transform.position;
-        //m_Animator = GetComponent<Animator>();
+        m_Animator = transform.GetComponentInChildren<Animator>(); // GetComponent<Animator>();
         //GameManager.Instance.AddRestartGameElement(this);
     }
 
@@ -96,7 +96,8 @@ public class Enemy_Cloyster : MonoBehaviour
 
                 if (SeesPlayer())
                 {
-                    //_Animator.SetBool("Alert", true);
+                    //Alert animation
+                    m_Animator.SetTrigger("Alert");
                     ChangeState(State.CHASE);
                 }
                 else if (m_CurrentAlertRotation >= 360 || m_CurrentTime > m_MaxTimeToWaitAlert)
@@ -107,7 +108,7 @@ public class Enemy_Cloyster : MonoBehaviour
                 break;
             case State.CHASE:
 
-                m_Body.transform.RotateAround(transform.position, Vector3.up, 2000 * Time.deltaTime);
+              //  m_Body.transform.RotateAround(transform.position, Vector3.up, 2000 * Time.deltaTime);
 
                 if (!OutOfRange())
                 {
@@ -173,7 +174,8 @@ public class Enemy_Cloyster : MonoBehaviour
 
                 m_NavMeshAgent.SetDestination(this.transform.position);
                 m_NavMeshAgent.speed = m_Speed;
-                m_Body.GetComponent<Collider>().enabled = false;
+               // m_Body.GetComponent<Collider>().enabled = false;
+                m_Animator.SetBool("Chase", false);
                 break;
             case State.WAIT_TO_ATTACK:
 
@@ -215,7 +217,10 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_CurrentTime = 0f;
                 m_NavMeshAgent.speed = m_ChaseSpeed;
                 MoveToPoint(GameManager.Instance.m_player.transform.position);
-                m_Body.GetComponent<Collider>().enabled = true;
+              //  m_Body.GetComponent<Collider>().enabled = true;
+
+                //Chase animation
+                m_Animator.SetBool("Chase", true);
                 break;
             case State.WAIT_TO_ATTACK:
                 CheckDie();
@@ -332,8 +337,10 @@ public class Enemy_Cloyster : MonoBehaviour
 
     public void HitPlayer()
     {
-       // StartCoroutine(DamagePlayer(m_Knockback, 0.2f));
+        //StartCoroutine(DamagePlayer(m_Knockback, 0.2f));
         ChangeState(State.WAIT);
+
+        
     }
 
     IEnumerator DamagePlayer(float sumPos, float inTime)
