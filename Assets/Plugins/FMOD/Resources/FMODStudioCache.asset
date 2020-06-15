@@ -13,22 +13,20 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/GasRockThrow
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/GasRockThrow
-  guid: 9c9d586d35b58d429637391bb5f7ff8a
+  guid: f8d38dae9b704441901941d1c40aac5d
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5668
+  Length: 1600
 --- !u!114 &-8648290453847261882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/FX/Weapon/AbsorbWhileOverheat
   guid: b0dd850200145846bc37c9ff1abf6816
-  Banks:
-  - {fileID: 3859341752565062859}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -192,8 +189,7 @@ MonoBehaviour:
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -322,17 +318,16 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/GasRockAbsorb
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/GasRockAbsorb
-  guid: c10abd89162740418c2062177ed57692
+  guid: 4771848964d768418cebfa427ee3bf2e
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 7915
+  Length: 15570
 --- !u!114 &-6701015316978550101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,22 +341,20 @@ MonoBehaviour:
   m_Name: event:/FX/Weapon/AbsorbOverheat
   m_EditorClassIdentifier: 
   Path: event:/FX/Weapon/AbsorbOverheat
-  guid: 10efd19251a12d488184aa295003b3dc
+  guid: eb9e34dde66b5f42a15f65b1c1ba2129
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 5903
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1183
 --- !u!114 &-6678840829231638606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,17 +386,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy2/Open
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy2/Open
-  guid: 3c70d277d7ee5f4fbf561e3c7895381b
+  guid: 6e18dd9b6fffc44cb222911722fad8f1
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5773
+  Length: 2043
 --- !u!114 &-6306461656875968107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,22 +427,20 @@ MonoBehaviour:
   m_Name: event:/FX/Character/StepGrass
   m_EditorClassIdentifier: 
   Path: event:/FX/Character/StepGrass
-  guid: 1b5f8c99fddce940af1aa5161b8283bb
+  guid: a4eda06cb9825a4c9e5db1da99fe4205
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 384
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 330
 --- !u!114 &-5860724438026282605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,6 +459,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-5833700737578204831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Master.bank
+  SubDir: 
+  lastModified: 637268766296621125
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-5786518982623749325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,17 +508,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy2/Shoot
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy2/Shoot
-  guid: d136bd6a563ac0439ba423978649702a
+  guid: 476b8839ffa2ce42bfd698e0cc5e9bff
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2664
+  Length: 600
 --- !u!114 &-5610361568747567623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,22 +531,20 @@ MonoBehaviour:
   m_Name: event:/FX/Menu/Pause
   m_EditorClassIdentifier: 
   Path: event:/FX/Menu/Pause
-  guid: f8cd1a1559a2814a8a10ca17e21a0320
+  guid: beda87fa62137242986aea46053f16fa
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1840
+  Length: 743
 --- !u!114 &-5077776940017889925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +563,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-5057028625152325808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Grup C/Master.bank
+  SubDir: 
+  lastModified: 637277545974589485
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5010230242654651759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,22 +594,20 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/AbsorbableNormal
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/AbsorbableNormal
-  guid: 0245a85c39f16743a8648fe57d9f8ef8
+  guid: 3a13c6945c403d4e84bc4eab04d92a4c
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 5355
+  Length: 192
 --- !u!114 &-4667083507239152089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,7 +623,7 @@ MonoBehaviour:
   Path: event:/FX/Enemies/Enemy3/Atack
   guid: 35efedf83943454badd3f12b56c6b4d8
   Banks:
-  - {fileID: -8360551911970485186}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -641,22 +662,20 @@ MonoBehaviour:
   m_Name: event:/FX/Character/Hit
   m_EditorClassIdentifier: 
   Path: event:/FX/Character/Hit
-  guid: d77bcfa2e830fa4cb5473cd91bb9c060
+  guid: e375b6443e86e14fb29d1b886e52929d
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 840
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 550
 --- !u!114 &-4326877675730275111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,17 +689,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy2/Close
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy2/Close
-  guid: cebddc1234d8fe4c82a71e87829c72eb
+  guid: dbc7b193c43cdc41b05b4a94f691e5d7
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5773
+  Length: 1250
 --- !u!114 &-4190852211204147770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,22 +730,20 @@ MonoBehaviour:
   m_Name: event:/FX/Menu/Resume
   m_EditorClassIdentifier: 
   Path: event:/FX/Menu/Resume
-  guid: e21396426c7e7b43a76edc076fe6d46f
+  guid: 7d5313de27bfd64fb5f2146422c1d018
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1504
+  Length: 766
 --- !u!114 &-3888165067777026332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,22 +757,20 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/AbsorbableSmall
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/AbsorbableSmall
-  guid: 1efd95d0042a7d4c82f2b1779e5eb3c0
+  guid: 18eadaf1674ae941bb9240cc2440d871
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 5355
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 181
 --- !u!114 &-3274784286979841622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,12 +785,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Grup E/Master.strings.bank
   SubDir: 
-  lastModified: 637277690351448625
+  lastModified: 637277545975426957
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 2686
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3256989168528206466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,17 +804,16 @@ MonoBehaviour:
   m_Name: event:/FX/Menu/Exit
   m_EditorClassIdentifier: 
   Path: event:/FX/Menu/Exit
-  guid: 23de72baa76d15479d508f8457bdd753
+  guid: a95d58ba8b186d4facebc93156a5228f
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2228
+  Length: 905
 --- !u!114 &-2826898162069204594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,22 +863,20 @@ MonoBehaviour:
   m_Name: event:/FX/Weapon/AbsorbCooldown
   m_EditorClassIdentifier: 
   Path: event:/FX/Weapon/AbsorbCooldown
-  guid: a6e6f57c84973646a3a6a9ae4def6cec
+  guid: d0f1249be548074488a76ceb343e6a41
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 550
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-2381569595588554531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,22 +908,20 @@ MonoBehaviour:
   m_Name: event:/FX/HUD/Damage
   m_EditorClassIdentifier: 
   Path: event:/FX/HUD/Damage
-  guid: f91fb158cc8d16488b70c90b79c11022
+  guid: 122766177161ab4a9e855be5d5bf87ae
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2000
+  Length: 8010
 --- !u!114 &-1888867167014945386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,17 +935,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy3/Yell
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy3/Yell
-  guid: 5d42164cf92b404bb4aea762bfa1c9df
+  guid: 178cf16f947bd445a1bdc81a869808e0
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2742
+  Length: 684
 --- !u!114 &-1686639228893963027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,22 +958,20 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/GasRock
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/GasRock
-  guid: da8c807b5a778c4da5e85d2d6998dc51
+  guid: 102f34ac0dd8034692575bd4908d19bc
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 13557
+  Length: 6600
 --- !u!114 &-1651255206167964607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,17 +985,16 @@ MonoBehaviour:
   m_Name: event:/Music/Zone2
   m_EditorClassIdentifier: 
   Path: event:/Music/Zone2
-  guid: 7f45f72276a0954aa9bf334f53340662
+  guid: 803b5644da8bde4983df08d39a9711d4
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 179879
+  Length: 118886
 --- !u!114 &-1489750960125537613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1021,17 +1026,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy1/Up
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy1/Up
-  guid: 73856feb83a73744a137c6bea0b5a1ce
+  guid: 8c31b169fd495241b17bceae1e7aa722
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3787
+  Length: 1532
 --- !u!114 &-1214860841372524793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1046,8 +1050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/FX/Menu/Select
   guid: 68f763917b3b254eb98f714ef7657ce7
-  Banks:
-  - {fileID: 3859341752565062859}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1070,7 +1073,7 @@ MonoBehaviour:
   Path: event:/FX/Enemies/Enemy1/Twincle
   guid: 08432ad13057b44a9ec385a946dde6ba
   Banks:
-  - {fileID: -8360551911970485186}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1110,10 +1113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 9013880976014271022}
-  - {fileID: -3274784286979841622}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   EditorEvents:
   - {fileID: 7376642313897348339}
   - {fileID: -1686639228893963027}
@@ -1162,21 +1162,12 @@ MonoBehaviour:
   - {fileID: 5325475272625574612}
   - {fileID: 5587434365683869348}
   - {fileID: -8648290453847261882}
-  - {fileID: 435450869459479849}
-  - {fileID: 2319455200229710734}
-  - {fileID: -1214860841372524793}
-  - {fileID: 614790865909570658}
-  - {fileID: -8037685699495285799}
-  - {fileID: 3814660314342048225}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   StringsBanks:
   - {fileID: 9013880976014271022}
-  - {fileID: -3274784286979841622}
-  stringsBankWriteTime: 637277690351448625
+  stringsBankWriteTime: 637277545974609096
   cacheVersion: 3
 --- !u!114 &101661225295624279
 MonoBehaviour:
@@ -1191,22 +1182,20 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/GasSource
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/GasSource
-  guid: 465061b50c592843b820dd831accf146
+  guid: 43b1b69bd5b46441bf81bd51a3e97d90
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 8428
 --- !u!114 &435450869459479849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,8 +1210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/ObstacleSoft
   guid: 3079d61ee13d874b805f26a36873c803
-  Banks:
-  - {fileID: 3859341752565062859}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1244,8 +1232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy3/Attack
   guid: b09dd07e6082ab41b0a6ca5504100d94
-  Banks:
-  - {fileID: 3859341752565062859}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1284,17 +1271,16 @@ MonoBehaviour:
   m_Name: event:/FX/Character/Jump
   m_EditorClassIdentifier: 
   Path: event:/FX/Character/Jump
-  guid: 7b96a233829ba2478b5f2e056bbeaa47
+  guid: 8a8aa894c7427a4b86f8c3e023eedd29
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 960
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 580
 --- !u!114 &1032796357617110412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,22 +1294,20 @@ MonoBehaviour:
   m_Name: event:/FX/HUD/Heal
   m_EditorClassIdentifier: 
   Path: event:/FX/HUD/Heal
-  guid: 73bf017b2631ab41aae2ec2ed16f5022
+  guid: a2ed6693753ab041bf4bb33d3a007585
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2000
+  Length: 4400
 --- !u!114 &1321815925932314961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,17 +1321,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy2/Rotate
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy2/Rotate
-  guid: 544b55544b3915408444762329f3f30d
+  guid: 59a041c5b429954f81497f777132a941
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 7183
+  Length: 2066
 --- !u!114 &1462736783904586509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1398,8 +1381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/BreakWall
   guid: 5941f448e46c704a80813363491eb19c
-  Banks:
-  - {fileID: 3859341752565062859}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1420,17 +1402,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy3/Fly
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy3/Fly
-  guid: c6f5d370b6b3da499d1e7d8557708da5
+  guid: 4eddaf7e4e918f4e8e46f639326e25f6
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 500
+  Length: 20966
 --- !u!114 &2485164476119995728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1444,17 +1425,16 @@ MonoBehaviour:
   m_Name: event:/Music/Zone1
   m_EditorClassIdentifier: 
   Path: event:/Music/Zone1
-  guid: ff4e3cbca0cbaa46ad8d6091c94ad041
+  guid: 93b7c4c38fda8049924bc035063d9549
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 159059
+  Length: 128019
 --- !u!114 &2859758730564594590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,22 +1486,20 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/AbsorbableBig
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/AbsorbableBig
-  guid: adb14940b98b9e41876cfbb6545f826d
+  guid: 4eb3ecab66604f44b1277b7e60bdf668
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5355
+  Length: 187
 --- !u!114 &3145674460380586708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,22 +1531,20 @@ MonoBehaviour:
   m_Name: event:/FX/Weapon/Absorb
   m_EditorClassIdentifier: 
   Path: event:/FX/Weapon/Absorb
-  guid: 6f590d457adcb74cbfd9a8dc5f6f5721
+  guid: 3a3fe26c7beaee46849c2ac29fe57265
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2587
 --- !u!114 &3293529807917197602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,22 +1558,20 @@ MonoBehaviour:
   m_Name: event:/FX/Character/Die
   m_EditorClassIdentifier: 
   Path: event:/FX/Character/Die
-  guid: 4a5b163f89198347a42cc51ef1805d44
+  guid: 2af6aefec2c0be40a7f936c2d5531e6b
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2064
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3159
 --- !u!114 &3814660314342048225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,8 +1586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy1/Twinkle
   guid: de4f2b257f634642a39d613937823dc5
-  Banks:
-  - {fileID: 3859341752565062859}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1670,22 +1643,38 @@ MonoBehaviour:
   m_Name: event:/FX/Weapon/AbsorbWarning
   m_EditorClassIdentifier: 
   Path: event:/FX/Weapon/AbsorbWarning
-  guid: b6cb2525f5304c44aa5c3b4f0c75e4a0
+  guid: 4f022198923b1c48af2afb2aaa7df8ec
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 7471
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1179
+--- !u!114 &4538761867560602950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Grup E/Master.bank
+  SubDir: 
+  lastModified: 637277545975406963
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5235911401144230513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,8 +1694,7 @@ MonoBehaviour:
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1729,7 +1717,7 @@ MonoBehaviour:
   Path: event:/FX/Weapon/AbsorbWhileCooldown
   guid: f11a095461d92a4198b444d580d1c910
   Banks:
-  - {fileID: -8360551911970485186}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1768,17 +1756,16 @@ MonoBehaviour:
   m_Name: event:/FX/Character/Land
   m_EditorClassIdentifier: 
   Path: event:/FX/Character/Land
-  guid: 1e6f30239d9e2241917c6ef93ba2cc83
+  guid: 4baa8e1084d2a94486463587b172f633
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 470
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 805
 --- !u!114 &5584725701035464151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1792,22 +1779,20 @@ MonoBehaviour:
   m_Name: event:/FX/Menu/Cancel
   m_EditorClassIdentifier: 
   Path: event:/FX/Menu/Cancel
-  guid: c293ce537875d84a8421ab55e0ea6677
+  guid: 61295278d54b2946b2970401271affac
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1323
+  Length: 1021
 --- !u!114 &5587434365683869348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1821,17 +1806,16 @@ MonoBehaviour:
   m_Name: event:/Music/Pause
   m_EditorClassIdentifier: 
   Path: event:/Music/Pause
-  guid: 85d2ddf2429297468e7f789b9d3f6487
+  guid: f29d316f321b5c47bc7ce15acc1ad723
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 35735
+  Length: 25312
 --- !u!114 &5667673992236242950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,17 +1829,16 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/AbsorbableStatic
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/AbsorbableStatic
-  guid: ba8ee8756568f0479183f10866c970ce
+  guid: 9a436080d970e84f81146e37696c7f54
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 10187
+  Length: 860
 --- !u!114 &5731693745004212140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,17 +1852,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy1/Down
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy1/Down
-  guid: cad545bf38d92947bd767e5411c34c08
+  guid: d1f92c71307f5f409c32365379f40736
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1227
+  Length: 3123
 --- !u!114 &5766143790539264379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1947,17 +1929,16 @@ MonoBehaviour:
   m_Name: event:/FX/Enemies/Enemy2/Wander
   m_EditorClassIdentifier: 
   Path: event:/FX/Enemies/Enemy2/Wander
-  guid: 3a6b54635a22fe4ba350a873dfd56b26
+  guid: 33ae72efa004c24fbd5980c049476df6
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 10710
+  Length: 3297
 --- !u!114 &7044737896063579307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1989,22 +1970,20 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/ObstacleHard
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/ObstacleHard
-  guid: 28f4adc3af8c8c4280036f016c9c1fae
+  guid: 4c114e398763904fadac8647434ca9ab
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 649
+  Length: 646
 --- !u!114 &7279612794634689086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2018,22 +1997,20 @@ MonoBehaviour:
   m_Name: event:/FX/Character/StepGround
   m_EditorClassIdentifier: 
   Path: event:/FX/Character/StepGround
-  guid: 36f624bdfb2c8b4491068326240e0808
+  guid: 563224b79f84cb40adbad6fb8e4d7f3e
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 432
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 360
 --- !u!114 &7376642313897348339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,8 +2030,7 @@ MonoBehaviour:
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2093,17 +2069,16 @@ MonoBehaviour:
   m_Name: event:/Music/MainMenu
   m_EditorClassIdentifier: 
   Path: event:/Music/MainMenu
-  guid: d99c983d0351a448a05ea3696b66bc56
+  guid: 6be54974681a344cb7b0948856d3878a
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
-  IsStream: 1
+  - {fileID: -5057028625152325808}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 163474
+  Length: 19500
 --- !u!114 &7677214028224183847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2122,6 +2097,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &8098526302718192154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Grup C/Master.bank
+  SubDir: 
+  lastModified: 637277545974589485
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &8640033943439416215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2135,17 +2128,16 @@ MonoBehaviour:
   m_Name: event:/FX/Objects/GasRockMoving
   m_EditorClassIdentifier: 
   Path: event:/FX/Objects/GasRockMoving
-  guid: 8687e8bb422312478051b456328ce8ff
+  guid: 097d6daeb958da428c114125c6c8763c
   Banks:
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5355
+  Length: 2351
 --- !u!114 &8988250916349955607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2159,22 +2151,20 @@ MonoBehaviour:
   m_Name: event:/FX/Menu/Accept
   m_EditorClassIdentifier: 
   Path: event:/FX/Menu/Accept
-  guid: d51561659fd44c41b99f9942a193a7b4
+  guid: 6fded4b40c8e2343ab0c16a597acf1f2
   Banks:
   - {fileID: 7677214028224183847}
   - {fileID: -7446055530087213278}
   - {fileID: 5766143790539264379}
   - {fileID: -7515298300500693482}
-  - {fileID: 7483468176579088650}
-  - {fileID: -8360551911970485186}
-  - {fileID: 3859341752565062859}
+  - {fileID: -5057028625152325808}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1323
+  Length: 1012
 --- !u!114 &9013880976014271022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,7 +2179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Grup C/Master.strings.bank
   SubDir: 
-  lastModified: 637277690350139318
+  lastModified: 637277545974609096
   LoadResult: 0
   FileSizes:
   - Name: 
