@@ -11,8 +11,39 @@ public class MainMenu : MonoBehaviour
     public Animator anim;
     public Camera cam;
 
-    public GameObject OptionsFirstButton, MenuFirstSelected;
+    public GameObject OptionsFirstButton, MenuFirstSelected, ToogleFullScreen;
     public GameObject m_Options;
+
+    public GameObject volumeImage, fullScreenImage;
+
+    Resolution[] resolutions;
+    public TMPro.TMP_Dropdown resolutionDropdown;
+    private void Start()
+    {
+        resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
+
+        List<string> options = new List<string>();
+
+        int currentResolutionIndex = 0;
+
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            options.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width &&
+                resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+
+        }
+
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+    }
 
     private void Update()
     {
@@ -21,6 +52,18 @@ public class MainMenu : MonoBehaviour
             m_Options.SetActive(false);
             Back();
         }
+
+        if (EventSystem.current.currentSelectedGameObject == OptionsFirstButton)
+        {
+            volumeImage.GetComponent<Animation>().Play("Volume");
+        }
+        else volumeImage.GetComponent<Animation>().Stop();
+
+        if (EventSystem.current.currentSelectedGameObject == ToogleFullScreen)
+        {
+            fullScreenImage.GetComponent<Animation>().Play("FullScreen");
+        }
+        else fullScreenImage.GetComponent<Animation>().Stop();
     }
 
     public void PlayGame()
@@ -53,11 +96,22 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void SetFullScreen (bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetResolution (int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
     IEnumerator LoadMainScene()
     {
         yield return new WaitForSeconds(time);
 
-        SceneManager.LoadScene("ProvesTerrain");
+        SceneManager.LoadScene("Loading");
 
     }
 
