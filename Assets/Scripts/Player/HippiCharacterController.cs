@@ -16,7 +16,9 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     [Header("COSAS AUTOMATICAS, NO TE RALLES TT")]
     public Animator anim;
-    public PlayerHUD pHud;
+    private PlayerHUD pHud;
+    private CameraOrbit camOrbit;
+    private ChangeToAngryWorld changeToAngry;
     public BLACKBOARD_ThirdPersonCharacter blackboard;
     private CharacterController m_CharacterController;
     public HippieMovement hMovement;
@@ -24,15 +26,10 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     [Header("A ESTAS VARIABLES NI CASO")]
 
     public bool UsingGadget;
-
     public bool NoPower;
-
     public bool AfectedByTheGas;
-
     bool StopLook;
-
     public bool Shootting;
-
     public bool Absorving;
 
     public bool WiningLife;
@@ -74,6 +71,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     {
         hMovement = GetComponent<HippieMovement>();
         pHud = GetComponent<PlayerHUD>();
+        camOrbit = FindObjectOfType<CameraOrbit>();
+        changeToAngry = FindObjectOfType<ChangeToAngryWorld>();
         gameManager = FindObjectOfType<GameManager>();
         gameManager.AddRestartGameElement(this);
 
@@ -88,8 +87,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {       
         ///////////////////////////////////ABSORB/////////////////////////////////////////////////////////////
         if ((Input.GetMouseButton(blackboard.m_Absorb) || blackboard.ControllerAbsorb()) && !NoPower && !playerIsDead)
         {
@@ -135,6 +133,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
 
             GamePad.SetVibration(playerIndex, .05f, .05f); 
         }
+
         else
         {
             vaccumCone.SetActive(false);
@@ -146,23 +145,16 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             firstTimeUsingGadget = true;
         }
         ////////////////////////////////////////////////LIFE//////////////////////////////////////////////////////
-        RestLife();   
-        /*
-        if (isDeadWorldActive)
-        {
-            ReducePlayerHealth();
-        }
-        */
+        RestLife();
+
+        LowHealthIndicator();
+
         if (blackboard.currentLife <= 0)
         {
             playerIsDead = true;
             PlayerHasDied();
         }
-        if(playerIsDead)
-        {
-            //PlayerHasDied();
-           // playerIsDead = false;
-        }        
+      
        //////////////////////////////////////////////POWER///////////////////////////////////////////////////////
         UsePower();
        /////////////////////////////////////////////////DAMAGE///////////////////////////////////////////////////      
@@ -248,12 +240,19 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         blackboard.currentLife = blackboard.currentLife - lifeToRest;
 
         SoundManager.Instance.PlayOneShotSound(GameManager.Instance.ChangeDirection, GameManager.Instance.m_player.transform);
-        FindObjectOfType<HitStop>().HitStopLoL(.1f);
+        //FindObjectOfType<HitStop>().HitStopLoL(.1f);
         anim.SetTrigger("Knockback");
         // hMovement.KnockBack();
 
-        pHud.KnockBackHUD();
+        //camOrbit.CameraShakeOnce();
+        pHud.KnockBackHUDandDamageVignette();
         pHud.HitHUD();
+    }
+
+    public void LowHealthIndicator()
+    {
+        if (blackboard.currentLife < 30 && !playerIsDead) pHud.SetLowHealthTrue();
+        else pHud.SetLowHealthFalse();
     }
 
     /*
@@ -280,9 +279,11 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         anim.SetBool("DeathBySuffocation", false);
         pHud.ShowAliveFadeOut();
         hMovement.canMove = true;
-        NoPower = false;
-       
+        NoPower = false;     
         playerIsDead = false;
+
+        if (changeToAngry.tutorialCompleted) AfectedByTheGas = true;
+        else AfectedByTheGas = false;
 
     }
 

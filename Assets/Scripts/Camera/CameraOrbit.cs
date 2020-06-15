@@ -10,7 +10,7 @@ public class CameraOrbit : MonoBehaviour
     private Transform parentTransform;
 
     private Vector3 localRotation;
-    private float cameraDistance = 10f;
+    private float cameraDistance = 12f;
 
     public float mouseSensitivity = 4f;
     public float scrollSensitivity = 2f;
@@ -71,7 +71,7 @@ public class CameraOrbit : MonoBehaviour
 
                 cameraDistance += scrollAmount * -1f;
 
-                cameraDistance = Mathf.Clamp(cameraDistance, 6f, 16f);
+                cameraDistance = Mathf.Clamp(cameraDistance, 6f, 18f);
 
             }
         }
@@ -109,6 +109,11 @@ public class CameraOrbit : MonoBehaviour
         if (collisionRayDebug)
             Debug.DrawLine(camRay.origin, camRay.origin + camRay.direction * cameraDistance, Color.cyan);
 
+    }
+
+    public void CameraShakeOnce()
+    {
+        camAnimator.SetTrigger("CameraShakeOnce");
     }
 
     public void FinalCameraShakeStart()

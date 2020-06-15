@@ -88,9 +88,10 @@ public class PlayerHUD : MonoBehaviour
         canvasAnimator.SetTrigger("AliveFadeOut");
     }
 
-    public void KnockBackHUD()
+    public void KnockBackHUDandDamageVignette()
     {
         playerHUDAnimator.SetTrigger("HUDKnockback");
+        canvasAnimator.SetTrigger("DamageVignette");
     }
 
     public void HitHUD()
@@ -98,5 +99,14 @@ public class PlayerHUD : MonoBehaviour
         canvasAnimator.SetTrigger("Hit");
     }
 
+    public void SetLowHealthTrue()
+    {
+        canvasAnimator.SetBool("LowHealthWarning", true);
+    }
+
+    public void SetLowHealthFalse()
+    {
+        canvasAnimator.SetBool("LowHealthWarning", false);
+    }
 
 }

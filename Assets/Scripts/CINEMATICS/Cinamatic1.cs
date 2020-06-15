@@ -52,7 +52,8 @@ public class Cinamatic1 : MonoBehaviour
     {
         ImActive = true;
         TimeUntilChange();
-        Debug.Log(CamerasC1.Length + "   y el numofCamers es: "+ numOfCamera);
+
+       // Debug.Log(CamerasC1.Length + "   y el numofCamers es: "+ numOfCamera);
         
     }
 
