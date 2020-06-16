@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public bool isPaused;
 
+    private AspirableObject[] m_AspirableObject;
+
     [Header("Sound Bank")]
     //CHARACTER
     public string stepGrass = "event:/FX/Character/StepGrass";
@@ -116,6 +118,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        m_AspirableObject = (AspirableObject[]) FindObjectsOfType(typeof(AspirableObject));
+
+        foreach (AspirableObject l_aspirableObject in m_AspirableObject)
+        {
+
+        }
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -132,7 +145,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P) || Input.GetButtonDown("Start"))
         {
             Pause();
-            SoundManager.Instance.PlayOneShotSound(PauseSound, transform);
+            SoundManager.Instance.PlayOneShotSound(PauseSound, m_player.transform);
+
         }
 
        // if (cc.currentHealth <= 0) m_GameActive = false;

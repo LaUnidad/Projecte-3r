@@ -59,7 +59,7 @@ public class DoorController : MonoBehaviour
         }
         boxy.isTrigger = true;
 
-        SoundManager.
+        //SoundManager.
         
     }
 }

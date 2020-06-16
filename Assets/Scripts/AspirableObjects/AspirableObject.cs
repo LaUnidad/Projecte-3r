@@ -267,16 +267,16 @@ public class AspirableObject : MonoBehaviour
             switch (Type)
             {
                 case 1:
-                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableSmall, transform, true, 0.2f);
+                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableSmall, transform, true, 0.2f);
                     break;
                 case 2:
-                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableNormal, transform, true, 0.2f);
+                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableNormal, transform, true, 0.2f);
                     break;
                 case 3:
-                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
+                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
                     break;
                 default:
-                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
+                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
                     break;
             }
             Invoke("MyTimeHasArrive", x);

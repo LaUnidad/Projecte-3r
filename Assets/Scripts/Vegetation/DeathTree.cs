@@ -16,7 +16,7 @@ public class DeathTree : MonoBehaviour
 
     public bool KillFruits;
 
-    
+    private bool doSound = true;
 
     void Start()
     {
@@ -30,6 +30,12 @@ public class DeathTree : MonoBehaviour
         TimeToDie();
         if(this.transform.childCount == 0)
         {
+            if (doSound)
+            {
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.Accept, transform);
+                doSound = false;
+            }
+
             if(!Death && rotate)
             {
                 DeathObj.transform.rotation = AliveObj.transform.rotation;
