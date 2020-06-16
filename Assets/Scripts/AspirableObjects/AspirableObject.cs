@@ -17,6 +17,9 @@ public class AspirableObject : MonoBehaviour
 
     public bool ImLive;
 
+    [Range(1,3)]
+    public int Type;
+
     [Header("VARIABLES DEL ASPIRABLEOBJECT")]
     public float ForceToAbsorb;
     public float SpeedToAbsorb;
@@ -261,6 +264,21 @@ public class AspirableObject : MonoBehaviour
         if(BeenAbsorved)
         {
             //this.transform.parent = null;
+            switch (Type)
+            {
+                case 1:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableSmall, transform, true, 0.2f);
+                    break;
+                case 2:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableNormal, transform, true, 0.2f);
+                    break;
+                case 3:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
+                    break;
+                default:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
+                    break;
+            }
             Invoke("MyTimeHasArrive", x);
 
         }    

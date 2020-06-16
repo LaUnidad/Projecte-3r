@@ -2,316 +2,445 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20006 (106220), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=192000, nAvgBytesPerSec=1536000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] OutputWASAPI::init                       : Output buffer size: 16384 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[WRN] SystemI::init                            : Output requires a sample rate of 192000Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000023375147048 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000010D663BCEE8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass', format=2, channels=2, frequency=48000, lengthbytes=5376, lengthpcm=22815, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass2', format=2, channels=2, frequency=48000, lengthbytes=5632, lengthpcm=23245, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SoundI::release                          :  (00000232ABE1FCD8)
-[LOG] SoundI::release                          :     StepGrass (00000232ADA22DC8)
-[LOG] SoundI::release                          :  (00000232ABE1C358)
-[LOG] SoundI::release                          :     StepGrass2 (00000232ADA21D88)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B1259DF8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass', format=2, channels=2, frequency=48000, lengthbytes=5376, lengthpcm=22815, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B1259DF8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass2', format=2, channels=2, frequency=48000, lengthbytes=5632, lengthpcm=23245, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SoundI::release                          :  (00000232ABE1ED08)
-[LOG] SoundI::release                          :     StepGrass (00000232ADA242E8)
-[LOG] SoundI::release                          :  (00000232ABE1F9F8)
-[LOG] SoundI::release                          :     StepGrass2 (00000232ADA24488)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepRocks', format=2, channels=2, frequency=48000, lengthbytes=4288, lengthpcm=24407, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.397649.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepRocks2', format=2, channels=2, frequency=48000, lengthbytes=4320, lengthpcm=24264, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.397649.
-[LOG] SoundI::release                          :  (00000232ABE1F9F8)
-[LOG] SoundI::release                          :     StepRocks (00000232ADA22A88)
-[LOG] SoundI::release                          :  (00000232ABE1F5A8)
-[LOG] SoundI::release                          :     StepRocks2 (00000232ADA213C8)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepRocks', format=2, channels=2, frequency=48000, lengthbytes=4288, lengthpcm=24407, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.397649.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepRocks2', format=2, channels=2, frequency=48000, lengthbytes=4320, lengthpcm=24264, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.397649.
-[LOG] SoundI::release                          :  (00000232ABE1F9F8)
-[LOG] SoundI::release                          :     StepRocks (00000232ADA24CA8)
-[LOG] SoundI::release                          :  (00000232ABE1CBF8)
-[LOG] SoundI::release                          :     StepRocks2 (00000232ADA22A88)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B1259DF8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass', format=2, channels=2, frequency=48000, lengthbytes=5376, lengthpcm=22815, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B1259DF8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass2', format=2, channels=2, frequency=48000, lengthbytes=5632, lengthpcm=23245, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SoundI::release                          :  (00000232ABE1CA88)
-[LOG] SoundI::release                          :     StepGrass (00000232ADA242E8)
-[LOG] SoundI::release                          :  (00000232ABE1DA58)
-[LOG] SoundI::release                          :     StepGrass2 (00000232ADA23788)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass', format=2, channels=2, frequency=48000, lengthbytes=5376, lengthpcm=22815, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass2', format=2, channels=2, frequency=48000, lengthbytes=5632, lengthpcm=23245, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SoundI::release                          :  (00000232ABE1C4C8)
-[LOG] SoundI::release                          :     StepGrass (00000232ADA22DC8)
-[LOG] SoundI::release                          :  (00000232ABE1F888)
-[LOG] SoundI::release                          :     StepGrass2 (00000232ADA24488)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass', format=2, channels=2, frequency=48000, lengthbytes=5376, lengthpcm=22815, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000533A2FEE2C
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFDA8A680A0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFDA8A68070
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFDA8A68170
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFDA8A68230
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000232B12597C8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='StepGrass2', format=2, channels=2, frequency=48000, lengthbytes=5632, lengthpcm=23245, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
-[LOG] SoundI::release                          :  (00000232ABE1ED08)
-[LOG] SoundI::release                          :     StepGrass (00000232ADA247C8)
-[LOG] SoundI::release                          :  (00000232ABE1C7A8)
-[LOG] SoundI::release                          :     StepGrass2 (00000232ADA21568)
+[LOG] SoundI::release                          :  (0000010DB5A55BE8)
+[LOG] SoundI::release                          :     E1_Twincle (0000010DBEB368B8)
+[LOG] SoundI::release                          :  (0000010D668FA738)
+[LOG] SoundI::release                          :     GasRockMoving (0000010DBEB34EB8)
+[LOG] SoundI::release                          :  (0000010D8D8F17A8)
+[LOG] SoundI::release                          :     Button (0000010D32C245F8)
+[LOG] SoundI::release                          :  (0000010D8D8F1078)
+[LOG] SoundI::release                          :     GasRock (0000010D32C24798)
+[LOG] SoundI::release                          :  (0000010D8D8F1BF8)
+[LOG] SoundI::release                          :     Damage (0000010D32C24938)
+[LOG] SoundI::release                          :  (0000010DAD1F8578)
+[LOG] SoundI::release                          :     Audio_8 (0000010DBEB35D58)
+[LOG] SoundI::release                          :  (0000010DBE815218)
+[LOG] SoundI::release                          :     Yell (0000010DBEB36098)
+[LOG] SoundI::release                          :  (0000010DB5A55D58)
+[LOG] SoundI::release                          :     AbsorbableSmall (0000010DBEB36578)
+[LOG] SoundI::release                          :  (0000010D887CDB08)
+[LOG] SoundI::release                          :     Audio_2 (0000010D13F4A328)
+[LOG] SoundI::release                          :  (0000010DAD1F7CD8)
+[LOG] SoundI::release                          :     Audio_13 (0000010DBEB38C78)
+[LOG] SoundI::release                          :  (0000010D8D8F0F08)
+[LOG] SoundI::release                          :     Asphyxiation (0000010D32C24AD8)
+[LOG] SoundI::release                          :  (0000010D887CF098)
+[LOG] SoundI::release                          :     Audio_19 (0000010D13F4B028)
+[LOG] SoundI::release                          :  (0000010DB5CFE288)
+[LOG] SoundI::release                          :     Wander (0000010D32993F78)
+[LOG] SoundI::release                          :  (0000010DBE8150A8)
+[LOG] SoundI::release                          :     Attack (0000010D32C242B8)
+[LOG] SoundI::release                          :  (0000010D668FA2E8)
+[LOG] SoundI::release                          :     Attack2 (0000010DBEB37278)
+[LOG] SoundI::release                          :  (0000010DB5CFE6D8)
+[LOG] SoundI::release                          :     AbsorbableNormal (0000010D32994AD8)
+[LOG] SoundI::release                          :  (0000010DBE8157D8)
+[LOG] SoundI::release                          :     Absorb (0000010DBEB35EF8)
+[LOG] SoundI::release                          :  (0000010D8D8F1918)
+[LOG] SoundI::release                          :     Audio_5 (0000010D32C25498)
+[LOG] SoundI::release                          :  (0000010CCC4FCD58)
+[LOG] SoundI::release                          :     Audio_7 (0000010D13F49FE8)
+[LOG] SoundI::release                          :  (0000010DB5A551D8)
+[LOG] SoundI::release                          :     GasSource (0000010DBEB351F8)
+[LOG] SoundI::release                          :  (0000010CCC4FC798)
+[LOG] SoundI::release                          :     Shot1 (0000010D13F4AE88)
+[LOG] SoundI::release                          :  (0000010D668FAB88)
+[LOG] SoundI::release                          :     Shot2 (0000010DBEB37418)
+[LOG] SoundI::release                          :  (0000010DBE815388)
+[LOG] SoundI::release                          :     GasRockAbsorb (0000010DBEB382B8)
+[LOG] SoundI::release                          :  (0000010DBE815AB8)
+[LOG] SoundI::release                          :     LAND 1 (0000010DBEB385F8)
+[LOG] SoundI::release                          :  (0000010DAD1F86E8)
+[LOG] SoundI::release                          :     LAND 2 (0000010DBEB36F38)
+[LOG] SoundI::release                          :  (0000010DB5A55798)
+[LOG] SoundI::release                          :     ObstacleHard (0000010D32994798)
+[LOG] SoundI::release                          :  (0000010D668FA458)
+[LOG] SoundI::release                          :     AbsorbableBig (0000010DBEB378F8)
+[LOG] SoundI::release                          :  (0000010DB5CFE9B8)
+[LOG] SoundI::release                          :     Fly (0000010D329969B8)
+[LOG] SoundI::release                          :  (0000010DAD1F7E48)
+[LOG] SoundI::release                          :     Fly2 (0000010DBEB37DD8)
+[LOG] SoundI::release                          :  (0000010D8D8F11E8)
+[LOG] SoundI::release                          :     Warning (0000010D32C24C78)
+[LOG] SoundI::release                          :  (0000010DB5A554B8)
+[LOG] SoundI::release                          :     StepRocks (0000010D32994458)
+[LOG] SoundI::release                          :  (0000010CCC4FD1A8)
+[LOG] SoundI::release                          :     StepRocks2 (0000010D13F49968)
+[LOG] SoundI::release                          :  (0000010D668FACF8)
+[LOG] SoundI::release                          :     Audio_3 (0000010DBEB37A98)
+[LOG] SoundI::release                          :  (0000010CCC4FD038)
+[LOG] SoundI::release                          :     Rotate (0000010D32C257D8)
+[LOG] SoundI::release                          :  (0000010D668FA8A8)
+[LOG] SoundI::release                          :     Cancel (0000010DBEB37F78)
+[LOG] SoundI::release                          :  (0000010CCC4FC628)
+[LOG] SoundI::release                          :     ChangeDirection (0000010D13F49CA8)
+[LOG] SoundI::release                          :  (0000010DAD1F7B68)
+[LOG] SoundI::release                          :     Audio_14 (0000010DBEB35398)
+[LOG] SoundI::release                          :  (0000010D32BBA078)
+[LOG] SoundI::release                          :     Main Menu (0000010D32993418)
+[LOG] SoundI::release                          :  (0000010DBE8154F8)
+[LOG] SoundI::release                          :     Open (0000010D32C25158)
+[LOG] SoundI::release                          :  (0000010DBE815668)
+[LOG] SoundI::release                          :     Accept (0000010DBEB36238)
+[LOG] SoundI::release                          :  (0000010D8D8F1638)
+[LOG] SoundI::release                          :     RESUME vf (0000010D32C24118)
+[LOG] SoundI::release                          :  (0000010DB5A55068)
+[LOG] SoundI::release                          :     InGame Zone2 (0000010D32994938)
+[LOG] SoundI::release                          :  (0000010DAC9CC028)
+[LOG] SoundI::release                          :     JUMP 1 vf (0000010D32993278)
+[LOG] SoundI::release                          :  (0000010D668FA178)
+[LOG] SoundI::release                          :     JUMP 2 (0000010DBEB37758)
+[LOG] SoundI::release                          :  (0000010DB5A55A78)
+[LOG] SoundI::release                          :     E1_Up (0000010DBEB356D8)
+[LOG] SoundI::release                          :  (0000010D32BBA358)
+[LOG] SoundI::release                          :     Audio_12 (0000010D32994118)
+[LOG] SoundI::release                          :  (0000010D8D8F1A88)
+[LOG] SoundI::release                          :     Audio15_16 (0000010D32C252F8)
+[LOG] SoundI::release                          :  (0000010DAD1F8298)
+[LOG] SoundI::release                          :     Audio_17 (0000010DBEB36BF8)
+[LOG] SoundI::release                          :  (0000010D887CD828)
+[LOG] SoundI::release                          :     InGame Zone1 (0000010D13F4A808)
+[LOG] SoundI::release                          :  (0000010D668FAA18)
+[LOG] SoundI::release                          :     AbsorbableStatic (0000010DBEB38118)
+[LOG] SoundI::release                          :  (0000010DAD1F8128)
+[LOG] SoundI::release                          :     AbsorbableStatic (2) (0000010DBEB36718)
+[LOG] SoundI::release                          :  (0000010D668FAE68)
+[LOG] SoundI::release                          :     Heal (0000010DBEB35058)
+[LOG] SoundI::release                          :  (0000010DB5CFDE38)
+[LOG] SoundI::release                          :     StepGrass (0000010D329935B8)
+[LOG] SoundI::release                          :  (0000010D8D8F1358)
+[LOG] SoundI::release                          :     StepGrass2 (0000010D32C23F78)
+[LOG] SoundI::release                          :  (0000010CCC4FC4B8)
+[LOG] SoundI::release                          :     EXIT vF (0000010D13F4A4C8)
+[LOG] SoundI::release                          :  (0000010D668FA5C8)
+[LOG] SoundI::release                          :     PAUSE (0000010DBEB37C38)
+[LOG] SoundI::release                          :  (0000010CCC4FCEC8)
+[LOG] SoundI::release                          :     Audio_11 (0000010D13F49628)
+[LOG] SoundI::release                          :  (0000010DBE815948)
+[LOG] SoundI::release                          :     Audio_6 (0000010DBEB38458)
+[LOG] SoundI::release                          :  (0000010DAC9CBBD8)
+[LOG] SoundI::release                          :     Audio_18 (0000010D32996CF8)
+[LOG] SoundI::release                          :  (0000010DB5A55628)
+[LOG] SoundI::release                          :     Audio9_10 (0000010D329945F8)
+[LOG] SoundI::release                          :  (0000010D8D8F14C8)
+[LOG] SoundI::release                          :     Cooldown (0000010D32C25638)
+[LOG] SoundI::release                          :  (0000010CCC4FC908)
+[LOG] SoundI::release                          :     E1_Down (0000010D13F4ACE8)
+[LOG] SoundI::release                          :  (0000010CCC4FCBE8)
+[LOG] SoundI::release                          :     Close (0000010D13F4A668)
+[LOG] SoundI::release                          :  (0000010DBE815D98)
+[LOG] SoundI::release                          :     Audio_1 (0000010D32C23C38)
+[LOG] SoundI::release                          :  (0000010DB5A55348)
+[LOG] SoundI::release                          :     Audio_4 (0000010D329942B8)
+[LOG] SoundI::release                          :  (0000010DAD1F7FB8)
+[LOG] SoundI::release                          :     Hit vF (0000010DBEB36A58)
+[LOG] SoundI::release                          :  (0000010DAD1F8858)
+[LOG] SoundI::release                          :     ObstacleLight (0000010DBEB363D8)
+[LOG] SoundI::release                          :  (0000010DB5A55908)
+[LOG] SoundI::release                          :     Overheat (0000010DBEB35BB8)
+[LOG] SoundI::release                          :  (0000010CCC4FCA78)
+[LOG] SoundI::release                          :     AbsorbWhileCooldown (0000010D32C23A98)
+[LOG] SoundI::release                          :  (0000010DAD1F8408)
+[LOG] SoundI::release                          :     Pause (0000010DBEB36D98)
+[LOG] SoundI::release                          :  (0000010DBE815C28)
+[LOG] SoundI::release                          :     GasRockThrow (0000010D32C23DD8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D66A3C038
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='GasRockThrow', format=2, channels=1, frequency=48000, lengthbytes=12128, lengthpcm=78154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.241946.
+[WRN] EventInstance::update                    : Event {ae8dd3f8-709b-4144-9019-41d1c40aac5d} waited 73 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] SoundI::release                          :  (0000010D8F21D738)
+[LOG] SoundI::release                          :     GasRockThrow (0000010DBEB35BB8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {0285ddb0-1400-4658-bc37-c9ff1abf6816}
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {0285ddb0-1400-4658-bc37-c9ff1abf6816}
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {0285ddb0-1400-4658-bc37-c9ff1abf6816}
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D66A3BC18
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='AbsorbWhileCooldown', format=2, channels=2, frequency=48000, lengthbytes=31584, lengthpcm=120372, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[WRN] EventInstance::update                    : Event {54091af1-d961-412a-98b4-44d580d1c910} waited 115 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D356BD3C8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Cooldown', format=2, channels=2, frequency=48000, lengthbytes=36128, lengthpcm=219874, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206959.
+[WRN] EventInstance::update                    : Event {9b24f1d0-48e5-4407-88a7-6ceb343e6a41} waited 115 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D66A3BE28
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Overheat', format=2, channels=2, frequency=48000, lengthbytes=16928, lengthpcm=56822, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.442462.
+[WRN] EventInstance::update                    : Event {dd349eeb-6be6-425f-a15f-65b1c1ba2129} waited 80 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D356BAC98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Warning', format=2, channels=2, frequency=48000, lengthbytes=17088, lengthpcm=56633, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.635573.
+[WRN] EventInstance::update                    : Event {9821024f-3b92-481c-af2a-fb2aaa7df8ec} waited 116 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010DACDAFD48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Fly', format=2, channels=2, frequency=48000, lengthbytes=255040, lengthpcm=1006389, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562341.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010DACDAFD48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Fly2', format=2, channels=2, frequency=48000, lengthbytes=254560, lengthpcm=1006389, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.630957.
+[WRN] EventInstance::update                    : Event {7eafdd4e-914e-4e8f-8e46-f639326e25f6} waited 127 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] SoundI::release                          :  (0000010D8F21DA18)
+[LOG] SoundI::release                          :     Overheat (0000010DBEB36F38)
+[LOG] SoundI::release                          :  (0000010D8857EEF8)
+[LOG] SoundI::release                          :     Cooldown (0000010DBEB385F8)
+[LOG] SoundI::release                          :  (0000010D88581458)
+[LOG] SoundI::release                          :     Warning (0000010DBEB356D8)
+[LOG] SoundI::release                          :  (0000010D8F21D5C8)
+[LOG] SoundI::release                          :     AbsorbWhileCooldown (0000010DBEB351F8)
+[LOG] SoundI::release                          :  (0000010D88581178)
+[LOG] SoundI::release                          :     Fly (0000010DBEB35058)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D66A3C458
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Yell', format=2, channels=2, frequency=48000, lengthbytes=6272, lengthpcm=32879, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[WRN] EventInstance::update                    : Event {6ff18c17-7b94-45d4-a1bd-c81a869808e0} waited 129 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {7ed09db0-8260-41ab-b0a6-ca5504100d94}
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {7ed09db0-8260-41ab-b0a6-ca5504100d94}
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[ERR] assert                                   : assertion: '!mManager->masterBus()' failed
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::finishLoadBank                  : Bank with guid {3da32ccd-25e7-4164-9bda-001597ce9b23} has already been loaded
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D66A3C038
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Attack2', format=2, channels=2, frequency=48000, lengthbytes=6848, lengthpcm=35197, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.960928.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5047936
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 78272
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000007B791F4AC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA486F80A0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA486F8070
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA486F8170
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA486F8230
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000010D66A3C038
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Attack', format=2, channels=2, frequency=48000, lengthbytes=6944, lengthpcm=35197, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[WRN] EventInstance::update                    : Event {f8edef35-4339-4b45-add3-f12b56c6b4d8} waited 126 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[LOG] SoundI::release                          :  (0000010D8857F1D8)
+[LOG] SoundI::release                          :     Fly2 (0000010DBEB37278)

@@ -95,6 +95,7 @@ public class HippieMovement : MonoBehaviour
                 if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && !hippieController.UsingGadget)
                 {
                     Jump();
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.playerJump, transform);
                 }
             }           
             else

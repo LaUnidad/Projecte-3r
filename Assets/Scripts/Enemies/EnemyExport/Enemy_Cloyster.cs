@@ -38,6 +38,7 @@ public class Enemy_Cloyster : MonoBehaviour
     public Animator m_Animator;
     private NavMeshAgent m_NavMeshAgent;
     private bool m_isAlive = true;
+    private FMOD.Studio.EventInstance m_PatrolSound, m_ChaseSound;
 
     public enum State
     {
@@ -163,7 +164,7 @@ public class Enemy_Cloyster : MonoBehaviour
             case State.PATROL:
 
                 m_NavMeshAgent.SetDestination(this.transform.position);
-                
+                SoundManager.Instance.StopEvent(m_PatrolSound, true);
                 break;
             case State.ALERT:
 
@@ -176,12 +177,13 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_NavMeshAgent.speed = m_Speed;
                // m_Body.GetComponent<Collider>().enabled = false;
                 m_Animator.SetBool("Chase", false);
+                SoundManager.Instance.StopEvent(m_ChaseSound, false);
                 break;
             case State.WAIT_TO_ATTACK:
 
                 SetActiveEnergy();
                 //m_Animator.SetTrigger("Close");
-
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E2_Close, transform);
                 break;
 
             case State.WAIT:
@@ -203,7 +205,7 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_NavMeshAgent.speed = m_Speed;
                 m_NavMeshAgent.isStopped = false;
                 //m_Animator.SetBool("Walk", true);
-
+                m_PatrolSound = SoundManager.Instance.PlayEvent(GameManager.Instance.E2_Wander, transform);
                 break;
             case State.ALERT:
                 CheckDie();
@@ -217,8 +219,8 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_CurrentTime = 0f;
                 m_NavMeshAgent.speed = m_ChaseSpeed;
                 MoveToPoint(GameManager.Instance.m_player.transform.position);
-              //  m_Body.GetComponent<Collider>().enabled = true;
-
+                //  m_Body.GetComponent<Collider>().enabled = true;
+                m_ChaseSound = SoundManager.Instance.PlayEvent(GameManager.Instance.E2_Rotate, transform);
                 //Chase animation
                 m_Animator.SetBool("Chase", true);
                 break;
@@ -227,7 +229,7 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_CurrentTime = 0f;
                 SetActiveEnergy();
                 //m_Animator.SetTrigger("Open");
-
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E2_Open, transform);
                 break;
 
             case State.WAIT:

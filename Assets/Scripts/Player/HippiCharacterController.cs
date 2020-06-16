@@ -47,6 +47,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     //----- SOUNDS -----
     bool firstTimeUsingGadget;
     EventInstance AbsorbSoundEvent;
+    EventInstance DamageSound, HealSound;
 
     //----- CONTROLLER -----
     PlayerIndex playerIndex;
@@ -220,6 +221,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             if(blackboard.currentLife >= 0)
             {
                 blackboard.currentLife -= blackboard.ResistanceToTheGas * Time.deltaTime;
+
             }          
         }
     }
@@ -241,7 +243,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         blackboard.BiomassObj.GetComponent<DamageBiomasIntaciate>().rotate = true;
         blackboard.currentLife = blackboard.currentLife - lifeToRest;
 
-        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.ChangeDirection, GameManager.Instance.m_player.transform);
+        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.playerHit, transform);
         //FindObjectOfType<HitStop>().HitStopLoL(.1f);
         anim.SetTrigger("Knockback");
         // hMovement.KnockBack();

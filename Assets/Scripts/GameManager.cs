@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     public string E2_Shoot = "event:/FX/Enemies/Enemy2/Shoot";
     public string E2_Wander = "event:/FX/Enemies/Enemy2/Wander";
     //ENEMY 3
-    public string E3_Attack = "event:/FX/Enemies/Enemy3/Attack";
+    public string E3_Attack = "event:/FX/Enemies/Enemy3/Atack";
     public string E3_Fly = "event:/FX/Enemies/Enemy3/Fly";
     public string E3_Yell = "event:/FX/Enemies/Enemy3/Yell";
     //HUD
@@ -132,6 +132,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P) || Input.GetButtonDown("Start"))
         {
             Pause();
+            SoundManager.Instance.PlayOneShotSound(PauseSound, transform);
         }
 
        // if (cc.currentHealth <= 0) m_GameActive = false;
@@ -182,5 +183,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-   
+    //Sounds Menu
+    public void SoundAccept()
+    {
+        SoundManager.Instance.PlayOneShotSound(Accept, transform);
+    }
+
+    public void SoundResume()
+    {
+        SoundManager.Instance.PlayOneShotSound(Resume, transform);
+    }
+
+    public void SoundExit()
+    {
+        SoundManager.Instance.PlayOneShotSound(Exit, transform);
+    }
+
+
+
+
 }

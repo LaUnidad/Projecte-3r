@@ -24,6 +24,10 @@ public class PlayerHUD : MonoBehaviour
 
     public float VelocityRedLife;
 
+    //Sounds
+    FMOD.Studio.EventInstance DamageSound, HealSound;
+    bool startLowSound = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +48,12 @@ public class PlayerHUD : MonoBehaviour
         
         healthBar.fillAmount = OtherLife/100;
         YellowhealthBar.fillAmount = cc.blackboard.currentLife/100;
+
+        if (healthBar.fillAmount != YellowhealthBar.fillAmount && !SoundManager.Instance.isPlaying(HealSound))
+        {
+            HealSound = SoundManager.Instance.PlayEvent(GameManager.Instance.Heal, transform);
+        }
+        if (healthBar.fillAmount == YellowhealthBar.fillAmount) HealSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
         if (cc.AfectedByTheGas) gasBubblesHUD.SetActive(true); //gasBubblesHUD.Play();
 
@@ -102,11 +112,19 @@ public class PlayerHUD : MonoBehaviour
     public void SetLowHealthTrue()
     {
         canvasAnimator.SetBool("LowHealthWarning", true);
+        if (!startLowSound && !SoundManager.Instance.isPlaying(DamageSound))
+        {
+            startLowSound = true;
+            DamageSound = SoundManager.Instance.PlayEvent(GameManager.Instance.Damage, transform);
+        }
+
     }
 
     public void SetLowHealthFalse()
     {
         canvasAnimator.SetBool("LowHealthWarning", false);
+        DamageSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //startLowSound = false;
     }
 
 }

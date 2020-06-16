@@ -149,6 +149,7 @@ public class Enemy_Mushrock : MonoBehaviour
                 m_CurrentTime = 0f;
                 //_Animator.SetBool("Twinkle", true);
                 //So Twinkle
+                //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Twincle, transform);
                 break;
             case State.GO_UP:
                 m_CurrentTime = 0f;
@@ -156,12 +157,14 @@ public class Enemy_Mushrock : MonoBehaviour
                 StartCoroutine(Move(new Vector3(0, 3.73f, 0), 0.4f));
                 //Play Go Up Animation
                 //So aixercar
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Up, transform);
                 break;
             case State.GO_DOWN:
                 m_CurrentTime = 0f;
                 StartCoroutine(Move(new Vector3(0, -3.73f, 0), 0.4f));
                 //Play Go Up Animation
                 //So baixar
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Down, transform);
                 break;
             
         }

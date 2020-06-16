@@ -19,6 +19,13 @@ public class MainMenu : MonoBehaviour
     Resolution[] resolutions;
     public TMPro.TMP_Dropdown resolutionDropdown;
 
+    public string Accept = "event:/FX/Menu/Accept";
+    public string Button = "event:/FX/Menu/Button";
+    public string Cancel = "event:/FX/Menu/Cancel";
+    public string Exit = "event:/FX/Menu/Exit";
+    public string PauseSound = "event:/FX/Menu/Pause";
+    public string Resume = "event:/FX/Menu/Resume";
+
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -139,6 +146,21 @@ public class MainMenu : MonoBehaviour
 
             SetActiveAllChildren(child);
         }
+    }
+
+    public void SoundAccept()
+    {
+        SoundManager.Instance.PlayOneShotSound(Accept, transform);
+    }
+
+    public void SoundResume()
+    {
+        SoundManager.Instance.PlayOneShotSound(Resume, transform);
+    }
+
+    public void SoundExit()
+    {
+        SoundManager.Instance.PlayOneShotSound(Exit, transform);
     }
 
 

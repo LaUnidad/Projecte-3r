@@ -58,6 +58,8 @@ public class DoorController : MonoBehaviour
             child.GetComponent<BreakDoorThing>().ActivateExplosion = true;
         }
         boxy.isTrigger = true;
+
+        SoundManager.
         
     }
 }
