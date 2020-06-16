@@ -24,7 +24,7 @@ public class VanChargingMass : MonoBehaviour
     {
         if(InVan == true)
         {
-            Gun.GetComponent<Aspiradora>().ExpulseBiomass();
+            //Gun.GetComponent<Aspiradora>().ExpulseBiomass();
         }
     }
 

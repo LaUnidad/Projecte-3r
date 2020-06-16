@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class CameraOrbit : MonoBehaviour
 {
-    public Animation anim;
-    public AnimationClip animClip;
+    Aspiradora aspiradora;
     private Transform cameraTransform;
     private Transform parentTransform;
 
     private Vector3 localRotation;
-    private float cameraDistance = 10f;
+    private float cameraDistance = 12f;
 
     public float mouseSensitivity = 4f;
     public float scrollSensitivity = 2f;
@@ -31,6 +30,7 @@ public class CameraOrbit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aspiradora = FindObjectOfType<Aspiradora>();
         cameraTransform = this.transform;
         parentTransform = this.transform.parent;
 
@@ -42,7 +42,7 @@ public class CameraOrbit : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.L)) anim.Play(animClip.name);
+        //if (Input.GetKeyDown(KeyCode.L)) anim.Play(animClip.name);
 
         //if (Input.GetKeyDown(KeyCode.LeftShift)) cameraDisabled = !cameraDisabled;
 
@@ -60,16 +60,16 @@ public class CameraOrbit : MonoBehaviour
             }
 
             //Zoom with Mouse scroll
-            if(Input.GetAxis("Mouse ScrollWheel") != 0)
+            if(Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetAxis("GamePad Vertical") != 0)
             {
-                float scrollAmount = Input.GetAxis("Mouse ScrollWheel") * scrollSensitivity;
+                float scrollAmount = Input.GetAxis("Mouse ScrollWheel") * scrollSensitivity + Input.GetAxis("GamePad Vertical") * scrollSensitivity;
 
                 //Zoom faster the further away the camera is
                 scrollAmount *= cameraDistance * 0.3f;
 
                 cameraDistance += scrollAmount * -1f;
 
-                cameraDistance = Mathf.Clamp(cameraDistance, 6f, 16f);
+                cameraDistance = Mathf.Clamp(cameraDistance, 6f, 18f);
 
             }
         }
@@ -84,6 +84,8 @@ public class CameraOrbit : MonoBehaviour
         }
 
         CameraCollision();
+
+        //if (aspiradora.startFinalCamShake) FinalCameraShakeStart();
     }
 
     void CameraCollision()
@@ -106,4 +108,9 @@ public class CameraOrbit : MonoBehaviour
             Debug.DrawLine(camRay.origin, camRay.origin + camRay.direction * cameraDistance, Color.cyan);
 
     }
+
+   
+
+
+
 }

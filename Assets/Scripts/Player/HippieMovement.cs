@@ -18,7 +18,9 @@ public class HippieMovement : MonoBehaviour
     /////INPUT
     private float InputX;
     private float InputZ;
-    private Vector3 l_Movment;
+    private Vector3 l_Movement;
+    private Vector3 lastMove;
+
 
     private float VerticalSpeed;
 
@@ -34,6 +36,21 @@ public class HippieMovement : MonoBehaviour
     private float ActualSpeed;
     private Vector3 hitNormal;
 
+    public bool canMove;
+
+    //knocback
+    public float knockBackTime = 2f;
+    private float knockBackCounter;
+
+    public float gravityScale = 1f;
+
+    public float knockTime = 0.2f;
+    float currentKnockTime;
+    Vector3 from;
+    Vector3 to;
+
+    bool isInKnocback = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +59,8 @@ public class HippieMovement : MonoBehaviour
         m_CharacterController = GetComponent<CharacterController>();
         blackboard = GetComponent<BLACKBOARD_ThirdPersonCharacter>();
         hippieController = GetComponent<HippiCharacterController>();
+        canMove = true;
+        blackboard.RotationSpeed = 1;
     }
 
     // Update is called once per frame
@@ -52,59 +71,109 @@ public class HippieMovement : MonoBehaviour
         InputZ = Input.GetAxis("Vertical");
         Vector3 orientation = new Vector3(InputX, 0, InputZ);
         orientation = Vector3.ClampMagnitude(orientation, 1);
+
+        ///////////////////////////////////////////////GRAVITY///////////////////////////////////////////
+
+        SetGravity();
         /////////////////////////////////////ROTACIÓN//////////////////////////////////////////////////
         CamDirection();
-        l_Movment = orientation.x * CamRight + orientation.z * camForward;
-        m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movment));
-        /*
-        if (!hippieController.StopLook)
+        //if (m_CharacterController.isGrounded) canMove = true;
+        // else canMove = false;
+
+        if (knockBackCounter <= 0 && canMove)
         {
-            m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movment));
-        }
-        else
-        {
-            if (blackboard.Gun.GetComponent<Aspiradora>().ObjectToLookAt() != null)
+
+            l_Movement = orientation.x * CamRight + orientation.z * camForward;
+            m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movement * blackboard.RotationSpeed));
+
+
+            //l_Movement = new Vector3(Input.GetAxis("Horizontal") * blackboard.NormalSpeed, l_Movement.y, Input.GetAxis("Vertical") * blackboard.NormalSpeed);
+            /////////////////////////////////////SALTO/////////////////////////////////////////////////////
+            if(m_CharacterController.isGrounded)
             {
-                //Debug.Log("Mirando al OBJETO");
-                m_CharacterController.transform.LookAt(blackboard.Gun.GetComponent<Aspiradora>().ObjectToLookAt().transform);
+                //l_Movement.y = 0f;
+                if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && !hippieController.UsingGadget)
+                {
+                    Jump();
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.playerJump, transform);
+                }
+            }           
+            else
+            {
+                VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
+                l_Movement.y = VerticalSpeed;
+            }
+            
+
+            ////////////////////////////////////////CORRER Y VELOCIDAD///////////////////////////////////////////////
+            if (Input.GetKey(blackboard.m_RunKeyCode))
+            {
+                ActualSpeed = blackboard.RunSpeed;
             }
             else
             {
-                m_CharacterController.transform.LookAt((m_CharacterController.transform.position + l_Movment));
+                ActualSpeed = blackboard.WalkSpeed;
             }
-        }
-        */
-        ///////////////////////////////////////////////GRAVITY///////////////////////////////////////////
-        SetGravity();
 
-        /////////////////////////////////////SALTO/////////////////////////////////////////////////////
-        if ((Input.GetKeyDown(blackboard.m_JumpCode) || Input.GetButtonDown("A")) && m_CharacterController.isGrounded)
-        {
-            anim.SetTrigger("Jump");
-            VerticalSpeed = blackboard.JumpForce / 2f;
-            l_Movment.y = VerticalSpeed;
+            l_Movement = l_Movement * ActualSpeed * blackboard.ForceAtAbsorb;
         }
         else
         {
-            VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
-            l_Movment.y = VerticalSpeed;
+            knockBackCounter -= Time.deltaTime;
+            // l_Movement = lastMove;
         }
 
-        ////////////////////////////////////////CORRER Y VELOCIDAD///////////////////////////////////////////////
-        if (Input.GetKey(blackboard.m_RunKeyCode))
-        {
-            ActualSpeed = blackboard.RunSpeed;
-        }
-        else
-        {
-            ActualSpeed = blackboard.WalkSpeed;
-        }
 
-        l_Movment = l_Movment * ActualSpeed * blackboard.ForceAtAbsorb;
+        if(isInKnocback)
+        {
+            currentKnockTime -= Time.deltaTime;
+            isInKnocback = (currentKnockTime > 0);
+
+            transform.position = Vector3.Lerp(from, to, (knockTime - currentKnockTime)/knockTime);
+
+        }
+ 
+        
+
+
+
+        //l_Movement = l_Movement * ActualSpeed * blackboard.ForceAtAbsorb;
         /////////////////////////////////////MOVIMIENTO/////////////////////////////////////////////////////////
-        m_CharacterController.Move(l_Movment * Time.deltaTime);
+         //VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
+         //l_Movement.y = VerticalSpeed;
+        //l_Movement.y = l_Movement.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
+        m_CharacterController.Move(l_Movement * Time.deltaTime * blackboard.NormalSpeed);
 
-        InputMagnitude();
+            InputMagnitude();        
+    }
+
+    void Jump()
+    {
+        anim.SetTrigger("Jump");
+        VerticalSpeed = blackboard.JumpForce / 2f;
+        l_Movement.y = VerticalSpeed;
+    }
+
+    public void KnockbackV2(float sumPos, float inTime)
+    {
+         Debug.Log("KnockbackV2");
+         from = transform.position;
+         to = transform.position + (-sumPos * transform.forward.normalized);
+         knockTime = currentKnockTime = inTime;
+
+         isInKnocback = true;
+       
+    }
+
+    public void KnockBack(Vector3 direction, float knockBackForce)
+    {
+        Debug.Log("Knockback");
+
+        knockBackCounter = knockBackTime;
+       // canMove = false;
+        l_Movement = direction * knockBackForce;
+        l_Movement.y = knockBackForce;
+        //Jump();        
     }
 
     void CamDirection()
@@ -121,12 +190,12 @@ public class HippieMovement : MonoBehaviour
         if (m_CharacterController.isGrounded)
         {
             VerticalSpeed = -blackboard.Gravity * Time.deltaTime;
-            l_Movment.y = VerticalSpeed;
+            l_Movement.y = VerticalSpeed;
         }
         else
         {
             VerticalSpeed -= (blackboard.Gravity / 3.5f) * Time.deltaTime;
-            l_Movment.y = VerticalSpeed;
+            l_Movement.y = VerticalSpeed;
         }
         //DESLIZAMIENTO//
         SlideDown();
@@ -137,9 +206,9 @@ public class HippieMovement : MonoBehaviour
         isOnSlope = Vector3.Angle(Vector3.up, hitNormal) >= m_CharacterController.slopeLimit;
         if (isOnSlope)
         {
-            l_Movment.x += ((1f - hitNormal.y) * hitNormal.x) * blackboard.SlideDownSpeed;
-            l_Movment.z += ((1f - hitNormal.y) * hitNormal.z) * blackboard.SlideDownSpeed;
-            l_Movment.y += blackboard.SlideDownForce;
+            l_Movement.x += ((1f - hitNormal.y) * hitNormal.x) * blackboard.SlideDownSpeed;
+            l_Movement.z += ((1f - hitNormal.y) * hitNormal.z) * blackboard.SlideDownSpeed;
+            l_Movement.y += blackboard.SlideDownForce;
         }
     }
 
@@ -148,7 +217,7 @@ public class HippieMovement : MonoBehaviour
         hitNormal = hit.normal;
     }
 
-    // ----- ANIMACIONS -----
+    // ----- ANIMATIONS -----
     void InputMagnitude()
     {
         // Calculate Input Vectors

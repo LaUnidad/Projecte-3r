@@ -43,7 +43,7 @@ public class Mushrock : MonoBehaviour
         if (Vector3.Distance(GameManager.Instance.m_player.transform.position, transform.position) <= m_tooNear && m_isUp && m_canKnockback && m_timerKnockback >= 0)
         {
             StartCoroutine(DamagePlayer(m_knockback, 0.2f));
-            GameManager.Instance.m_player.GetComponent<HippiCharacterController>().PlayerReciveDamage(m_damage);
+            GameManager.Instance.m_player.GetComponent<HippiCharacterController>().PlayerTakeDamage(m_damage);
             //Debug.Log("lol");
             m_canKnockback = false;
         }
@@ -59,7 +59,7 @@ public class Mushrock : MonoBehaviour
                 if (Vector3.Distance(GameManager.Instance.m_player.transform.position, transform.position) <= 4.5f)
                 {
                     StartCoroutine(DamagePlayer(m_knockback, 0.2f));
-                    GameManager.Instance.m_player.GetComponent<HippiCharacterController>().PlayerReciveDamage(m_damage);
+                    GameManager.Instance.m_player.GetComponent<HippiCharacterController>().PlayerTakeDamage(m_damage);
                     
                 }
                 m_isUp = false;

@@ -41,25 +41,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522287307909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -101,25 +99,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523795846368
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,25 +157,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523706067714
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -221,25 +215,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523296852029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -281,25 +273,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523270123005
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -341,25 +331,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522860933850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -401,25 +389,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523452005780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -461,25 +447,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523564069747
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -521,25 +505,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257524282644307
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -581,25 +563,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522725709495
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -641,25 +621,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522511468569
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -701,25 +679,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523876749380
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -761,25 +737,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257524016012657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -821,25 +795,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257524287500749
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -881,25 +853,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257524048305729
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -941,25 +911,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
+--- !u!54 &1503159325201422053
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142274383153478354}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7088091363414004243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142274383153478354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018848183, y: 0.015033237, z: 0.2533607}
+  m_Center: {x: -0.00026156878, y: -0.001699657, z: 0.1235542}
+--- !u!114 &2554594290801215644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142274383153478354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d945c5ad9c89e04cb740907db512504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Disolve: 0
 --- !u!54 &4674257523300101675
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1001,25 +1011,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523835300229
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1061,25 +1069,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523539828520
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1121,25 +1127,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522324388339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1181,25 +1185,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522408483321
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1241,41 +1243,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
---- !u!54 &4674257524104849294
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452791933136662130}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!65 &4674257524104849295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1289,6 +1273,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.017690456, y: 0.017690461, z: 0.19517332}
   m_Center: {x: -0.000000059604645, y: -0.000000059604645, z: 0.09758666}
+--- !u!114 &1054846989588443535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452791933136662130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fe344825217ee4bbf9bfd6a16dc846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Doit: 0
+  timer: 0
+  VelocityToDisapear: 6
 --- !u!54 &4674257523873373528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1330,25 +1329,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!65 &4674257524079302187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1377,22 +1374,6 @@ MonoBehaviour:
   Death: 0
   rotate: 0
   KillFruits: 0
---- !u!54 &4674257523796277334
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3638874555554020672}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &4674257523796277335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1406,6 +1387,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.017690457, y: 0.01769046, z: 0.25400004}
   m_Center: {x: 0, y: -0.00000011920929, z: 0.127}
+--- !u!114 &8252393790772182551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3638874555554020672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211ef8caf4af1a24ebf76eb2ffd1cc54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Doit: 0
+  timer: 0
+  VelocityToDisapear: 5
 --- !u!54 &4674257524266351768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1447,25 +1443,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523352075300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1507,25 +1501,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522487116064
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1567,25 +1559,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523706663137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1627,25 +1617,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523130781040
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1687,25 +1675,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522356372751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1747,25 +1733,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!1 &4674257522597107641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,7 +1774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4674257522597107641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -147.97607, y: 30.269283, z: 532.7058}
+  m_LocalPosition: {x: -28.689308, y: 23.84, z: -70.556335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4710215688624281705}
@@ -1839,25 +1823,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522481145725
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1899,25 +1881,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257524075513158
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1959,25 +1939,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257524132742341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2019,25 +1997,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523095166674
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2079,25 +2055,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257524070136876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2139,25 +2113,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522321616961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2199,25 +2171,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523989594557
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2259,25 +2229,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523132612247
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2319,25 +2287,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523078964394
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2379,25 +2345,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522621999323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2439,25 +2403,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
+--- !u!54 &1954776331594308866
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623750389934914684}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &352823801413809172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623750389934914684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43461037, y: 3.7976825, z: 0.50972176}
+  m_Center: {x: -0.28269482, y: 0.71979177, z: 0.24513912}
+--- !u!114 &346378047270332781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623750389934914684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ec2b5c8acd1b346a1e4781d18660ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Create: 0
 --- !u!54 &4674257523129978806
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2499,25 +2503,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523661050762
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2559,25 +2561,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523196654351
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2619,25 +2619,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523668916524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2679,25 +2677,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523072403553
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2739,25 +2735,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522918852363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2799,25 +2793,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522874222717
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2859,25 +2851,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523595947537
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2919,25 +2909,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523163982703
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2979,25 +2967,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522773104229
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3039,25 +3025,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523650997612
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3099,25 +3083,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523483389965
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3159,25 +3141,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523263486146
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3219,25 +3199,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257523532289403
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3279,25 +3257,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522541197171
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3339,25 +3315,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522221435167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3399,25 +3373,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522375226709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3459,25 +3431,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &4674257522919511374
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3519,25 +3489,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 1
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
   ForceToAbsorb: 0.5
-  SpeedToAbsorb: 5.5
+  SpeedToAbsorb: 7
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 0.5
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!1001 &4674257523001597592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3559,7 +3527,7 @@ PrefabInstance:
     - target: {fileID: 1959634908722356964, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: DeathPlant
       objectReference: {fileID: 0}
     - target: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
@@ -3649,10 +3617,16 @@ PrefabInstance:
     - target: {fileID: 8013183068779376874, guid: 9c81e4ffc0e382342904101ec8d13444,
         type: 3}
       propertyPath: m_TagString
-      value: DeathPlant
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c81e4ffc0e382342904101ec8d13444, type: 3}
+--- !u!1 &6623750389934914684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1959634908722356964, guid: 9c81e4ffc0e382342904101ec8d13444,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523001597592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7534806398909247695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2904626098214432343, guid: 9c81e4ffc0e382342904101ec8d13444,
@@ -3977,6 +3951,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 6729696433744776786, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+        type: 3}
+      propertyPath: m_TagString
+      value: LivePlant
+      objectReference: {fileID: 0}
     - target: {fileID: 6966021394575811427, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
         type: 3}
       propertyPath: m_TagString
@@ -3987,11 +3966,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
-    - target: {fileID: 7682432189585767708, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: eb7b8724595ce244b9ca458911dffdea, type: 2}
     - target: {fileID: 7849804588331959332, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
         type: 3}
       propertyPath: m_TagString
@@ -4020,7 +3994,7 @@ PrefabInstance:
     - target: {fileID: 8260073764421306816, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
         type: 3}
       propertyPath: m_TagString
-      value: LivePlant
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8342408937116602972, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
         type: 3}
@@ -4049,9 +4023,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2db5dfbaaba1f2a4c941314c9fd95060, type: 3}
---- !u!1 &5304525378507096771 stripped
+--- !u!1 &1467610497419163434 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 667440709110855235, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 6089908532857504682, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4061,21 +4035,33 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1467610497419163434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6089908532857504682, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8713381736253343771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4049416618900192411, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5387654481998689242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 728043029134870362, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7563073704994116748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2894445691988320268, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1583607005860171110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6135123552917502438, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1394690558434114566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6018115183129675910, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4097,15 +4083,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4710215688624281705 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 108157057348545769, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+--- !u!1 &1843297620190418810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6434228901712487418, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3638874555554020672 stripped
+--- !u!1 &3275971379429690234 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8260073764421306816, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 7901806266750271482, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4135643362007239070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8771479123634617630, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4115,45 +4107,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3638874555119891385 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8260073763987179321, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8177850236121091778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3576916959306824258, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5469982895082316796 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 808119081885636476, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8484276828369053907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3846206715260951635, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &603877686761195564 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5241956860129819820, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8346216910032400431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3678865288273380527, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8263091200230596763 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3635013863251678235, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4163,21 +4119,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4616666326424384951 stripped
+--- !u!1 &8951859167246033398 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 58544474024984887, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 4387957427033347446, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3499171056575794436 stripped
+--- !u!1 &8135825295685758940 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8093463287454071172, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 3473980053927664476, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5840215800087492366 stripped
+--- !u!1 &8413650184891684049 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1284318779375649678, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 3755164500912005201, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4199,9 +4155,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3813483430749357519 stripped
+--- !u!1 &6221690555625127481 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8372889392481399119, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 1624021466840959673, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4211,21 +4167,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5387654481998689242 stripped
+--- !u!1 &686109994590938117 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 728043029134870362, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 5286030881048891525, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7563073704994116748 stripped
+--- !u!1 &3499171056575794436 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2894445691988320268, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 8093463287454071172, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1394690558434114566 stripped
+--- !u!1 &4616666326424384951 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6018115183129675910, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 58544474024984887, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4235,21 +4191,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1843297620190418810 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6434228901712487418, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7342222722820347481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2682628986681959129, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &686109994590938117 stripped
+--- !u!1 &8263091200230596763 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5286030881048891525, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 3635013863251678235, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &868993368899426575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5535210565232864655, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4259,21 +4215,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3275971379429690234 stripped
+--- !u!1 &7365919077547931017 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7901806266750271482, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 2803293045684846857, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4135643362007239070 stripped
+--- !u!1 &8346216910032400431 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8771479123634617630, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 3678865288273380527, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6221690555625127481 stripped
+--- !u!1 &603877686761195564 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1624021466840959673, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 5241956860129819820, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4283,21 +4239,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8413650184891684049 stripped
+--- !u!1 &5469982895082316796 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3755164500912005201, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 808119081885636476, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7365919077547931017 stripped
+--- !u!1 &8177850236121091778 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2803293045684846857, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 3576916959306824258, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8135825295685758940 stripped
+--- !u!1 &3638874555119891385 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3473980053927664476, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 8260073763987179321, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4313,39 +4269,39 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3681829901112649436 stripped
+--- !u!1 &5083010316535090608 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8342408937116602972, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 456049387574032688, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &105022934734706441 stripped
+--- !u!1 &597803435569844535 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4731965713172636553, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 5230261903334057399, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &868993368899426575 stripped
+--- !u!1 &4555529960540864110 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5535210565232864655, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 9216108865533627118, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6941833333880757809 stripped
+--- !u!1 &3638874555554020672 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2344146491833559729, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 8260073764421306816, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8877563313749100817 stripped
+--- !u!1 &2142274383153478354 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4318174411637407121, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 6729696433744776786, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8951859167246033398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4387957427033347446, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+--- !u!4 &4710215688624281705 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 108157057348545769, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4361,27 +4317,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2856400229007407897 stripped
+--- !u!1 &3681829901112649436 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7457315209268334489, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 8342408937116602972, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1814301729748366420 stripped
+--- !u!1 &6941833333880757809 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6481803273784066260, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 2344146491833559729, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5083010316535090608 stripped
+--- !u!1 &105022934734706441 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 456049387574032688, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
-    type: 3}
-  m_PrefabInstance: {fileID: 4674257523297629312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &597803435569844535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5230261903334057399, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 4731965713172636553, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4391,9 +4341,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5746895894818576009 stripped
+--- !u!1 &8877563313749100817 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1089694285803414025, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 4318174411637407121, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1814301729748366420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6481803273784066260, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2856400229007407897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7457315209268334489, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
@@ -4403,9 +4365,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4555529960540864110 stripped
+--- !u!1 &5840215800087492366 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 9216108865533627118, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+  m_CorrespondingSourceObject: {fileID: 1284318779375649678, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5746895894818576009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1089694285803414025, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5304525378507096771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 667440709110855235, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
+    type: 3}
+  m_PrefabInstance: {fileID: 4674257523297629312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3813483430749357519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8372889392481399119, guid: 2db5dfbaaba1f2a4c941314c9fd95060,
     type: 3}
   m_PrefabInstance: {fileID: 4674257523297629312}
   m_PrefabAsset: {fileID: 0}

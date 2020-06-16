@@ -261,25 +261,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  ImLive: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 2
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!1 &9154162326997067323
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,25 +402,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  ImLive: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 2
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!1 &9154162327098994859
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,25 +543,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  ImLive: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 2
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!1 &9154162327270498966
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,25 +720,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  ImLive: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 2
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!1 &9154162328022230259
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,25 +919,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  ImLive: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 2
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!1 &9154162328117676809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,22 +1060,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  ImLive: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
   MinDistToGeiser: 0
-  rgbd: {fileID: 0}
   Biomass: 10
   LifeForThePlayer: 2
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  target: {fileID: 0}
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  BeenAbsorved: 0
+  target: {fileID: 0}
+  StartDistance: 0
+  booleanForTheScale: 0

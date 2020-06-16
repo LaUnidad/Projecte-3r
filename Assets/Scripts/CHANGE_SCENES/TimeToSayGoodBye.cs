@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class TimeToSayGoodBye : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject Canvas;
+    public GameObject MainCAmera;
+
+    public GameObject Player;
     void Start()
     {
         
@@ -22,7 +26,9 @@ public class TimeToSayGoodBye : MonoBehaviour
         {
             if(other.gameObject.GetComponent<HippiCharacterController>().blackboard.RoketMan)
             {
-                SceneManager.LoadScene("MainMenuScene");
+                Destroy(Canvas.gameObject);
+                //MainCAmera.SetActive(false);
+                Destroy(Player.gameObject);
             }
         }
     }

@@ -188,12 +188,14 @@ public class Enemy_Manta : MonoBehaviour
                 m_RotationalDamp = m_RotationalDampAlert;
                 m_Speed = m_SpeedChase;
                 CheckDie();
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E3_Yell, transform);
                 break;
             case State.REPLACE:
                 m_CurrentTime = 0f;
                 m_Target = (GetNearestPoint());
                 m_RotationalDamp = m_RotationalDampAlert;
                 CheckDie();
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E3_Attack, transform);
                 break;
             case State.DIE:
                 m_CurrentTime = 0f;

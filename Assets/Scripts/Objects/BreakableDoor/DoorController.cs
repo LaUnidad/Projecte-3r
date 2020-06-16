@@ -7,6 +7,11 @@ public class DoorController : MonoBehaviour
 {
     // Start is called before the first frame update
     private BoxCollider boxy;
+
+    public bool Exploted;
+
+    public GameObject particlesExplosion;
+
     void Start()
     {
         boxy = GetComponent<BoxCollider>();
@@ -32,18 +37,29 @@ public class DoorController : MonoBehaviour
             if(other.gameObject.GetComponent<AspirableObject>().SpeedToShoot>20)
             {
                 ExploteYourChildren();
-                boxy.isTrigger = true;
+                MakeExplosion(other.transform.position);
+                Destroy(other.gameObject);
+                
             }
             
         }
     }
+
+    public void MakeExplosion(Vector3 pos)
+    {   
+        Instantiate(particlesExplosion,pos,particlesExplosion.transform.rotation);
+
+    }
     public void ExploteYourChildren()
     {
-        
+        Exploted = true;
         foreach (Transform child in this.transform) 
         {
             child.GetComponent<BreakDoorThing>().ActivateExplosion = true;
         }
+        boxy.isTrigger = true;
+
+        SoundManager.
         
     }
 }

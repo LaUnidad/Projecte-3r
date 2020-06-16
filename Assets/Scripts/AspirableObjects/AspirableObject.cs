@@ -6,49 +6,73 @@ using UnityEngine;
 [RequireComponent(typeof (SphereCollider))]
 public class AspirableObject : MonoBehaviour
 {
+    [Header("TIPO DE ASPIRABLEOBJECT")]
     public bool THEBIGONE;
     public bool IMakeDamage;
     public bool IAmMagnetic;
     public bool IAmAsborved;
     public bool IAmInList;
+
+    public bool Heart;
+
+    public bool ImLive;
+
+    [Range(1,3)]
+    public int Type;
+
+    [Header("VARIABLES DEL ASPIRABLEOBJECT")]
     public float ForceToAbsorb;
     public float SpeedToAbsorb;
     public float SpeedToShoot;
-
     public float MinDistToGeiser;
-
-    public Rigidbody rgbd;
-    private GameObject Player;
-
-    private GameObject Gun;
 
     public float Biomass;
 
     public float LifeForThePlayer;
 
-    public float distance;
+    [Header("VARIABLES AUTOMATICAS, NI CASO")]
+    public Rigidbody rgbd;
 
     public Vector3 OriginalScale;
-
-    public bool ImAbsorved;
-
-    public GameObject target;
-
-    public float timer;
-    public bool ImShooted;
-
     public Vector3 PlayerForward;
+    private GameObject Player;
+
+    private GameObject Gun;
+    private SphereCollider coll;
+
+    
+    [Header("SI LA ROCA ES MAGNETICA NECESITA EL TARGET")]
+    public GameObject target;
+    float distance;
+    bool ImAbsorved;
+
+    float timer;
+    bool ImShooted;
 
     bool TouchingCrater;
 
     bool DoIt1Time;
 
-    public bool BeenAbsorved;
+    bool BeenAbsorved;
+    
+    float TimeToReturn;
+    
+    float XPos;
 
-    private SphereCollider coll;
-    
-    public float TimeToReturn;
-    
+    float YPos;
+
+    float ZPos;
+    Vector3  rotationPoint;
+
+    float RandomSpeed;
+
+    public float StartDistance;
+
+    public bool booleanForTheScale;
+
+    Vector3 TheOtherOriginalScale;
+
+
 
     
 
@@ -59,6 +83,7 @@ public class AspirableObject : MonoBehaviour
         coll = GetComponent<SphereCollider>();
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
+        RandomSpeed = Random.Range(0.7f,1);
     }
 
     void Update()
@@ -70,7 +95,7 @@ public class AspirableObject : MonoBehaviour
         if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {   
             VelocityChanger(timer);
-            Debug.Log(StopAbsorvingMagneticRock());  
+            //Debug.Log(StopAbsorvingMagneticRock());  
             if(StopAbsorvingMagneticRock())
             {
                 //ReturnHome();
@@ -81,6 +106,13 @@ public class AspirableObject : MonoBehaviour
         if(!IAmMagnetic && !THEBIGONE)
         {
             DieWithTime(8);
+        }
+        
+
+        if(ImLive)
+        {
+            rgbd.useGravity = true;
+            Invoke("KillLiveAsset", 8);
         }
             
     }
@@ -110,28 +142,41 @@ public class AspirableObject : MonoBehaviour
     }
     public void Absorbing()
     {
-        distance = Vector3.Distance(this.transform.position, Gun.transform.position);
+        
 
         if(Player.GetComponent<HippiCharacterController>().Absorving == true)
         {
+
             //Debug.Log("ABSORVIENDO");
-            this.transform.LookAt(Gun.transform.position);
-            ImAbsorved = true;
-            IMakeDamage = false;
-            rgbd.useGravity = false;
-            rgbd.isKinematic = false;
-            this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
-            BeenAbsorved = true;
-            timer += 1* Time.deltaTime;
-            if(!IAmMagnetic)
+            //this.transform.LookAt(Gun.transform.position);
+            //ImAbsorved = true;
+            //IMakeDamage = false;
+            //rgbd.useGravity = false;
+            //rgbd.isKinematic = false;
+            //this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
+            //BeenAbsorved = true;
+            //timer += 1* Time.deltaTime;
+            if(!IAmMagnetic && !THEBIGONE)
             {
-                this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
+                //this.transform.localScale = new Vector3(transform.localScale.x * 0.99f,transform.localScale.y * 0.99f,transform.localScale.z * 0.99f);
+                 AbsorbInSpiral();
+            }
+            else if(THEBIGONE)
+            {
+                //AbsorbInSpiral();
+                AbsorbingMagnetic();
+            }
+            else if(IAmMagnetic)
+            {
+                AbsorbingMagnetic();
             }
         }
         else
         {
-            if(!IAmMagnetic)
+            if(!IAmMagnetic )
             {
+                rgbd.isKinematic = !BeenAbsorved;
+                booleanForTheScale = false;
                 rgbd.useGravity = true;
                 this.transform.localScale = OriginalScale;
                 ImAbsorved = false;
@@ -175,7 +220,7 @@ public class AspirableObject : MonoBehaviour
         {
             //Debug.Log("IEP");
             rgbd.useGravity = false;
-            Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = true;
+            //Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = true;
             
         }
         
@@ -184,7 +229,7 @@ public class AspirableObject : MonoBehaviour
     {
         if(other.gameObject.tag == "Gun")
         {
-            Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = false;
+            //Player.GetComponent<HippiCharacterController>().ICanAbsorbThis = false;
             
         }
     }
@@ -204,7 +249,7 @@ public class AspirableObject : MonoBehaviour
         }
         if(other.tag == "PlayerCollider" && IMakeDamage)
         {
-            Player.GetComponent<HippiCharacterController>().PlayerReciveDamage(5);
+            Player.GetComponent<HippiCharacterController>().PlayerTakeDamage(5);
         }
     }
     void OnTriggerExit(Collider other) 
@@ -219,6 +264,21 @@ public class AspirableObject : MonoBehaviour
         if(BeenAbsorved)
         {
             //this.transform.parent = null;
+            switch (Type)
+            {
+                case 1:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableSmall, transform, true, 0.2f);
+                    break;
+                case 2:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableNormal, transform, true, 0.2f);
+                    break;
+                case 3:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
+                    break;
+                default:
+                    SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
+                    break;
+            }
             Invoke("MyTimeHasArrive", x);
 
         }    
@@ -257,6 +317,47 @@ public class AspirableObject : MonoBehaviour
             SpeedToShoot = 25;
             TimeToReturn = 3;
         }
+    }
+
+    public void AbsorbingMagnetic()
+    {
+        this.transform.LookAt(Gun.transform.position);
+        ImAbsorved = true;
+        IMakeDamage = false;
+        rgbd.useGravity = false;
+        rgbd.isKinematic = false;
+        this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime);
+        BeenAbsorved = true;
+        timer += 1* Time.deltaTime;
+    }
+    public void AbsorbInSpiral()
+    {
+        if(!booleanForTheScale)
+        {
+            StartDistance = Vector3.Distance(this.transform.position, Gun.transform.position);
+            TheOtherOriginalScale = new Vector3(OriginalScale.x + 0.3f, OriginalScale.y + 0.3f, OriginalScale.z +0.3f);
+            
+        }
+        distance = Vector3.Distance(this.transform.position, Gun.transform.position);
+        rotationPoint = Gun.transform.position + (Gun.transform.forward * distance);
+        this.transform.RotateAround(rotationPoint, Gun.transform.forward, Time.deltaTime*720*RandomSpeed);
+        ImAbsorved = true;
+        IMakeDamage = false;
+        rgbd.useGravity = false;
+        rgbd.isKinematic = false;
+        this.transform.position = Vector3.MoveTowards(transform.position, Gun.transform.position, SpeedToAbsorb*Time.deltaTime*RandomSpeed);
+        BeenAbsorved = true;
+        booleanForTheScale = true;
+        timer += 1* Time.deltaTime;
+        float escala = distance/StartDistance;
+        //Debug.Log("SD"+ StartDistance + "  D" + distance + " E" + escala);
+        //this.transform.localScale = new Vector3(OriginalScale.x * escala,OriginalScale.y * escala,OriginalScale.z * escala);
+        this.transform.localScale = new Vector3(TheOtherOriginalScale.x * escala,TheOtherOriginalScale.y * escala,TheOtherOriginalScale.z * escala);  
+    }
+
+    public void KillLiveAsset()
+    {
+        Destroy(this.gameObject);
     }
     
 }

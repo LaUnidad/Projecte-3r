@@ -26,12 +26,27 @@ public class Aspiradora : MonoBehaviour
 
     public GameObject LastObjectCatched;
 
+    private GameObject DestroyDoors;
+
+    private GameObject[] LeavesBT;
+
+    CamAnimations camAnimations;
+
+    public bool startFinalCamShake = false;
+
+    public GameObject[] Cinematicas;
+
+    public int wichCinematicYouWant;
    
 
     void Start()
     {
+        camAnimations = FindObjectOfType<CamAnimations>();
         blackboard = GetComponent<BLACKBOARD_Aspiradora>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        DestroyDoors = GameObject.FindGameObjectWithTag("DestroyDoors");
+        LeavesBT = GameObject.FindGameObjectsWithTag("LeavesBigTree");
+        Cinematicas = GameObject.FindGameObjectsWithTag("Cinematic");
     }
 
     // Update is called once per frame
@@ -156,16 +171,27 @@ public class Aspiradora : MonoBehaviour
         {
             if(other.gameObject.GetComponent<AspirableObject>().IAmMagnetic == false)
             {
-                //Debug.Log("ASPIRADO");
+                //Debug.Log(other.gameObject.GetComponent<AspirableObject>().Heart);
                 RemoveObjects(other.gameObject);
-                Biomass += other.gameObject.GetComponent<AspirableObject>().Biomass;
+                Player.GetComponent<HippiCharacterController>().blackboard.Biomassa += other.gameObject.GetComponent<AspirableObject>().Biomass;
                 Player.GetComponent<HippiCharacterController>().SumLife(1);
 
                 //Player.GetComponent<HippiCharacterController>().currentHealth += 0.5f;
-                if(other.gameObject.GetComponent<AspirableObject>().THEBIGONE)
+                if(other.gameObject.GetComponent<AspirableObject>().Heart)
                 {
+                    Debug.Log("ASPIRADO A THE FUCKING BIGONE");
+                    ActivateTheCorrectCinematic();
+                    Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
                     Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
                     Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
+                    DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
+                    foreach(GameObject obj in LeavesBT)
+                    {
+                        Destroy(obj.gameObject);
+                    }
+                   Destroy(other.gameObject);
+                   //KillPlanet();
+                   
                 }
 
                 Destroy(other.gameObject);
@@ -195,13 +221,34 @@ public class Aspiradora : MonoBehaviour
             }
         }
     }
-    public void ExpulseBiomass()
+
+    public void KillPlanet()
     {
-        Biomass = Biomass - 1f;
-        
-        if(Biomass<= 0)
+        Debug.Log("ULTIM ITEM MORT");
+       
+        Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
+        Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;  
+        Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
+        DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
+        foreach(GameObject obj in LeavesBT)
         {
-            Biomass = 0;
+            Destroy(obj.gameObject);
+        }
+        startFinalCamShake = true;
+
+        //Start final camera shake
+        camAnimations.FinalCameraShakeStart();
+        
+    }
+    public void ActivateTheCorrectCinematic()
+    {
+        foreach(GameObject obj in Cinematicas)
+        {
+            if(obj.GetComponent<Cinamatic1>().CinematicOrder == wichCinematicYouWant)
+            {
+                obj.GetComponent<Cinamatic1>().ImActive = true;
+                obj.gameObject.SetActive(true);
+            }
         }
     }
 }

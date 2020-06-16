@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &6135696944566540966
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861642533805672254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: b52a608957116e941b8333b6894d57e7, type: 3}
 --- !u!114 &6095470015624891680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,20 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticleSystem: {fileID: 6095470016391180440}
   IAmMagneticCrater: 1
---- !u!64 &6135696944566540966
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2861642533805672254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -462981019419857548, guid: b52a608957116e941b8333b6894d57e7, type: 3}
+  Gas: 0
 --- !u!1 &6095470015368605145
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,6 +4918,7 @@ GameObject:
   - component: {fileID: 6095470017244021348}
   - component: {fileID: 6095470017244021349}
   - component: {fileID: 6095470017244021354}
+  - component: {fileID: 1883079358592231563}
   - component: {fileID: 6095470017244021351}
   - component: {fileID: 6095470017244021350}
   - component: {fileID: 6095470017244021345}
@@ -5001,6 +5003,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1883079358592231563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6095470017244021352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08ef17beec454f4b85cc131b4127bc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6095470017244021351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5013,28 +5027,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241922291cd5aed4caf095fa7cd9976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THEBIGONE: 0
   IMakeDamage: 0
   IAmMagnetic: 1
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
   ForceToAbsorb: 0.05
   SpeedToAbsorb: 2
   SpeedToShoot: 15
   MinDistToGeiser: 2
-  rgbd: {fileID: 0}
   Biomass: 0
   LifeForThePlayer: 0
-  distance: 0
+  rgbd: {fileID: 0}
   OriginalScale: {x: 0, y: 0, z: 0}
-  ImAbsorved: 0
-  Enganchao: 0
-  target: {fileID: 6095470016257724670}
-  TimeToReturn: 3
-  timer: 0
-  ImShooted: 0
   PlayerForward: {x: 0, y: 0, z: 0}
-  OnSide: 0
-  BeenAbsorved: 0
+  target: {fileID: 6095470016257724670}
+  StartDistance: 0
+  booleanForTheScale: 0
 --- !u!54 &6095470017244021350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5063,8 +5074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b236955a790ae874d95ea3ad6c2d6e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AspirableObjMaterial: {fileID: 2100000, guid: 1e2cb652366f4fc419c45f89e2ec8972,
-    type: 2}
+  AspirableObjMaterial: {fileID: 0}
 --- !u!1001 &6095470016821304887
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class ChangeToAngryWorld : MonoBehaviour
     GameObject Player;
 
     GameObject ParticleController;
+
+    public bool tutorialCompleted = false;
     void Start()
     {
         //TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
@@ -44,6 +46,8 @@ public class ChangeToAngryWorld : MonoBehaviour
         
         Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
         ParticleController.gameObject.SetActive(true);
+
+        tutorialCompleted = true;
         
     }
     void OnTriggerEnter(Collider other) 

@@ -53,9 +53,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayOneShotSound(string path, Transform transform)
+    public void PlayOneShotSound(string path, Transform transform, bool low = false, float vol = 0f)
     {
         EventInstance soundEvent = RuntimeManager.CreateInstance(path);
+        if (low) soundEvent.setVolume(vol);
         if (!soundEvent.Equals(null))
         {
             soundEvent.set3DAttributes(To3DAttributes(transform.position));
@@ -230,7 +231,10 @@ public class SoundManagerParameter
 
 }
 
+/*
+[SerializeField]
 public class SoundBank
 {
     public string xPath;
 }
+*/

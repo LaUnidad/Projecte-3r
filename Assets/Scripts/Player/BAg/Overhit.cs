@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class Overhit : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Overhit : MonoBehaviour
     public Material LowMat;
 
     MeshRenderer meshR;
+
+    EventInstance Warning;
 
     void Start()
     {
@@ -42,6 +45,8 @@ public class Overhit : MonoBehaviour
         if(HaveToChange())
         {
             meshR.material = LowMat;
+
+
         }
         else
         {
