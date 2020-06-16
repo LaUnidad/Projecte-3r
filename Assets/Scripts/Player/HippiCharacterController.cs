@@ -18,6 +18,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public Animator anim;
     private PlayerHUD pHud;
     private CameraOrbit camOrbit;
+    private CamAnimations camAnimations;
     private ChangeToAngryWorld changeToAngry;
     public BLACKBOARD_ThirdPersonCharacter blackboard;
     private CharacterController m_CharacterController;
@@ -72,6 +73,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         hMovement = GetComponent<HippieMovement>();
         pHud = GetComponent<PlayerHUD>();
         camOrbit = FindObjectOfType<CameraOrbit>();
+        camAnimations = FindObjectOfType<CamAnimations>();
         changeToAngry = FindObjectOfType<ChangeToAngryWorld>();
         gameManager = FindObjectOfType<GameManager>();
         gameManager.AddRestartGameElement(this);
@@ -244,7 +246,7 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         anim.SetTrigger("Knockback");
         // hMovement.KnockBack();
 
-        //camOrbit.CameraShakeOnce();
+        camAnimations.CameraShakeOnce();
         pHud.KnockBackHUDandDamageVignette();
         pHud.HitHUD();
     }

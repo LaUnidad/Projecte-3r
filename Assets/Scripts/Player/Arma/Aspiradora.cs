@@ -30,7 +30,7 @@ public class Aspiradora : MonoBehaviour
 
     private GameObject[] LeavesBT;
 
-    CameraOrbit camOrbit;
+    CamAnimations camAnimations;
 
     public bool startFinalCamShake = false;
 
@@ -41,7 +41,7 @@ public class Aspiradora : MonoBehaviour
 
     void Start()
     {
-        camOrbit = FindObjectOfType<CameraOrbit>();
+        camAnimations = FindObjectOfType<CamAnimations>();
         blackboard = GetComponent<BLACKBOARD_Aspiradora>();
         Player = GameObject.FindGameObjectWithTag("Player");
         DestroyDoors = GameObject.FindGameObjectWithTag("DestroyDoors");
@@ -235,8 +235,9 @@ public class Aspiradora : MonoBehaviour
             Destroy(obj.gameObject);
         }
         startFinalCamShake = true;
-        
-        //camOrbit.FinalCameraShakeStart();
+
+        //Start final camera shake
+        camAnimations.FinalCameraShakeStart();
         
     }
     public void ActivateTheCorrectCinematic()

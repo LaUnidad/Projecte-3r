@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraOrbit : MonoBehaviour
 {
     Aspiradora aspiradora;
-    public Animator camAnimator;
     private Transform cameraTransform;
     private Transform parentTransform;
 
@@ -32,7 +31,6 @@ public class CameraOrbit : MonoBehaviour
     void Start()
     {
         aspiradora = FindObjectOfType<Aspiradora>();
-        camAnimator = GetComponent<Animator>();
         cameraTransform = this.transform;
         parentTransform = this.transform.parent;
 
@@ -87,7 +85,7 @@ public class CameraOrbit : MonoBehaviour
 
         CameraCollision();
 
-        if (aspiradora.startFinalCamShake) FinalCameraShakeStart();
+        //if (aspiradora.startFinalCamShake) FinalCameraShakeStart();
     }
 
     void CameraCollision()
@@ -111,19 +109,8 @@ public class CameraOrbit : MonoBehaviour
 
     }
 
-    public void CameraShakeOnce()
-    {
-        camAnimator.SetTrigger("CameraShakeOnce");
-    }
+   
 
-    public void FinalCameraShakeStart()
-    {
-        camAnimator.SetBool("FinalCameraShake", true);
-    }
 
-    public void FinalCameraShakeStop()
-    {
-        //camAnim.SetBool("FinalCameraShake", false);
-    }
 
 }

@@ -92,7 +92,7 @@ public class AspirableObject : MonoBehaviour
         if(IAmMagnetic && this.gameObject.tag == "AspirableObject")
         {   
             VelocityChanger(timer);
-            Debug.Log(StopAbsorvingMagneticRock());  
+            //Debug.Log(StopAbsorvingMagneticRock());  
             if(StopAbsorvingMagneticRock())
             {
                 //ReturnHome();
