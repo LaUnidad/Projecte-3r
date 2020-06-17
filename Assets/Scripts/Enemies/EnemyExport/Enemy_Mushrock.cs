@@ -34,6 +34,7 @@ public class Enemy_Mushrock : MonoBehaviour
     {
         m_Animator = transform.GetComponent<Animator>();
         //GameManager.Instance.AddRestartGameElement(this);
+
     }
 
     // Update is called once per frame
@@ -59,18 +60,15 @@ public class Enemy_Mushrock : MonoBehaviour
                 //Suficient aprop i amb energia
                 if (Vector3.Distance(GameManager.Instance.m_player.transform.position, transform.position) <= m_MinDistanceToTwinkle && m_AbsorbableItems.Count > 0)
                 {
-                    ChangeState(State.TWINKLE);
+                    ChangeState(State.GO_UP);
 
                 }
 
                 break;
             case State.TWINKLE:
-
-                if (m_CurrentTime >= 0.5f)
+                if (m_CurrentTime >= 5f)
                 {
-
-                    ChangeState(State.GO_UP);
-
+                    ChangeState(State.GO_DOWN);
                 }
                 break;
             case State.GO_UP:
@@ -89,7 +87,13 @@ public class Enemy_Mushrock : MonoBehaviour
                     if (item == null) m_AbsorbableItems.Remove(item);
                 }
 
-                if (m_CurrentTime >= m_TimeUp || m_AbsorbableItems.Count <= 0)
+                //if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && !m_Animator.IsInTransition(0))
+                if (m_CurrentTime > m_TimeUp)
+                {
+                    ChangeState(State.TWINKLE);
+                }
+
+                if (m_AbsorbableItems.Count <= 0)
                 {
                     ChangeState(State.GO_DOWN);
                 }
@@ -125,6 +129,8 @@ public class Enemy_Mushrock : MonoBehaviour
                 m_Collider.SetActive(false);
                 break;
             case State.TWINKLE:
+                m_Animator.SetBool("Twinkle", false);
+                SetActiveEnergy();
                 break;
             case State.GO_UP:
 
@@ -134,7 +140,7 @@ public class Enemy_Mushrock : MonoBehaviour
             case State.GO_DOWN:
 
                 m_Collider.SetActive(false);
-                SetActiveEnergy();
+                
 
                 break;
           
@@ -150,13 +156,13 @@ public class Enemy_Mushrock : MonoBehaviour
                 break;
             case State.TWINKLE:
                 m_CurrentTime = 0f;
-                //_Animator.SetBool("Twinkle", true);
+                m_Animator.SetBool("Twinkle", true);
+                SetActiveEnergy();
                 //So Twinkle
                 //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Twincle, transform);
                 break;
             case State.GO_UP:
                 m_CurrentTime = 0f;
-                SetActiveEnergy();
                // StartCoroutine(Move(new Vector3(0, 3.73f, 0), 0.4f));
                 //Play Go Up Animation
                 m_Animator.SetTrigger("Go Up");
@@ -167,7 +173,7 @@ public class Enemy_Mushrock : MonoBehaviour
             case State.GO_DOWN:
                 m_CurrentTime = 0f;
                 //StartCoroutine(Move(new Vector3(0, -3.73f, 0), 0.4f));
-                //Play Go Up Animation
+                m_Animator.SetTrigger("Go Down");
                 //So baixar
                 SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Down, transform);
                 break;
