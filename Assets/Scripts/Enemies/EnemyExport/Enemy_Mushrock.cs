@@ -18,7 +18,6 @@ public class Enemy_Mushrock : MonoBehaviour
 
     private Animator m_Animator;
     private float m_CurrentTime;
-    
 
     public enum State
     {
@@ -33,7 +32,7 @@ public class Enemy_Mushrock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //m_Animator = GetComponent<Animator>();
+        m_Animator = transform.GetComponent<Animator>();
         //GameManager.Instance.AddRestartGameElement(this);
     }
 
@@ -122,6 +121,8 @@ public class Enemy_Mushrock : MonoBehaviour
         switch (m_CurrentState)
         {
             case State.IDLE:
+                m_Animator.SetBool("Idle", false);
+                m_Collider.SetActive(false);
                 break;
             case State.TWINKLE:
                 break;
@@ -144,6 +145,8 @@ public class Enemy_Mushrock : MonoBehaviour
         {
             case State.IDLE:
                 m_CurrentTime = 0f;
+                m_Animator.SetBool("Idle", true);
+                m_Collider.SetActive(false);
                 break;
             case State.TWINKLE:
                 m_CurrentTime = 0f;
@@ -154,14 +157,16 @@ public class Enemy_Mushrock : MonoBehaviour
             case State.GO_UP:
                 m_CurrentTime = 0f;
                 SetActiveEnergy();
-                StartCoroutine(Move(new Vector3(0, 3.73f, 0), 0.4f));
+               // StartCoroutine(Move(new Vector3(0, 3.73f, 0), 0.4f));
                 //Play Go Up Animation
+                m_Animator.SetTrigger("Go Up");
+
                 //So aixercar
                 SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Up, transform);
                 break;
             case State.GO_DOWN:
                 m_CurrentTime = 0f;
-                StartCoroutine(Move(new Vector3(0, -3.73f, 0), 0.4f));
+                //StartCoroutine(Move(new Vector3(0, -3.73f, 0), 0.4f));
                 //Play Go Up Animation
                 //So baixar
                 SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Down, transform);

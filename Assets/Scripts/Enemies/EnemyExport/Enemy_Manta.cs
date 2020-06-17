@@ -30,7 +30,7 @@ public class Enemy_Manta : MonoBehaviour
     public float m_ConeAngle = 15.0f;
     private bool m_hasPath = false;
     private bool m_isAlive = true;
-
+    private Rigidbody[] m_rigidbodies;
 
 
     public enum State
@@ -47,7 +47,8 @@ public class Enemy_Manta : MonoBehaviour
     void Start()
     {
         m_initialPosition = transform.position;
-        //m_Animator = GetComponent<Animator>();
+        m_Animator = transform.GetComponentInChildren<Animator>();
+        m_rigidbodies = GetComponentsInChildren<Rigidbody>();
         //GameManager.Instance.AddRestartGameElement(this);
     }
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9154162327660789135}
   - component: {fileID: 9154162327660789134}
   - component: {fileID: 9154162327660789131}
+  - component: {fileID: 8926543801143945765}
   m_Layer: 0
   m_Name: Mushrock
   m_TagString: Untagged
@@ -138,6 +139,25 @@ MonoBehaviour:
   - {fileID: 9154162328032731167}
   - {fileID: 9154162327098994859}
   - {fileID: 9154162327632608184}
+--- !u!95 &8926543801143945765
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877061960205704036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8043e310c7296ae498e3e38a5509f034, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9154162326419989780
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +286,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
@@ -407,7 +429,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
@@ -548,7 +572,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
@@ -725,7 +751,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
@@ -924,7 +952,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0
@@ -1065,7 +1095,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 5.5
   SpeedToShoot: 0

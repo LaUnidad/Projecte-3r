@@ -39,6 +39,8 @@ public class Enemy_Cloyster : MonoBehaviour
     private NavMeshAgent m_NavMeshAgent;
     private bool m_isAlive = true;
     private FMOD.Studio.EventInstance m_PatrolSound, m_ChaseSound;
+    private Rigidbody[] m_rigidbodies;
+
 
     public enum State
     {
@@ -57,8 +59,10 @@ public class Enemy_Cloyster : MonoBehaviour
 
         m_NavMeshAgent = GetComponent<NavMeshAgent>();
         m_initialPosition = transform.position;
-        m_Animator = transform.GetComponentInChildren<Animator>(); // GetComponent<Animator>();
+        m_Animator = transform.GetComponentInChildren<Animator>(); 
         //GameManager.Instance.AddRestartGameElement(this);
+
+        m_rigidbodies = GetComponentsInChildren<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -146,9 +150,10 @@ public class Enemy_Cloyster : MonoBehaviour
 
             case State.DIE:
 
-                if (m_CurrentTime > 1)
+                if (m_CurrentTime > 2)
                 {
                     //DIE
+
                     gameObject.SetActive(false);
                 }
                 break;
@@ -208,6 +213,8 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_PatrolSound = SoundManager.Instance.PlayEvent(GameManager.Instance.E2_Wander, transform);
                 break;
             case State.ALERT:
+
+                m_Animator.SetTrigger("Alert");
                 CheckDie();
                 m_CurrentTime = 0f;
                 m_CurrentAlertRotation = 0.0f;
@@ -240,6 +247,11 @@ public class Enemy_Cloyster : MonoBehaviour
             case State.DIE:
                 m_CurrentTime = 0f;
                 //m_Animator.SetTrigger("Die");
+                foreach (Rigidbody rb in m_rigidbodies)
+                {
+                    rb.isKinematic = false;
+                    rb.useGravity = true;
+                }
 
                 break;
 
