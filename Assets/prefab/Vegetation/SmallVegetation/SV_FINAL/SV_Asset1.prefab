@@ -75,6 +75,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -87,6 +90,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4527273573432644920
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,6 +137,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -145,6 +152,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2734446688633294984
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -233,6 +241,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -245,6 +256,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4527273574912912875
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -272,8 +284,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.47, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Size: {x: 0.2772023, y: 0.60012543, z: 0.2}
+  m_Center: {x: -0.0035696763, y: 0.27143744, z: 0}
 --- !u!114 &4527273574912912877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +347,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -347,6 +362,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4527273573432644885
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -393,6 +409,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -405,6 +424,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4527273573432644905
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -451,6 +471,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -463,6 +486,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4527273573804502801
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +565,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -553,6 +580,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &3595513654239864099
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -580,8 +608,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3279953, y: 0.86559856, z: 0.26328278}
-  m_Center: {x: 0.21155548, y: 0.20657986, z: -0.079647064}
+  m_Size: {x: 0.3279953, y: 0.82871544, z: 0.26328278}
+  m_Center: {x: 0.21155548, y: 0.1881383, z: -0.079647064}
 --- !u!114 &7542444450769386566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,6 +669,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -653,6 +684,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4527273573432644880
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -699,6 +731,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -711,6 +746,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4527273573432644919
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -757,6 +793,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -769,6 +808,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!64 &4527273574338945672
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -844,6 +884,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -856,6 +899,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1001 &4527273573432644937
 PrefabInstance:
   m_ObjectHideFlags: 0

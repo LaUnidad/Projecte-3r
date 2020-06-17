@@ -72,6 +72,8 @@ public class AspirableObject : MonoBehaviour
 
     Vector3 TheOtherOriginalScale;
 
+    public float timer2;
+
 
 
     
@@ -112,6 +114,7 @@ public class AspirableObject : MonoBehaviour
         if(ImLive)
         {
             rgbd.useGravity = true;
+            rgbd.isKinematic = false;
             Invoke("KillLiveAsset", 8);
         }
             
@@ -126,7 +129,7 @@ public class AspirableObject : MonoBehaviour
     {
         Debug.Log("Take Me Home");
         BeenAbsorved = false;
-        //coll.isTrigger = true;
+        coll.isTrigger = true;
         transform.LookAt(target.transform.position, transform.position + transform.forward);
         this.transform.position = transform.position + transform.forward * 0.1f;
         rgbd.velocity = transform.forward * SpeedToShoot;
@@ -257,6 +260,7 @@ public class AspirableObject : MonoBehaviour
         if(other.tag == "CraterCollider")
         {
             TouchingCrater = false;
+            
         }
     }
     void DieWithTime(float x)

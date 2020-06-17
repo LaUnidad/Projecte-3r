@@ -47,7 +47,7 @@ public class DoorController : MonoBehaviour
 
     public void MakeExplosion(Vector3 pos)
     {   
-        Instantiate(particlesExplosion,pos,particlesExplosion.transform.rotation);
+        Instantiate(particlesExplosion,pos,this.transform.rotation);
 
     }
     public void ExploteYourChildren()

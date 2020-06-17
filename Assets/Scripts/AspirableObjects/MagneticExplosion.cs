@@ -17,7 +17,7 @@ public class MagneticExplosion : MonoBehaviour
         timer += 1*Time.deltaTime;
         if(timer>= 3)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject);   
         }
     }
 }

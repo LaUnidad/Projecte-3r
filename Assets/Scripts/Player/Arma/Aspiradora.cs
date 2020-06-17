@@ -183,8 +183,10 @@ public class Aspiradora : MonoBehaviour
                     ActivateTheCorrectCinematic();
                     Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
                     Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
+                    Player.GetComponent<HippiCharacterController>().SumLife(100);
                     Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
                     DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
+                    camAnimations.FinalCameraShakeStart();
                     foreach(GameObject obj in LeavesBT)
                     {
                         Destroy(obj.gameObject);
@@ -237,7 +239,7 @@ public class Aspiradora : MonoBehaviour
         startFinalCamShake = true;
 
         //Start final camera shake
-        camAnimations.FinalCameraShakeStart();
+        
         
     }
     public void ActivateTheCorrectCinematic()
