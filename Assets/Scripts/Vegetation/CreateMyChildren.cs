@@ -17,10 +17,26 @@ public class CreateMyChildren : MonoBehaviour
     {
         if(Create)
         {
-            for(int i = 0; i < this.transform.childCount; i++)
+            if(this.transform.childCount != 0)
             {
-                this.transform.GetChild(i).gameObject.GetComponent<CreateTrial>().Doit = true;
+                for(int i = 0; i < this.transform.childCount; i++)
+                {
+                    if( this.transform.GetChild(i).gameObject != null)
+                    {
+                        this.transform.GetChild(i).gameObject.GetComponent<CreateTrial>().Doit = true;
+                    }
+                    else
+                    {
+                        Debug.Log("NO MAS ERRORES");
+                    }
+                    
+                }
             }
+            else
+            {
+                Debug.Log("NO MAS ERRORES");
+            }
+            
         }
         
     }

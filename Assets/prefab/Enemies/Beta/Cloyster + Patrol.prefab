@@ -477,6 +477,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &6885092256324664995
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +874,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &6885092257147744511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1048,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &6885092257625150650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1060,7 @@ GameObject:
   - component: {fileID: 6885092257625150651}
   m_Layer: 0
   m_Name: Cloyster + Patrol
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1358,12 +1361,17 @@ PrefabInstance:
     - target: {fileID: -1617365279978105996, guid: 8e83d5f3ae1be614a858f80e190255b8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1056113
+      value: 1.106
       objectReference: {fileID: 0}
     - target: {fileID: -1617365279978105996, guid: 8e83d5f3ae1be614a858f80e190255b8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1322757
+      value: 0.187
+      objectReference: {fileID: 0}
+    - target: {fileID: -1617365279978105996, guid: 8e83d5f3ae1be614a858f80e190255b8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.092
       objectReference: {fileID: 0}
     - target: {fileID: -1046660687722909942, guid: 8e83d5f3ae1be614a858f80e190255b8,
         type: 3}

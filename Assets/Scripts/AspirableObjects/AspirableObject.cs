@@ -127,6 +127,7 @@ public class AspirableObject : MonoBehaviour
     }
     public void ReturnHome()
     {
+        //-----------------------------------------MARC AQUI ES QUAN ESTA TORNANT A CASA!!--------------------------------------------------------  
         Debug.Log("Take Me Home");
         BeenAbsorved = false;
         coll.isTrigger = true;
@@ -135,7 +136,8 @@ public class AspirableObject : MonoBehaviour
         rgbd.velocity = transform.forward * SpeedToShoot;
     }
     public void Shooting()
-    {      
+    {   
+        //-----------------------------------------MARC AQUI ES QUAN ES DISPARA!!!--------------------------------------------------------  
         ImAbsorved = false;
         PlayerForward = Player.gameObject.transform.forward;
         this.transform.position = transform.position + PlayerForward;

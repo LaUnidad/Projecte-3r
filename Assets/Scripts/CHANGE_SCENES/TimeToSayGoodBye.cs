@@ -12,9 +12,24 @@ public class TimeToSayGoodBye : MonoBehaviour
     public GameObject Player;
 
     public GameObject[] fruits;
+    public GameObject[] enemys;
+
+    public GameObject newPos;
+
+    public GameObject Objective;
+    public float TimeForGo;
+
+    public float velocity;
+
+    public GameObject AssetsMuertosEnemys;
+
+    
     void Start()
     {
         fruits = GameObject.FindGameObjectsWithTag("DeadController");
+        enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        AssetsMuertosEnemys.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -28,9 +43,7 @@ public class TimeToSayGoodBye : MonoBehaviour
         {
             if(other.gameObject.GetComponent<HippiCharacterController>().blackboard.RoketMan)
             {
-                Destroy(Canvas.gameObject);
-                //MainCAmera.SetActive(false);
-                Destroy(Player.gameObject);
+                AssetsMuertosEnemys.SetActive(true);
                 foreach(GameObject obj in fruits)
                 {
                     if(!obj.GetComponent<DeathTree>().KillFruits)
@@ -38,7 +51,30 @@ public class TimeToSayGoodBye : MonoBehaviour
                         obj.GetComponent<DeathTree>().KillFruits= true;
                     }
                 }
+                foreach(GameObject obj in enemys)
+                {
+                   obj.gameObject.SetActive(false);
+                }
+                Destroy(Canvas.gameObject);
+                //MainCAmera.SetActive(false);
+                Destroy(Player.gameObject);
+                
+                EncendiendoMotores();
             }
         }
+    }
+
+    public void EncendiendoMotores()
+    {
+        this.transform.position = newPos.transform.position;
+        ////__________________________________________ANIMACIÓ ENCENDIENDO MOTORES_______________________________________________________
+        Invoke("Despegue", TimeForGo);
+    }
+
+    public void Despegue()
+    {
+        Debug.Log("DESPEQUE");
+        ////__________________________________________ANIMACIÓ NAU PIRANT_______________________________________________________
+        Vector3.MoveTowards(this.transform.position,Objective.transform.position, 10000);
     }
 }
