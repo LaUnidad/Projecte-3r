@@ -28,6 +28,10 @@ public class Enemy_Cloyster : MonoBehaviour
     public List<GameObject> m_AbsorbableItems;
    // public GameObject m_Body;
 
+   //[Header("For Disolve Mat")]
+
+   //public GameObject DisolveChild;
+
     private int m_CurrentPatrolPositionId = -1;
     private float m_CurrentTime;
     private float m_WaitTime = 0.5f;
@@ -252,7 +256,7 @@ public class Enemy_Cloyster : MonoBehaviour
                     rb.isKinematic = false;
                     rb.useGravity = true;
                 }
-
+                //DisolveChild.GetComponent<DisolveMyChildrens>().Disolve = true;
                 break;
 
         }

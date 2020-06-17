@@ -20,6 +20,7 @@ public class DisolveMyChildrens : MonoBehaviour
         {
             for(int i = 0; i < this.transform.childCount; i++)
             {
+                
                 this.transform.GetChild(i).gameObject.GetComponent<DisolveTrial>().Doit = true;
             }
             

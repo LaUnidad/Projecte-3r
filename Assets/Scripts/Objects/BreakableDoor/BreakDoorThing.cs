@@ -25,7 +25,7 @@ public class BreakDoorThing : MonoBehaviour
         {
             rgbd.isKinematic = false;
             rgbd.useGravity = true;
-            Invoke("TimeToGo", 8);
+            Invoke("TimeToGo", 4);
         }
     }
     public void TimeToGo()

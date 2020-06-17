@@ -40,6 +40,8 @@ public class AspirableObject : MonoBehaviour
     private GameObject Gun;
     private SphereCollider coll;
 
+    private Animator animator;
+
     
     [Header("SI LA ROCA ES MAGNETICA NECESITA EL TARGET")]
     public GameObject target;
@@ -86,6 +88,11 @@ public class AspirableObject : MonoBehaviour
         rgbd = GetComponent<Rigidbody>();
         OriginalScale = this.transform.localScale;
         RandomSpeed = Random.Range(0.7f,1);
+
+        if(IAmMagnetic)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     void Update()
@@ -246,6 +253,7 @@ public class AspirableObject : MonoBehaviour
 
             if(!ImAbsorved && !ImShooted && this.gameObject.tag == "AspirableObject")
             {
+                animator.SetBool("Float", true);
                 this.transform.position = target.transform.position;
                 rgbd.isKinematic = true;
                 timer = 0;
@@ -262,7 +270,7 @@ public class AspirableObject : MonoBehaviour
         if(other.tag == "CraterCollider")
         {
             TouchingCrater = false;
-            
+            animator.SetBool("Float", false);
         }
     }
     void DieWithTime(float x)
