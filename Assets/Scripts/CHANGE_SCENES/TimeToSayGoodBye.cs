@@ -10,9 +10,11 @@ public class TimeToSayGoodBye : MonoBehaviour
     public GameObject MainCAmera;
 
     public GameObject Player;
+
+    public GameObject[] fruits;
     void Start()
     {
-        
+        fruits = GameObject.FindGameObjectsWithTag("DeadController");
     }
 
     // Update is called once per frame
@@ -29,6 +31,13 @@ public class TimeToSayGoodBye : MonoBehaviour
                 Destroy(Canvas.gameObject);
                 //MainCAmera.SetActive(false);
                 Destroy(Player.gameObject);
+                foreach(GameObject obj in fruits)
+                {
+                    if(!obj.GetComponent<DeathTree>().KillFruits)
+                    {
+                        obj.GetComponent<DeathTree>().KillFruits= true;
+                    }
+                }
             }
         }
     }
