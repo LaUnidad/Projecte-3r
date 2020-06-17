@@ -585,7 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6999218210870858349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SV_Asset2
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -925,10 +925,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DeathPlant
       objectReference: {fileID: 0}
+    - target: {fileID: 4830992540249024444, guid: 325bc7bb34fe3974b8b9cc59ff6134b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6049697217812049275, guid: 325bc7bb34fe3974b8b9cc59ff6134b5,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049697217812049275, guid: 325bc7bb34fe3974b8b9cc59ff6134b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7327231566391664488, guid: 325bc7bb34fe3974b8b9cc59ff6134b5,
         type: 3}
@@ -972,35 +982,70 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 371843856227600264, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 557144772122633573, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: DeadController
+      objectReference: {fileID: 0}
+    - target: {fileID: 557144772122633573, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 748505368374905017, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 748505368374905017, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1428860535307789729, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428860535307789729, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2568600744133204913, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 2568600744133204913, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2569626947647592476, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 2569626947647592476, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3399540168306145925, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: LivePlant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399540168306145925, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3593936201457014646, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
@@ -1016,6 +1061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SV_Asset4Alive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833195008007211154, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5652814435116921990, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
@@ -1102,30 +1152,60 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7196137439480752247, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7457479754974487474, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457479754974487474, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8658606925259130517, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 8658606925259130517, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8816969888655072546, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816969888655072546, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8845651894309935414, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8845651894309935414, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9136302729256566118, guid: 46af50248d6a99d4e88ca67f9a7fa578,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136302729256566118, guid: 46af50248d6a99d4e88ca67f9a7fa578,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46af50248d6a99d4e88ca67f9a7fa578, type: 3}

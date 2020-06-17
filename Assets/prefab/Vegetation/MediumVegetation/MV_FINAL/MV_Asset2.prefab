@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 343627421655361893}
   - component: {fileID: 5136434843732081864}
   - component: {fileID: 5360377680963600637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LIVE_PLANT
   m_TagString: LivePlant
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4817848951930113312}
   - component: {fileID: 4817848951930113319}
   - component: {fileID: 4817848951930113313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box016
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -204,6 +204,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -216,6 +219,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848951965655505
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +234,7 @@ GameObject:
   - component: {fileID: 4817848951965655500}
   - component: {fileID: 4817848951965655507}
   - component: {fileID: 4817848951965655501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box023
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -344,6 +348,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -356,6 +363,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952088479850
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +378,7 @@ GameObject:
   - component: {fileID: 4817848952088479845}
   - component: {fileID: 4817848952088479844}
   - component: {fileID: 4817848952088479846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box005
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -484,6 +492,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -496,6 +507,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952118562121
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +522,7 @@ GameObject:
   - component: {fileID: 4817848952118562116}
   - component: {fileID: 4817848952118562123}
   - component: {fileID: 4817848952118562117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box033
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -624,6 +636,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -636,6 +651,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952183123575
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +666,7 @@ GameObject:
   - component: {fileID: 4817848952183123570}
   - component: {fileID: 4817848952183123569}
   - component: {fileID: 4817848952183123571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box004
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -764,6 +780,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -776,6 +795,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952213140503
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +810,7 @@ GameObject:
   - component: {fileID: 4817848952213140498}
   - component: {fileID: 4817848952213140497}
   - component: {fileID: 4817848952213140499}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box006
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -904,6 +924,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -916,6 +939,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952239619155
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +954,7 @@ GameObject:
   - component: {fileID: 4817848952239619150}
   - component: {fileID: 4817848952239619149}
   - component: {fileID: 4817848952239619151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box019
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -1044,6 +1068,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1056,6 +1083,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952287661443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1098,7 @@ GameObject:
   - component: {fileID: 4817848952287661502}
   - component: {fileID: 4817848952287661501}
   - component: {fileID: 4817848952287661503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box041
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -1184,6 +1212,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1196,6 +1227,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952302754335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1242,7 @@ GameObject:
   - component: {fileID: 4817848952302754330}
   - component: {fileID: 4817848952302754329}
   - component: {fileID: 4817848952302754331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box020
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -1324,6 +1356,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1336,6 +1371,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952309488615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1386,7 @@ GameObject:
   - component: {fileID: 4817848952309488610}
   - component: {fileID: 4817848952309488609}
   - component: {fileID: 4817848952309488611}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box002
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -1464,6 +1500,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1476,6 +1515,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952330162546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1530,7 @@ GameObject:
   - component: {fileID: 4817848952330162541}
   - component: {fileID: 4817848952330162540}
   - component: {fileID: 4817848952330162542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box022
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -1604,6 +1644,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1616,6 +1659,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952341236693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +1673,7 @@ GameObject:
   - component: {fileID: 4817848952341236695}
   - component: {fileID: 4817848952341236689}
   - component: {fileID: 3648615068847528036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tronco02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1784,7 @@ GameObject:
   - component: {fileID: 4817848952436139457}
   - component: {fileID: 4817848952436139456}
   - component: {fileID: 4817848952436139458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box034
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -1854,6 +1898,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1866,6 +1913,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952486358591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,7 +1928,7 @@ GameObject:
   - component: {fileID: 4817848952486358586}
   - component: {fileID: 4817848952486358585}
   - component: {fileID: 4817848952486358587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box046
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -1994,6 +2042,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -2006,6 +2057,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952543040482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2072,7 @@ GameObject:
   - component: {fileID: 4817848952543040413}
   - component: {fileID: 4817848952543040412}
   - component: {fileID: 4817848952543040414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box021
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -2134,6 +2186,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -2146,6 +2201,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952645247682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2216,7 @@ GameObject:
   - component: {fileID: 4817848952645247741}
   - component: {fileID: 4817848952645247740}
   - component: {fileID: 4817848952645247742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box042
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -2274,6 +2330,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -2286,6 +2345,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952694061939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,7 +2360,7 @@ GameObject:
   - component: {fileID: 4817848952694061934}
   - component: {fileID: 4817848952694061933}
   - component: {fileID: 4817848952694061935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box043
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -2414,6 +2474,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -2426,6 +2489,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952726134216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,7 +2504,7 @@ GameObject:
   - component: {fileID: 4817848952726134219}
   - component: {fileID: 4817848952726134218}
   - component: {fileID: 4817848952726134212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box048
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -2554,6 +2618,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -2566,6 +2633,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952728923840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,7 +2646,7 @@ GameObject:
   - component: {fileID: 4135900630201410095}
   - component: {fileID: 3733139010040863071}
   - component: {fileID: 6212669743527763156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MV_Asset2Dead
   m_TagString: DeathPlant
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -2656,7 +2724,7 @@ GameObject:
   - component: {fileID: 4817848952813469256}
   - component: {fileID: 4817848952813469263}
   - component: {fileID: 4817848952813469257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box032
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -2770,6 +2838,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -2782,6 +2853,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952824833487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,7 +2868,7 @@ GameObject:
   - component: {fileID: 4817848952824833482}
   - component: {fileID: 4817848952824833481}
   - component: {fileID: 4817848952824833483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box009
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -2910,6 +2982,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -2922,6 +2997,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952868215983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +3012,7 @@ GameObject:
   - component: {fileID: 4817848952868215978}
   - component: {fileID: 4817848952868215977}
   - component: {fileID: 4817848952868215979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box025
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -3050,6 +3126,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -3062,6 +3141,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848952922845823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3071,7 +3151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4817848952922845816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MV_Asset2Alive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3108,7 +3188,7 @@ GameObject:
   - component: {fileID: 4817848952953744757}
   - component: {fileID: 4817848952953744756}
   - component: {fileID: 4817848952953744758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box036
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -3222,6 +3302,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -3234,6 +3317,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953008229321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,7 +3332,7 @@ GameObject:
   - component: {fileID: 4817848953008229316}
   - component: {fileID: 4817848953008229323}
   - component: {fileID: 4817848953008229317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box045
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -3362,6 +3446,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -3374,6 +3461,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953016455195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3388,7 +3476,7 @@ GameObject:
   - component: {fileID: 4817848953016455190}
   - component: {fileID: 4817848953016455189}
   - component: {fileID: 4817848953016455191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box014
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -3502,6 +3590,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -3514,6 +3605,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953060225015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,7 +3620,7 @@ GameObject:
   - component: {fileID: 4817848953060225010}
   - component: {fileID: 4817848953060225009}
   - component: {fileID: 4817848953060225011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box039
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -3642,6 +3734,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -3654,6 +3749,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953147409576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3668,7 +3764,7 @@ GameObject:
   - component: {fileID: 4817848953147409579}
   - component: {fileID: 4817848953147409578}
   - component: {fileID: 4817848953147409572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box010
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -3782,6 +3878,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -3794,6 +3893,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953167269023
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,7 +3903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4817848953167269016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MV_Asset2
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -3840,7 +3940,7 @@ GameObject:
   - component: {fileID: 4817848953221774196}
   - component: {fileID: 4817848953221774203}
   - component: {fileID: 4817848953221774197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box007
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -3954,6 +4054,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -3966,6 +4069,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953225532090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,7 +4084,7 @@ GameObject:
   - component: {fileID: 4817848953225532085}
   - component: {fileID: 4817848953225532084}
   - component: {fileID: 4817848953225532086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box040
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -4094,6 +4198,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -4106,6 +4213,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953400702290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,7 +4228,7 @@ GameObject:
   - component: {fileID: 4817848953400702285}
   - component: {fileID: 4817848953400702284}
   - component: {fileID: 4817848953400702286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box038
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -4234,6 +4342,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -4246,6 +4357,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953415417132
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,7 +4372,7 @@ GameObject:
   - component: {fileID: 4817848953415417135}
   - component: {fileID: 4817848953415417134}
   - component: {fileID: 4817848953415417128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box037
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -4374,6 +4486,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -4386,6 +4501,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953510917870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4400,7 +4516,7 @@ GameObject:
   - component: {fileID: 4817848953510917865}
   - component: {fileID: 4817848953510917864}
   - component: {fileID: 4817848953510917866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box031
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -4514,6 +4630,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -4526,6 +4645,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953539688925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,7 +4660,7 @@ GameObject:
   - component: {fileID: 4817848953539688920}
   - component: {fileID: 4817848953539688927}
   - component: {fileID: 4817848953539688921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box012
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -4654,6 +4774,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -4666,6 +4789,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953545896166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4680,7 +4804,7 @@ GameObject:
   - component: {fileID: 4817848953545896161}
   - component: {fileID: 4817848953545896160}
   - component: {fileID: 4817848953545896162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box044
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -4794,6 +4918,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -4806,6 +4933,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953578413470
 GameObject:
   m_ObjectHideFlags: 0
@@ -4820,7 +4948,7 @@ GameObject:
   - component: {fileID: 4817848953578413465}
   - component: {fileID: 4817848953578413464}
   - component: {fileID: 4817848953578413466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box030
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -4934,6 +5062,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -4946,6 +5077,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953601715331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4960,7 +5092,7 @@ GameObject:
   - component: {fileID: 4817848953601715390}
   - component: {fileID: 4817848953601715389}
   - component: {fileID: 4817848953601715391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box015
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -5074,6 +5206,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -5086,6 +5221,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953629946258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,7 +5236,7 @@ GameObject:
   - component: {fileID: 4817848953629946253}
   - component: {fileID: 4817848953629946252}
   - component: {fileID: 4817848953629946254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box026
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -5214,6 +5350,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -5226,6 +5365,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953680854616
 GameObject:
   m_ObjectHideFlags: 0
@@ -5240,7 +5380,7 @@ GameObject:
   - component: {fileID: 4817848953680854619}
   - component: {fileID: 4817848953680854618}
   - component: {fileID: 4817848953680854612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box027
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -5354,6 +5494,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -5366,6 +5509,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953701400716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,7 +5524,7 @@ GameObject:
   - component: {fileID: 4817848953701400719}
   - component: {fileID: 4817848953701400718}
   - component: {fileID: 4817848953701400712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box029
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -5494,6 +5638,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -5506,6 +5653,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953703243723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,7 +5667,7 @@ GameObject:
   - component: {fileID: 4817848953703243717}
   - component: {fileID: 4817848953703243719}
   - component: {fileID: 8246085882896055445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree02Dead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5630,7 +5778,7 @@ GameObject:
   - component: {fileID: 4817848953719163879}
   - component: {fileID: 4817848953719163878}
   - component: {fileID: 4817848953719163872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box047
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -5744,6 +5892,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -5756,6 +5907,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953726355912
 GameObject:
   m_ObjectHideFlags: 0
@@ -5770,7 +5922,7 @@ GameObject:
   - component: {fileID: 4817848953726355915}
   - component: {fileID: 4817848953726355914}
   - component: {fileID: 4817848953726355908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box003
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -5884,6 +6036,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -5896,6 +6051,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953737187426
 GameObject:
   m_ObjectHideFlags: 0
@@ -5910,7 +6066,7 @@ GameObject:
   - component: {fileID: 4817848953737187357}
   - component: {fileID: 4817848953737187356}
   - component: {fileID: 4817848953737187358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box028
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -6024,6 +6180,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -6036,6 +6195,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953763988128
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,7 +6210,7 @@ GameObject:
   - component: {fileID: 4817848953763988131}
   - component: {fileID: 4817848953763988130}
   - component: {fileID: 4817848953763988316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box024
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -6164,6 +6324,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -6176,6 +6339,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953794657740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6190,7 +6354,7 @@ GameObject:
   - component: {fileID: 4817848953794657743}
   - component: {fileID: 4817848953794657742}
   - component: {fileID: 4817848953794657736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box013
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -6304,6 +6468,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -6316,6 +6483,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953919424139
 GameObject:
   m_ObjectHideFlags: 0
@@ -6330,7 +6498,7 @@ GameObject:
   - component: {fileID: 4817848953919424134}
   - component: {fileID: 4817848953919424133}
   - component: {fileID: 4817848953919424135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box008
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -6444,6 +6612,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -6456,6 +6627,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953948058243
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,7 +6642,7 @@ GameObject:
   - component: {fileID: 4817848953948058302}
   - component: {fileID: 4817848953948058301}
   - component: {fileID: 4817848953948058303}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box011
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -6584,6 +6756,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -6596,6 +6771,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953954190647
 GameObject:
   m_ObjectHideFlags: 0
@@ -6610,7 +6786,7 @@ GameObject:
   - component: {fileID: 4817848953954190642}
   - component: {fileID: 4817848953954190641}
   - component: {fileID: 4817848953954190643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box035
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -6724,6 +6900,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -6736,6 +6915,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953984713216
 GameObject:
   m_ObjectHideFlags: 0
@@ -6750,7 +6930,7 @@ GameObject:
   - component: {fileID: 4817848953984713219}
   - component: {fileID: 4817848953984713218}
   - component: {fileID: 4817848953984713276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box018
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -6864,6 +7044,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -6876,6 +7059,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848953997860406
 GameObject:
   m_ObjectHideFlags: 0
@@ -6890,7 +7074,7 @@ GameObject:
   - component: {fileID: 4817848953997860401}
   - component: {fileID: 4817848953997860400}
   - component: {fileID: 4817848953997860402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box017
   m_TagString: AspirableObject
   m_Icon: {fileID: 0}
@@ -7004,6 +7188,9 @@ MonoBehaviour:
   IAmMagnetic: 0
   IAmAsborved: 0
   IAmInList: 0
+  Heart: 0
+  ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -7016,6 +7203,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &4817848954018174169
 GameObject:
   m_ObjectHideFlags: 0
@@ -7027,7 +7215,7 @@ GameObject:
   - component: {fileID: 4817848954018174170}
   - component: {fileID: 4817848954018174164}
   - component: {fileID: 4817848954018174171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hojas02
   m_TagString: DeadController
   m_Icon: {fileID: 0}

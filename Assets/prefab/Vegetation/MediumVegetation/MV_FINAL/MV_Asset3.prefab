@@ -48,6 +48,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -60,6 +61,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224688338981046
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,6 +110,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -120,6 +123,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224686649758545
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,6 +172,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -180,6 +185,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4683409816829112899
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -270,6 +276,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -282,6 +289,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224687797525799
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -330,6 +338,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -342,6 +351,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!1 &2695224687860575577
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2695224687860575576}
   - component: {fileID: 4548974601585829313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MV_Asset3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,6 +506,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -508,6 +519,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224687255173780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -556,6 +568,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -568,6 +581,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224687883086803
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -616,6 +630,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -628,6 +643,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224688073140437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -676,6 +692,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -688,6 +705,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224687818715607
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -736,6 +754,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -748,6 +767,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224686376630047
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -796,6 +816,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -808,6 +829,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224688350438327
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -856,6 +878,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -868,6 +891,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224687087595547
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -916,6 +940,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -928,6 +953,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224686479158982
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -976,6 +1002,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -988,6 +1015,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224686352988339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1036,6 +1064,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1048,6 +1077,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224687446562293
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1096,6 +1126,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1108,6 +1139,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!114 &4548974600332002980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,6 +1201,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1181,6 +1214,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224686539274718
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1229,6 +1263,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1241,6 +1276,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224688411236361
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1334,6 +1370,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1346,6 +1383,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &2695224687713985949
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1394,6 +1432,7 @@ MonoBehaviour:
   IAmInList: 0
   Heart: 0
   ImLive: 0
+  Type: 0
   ForceToAbsorb: 0.5
   SpeedToAbsorb: 7
   SpeedToShoot: 0
@@ -1406,6 +1445,7 @@ MonoBehaviour:
   target: {fileID: 0}
   StartDistance: 0
   booleanForTheScale: 0
+  timer2: 0
 --- !u!54 &4548974601639441786
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1460,10 +1500,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DeadController
       objectReference: {fileID: 0}
+    - target: {fileID: 50209012425645565, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 50209013104927351, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 50209013104927351, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 135829130667019154, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
@@ -1475,6 +1525,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 676094905916254962, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 732604810167840408, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1485,40 +1540,80 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 819864498964626726, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1207718661649067476, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207718661649067476, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1241978886605155259, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 1241978886605155259, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1319799683893959943, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319799683893959943, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1376391615862385703, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 1376391615862385703, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1462181630454296531, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462181630454296531, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2180522249540099479, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 2180522249540099479, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2644158451324366871, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644158451324366871, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2753199494064534701, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
@@ -1544,6 +1639,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702696139898506623, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3856479555701300477, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
@@ -1655,25 +1755,50 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 4143263534968132457, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4194772532944518455, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194772532944518455, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4394726871368320255, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: LivePlant
       objectReference: {fileID: 0}
+    - target: {fileID: 4394726871368320255, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4434247691605405648, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434247691605405648, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943992050676909582, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
     - target: {fileID: 4943992050676909582, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
-      propertyPath: m_TagString
-      value: AspirableObject
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4957255625586238790, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
@@ -1700,10 +1825,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 5559033757522330185, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5578294510117524701, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578294510117524701, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5705847477364424213, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
@@ -1730,6 +1865,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7328804772165118956, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7375144992326207139, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1755,10 +1895,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: AspirableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7773731561205509041, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7874870924843809342, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874870924843809342, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8328156004096641524, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
@@ -1771,6 +1921,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8328156004096641524, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8328156004096641525, guid: dd782989285a21e4fb485cc79445efbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1850,6 +2005,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: AspirableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962389018379650645, guid: dd782989285a21e4fb485cc79445efbe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd782989285a21e4fb485cc79445efbe, type: 3}
@@ -2015,6 +2175,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5079038749081840717, guid: b01176cccf002fb4fbeee58153096a9a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6896508917246817716, guid: b01176cccf002fb4fbeee58153096a9a,
         type: 3}
       propertyPath: m_Name
@@ -2030,6 +2195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: DeathPlant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896508917246817716, guid: b01176cccf002fb4fbeee58153096a9a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8081435812931133022, guid: b01176cccf002fb4fbeee58153096a9a,
         type: 3}
