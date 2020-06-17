@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: eb187bc391b35cc49aaff49a4b6bcaf1, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 37fb464d125f42045b58f035973b8045, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1699,6 +1699,7 @@ GameObject:
   - component: {fileID: 635917862}
   - component: {fileID: 635917863}
   - component: {fileID: 635917859}
+  - component: {fileID: 635917864}
   m_Layer: 0
   m_Name: Main  Camera
   m_TagString: MainCamera
@@ -1823,6 +1824,19 @@ MonoBehaviour:
   - {fileID: 1584702381}
   - {fileID: 1988339774}
   transitionSpeed: 5
+--- !u!114 &635917864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635917858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c193ff4d6491f48aaee4c91c25cb33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotateSpeed: 1.5
 --- !u!1 &643123493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,79 +2377,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &809724751
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 809724752}
-  - component: {fileID: 809724754}
-  - component: {fileID: 809724753}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &809724752
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809724751}
-  m_LocalRotation: {x: -0, y: -0.2976826, z: -0, w: 0.9546649}
-  m_LocalPosition: {x: 0, y: 0, z: 1574}
-  m_LocalScale: {x: 50.51835, y: 50.51835, z: 50.51835}
-  m_Children: []
-  m_Father: {fileID: 1271116222}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -34.637, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -383, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &809724753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809724751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 742ffbf92243c334db5ad272088936fe, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &809724754
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809724751}
-  m_CullTransparentMesh: 0
 --- !u!1 &906804865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,17 +2572,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.07
+      value: 218.03
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.79
+      value: -22.915
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.27
+      value: -15.243
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
@@ -2686,17 +2627,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 328.19067
+      value: 90.71847
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 328.19064
+      value: 90.71846
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 328.19064
+      value: 90.71846
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: be2c9cde88f1a3d4f940e8600d0e11c5,
         type: 3}
@@ -3221,7 +3162,7 @@ RectTransform:
   - {fileID: 472092998}
   - {fileID: 1716896823}
   m_Father: {fileID: 1271116222}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3751,6 +3692,13 @@ MonoBehaviour:
   Canvas: {fileID: 0}
   MainCAmera: {fileID: 0}
   Player: {fileID: 0}
+  fruits: []
+  enemys: []
+  newPos: {fileID: 0}
+  Objective: {fileID: 0}
+  TimeForGo: 0
+  velocity: 0
+  AssetsMuertosEnemys: {fileID: 0}
 --- !u!54 &1195602497
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4044,7 +3992,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -259.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 809724752}
   - {fileID: 1076754190}
   m_Father: {fileID: 0}
   m_RootOrder: 11
