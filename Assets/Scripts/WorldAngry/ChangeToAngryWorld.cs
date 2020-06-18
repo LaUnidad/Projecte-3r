@@ -28,6 +28,7 @@ public class ChangeToAngryWorld : MonoBehaviour
         Craters = GameObject.FindGameObjectsWithTag("Crater");
         ParticleController = GameObject.FindGameObjectWithTag("BadGas");
         ParticleController.gameObject.SetActive(false);
+        tutorialCompleted = false;
     }
     // Update is called once per frame
     void Update()

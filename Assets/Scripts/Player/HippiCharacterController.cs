@@ -177,7 +177,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             hitDirection = hitDirection.normalized;
             hMovement.KnockBack(hitDirection, 2f);
             Debug.Log("Knocback COntroller");
-        }       
+        }
+        
+        if(other.tag == "MapOutofLimit")
+        {
+            gameManager.RestartGame();
+        }
     }
 
     
