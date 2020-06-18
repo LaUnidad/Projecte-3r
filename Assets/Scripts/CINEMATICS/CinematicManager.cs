@@ -9,6 +9,8 @@ public class CinematicManager : MonoBehaviour
 
     private GameObject Canvas;
 
+    private GameObject Credits;
+
     private GameObject Player;
     [Header("LISTA DE CINEMATICAS")]
 
@@ -24,6 +26,7 @@ public class CinematicManager : MonoBehaviour
         Canvas = GameObject.FindGameObjectWithTag("Canvas");
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         Player = GameObject.FindGameObjectWithTag("Player");
+        Credits = GameObject.FindGameObjectWithTag("Credits");
     }
 
     // Update is called once per frame
