@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
     public string TakeMeHome = "event:/Music/TakeMeHome";
 
     private FMOD.Studio.EventInstance m_Intro, m_MZone1, m_MZone2;
+    public FMOD.Studio.EventInstance earthquake;
 
 
     public static GameManager Instance
@@ -235,7 +236,7 @@ public class GameManager : MonoBehaviour
     public void FinalRun()
     {
         SoundManager.Instance.StopAllEvents(true);
-        FMOD.Studio.EventInstance earthquake = SoundManager.Instance.PlayEvent(Earthquake, transform);
+        earthquake = SoundManager.Instance.PlayEvent(Earthquake, transform);
     }
 
     //Sounds Menu
