@@ -15,7 +15,7 @@ public class Intro : MonoBehaviour
 
     IEnumerator IntroCo()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(80F);
         Destroy(g1);
         Destroy(g2);
     }
