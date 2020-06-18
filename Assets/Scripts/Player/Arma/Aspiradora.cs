@@ -41,6 +41,8 @@ public class Aspiradora : MonoBehaviour
     private FMOD.Studio.EventInstance AbsorbSound0, AbsorbSound1, AbsorbSound2;
     private int soundN = 0;
 
+    private GameObject[] firefly;
+
     void Start()
     {
         camAnimations = FindObjectOfType<CamAnimations>();
@@ -49,6 +51,7 @@ public class Aspiradora : MonoBehaviour
         DestroyDoors = GameObject.FindGameObjectWithTag("DestroyDoors");
         LeavesBT = GameObject.FindGameObjectsWithTag("LeavesBigTree");
         Cinematicas = GameObject.FindGameObjectsWithTag("Cinematic");
+        firefly = GameObject.FindGameObjectsWithTag("Firefly");
     }
 
     // Update is called once per frame
@@ -196,6 +199,10 @@ public class Aspiradora : MonoBehaviour
                     Player.GetComponent<HippiCharacterController>().blackboard.RoketMan = true;
                     DestroyDoors.GetComponent<DestroyDoors>().DestroyAllDoors();
                     camAnimations.FinalCameraShakeStart();
+                    foreach(GameObject obj in firefly)
+                    {
+                        Destroy(obj.gameObject);
+                    }
                     foreach(GameObject obj in LeavesBT)
                     {
                         Destroy(obj.gameObject);

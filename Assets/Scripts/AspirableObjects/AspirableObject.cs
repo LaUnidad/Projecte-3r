@@ -52,7 +52,7 @@ public class AspirableObject : MonoBehaviour
     float timer;
     bool ImShooted;
 
-    bool TouchingCrater;
+    public bool TouchingCrater;
 
     bool DoIt1Time;
 
@@ -75,7 +75,13 @@ public class AspirableObject : MonoBehaviour
 
     Vector3 TheOtherOriginalScale;
 
+     [Header("FOR RESPAWN")]
+
     public float timer2;
+
+    public GameObject m_Rock;  
+
+    public bool OneTime;
 
 
 
@@ -117,13 +123,22 @@ public class AspirableObject : MonoBehaviour
         {
             DieWithTime(8);
         }
-        
-
         if(ImLive)
         {
             rgbd.useGravity = true;
             rgbd.isKinematic = false;
             Invoke("KillLiveAsset", 8);
+        }
+        if(!TouchingCrater && OneTime)
+        {
+            timer2 += 1*Time.deltaTime;
+
+            if(timer2>= 10)
+            {
+               this.transform.position = target.transform.position;
+               timer2 = 0;
+               OneTime = false;
+            }
         }
             
     }
@@ -139,13 +154,14 @@ public class AspirableObject : MonoBehaviour
         //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.GasRockAbsorb, transform);
         Debug.Log("Take Me Home");
         BeenAbsorved = false;
-        coll.isTrigger = true;
+        //coll.isTrigger = true;
         transform.LookAt(target.transform.position, transform.position + transform.forward);
         this.transform.position = transform.position + transform.forward * 0.1f;
         rgbd.velocity = transform.forward * SpeedToShoot;
     }
     public void Shooting()
     {
+        OneTime = true;
         SoundManager.Instance.PlayOneShotSound(GameManager.Instance.GasRockThrow, transform);
         ImAbsorved = false;
         PlayerForward = Player.gameObject.transform.forward;

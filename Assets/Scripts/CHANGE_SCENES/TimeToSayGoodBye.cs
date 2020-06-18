@@ -9,17 +9,12 @@ public class TimeToSayGoodBye : MonoBehaviour
     public GameObject Canvas;
     public GameObject MainCAmera;
 
+    public GameObject Van;
+
     public GameObject Player;
 
     public GameObject[] fruits;
     public GameObject[] enemys;
-
-    public GameObject newPos;
-
-    public GameObject Objective;
-    public float TimeForGo;
-
-    public float velocity;
 
     public GameObject AssetsMuertosEnemys;
 
@@ -58,23 +53,11 @@ public class TimeToSayGoodBye : MonoBehaviour
                 Destroy(Canvas.gameObject);
                 //MainCAmera.SetActive(false);
                 Destroy(Player.gameObject);
+                this.gameObject.SetActive(false);  
                 
-                EncendiendoMotores();
             }
         }
     }
 
-    public void EncendiendoMotores()
-    {
-        this.transform.position = newPos.transform.position;
-        ////__________________________________________ANIMACIÓ ENCENDIENDO MOTORES_______________________________________________________
-        Invoke("Despegue", TimeForGo);
-    }
-
-    public void Despegue()
-    {
-        Debug.Log("DESPEQUE");
-        ////__________________________________________ANIMACIÓ NAU PIRANT_______________________________________________________
-        Vector3.MoveTowards(this.transform.position,Objective.transform.position, 10000);
-    }
+    
 }
