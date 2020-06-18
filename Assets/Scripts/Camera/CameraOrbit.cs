@@ -109,7 +109,12 @@ public class CameraOrbit : MonoBehaviour
 
     }
 
-   
+    public void Sensitivity(float sens)
+    {
+        mouseSensitivity = sens;
+    }
+
+
 
 
 

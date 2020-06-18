@@ -15,8 +15,8 @@ public class AudioSettings : MonoBehaviour
 
     private void Awake()
     {
-        //SFX = FMODUnity.RuntimeManager.GetBus("Bus:/Master/FX");
-        //Music = FMODUnity.RuntimeManager.GetBus("Bus:/Music");
+        SFX = FMODUnity.RuntimeManager.GetBus("Bus:/FX");
+        Music = FMODUnity.RuntimeManager.GetBus("Bus:/Music");
         Master = FMODUnity.RuntimeManager.GetBus("Bus:/");
         SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance("event:/FX/Menu/Cancel");
     }
@@ -30,8 +30,8 @@ public class AudioSettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Music.setVolume(MusicVolume);
-        //SFX.setVolume(SFXVolume);
+        Music.setVolume(MusicVolume);
+        SFX.setVolume(SFXVolume);
         Master.setVolume(MasterVolume);
     }
 

@@ -129,12 +129,13 @@ public class Enemy_Manta : MonoBehaviour
 
                 break;
             case State.DIE:
-
+               
+                /*
                 if (m_CurrentTime > 1)
                 {
                     //DIE
                     gameObject.SetActive(false);
-                }
+                }*/
                 break;
         }
 
@@ -200,6 +201,8 @@ public class Enemy_Manta : MonoBehaviour
                 break;
             case State.DIE:
                 m_CurrentTime = 0f;
+                m_Animator.enabled = false;
+                StartCoroutine(LerpDie(transform.localScale));
                 break;
         }
 
@@ -282,6 +285,15 @@ public class Enemy_Manta : MonoBehaviour
         
         transform.rotation = Quaternion.Slerp(transform.rotation, l_rotation, m_RotationalDamp * Time.deltaTime);
         
+    }
+
+    IEnumerator LerpDie(Vector3 InitialScale)
+    {
+        transform.localScale = Vector3.Lerp(InitialScale, Vector3.zero, Time.deltaTime * 3);
+        yield return null;
+
+        Destroy(gameObject);
+
     }
 
     void Move()

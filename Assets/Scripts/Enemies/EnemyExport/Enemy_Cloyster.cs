@@ -103,7 +103,7 @@ public class Enemy_Cloyster : MonoBehaviour
 
                 RotateTowards(GameManager.Instance.m_player.transform);
 
-                if (SeesPlayer())
+                if (SeesPlayer() /*|| (m_CurrentTime > 3f && HearsPlayer())*/)
                 {
                     //Alert animation
                     m_Animator.SetTrigger("Alert");
@@ -154,10 +154,10 @@ public class Enemy_Cloyster : MonoBehaviour
 
             case State.DIE:
 
-                if (m_CurrentTime > 2)
+                if (m_CurrentTime > 0.4f)
                 {
                     //DIE
-
+                    StartCoroutine(LerpSize());
                     gameObject.SetActive(false);
                 }
                 break;
@@ -186,7 +186,7 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_NavMeshAgent.speed = m_Speed;
                // m_Body.GetComponent<Collider>().enabled = false;
                 m_Animator.SetBool("Chase", false);
-                SoundManager.Instance.StopEvent(m_ChaseSound, false);
+                //SoundManager.Instance.StopEvent(m_ChaseSound, false);
                 break;
             case State.WAIT_TO_ATTACK:
 
@@ -223,7 +223,7 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_CurrentTime = 0f;
                 m_CurrentAlertRotation = 0.0f;
                 m_StartAlertRotation = transform.rotation.y;
-
+                //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.E1_Twincle, transform);
                 break;
             case State.CHASE:
                 CheckDie();
@@ -231,7 +231,7 @@ public class Enemy_Cloyster : MonoBehaviour
                 m_NavMeshAgent.speed = m_ChaseSpeed;
                 MoveToPoint(GameManager.Instance.m_player.transform.position);
                 //  m_Body.GetComponent<Collider>().enabled = true;
-                m_ChaseSound = SoundManager.Instance.PlayEvent(GameManager.Instance.E2_Rotate, transform);
+                //m_ChaseSound = SoundManager.Instance.PlayEvent(GameManager.Instance.E2_Rotate, transform);
                 //Chase animation
                 m_Animator.SetBool("Chase", true);
                 break;
@@ -251,6 +251,7 @@ public class Enemy_Cloyster : MonoBehaviour
             case State.DIE:
                 m_CurrentTime = 0f;
                 //m_Animator.SetTrigger("Die");
+                m_PatrolSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 foreach (Rigidbody rb in m_rigidbodies)
                 {
                     rb.isKinematic = false;
@@ -275,7 +276,7 @@ public class Enemy_Cloyster : MonoBehaviour
     bool SeesPlayer()
     {
         //Nomenclatura player al GameManager m_player > m_Player;
-        Vector3 l_Direction = (GameManager.Instance.m_player.transform.position /*+ Vector3.up * 0.9f*/) - transform.position;
+        Vector3 l_Direction = (GameManager.Instance.m_player.transform.position + Vector3.up * 0.9f) - transform.position;
         Ray l_Ray = new Ray(transform.position, l_Direction);
 
         float l_Distance = l_Direction.magnitude;
@@ -339,6 +340,16 @@ public class Enemy_Cloyster : MonoBehaviour
             }
 
         }
+
+    }
+
+    IEnumerator LerpSize()
+    {
+        foreach (Rigidbody rb in m_rigidbodies)
+        {
+            rb.transform.localScale = Vector3.Lerp(rb.transform.localScale, Vector3.zero, Time.deltaTime * 0.7f);
+        }
+        yield return null;
 
     }
 

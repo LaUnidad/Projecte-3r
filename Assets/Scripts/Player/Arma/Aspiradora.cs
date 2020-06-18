@@ -188,6 +188,7 @@ public class Aspiradora : MonoBehaviour
                 if (other.gameObject.GetComponent<AspirableObject>().Heart)
                 {
                     Debug.Log("ASPIRADO A THE FUCKING BIGONE");
+                    GameManager.Instance.FinalRun();
                     ActivateTheCorrectCinematic();
                     Player.GetComponent<HippiCharacterController>().AfectedByTheGas = true;
                     Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 3;
@@ -247,6 +248,7 @@ public class Aspiradora : MonoBehaviour
         }
         startFinalCamShake = true;
 
+        SoundManager.Instance.StopAllEvents(true);
         SoundManager.Instance.PlayOneShotSound(GameManager.Instance.Earthquake, transform);
 
         //Start final camera shake

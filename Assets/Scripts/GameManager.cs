@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     //ENEMIES
     //ENEMY 1
     public string E1_Down = "event:/FX/Enemies/Enemy1/Down";
-    public string E1_Twincle = "event:/FX/Enemies/Enemy1/Twincle";
+    public string E1_Twincle = "event:/FX/Enemies/Enemy1/Twinkle";
     public string E1_Up = "event:/FX/Enemies/Enemy1/Up";
     //ENEMY 2
     public string E2_Close = "event:/FX/Enemies/Enemy2/Close";
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
     public string RocketMan = "event:/Music/RocketMan";
     public string TakeMeHome = "event:/Music/TakeMeHome";
 
-
+    private FMOD.Studio.EventInstance m_Intro, m_MZone1, m_MZone2;
 
 
     public static GameManager Instance
@@ -145,6 +145,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         cc = FindObjectOfType<HippiCharacterController>();
+        m_Intro = SoundManager.Instance.PlayEvent(TakeMeHome, transform);
+        //StartCoroutine(StartGameSong());
+        //Musica Cinematica
     }
 
     // Update is called once per frame
@@ -200,13 +203,39 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             pauseMenu.GetComponent<PauseMenu>().Pause();
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
             SoundManager.Instance.ResumeAllEvents();
             Time.timeScale = 1f;
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+
+    IEnumerator StartGameSong()
+    {
+        yield return new WaitForSeconds(35f);
+        m_Intro.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        m_MZone1 = SoundManager.Instance.PlayEvent(Zone1, transform);
+    }
+
+    public void ChangeSong()
+    {
+        m_MZone1.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        m_MZone2 = SoundManager.Instance.PlayEvent(Zone2, transform);
+    }
+
+    public void StopSong()
+    {
+        m_MZone2.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void FinalRun()
+    {
+        SoundManager.Instance.StopAllEvents(true);
+        FMOD.Studio.EventInstance earthquake = SoundManager.Instance.PlayEvent(Earthquake, transform);
     }
 
     //Sounds Menu
