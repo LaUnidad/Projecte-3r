@@ -202,7 +202,10 @@ public class Enemy_Manta : MonoBehaviour
             case State.DIE:
                 m_CurrentTime = 0f;
                 m_Animator.enabled = false;
-                StartCoroutine(LerpDie(transform.localScale));
+                if (m_CurrentTime > 1)
+                {
+                    gameObject.SetActive(false);
+                }
                 break;
         }
 
@@ -287,14 +290,7 @@ public class Enemy_Manta : MonoBehaviour
         
     }
 
-    IEnumerator LerpDie(Vector3 InitialScale)
-    {
-        transform.localScale = Vector3.Lerp(InitialScale, Vector3.zero, Time.deltaTime * 3);
-        yield return null;
-
-        Destroy(gameObject);
-
-    }
+    
 
     void Move()
     {

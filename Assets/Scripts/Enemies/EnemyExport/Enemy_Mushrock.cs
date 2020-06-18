@@ -194,12 +194,12 @@ public class Enemy_Mushrock : MonoBehaviour
                 if (item.activeSelf)
                 {
                     //item.SetActive(false);
-                    StartCoroutine(LerpSize(item, item.transform.localScale, m_LittleScale, 2f, true));
+                    StartCoroutine(LerpSize(item, item.transform.localScale, m_LittleScale, 5f, true));
                 }
                 else
                 {
                     item.SetActive(true);
-                    StartCoroutine(LerpSize(item, item.transform.localScale, m_BigScale, 2f));
+                    StartCoroutine(LerpSize(item, item.transform.localScale, m_BigScale, 5f));
                 }
             }
             else

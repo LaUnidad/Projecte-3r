@@ -39,6 +39,7 @@ public class DoorController : MonoBehaviour
                 ExploteYourChildren();
                 MakeExplosion(other.transform.position);
                 other.gameObject.SetActive(false);
+                SoundManager.Instance.PlayOneShotSound(GameManager.Instance.ObstacleHard, transform);
                 
             }
             
