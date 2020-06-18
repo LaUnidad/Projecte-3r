@@ -33,6 +33,7 @@ public class ChangeToCredits : MonoBehaviour
     public void ChangeScene()
     {
         //SceneManager.LoadScene("Credits");
+        GameManager.Instance.earthquake.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         LastCam.GetComponent<CAM_Movment>().RotationVelocity = 0;
         credits.GetComponent<Credits>().credits = true;
         Invoke("GoToMainMenu", 44);
