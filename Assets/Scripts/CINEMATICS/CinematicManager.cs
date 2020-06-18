@@ -21,7 +21,7 @@ public class CinematicManager : MonoBehaviour
     bool TrapInBool;
     void Start()
     {
-        TrapCinematic = 0;
+        TrapCinematic = 10;
         Cinematicas = GameObject.FindGameObjectsWithTag("Cinematic");
         Canvas = GameObject.FindGameObjectWithTag("Canvas");
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -106,13 +106,13 @@ public class CinematicManager : MonoBehaviour
                 obj.SetActive(false);
            }
         }
-
+        /*
         if(!TrapInBool)
         {
             TrapCinematic = 10;
             TrapInBool = true;
         }
-        
+        */
     }
 
     

@@ -19,9 +19,9 @@ public class ControlsScreen : MonoBehaviour
 
     IEnumerator LoadAsyncOperation()
     {
+        
+        yield return new WaitForSeconds(6f);
         AsyncOperation gameLevel = SceneManager.LoadSceneAsync(2);
-        yield return new WaitForSeconds(5f);
-
         new WaitForEndOfFrame();
     }
 }

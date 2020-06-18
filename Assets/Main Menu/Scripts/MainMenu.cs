@@ -54,7 +54,7 @@ public class MainMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-
+        SetResolution(resolutions.Length-1);
         IntroSong = SoundManager.Instance.PlayEvent(Intro, transform);
 
     }

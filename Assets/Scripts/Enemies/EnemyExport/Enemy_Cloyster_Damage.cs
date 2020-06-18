@@ -40,7 +40,7 @@ public class Enemy_Cloyster_Damage : MonoBehaviour
             other.gameObject.GetComponent<HippieMovement>().KnockBack(hitDirection, 3f);
             */
 
-            other.gameObject.GetComponent<HippieMovement>().KnockbackV2(16f, .2f);
+            //other.gameObject.GetComponent<HippieMovement>().KnockbackV2(16f, .2f);
         }
     }
 
