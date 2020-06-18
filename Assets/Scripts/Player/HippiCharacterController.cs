@@ -180,6 +180,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         }       
     }
 
+    
+
     void UsePower()
     {
         if(UsingGadget && blackboard.Power>0)

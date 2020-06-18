@@ -18,7 +18,8 @@ public class Enemy_Mushrock : MonoBehaviour
 
     private Animator m_Animator;
     private float m_CurrentTime;
-
+    private Vector3 m_BigScale = new Vector3(29, 29, 29);
+    private Vector3 m_LittleScale = new Vector3(1, 1, 1);
     public enum State
     {
         INITIAL,
@@ -190,14 +191,34 @@ public class Enemy_Mushrock : MonoBehaviour
         {
             if (item != null)
             {
-                if (item.activeSelf) item.SetActive(false);
-                else item.SetActive(true);
+                if (item.activeSelf)
+                {
+                    //item.SetActive(false);
+                    StartCoroutine(LerpSize(item, item.transform.localScale, m_LittleScale, 2f, true));
+                }
+                else
+                {
+                    item.SetActive(true);
+                    StartCoroutine(LerpSize(item, item.transform.localScale, m_BigScale, 2f));
+                }
             }
             else
             {
                 m_AbsorbableItems.Remove(item);
             }
          
+        }
+
+    }
+
+    IEnumerator LerpSize(GameObject item, Vector3 InitialScale, Vector3 FinalScale, float TimeScale, bool Desactivate = false)
+    {
+        item.transform.localScale = Vector3.Lerp(InitialScale, FinalScale, Time.deltaTime * TimeScale);
+        yield return null;
+
+        if (Desactivate)
+        {
+            item.SetActive(false);
         }
 
     }

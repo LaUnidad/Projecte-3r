@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public string E2_Shoot = "event:/FX/Enemies/Enemy2/Shoot";
     public string E2_Wander = "event:/FX/Enemies/Enemy2/Wander";
     //ENEMY 3
-    public string E3_Attack = "event:/FX/Enemies/Enemy3/Atack";
+    public string E3_Attack = "event:/FX/Enemies/Enemy3/Attack";
     public string E3_Fly = "event:/FX/Enemies/Enemy3/Fly";
     public string E3_Yell = "event:/FX/Enemies/Enemy3/Yell";
     //HUD
@@ -97,11 +97,23 @@ public class GameManager : MonoBehaviour
     public string Audio_17 = "event:/FX/Tutorial/Audio_17";
     public string Audio_18 = "event:/FX/Tutorial/Audio_18";
     public string Audio_19 = "event:/FX/Tutorial/Audio_19";
+    //AMBIENT
+    public string Sea = "event:/FX/Objects/Bubble";
+    public string Heart = "event:/FX/Objects/Heat";
+    public string Wind = "event:/Music/ColdWind";
+    public string Earthquake = "event:/Music/Earthquake";
+    public string Pajaritos = "event:/Music/Pajaritos";
+    public string VientoBosque = "event:/Music/VientoBosque";
     //MUSIC
     public string MainMenu = "event:/Music/MainMenu";
     public string PauseMusic = "event:/Music/Pause";
     public string Zone1 = "event:/Music/Zone1";
     public string Zone2 = "event:/Music/Zone2";
+    public string Intro = "event:/Music/IntroSong";
+    public string NightNurse = "event:/Music/NightNurse";
+    public string RocketMan = "event:/Music/RocketMan";
+    public string TakeMeHome = "event:/Music/TakeMeHome";
+
 
 
 

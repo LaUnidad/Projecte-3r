@@ -16,6 +16,10 @@ public class ChangeToAngryWorld : MonoBehaviour
     GameObject ParticleController;
 
     public bool tutorialCompleted = false;
+
+    private FMOD.Studio.EventInstance Danger;
+    private bool done = false;
+
     void Start()
     {
         //TerrainColor = GameObject.FindGameObjectsWithTag("Terrain");
@@ -55,6 +59,19 @@ public class ChangeToAngryWorld : MonoBehaviour
         if(other.tag == "Player")
         {
             ChangeWorld();  
+            if (!done)
+            {
+                Danger = SoundManager.Instance.PlayEvent(GameManager.Instance.Damage, transform);
+                done = true;
+            }
         }    
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Danger.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
     }
 }

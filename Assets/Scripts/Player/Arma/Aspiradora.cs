@@ -37,7 +37,9 @@ public class Aspiradora : MonoBehaviour
     public GameObject[] Cinematicas;
 
     public int wichCinematicYouWant;
-   
+
+    private FMOD.Studio.EventInstance AbsorbSound0, AbsorbSound1, AbsorbSound2;
+    private int soundN = 0;
 
     void Start()
     {
@@ -175,9 +177,15 @@ public class Aspiradora : MonoBehaviour
                 RemoveObjects(other.gameObject);
                 Player.GetComponent<HippiCharacterController>().blackboard.Biomassa += other.gameObject.GetComponent<AspirableObject>().Biomass;
                 Player.GetComponent<HippiCharacterController>().SumLife(1);
-
+                int n = Random.Range(0, 3);
+                if (n == 0) if (!SoundManager.Instance.isPlaying(AbsorbSound0)) AbsorbSound0 = SoundManager.Instance.PlayEvent(GameManager.Instance.AbsorbableBig, GameManager.Instance.m_player.transform);
+                    else if (n == 1) if (!SoundManager.Instance.isPlaying(AbsorbSound1)) AbsorbSound1 = SoundManager.Instance.PlayEvent(GameManager.Instance.AbsorbableNormal, transform);
+                        else if (!SoundManager.Instance.isPlaying(AbsorbSound2)) AbsorbSound2 = SoundManager.Instance.PlayEvent(GameManager.Instance.AbsorbableSmall, transform);
+                if (!SoundManager.Instance.isPlaying(AbsorbSound0)) AbsorbSound0 = SoundManager.Instance.PlayEvent(GameManager.Instance.AbsorbableBig, transform);
+                //if (!SoundManager.Instance.isPlaying(AbsorbSound1)) AbsorbSound1 = SoundManager.Instance.PlayEvent(GameManager.Instance.AbsorbableNormal, transform);
+                //if (!SoundManager.Instance.isPlaying(AbsorbSound2)) AbsorbSound2 = SoundManager.Instance.PlayEvent(GameManager.Instance.AbsorbableSmall, transform);
                 //Player.GetComponent<HippiCharacterController>().currentHealth += 0.5f;
-                if(other.gameObject.GetComponent<AspirableObject>().Heart)
+                if (other.gameObject.GetComponent<AspirableObject>().Heart)
                 {
                     Debug.Log("ASPIRADO A THE FUCKING BIGONE");
                     ActivateTheCorrectCinematic();
@@ -219,6 +227,7 @@ public class Aspiradora : MonoBehaviour
                 RemoveObjects(other.gameObject);
                 Biomass += other.gameObject.GetComponent<AspirableObject>().Biomass;
                 Player.GetComponent<HippiCharacterController>().SumLife(other.gameObject.GetComponent<AspirableObject>().LifeForThePlayer);
+                
                 Destroy(other.gameObject);
             }
         }
@@ -237,6 +246,8 @@ public class Aspiradora : MonoBehaviour
             Destroy(obj.gameObject);
         }
         startFinalCamShake = true;
+
+        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.Earthquake, transform);
 
         //Start final camera shake
         

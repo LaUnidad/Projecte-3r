@@ -41,6 +41,7 @@ public class AspirableObject : MonoBehaviour
     private SphereCollider coll;
 
     private Animator animator;
+    private FMOD.Studio.EventInstance AbsorbSound;
 
     
     [Header("SI LA ROCA ES MAGNETICA NECESITA EL TARGET")]
@@ -135,6 +136,7 @@ public class AspirableObject : MonoBehaviour
     public void ReturnHome()
     {
         //-----------------------------------------MARC AQUI ES QUAN ESTA TORNANT A CASA!!--------------------------------------------------------  
+        //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.GasRockAbsorb, transform);
         Debug.Log("Take Me Home");
         BeenAbsorved = false;
         coll.isTrigger = true;
@@ -143,8 +145,8 @@ public class AspirableObject : MonoBehaviour
         rgbd.velocity = transform.forward * SpeedToShoot;
     }
     public void Shooting()
-    {   
-        //-----------------------------------------MARC AQUI ES QUAN ES DISPARA!!!--------------------------------------------------------  
+    {
+        SoundManager.Instance.PlayOneShotSound(GameManager.Instance.GasRockThrow, transform);
         ImAbsorved = false;
         PlayerForward = Player.gameObject.transform.forward;
         this.transform.position = transform.position + PlayerForward;
@@ -278,21 +280,6 @@ public class AspirableObject : MonoBehaviour
         if(BeenAbsorved)
         {
             //this.transform.parent = null;
-            switch (Type)
-            {
-                case 1:
-                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableSmall, transform, true, 0.2f);
-                    break;
-                case 2:
-                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableNormal, transform, true, 0.2f);
-                    break;
-                case 3:
-                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
-                    break;
-                default:
-                    //SoundManager.Instance.PlayOneShotSound(GameManager.Instance.AbsorbableBig, transform, true, 0.2f);
-                    break;
-            }
             Invoke("MyTimeHasArrive", x);
 
         }    
