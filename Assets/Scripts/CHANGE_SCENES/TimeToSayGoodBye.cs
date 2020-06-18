@@ -18,6 +18,8 @@ public class TimeToSayGoodBye : MonoBehaviour
 
     public GameObject AssetsMuertosEnemys;
 
+    public bool final;
+
     
     void Start()
     {
@@ -38,6 +40,7 @@ public class TimeToSayGoodBye : MonoBehaviour
         {
             if(other.gameObject.GetComponent<HippiCharacterController>().blackboard.RoketMan)
             {
+                final = true;
                 AssetsMuertosEnemys.SetActive(true);
                 foreach(GameObject obj in fruits)
                 {
