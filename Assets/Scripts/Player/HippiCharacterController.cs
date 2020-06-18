@@ -37,8 +37,12 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
     public float currentHealth;  
     bool playerIsDead;
       
-    [Header("CONO DE ABSORCIÓN!!")]
+    [Header("ELEMENTOS EXTRA PARA LA ABSORCION ABSORCIÓN!!")]
     public GameObject vaccumCone;
+
+    public GameObject particles;
+
+    public GameObject windZone;
 
 
     //----- HIT STOP -----
@@ -84,6 +88,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         Cursor.visible = false;
 
         vaccumCone.SetActive(false);
+        particles.SetActive(false);
+        windZone.SetActive(false);
         AfectedByTheGas = false;
         playerIsDead = false;
     }
@@ -129,6 +135,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         if (UsingGadget && !playerIsDead)
         {
             vaccumCone.SetActive(true);
+            particles.SetActive(true);
+            windZone.SetActive(true);
             anim.SetBool("Absorbing", true);
 
             if (!SoundManager.Instance.isPlaying(AbsorbSoundEvent)) AbsorbSoundEvent = SoundManager.Instance.PlayEvent(GameManager.Instance.Absorb, transform);
@@ -140,6 +148,8 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
         else
         {
             vaccumCone.SetActive(false);
+            particles.SetActive(false);
+            windZone.SetActive(false);
             anim.SetBool("Absorbing", false);
 
             GamePad.SetVibration(playerIndex, 0f, 0f);

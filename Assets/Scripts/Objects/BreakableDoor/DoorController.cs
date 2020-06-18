@@ -38,7 +38,7 @@ public class DoorController : MonoBehaviour
             {
                 ExploteYourChildren();
                 MakeExplosion(other.transform.position);
-                Destroy(other.gameObject);
+                other.gameObject.SetActive(false);
                 
             }
             
