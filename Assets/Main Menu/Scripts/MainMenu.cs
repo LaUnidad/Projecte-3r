@@ -25,6 +25,9 @@ public class MainMenu : MonoBehaviour
     public string Exit = "event:/FX/Menu/Exit";
     public string PauseSound = "event:/FX/Menu/Pause";
     public string Resume = "event:/FX/Menu/Resume";
+    public string Intro = "event:/Music/IntroSong";
+
+    private FMOD.Studio.EventInstance IntroSong;
 
     private void Start()
     {
@@ -51,6 +54,9 @@ public class MainMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        IntroSong = SoundManager.Instance.PlayEvent(Intro, transform);
+
     }
 
     private void Update()
@@ -140,7 +146,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator LoadMainScene()
     {
         yield return new WaitForSeconds(time);
-
+        IntroSong.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         SceneManager.LoadScene(1);
 
     }

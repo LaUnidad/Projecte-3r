@@ -146,7 +146,7 @@ public class GameManager : MonoBehaviour
     {
         cc = FindObjectOfType<HippiCharacterController>();
         m_Intro = SoundManager.Instance.PlayEvent(TakeMeHome, transform);
-        //StartCoroutine(StartGameSong());
+        StartCoroutine(StartGameSong());
         //Musica Cinematica
     }
 
@@ -216,7 +216,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartGameSong()
     {
-        yield return new WaitForSeconds(35f);
+        yield return new WaitForSeconds(37f);
         m_Intro.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         m_MZone1 = SoundManager.Instance.PlayEvent(Zone1, transform);
     }

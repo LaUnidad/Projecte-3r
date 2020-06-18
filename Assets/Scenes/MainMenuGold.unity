@@ -1212,6 +1212,7 @@ MonoBehaviour:
   Exit: event:/FX/Menu/Exit
   PauseSound: event:/FX/Menu/Pause
   Resume: event:/FX/Menu/Resume
+  Intro: event:/Music/IntroSong
 --- !u!224 &389394751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3643,6 +3644,12 @@ PrefabInstance:
       propertyPath: priority
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802432374769713296, guid: b464d2096984d174393967f7ee5dbf73,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 656c890644720ef408eebac6d8187b1b,
+        type: 2}
     - target: {fileID: 4802432374769713297, guid: b464d2096984d174393967f7ee5dbf73,
         type: 3}
       propertyPath: m_Name
@@ -4153,14 +4160,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Canvas: {fileID: 0}
   MainCAmera: {fileID: 0}
+  Van: {fileID: 0}
   Player: {fileID: 0}
   fruits: []
   enemys: []
-  newPos: {fileID: 0}
-  Objective: {fileID: 0}
-  TimeForGo: 0
-  velocity: 0
   AssetsMuertosEnemys: {fileID: 0}
+  final: 0
 --- !u!54 &1195602497
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5245,12 +5250,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: c33220c7477c1f6439bb525bc464cb9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.84
+      value: -10.19
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c33220c7477c1f6439bb525bc464cb9c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.18
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c33220c7477c1f6439bb525bc464cb9c,
         type: 3}
@@ -5295,17 +5300,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: c33220c7477c1f6439bb525bc464cb9c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.7750235
+      value: 1.873002
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c33220c7477c1f6439bb525bc464cb9c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.7750235
+      value: 1.873002
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c33220c7477c1f6439bb525bc464cb9c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.7750235
+      value: 1.873002
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: c33220c7477c1f6439bb525bc464cb9c,
         type: 3}
@@ -16694,7 +16699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &843412329296220173
 MonoBehaviour:
   m_ObjectHideFlags: 0
