@@ -20,7 +20,7 @@ public class CREDITS_FINAL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Invoke("cam2GOOOO", 28);
+        Invoke("cam2GOOOO", 43);
     }
 
     public void cam2GOOOO()
