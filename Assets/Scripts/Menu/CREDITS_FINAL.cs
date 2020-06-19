@@ -28,7 +28,7 @@ public class CREDITS_FINAL : MonoBehaviour
         cam1.SetActive(false);
         cam2.SetActive(true);
         Credits.GetComponent<Credits>().credits = true;
-        Invoke("ChangeScene", 120);
+        Invoke("ChangeScene", 110);
     }
 
     public void ChangeScene()
