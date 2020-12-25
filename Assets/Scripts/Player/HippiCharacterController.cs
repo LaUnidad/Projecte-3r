@@ -188,12 +188,15 @@ public class HippiCharacterController : MonoBehaviour, IRestartGameElement
             hMovement.KnockBack(hitDirection, 2f);
             Debug.Log("Knocback COntroller");
         }
-        
-        if(other.tag == "MapOutofLimit")
+    }
+   void OnCollisionEnter(Collision other) 
+{
+      if(other.gameObject.tag == "MapOutofLimit")
         {
+           Debug.Log("COLLIDEEEEEEEEEEEEEEEEEEER!!!");
             gameManager.RestartGame();
         }
-    }
+   }
 
     
 
