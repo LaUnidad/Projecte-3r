@@ -93,6 +93,13 @@ public class DeathTree : MonoBehaviour
             {
                 GameObject.Destroy(child.gameObject);
             }
+            AliveObj.GetComponent<DisolveMyChildrens>().Disolve = true;
+            DeathObj.GetComponent<CreateMyChildren>().Create = true;
+            if(Particles != null)
+            {
+                Destroy(Particles.gameObject);
+            }
         }
+
     }
 }
