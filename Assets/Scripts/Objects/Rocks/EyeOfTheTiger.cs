@@ -7,6 +7,7 @@ public class EyeOfTheTiger : MonoBehaviour
     // Start is called before the first frame update
 
     GameObject Player;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");

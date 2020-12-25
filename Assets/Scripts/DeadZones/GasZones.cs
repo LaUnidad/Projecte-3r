@@ -20,7 +20,7 @@ public class GasZones : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-           Debug.Log("ENGAS");
+           //Debug.Log("ENGAS");
             Player.GetComponent<HippiCharacterController>().blackboard.ResistanceToTheGas = 4;
         }
    
