@@ -9,8 +9,14 @@ public class BreakDoorThing : MonoBehaviour
     public bool ActivateExplosion;
 
     private Rigidbody rgbd;
+    private MeshRenderer mesR;
+
+    public float timer;
+
+    [Range (0,10)]public float VelocityToDisapear;
     void Start()
     {
+        mesR = GetComponent<MeshRenderer>();
         rgbd = GetComponent<Rigidbody>();
     }
 
@@ -25,11 +31,23 @@ public class BreakDoorThing : MonoBehaviour
         {
             rgbd.isKinematic = false;
             rgbd.useGravity = true;
-            Invoke("TimeToGo", 4);
+            DisolveMe();
+            //Invoke("TimeToGo", 4);
         }
     }
     public void TimeToGo()
     {
         Destroy(this.gameObject);
+    }
+    public void DisolveMe()
+    {
+        mesR.material.SetFloat("VelocityToDisapear", timer);
+
+        timer += 1* Time.deltaTime * (VelocityToDisapear/10);  
+        if(timer>= 1)
+        {
+                Destroy(this.gameObject);
+        }  
+        
     }
 }
