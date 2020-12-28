@@ -10,6 +10,7 @@ public class CinematicManager : MonoBehaviour
     private GameObject Canvas;
 
     private GameObject Credits;
+    private GameObject CinematicLines;
 
     private GameObject Player;
     [Header("LISTA DE CINEMATICAS")]
@@ -27,6 +28,7 @@ public class CinematicManager : MonoBehaviour
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         Player = GameObject.FindGameObjectWithTag("Player");
         Credits = GameObject.FindGameObjectWithTag("Credits");
+        CinematicLines = GameObject.FindGameObjectWithTag("LinesCinematics");  
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class CinematicManager : MonoBehaviour
             MainCamera.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             Player.gameObject.SetActive(false);
+            CinematicLines.SetActive(true);
         }
         else
         {
@@ -69,6 +72,7 @@ public class CinematicManager : MonoBehaviour
         MainCamera.gameObject.SetActive(true);
         Canvas.gameObject.SetActive(true);
         Player.gameObject.SetActive(true);
+        CinematicLines.SetActive(false);
         AnyoneIsActive();
         
     }

@@ -9,6 +9,8 @@ public class Cinamatic1 : MonoBehaviour
 
     private GameObject Canvas;
 
+    private GameObject CinematicLines;
+
     [Header("LISTA DE CAMARAS")]
 
     public GameObject[] CamerasC1;
@@ -21,7 +23,6 @@ public class Cinamatic1 : MonoBehaviour
     public int CinematicOrder;
 
     [Header("NI CASO")]
-
 
 
     int numOfCamera;
@@ -38,6 +39,7 @@ public class Cinamatic1 : MonoBehaviour
         numOfCamera = 0;
         CamerasC1 = GameObject.FindGameObjectsWithTag(TagOfCamera);
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        CinematicLines = GameObject.FindGameObjectWithTag("LinesCinematics");  
         //MainCamera.gameObject.SetActive(false);
         //CamerasC1[numOfCamera].GetComponent<CAM_Movment>().Move = true;
         WichCameraHaveToMove(numOfCamera);
@@ -52,7 +54,8 @@ public class Cinamatic1 : MonoBehaviour
     {
         ImActive = true;
         TimeUntilChange();
-
+        Canvas.SetActive(false);
+        CinematicLines.SetActive(true);
        // Debug.Log(CamerasC1.Length + "   y el numofCamers es: "+ numOfCamera);
         
     }
@@ -73,6 +76,8 @@ public class Cinamatic1 : MonoBehaviour
         if(numOfCamera>= CamerasC1.Length)
         {
             ImActive = false;
+            Canvas.SetActive(true);
+            CinematicLines.SetActive(false);
             //ReturnToThePlayer();
             
         }

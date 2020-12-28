@@ -12,6 +12,8 @@ public class TutoMAnager : MonoBehaviour
 
     public float timetxt1;
 
+    public float timertxt1;
+
 
     [Header("TIMER")]
 
@@ -47,6 +49,9 @@ public class TutoMAnager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timertxt1 += 1*Time.deltaTime;
+        if(timertxt1 >= timetxt1)
+        {
         if(!FindingCondition())
         {
             timer += 1*Time.deltaTime;
@@ -71,6 +76,7 @@ public class TutoMAnager : MonoBehaviour
         else
         {
             AllCaput();
+        }
         }
         Conditions();
         //Debug.Log(FindingCondition());
